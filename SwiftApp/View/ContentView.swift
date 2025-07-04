@@ -9,24 +9,24 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    
+    @State private var selectedTab: Int = 1
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             ScansioneView()
                 .tabItem {
                     Image(systemName: "qrcode")
-                        .font(.system(size: 46))
-                }.tag(1)
+                }.tag(0)
             
             creaItinerarioView()
                 .tabItem {
-                    Image(systemName: "airplane")
-                        .font(.system(size: 4))
-                }.tag(0)
+                    Image(systemName: "airplane.arrival")
+                }.tag(1)
             
             ListaItinerariView()
                 .tabItem {
                     Image(systemName: "map")
-                        .font(.system(size: 4))
                 }.tag(2)
         }.accentColor(.mint)
     }
