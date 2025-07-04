@@ -31,6 +31,11 @@ struct ListaItinerariView: View {
     
     var body: some View {
         NavigationStack {
+            if itinerari.isEmpty{
+                Text("Nessun itinerario salvato!")
+                    .font(.headline)
+                    .padding()
+            }
             List {
                 ForEach(itinerari) { itinerario in
                     NavigationLink(destination: ItinerarioView()) {
@@ -68,8 +73,6 @@ struct ListaItinerariView: View {
             .navigationBarTitleDisplayMode(.large)
         }
     }
-    
-    // MARK: - Azioni
     
     func togglePreferito(_ item: Itinerario) {
         if let index = itinerari.firstIndex(of: item) {
