@@ -88,7 +88,7 @@ struct creaItinerarioView: View {
                 }
                 .padding()
                 .background(Color.white)
-                .cornerRadius(16)
+                .cornerRadius(30)
                 .padding(.horizontal, 35)
                 .padding(.top, 50)
                 
