@@ -15,19 +15,19 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "qrcode")
                         .font(.system(size: 46))
-                }
+                }.tag(1)
             
             creaItinerarioView()
                 .tabItem {
                     Image(systemName: "airplane")
                         .font(.system(size: 4))
-                }
+                }.tag(0)
             
             ListaItinerariView()
                 .tabItem {
                     Image(systemName: "map")
                         .font(.system(size: 4))
-                }
+                }.tag(2)
         }.accentColor(.mint)
     }
 }
