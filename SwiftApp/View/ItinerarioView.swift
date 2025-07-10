@@ -21,13 +21,12 @@ struct ItinerarioView: View {
                     .font(.system(size: 20))
                     .fontWeight(.bold)
                 Divider()
-                    .frame(height:2)
+                    .frame(height:1)
                     .background(.black)
                 
                 ScrollView{
                     ScrollView(.horizontal){
                         HStack{
-                            Spacer()
                             let totalSteps=itinerario.tappe.count
                             ForEach(0..<totalSteps, id: \.self) { index in
                                 VStack{
@@ -52,13 +51,13 @@ struct ItinerarioView: View {
                                         Rectangle()
                                             .fill(index < progresso ? Color.mint : Color.gray.opacity(0.3))
                                             .frame(height: 2)
-                                            .frame(width: .infinity)
+                                            .frame(width: 35)
                                     }
                                 }
                             }
-                            Spacer()
                         }
-                        .frame(width: 400)
+                        .padding(.horizontal,20)
+                        .frame(minWidth: 400, alignment: .leading)
                     }
                     VStack(alignment: .leading){
                         ForEach($itinerario.tappe){$tappa in
@@ -140,6 +139,20 @@ struct ItinerarioView: View {
             oraArrivo: "12:00",
             foto: "mercato_boqueria",
             maps: "https://maps.apple.com/?q=Mercado+de+La+Boqueria"
+        ),
+        Tappa(
+            nome: "Barceloneta",
+            descr: "Passeggiata rilassante lungo la spiaggia più famosa di Barcellona.",
+            oraArrivo: "13:30",
+            foto: "barceloneta",
+            maps: "https://maps.apple.com/?q=Barceloneta"
+        ),
+        Tappa(
+            nome: "Barceloneta",
+            descr: "Passeggiata rilassante lungo la spiaggia più famosa di Barcellona.",
+            oraArrivo: "13:30",
+            foto: "barceloneta",
+            maps: "https://maps.apple.com/?q=Barceloneta"
         ),
         Tappa(
             nome: "Barceloneta",
