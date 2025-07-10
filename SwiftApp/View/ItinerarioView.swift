@@ -10,36 +10,68 @@ import SwiftUI
 struct ItinerarioView: View {
     @Binding var itinerario: Itinerario
     @State var progresso=0
+    @State var open:[Bool]=[]
     var body: some View {
         NavigationStack{
             VStack{
                 Text("\(itinerario.testo())")
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
                 Text("\(itinerario.aeroporto)")
+                    .font(.system(size: 20))
+                    .fontWeight(.bold)
                 Divider()
                     .frame(height:2)
                     .background(.black)
                 Text("Itinerario")
-                List{
+                VStack(alignment: .leading){
                     ForEach($itinerario.tappe){$tappa in
-                        HStack{
-                            Button(action: {progresso=itinerario.tappe.firstIndex(of:tappa)!;}){
-                                Image(systemName: itinerario.tappe.firstIndex(of: tappa)!>progresso ? "xmark.circle.fill" : "checkmark.circle.fill")
-                                    .foregroundColor(itinerario.tappe.firstIndex(of: tappa)!>progresso ? .gray : .mint)
-                            
+                        HStack(alignment: .center){
+                            let i=itinerario.tappe.firstIndex(of: tappa)!
+                            Button(action: {progresso=i}){
+                                Image(systemName: i>progresso ? "xmark.circle.fill" : "checkmark.circle.fill")
+                                    .foregroundColor(i>progresso ? .gray : .mint)
+                                    .font(.system(size: 24))
+                                
                             }
                             Text("\(tappa.oraArrivo)")
+                                .font(.system(size: 24))
+                                .fontWeight(.bold)
                             VStack(alignment: .leading){
                                 Text("\(tappa.nome)")
+                                    .fontWeight(.bold)
+                                    .font(.system(size: 20))
                                 Text("\(tappa.descr)")
+                                    .foregroundColor(.gray)
+                            }
+                            Spacer()
+                            if !open.isEmpty && open[i]{
+                                Button(action:{open[i].toggle()}){
+                                    VStack{Image(systemName: "chevron.down.circle")
+                                            .foregroundColor(.mint)
+                                            .font(.system(size: 24))
+                                    }
+                                }
+                            }else if !open.isEmpty && !open[i]{
+                                Button(action:{open[i].toggle()}){
+                                    Image(systemName: "chevron.right.circle")
+                                        .foregroundColor(.mint)
+                                        .font(.system(size: 24))
+                                }
                             }
                         }
                     }
+                    .padding()
                 }
-                Spacer()
             }
+            Spacer()
         }
-            
+        .onAppear{
+            open=Array(repeating: false, count: itinerario.tappe.count)
+        }
+        
     }
+
 }
 
 #Preview {
