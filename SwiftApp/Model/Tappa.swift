@@ -5,14 +5,14 @@ struct Tappa: Identifiable, Equatable, Codable {
     var nome: String
     var descr: String
     var oraArrivo: String
-    var foto: Image? = nil // Non codificabile, gestita separatamente
     var maps: String
+    var foto: String
     
     enum CodingKeys: String, CodingKey {
-        case id, nome, descr, oraArrivo, maps
+        case id, nome, descr, oraArrivo, maps,foto
     }
     
-    init(id: UUID = UUID(), nome: String, descr: String, oraArrivo: String, foto: Image? = nil, maps: String) {
+    init(id: UUID = UUID(), nome: String, descr: String, oraArrivo: String, foto: String, maps: String) {
         self.id = id
         self.nome = nome
         self.descr = descr
@@ -28,7 +28,7 @@ struct Tappa: Identifiable, Equatable, Codable {
         descr = try container.decode(String.self, forKey: .descr)
         oraArrivo = try container.decode(String.self, forKey: .oraArrivo)
         maps = try container.decode(String.self, forKey: .maps)
-        foto = nil // Non decodificata da JSON
+        foto = try container.decode(String.self, forKey: .foto)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -38,6 +38,6 @@ struct Tappa: Identifiable, Equatable, Codable {
         try container.encode(descr, forKey: .descr)
         try container.encode(oraArrivo, forKey: .oraArrivo)
         try container.encode(maps, forKey: .maps)
-        // foto non codificata
+        try container.encode(foto, forKey: .foto)
     }
 } 
