@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ItinerarioView: View {
     @Binding var itinerario: Itinerario
+    @State var progresso=0
     var body: some View {
         NavigationStack{
             VStack{
@@ -18,6 +19,22 @@ struct ItinerarioView: View {
                     .frame(height:2)
                     .background(.black)
                 Text("Itinerario")
+                List{
+                    ForEach($itinerario.tappe){$tappa in
+                        HStack{
+                            Button(action: {progresso=itinerario.tappe.firstIndex(of:tappa)!;}){
+                                Image(systemName: itinerario.tappe.firstIndex(of: tappa)!>progresso ? "xmark.circle.fill" : "checkmark.circle.fill")
+                                    .foregroundColor(itinerario.tappe.firstIndex(of: tappa)!>progresso ? .gray : .mint)
+                            
+                            }
+                            Text("\(tappa.oraArrivo)")
+                            VStack(alignment: .leading){
+                                Text("\(tappa.nome)")
+                                Text("\(tappa.descr)")
+                            }
+                        }
+                    }
+                }
                 Spacer()
             }
         }
