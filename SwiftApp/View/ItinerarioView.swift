@@ -25,7 +25,7 @@ struct ItinerarioView: View {
                     .background(.black)
                 
                 ScrollView{
-                    ScrollView(.horizontal){
+                    ScrollView(.horizontal,showsIndicators: false){
                         HStack{
                             let totalSteps=itinerario.tappe.count
                             ForEach(0..<totalSteps, id: \.self) { index in
@@ -36,11 +36,12 @@ struct ItinerarioView: View {
                                      }
                                     Circle()
                                         .fill(index <= progresso ? Color.mint : Color.gray.opacity(0.3))
-                                        .frame(width: 20, height: 20)
+                                        .frame(width: 30, height: 30)
                                         .overlay(
                                             Text("\(index + 1)")
                                                 .font(.caption)
                                                 .foregroundColor(.white)
+                                                .fontWeight(.bold)
                                         )
                                 }
                                 
@@ -52,6 +53,7 @@ struct ItinerarioView: View {
                                             .fill(index < progresso ? Color.mint : Color.gray.opacity(0.3))
                                             .frame(height: 2)
                                             .frame(width: 35)
+                                            .padding(0)
                                     }
                                 }
                             }
@@ -61,45 +63,48 @@ struct ItinerarioView: View {
                     }
                     VStack(alignment: .leading){
                         ForEach($itinerario.tappe){$tappa in
-                            Divider()
-                            HStack(alignment: .center){
-                                let i=itinerario.tappe.firstIndex(of: tappa)!
-                                Button(action: {progresso=i}){
-                                    Image(systemName: i>progresso ? "xmark.circle.fill" : "checkmark.circle.fill")
-                                        .foregroundColor(i>progresso ? .gray : .mint)
-                                        .font(.system(size: 24))
-                                    
-                                }
-                                VStack(alignment: .leading){
-                                    Text("\(tappa.oraArrivo) - \(tappa.nome)")
-                                        .fontWeight(.bold)
-                                        .font(.system(size: 20))
-                                    Text("\(tappa.descr)")
-                                        .foregroundColor(.gray)
-                                    if !open.isEmpty && open[i]{
-                                        Image("\(tappa.foto)")
-                                            .resizable()
-                                            .scaledToFit()
-                                        Link("Apri in Mappe", destination: URL(string: "\(tappa.maps)")!)
-                                            .foregroundColor(.blue)
-                                            .font(.system(size:20))
+                            let i=itinerario.tappe.firstIndex(of: tappa)!
+                            VStack{
+                                Divider()
+                                HStack(alignment: .center){
+                                    Button(action: {progresso=i}){
+                                        Image(systemName: i>progresso ? "xmark.circle.fill" : "checkmark.circle.fill")
+                                            .foregroundColor(i>progresso ? .gray : .mint)
+                                            .font(.system(size: 24))
+                                        
                                     }
-                                }
-                                Spacer()
-                                if !open.isEmpty && open[i]{
-                                    Button(action:{open[i].toggle()}){
-                                        VStack{Image(systemName: "chevron.down.circle")
+                                    VStack(alignment: .leading){
+                                        Text("\(tappa.oraArrivo) - \(tappa.nome)")
+                                            .fontWeight(.bold)
+                                            .font(.system(size: 20))
+                                        Text("\(tappa.descr)")
+                                            .foregroundColor(.gray)
+                                        
+                                    }
+                                    Spacer()
+                                    if !open.isEmpty && open[i]{
+                                        Button(action:{open[i].toggle()}){
+                                            VStack{Image(systemName: "chevron.down.circle")
+                                                    .foregroundColor(.mint)
+                                                    .font(.system(size: 24))
+                                            }
+                                        }
+                                        
+                                    }else if !open.isEmpty && !open[i]{
+                                        Button(action:{open[i].toggle()}){
+                                            Image(systemName: "chevron.right.circle")
                                                 .foregroundColor(.mint)
                                                 .font(.system(size: 24))
                                         }
                                     }
-                                    
-                                }else if !open.isEmpty && !open[i]{
-                                    Button(action:{open[i].toggle()}){
-                                        Image(systemName: "chevron.right.circle")
-                                            .foregroundColor(.mint)
-                                            .font(.system(size: 24))
-                                    }
+                                }
+                                if !open.isEmpty && open[i]{
+                                    Image("\(tappa.foto)")
+                                        .resizable()
+                                        .scaledToFit()
+                                    Link("Apri in Mappe", destination: URL(string: "\(tappa.maps)")!)
+                                        .foregroundColor(.blue)
+                                        .font(.system(size:20))
                                 }
                             }
                         }
@@ -139,20 +144,6 @@ struct ItinerarioView: View {
             oraArrivo: "12:00",
             foto: "mercato_boqueria",
             maps: "https://maps.apple.com/?q=Mercado+de+La+Boqueria"
-        ),
-        Tappa(
-            nome: "Barceloneta",
-            descr: "Passeggiata rilassante lungo la spiaggia più famosa di Barcellona.",
-            oraArrivo: "13:30",
-            foto: "barceloneta",
-            maps: "https://maps.apple.com/?q=Barceloneta"
-        ),
-        Tappa(
-            nome: "Barceloneta",
-            descr: "Passeggiata rilassante lungo la spiaggia più famosa di Barcellona.",
-            oraArrivo: "13:30",
-            foto: "barceloneta",
-            maps: "https://maps.apple.com/?q=Barceloneta"
         ),
         Tappa(
             nome: "Barceloneta",
