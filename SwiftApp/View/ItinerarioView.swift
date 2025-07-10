@@ -49,8 +49,9 @@ struct ItinerarioView: View {
                                         Image("\(tappa.foto)")
                                             .resizable()
                                             .scaledToFit()
-                                            .frame(width: 200, height: 200)
-                                        Text("\(tappa.maps)")
+                                        Link("Apri in Mappe", destination: URL(string: "\(tappa.maps)")!)
+                                            .foregroundColor(.blue)
+                                            .font(.system(size:20))
                                     }
                                 }
                                 Spacer()

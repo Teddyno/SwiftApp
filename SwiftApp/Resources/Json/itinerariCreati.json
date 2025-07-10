@@ -101,8 +101,8 @@
         "nome": "Sagrada Familia",
         "descr": "Capolavoro di Gaudí ancora in costruzione",
         "oraArrivo": "09:00",
-        "foto": "sagrada.jpg",
-        "maps": "https://maps.app.goo.gl/sagrada"
+        "foto": "sagrada_familia",
+        "maps": "https://maps.apple.com/?q=Sagrada+Familia"
       },
       {
         "nome": "Parc Güell",
@@ -122,8 +122,8 @@
         "nome": "Barceloneta",
         "descr": "Spiaggia urbana ideale per relax e tapas",
         "oraArrivo": "15:00",
-        "foto": "barceloneta.jpg",
-        "maps": "https://maps.app.goo.gl/barceloneta"
+        "foto": "barceloneta",
+        "maps": "https://maps.apple.com/?q=Barceloneta"
       },
       {
         "nome": "Casa Batlló",
