@@ -25,9 +25,44 @@ struct ItinerarioView: View {
                     .background(.black)
                 
                 ScrollView{
-                    Text("Itinerario")
+                    ScrollView(.horizontal){
+                        HStack{
+                            Spacer()
+                            let totalSteps=itinerario.tappe.count
+                            ForEach(0..<totalSteps, id: \.self) { index in
+                                VStack{
+                                    if !itinerario.tappe.isEmpty{
+                                     Text("\(itinerario.tappe[index].oraArrivo)")
+                                     .frame(width:50)
+                                     }
+                                    Circle()
+                                        .fill(index <= progresso ? Color.mint : Color.gray.opacity(0.3))
+                                        .frame(width: 20, height: 20)
+                                        .overlay(
+                                            Text("\(index + 1)")
+                                                .font(.caption)
+                                                .foregroundColor(.white)
+                                        )
+                                }
+                                
+                                if index < totalSteps - 1 {
+                                    VStack{
+                                        Text(".")
+                                            .foregroundColor(.white)
+                                        Rectangle()
+                                            .fill(index < progresso ? Color.mint : Color.gray.opacity(0.3))
+                                            .frame(height: 2)
+                                            .frame(width: .infinity)
+                                    }
+                                }
+                            }
+                            Spacer()
+                        }
+                        .frame(width: 400)
+                    }
                     VStack(alignment: .leading){
                         ForEach($itinerario.tappe){$tappa in
+                            Divider()
                             HStack(alignment: .center){
                                 let i=itinerario.tappe.firstIndex(of: tappa)!
                                 Button(action: {progresso=i}){
@@ -36,11 +71,8 @@ struct ItinerarioView: View {
                                         .font(.system(size: 24))
                                     
                                 }
-                                Text("\(tappa.oraArrivo)")
-                                    .font(.system(size: 24))
-                                    .fontWeight(.bold)
                                 VStack(alignment: .leading){
-                                    Text("\(tappa.nome)")
+                                    Text("\(tappa.oraArrivo) - \(tappa.nome)")
                                         .fontWeight(.bold)
                                         .font(.system(size: 20))
                                     Text("\(tappa.descr)")
