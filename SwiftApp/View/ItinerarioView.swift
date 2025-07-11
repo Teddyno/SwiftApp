@@ -11,6 +11,7 @@ struct ItinerarioView: View {
     @Binding var itinerario: Itinerario
     @State var progresso=0
     @State var open:[Bool]=[]
+    @State var mostraMap=false
     var body: some View {
         NavigationStack{
             VStack{
@@ -116,6 +117,16 @@ struct ItinerarioView: View {
         }
         .onAppear{
             open=Array(repeating: false, count: itinerario.tappe.count)
+        }
+        .toolbar{
+            ToolbarItem(placement: .topBarTrailing){
+                Button(action:{mostraMap=true}){
+                    Image(systemName: "mappin.and.ellipse")
+                }
+            }
+        }
+        .sheet(isPresented: $mostraMap){
+            MapView()
         }
         
     }
