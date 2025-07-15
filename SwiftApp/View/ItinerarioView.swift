@@ -27,23 +27,38 @@ struct ItinerarioView: View {
                 
                 ScrollView{
                     ScrollView(.horizontal,showsIndicators: false){
-                        HStack{
+                        HStack(spacing: 18){
                             let totalSteps=itinerario.tappe.count
                             ForEach(0..<totalSteps, id: \.self) { index in
-                                VStack{
-                                    if !itinerario.tappe.isEmpty{
-                                     Text("\(itinerario.tappe[index].oraArrivo)")
-                                     .frame(width:50)
-                                     }
-                                    Circle()
-                                        .fill(index <= progresso ? Color.mint : Color.gray.opacity(0.3))
-                                        .frame(width: 30, height: 30)
-                                        .overlay(
-                                            Text("\(index + 1)")
-                                                .font(.caption)
-                                                .foregroundColor(.white)
-                                                .fontWeight(.bold)
-                                        )
+                                Button(action: { withAnimation(.spring()) { progresso = index } }) {
+                                    VStack(spacing: 4){
+                                        if !itinerario.tappe.isEmpty{
+                                            Text("\(itinerario.tappe[index].oraArrivo)")
+                                                .frame(width:58)
+                                                .fontWeight(index == progresso ? .bold : .regular)
+                                                .foregroundColor(index == progresso ? .mint : .gray)
+                                                .lineLimit(1)
+                                                .minimumScaleFactor(0.7)
+                                                .animation(.easeInOut, value: progresso)
+                                        }
+                                        Circle()
+                                            .fill(index <= progresso ? Color.mint : Color.gray.opacity(0.3))
+                                            .frame(width: 30, height: 30)
+                                            .overlay(
+                                                Circle()
+                                                    .stroke(index == progresso ? Color.mint : Color.clear, lineWidth: index == progresso ? 4 : 0)
+                                                    .shadow(color: index == progresso ? Color.mint.opacity(0.4) : .clear, radius: 8, x: 0, y: 2)
+                                            )
+                                            .overlay(
+                                                Text("\(index + 1)")
+                                                    .font(.caption)
+                                                    .foregroundColor(.white)
+                                                    .fontWeight(.bold)
+                                            )
+                                            .animation(.spring(), value: progresso)
+                                            .padding(4)
+                                            .padding(.horizontal, 6)
+                                    }
                                 }
                                 
                                 if index < totalSteps - 1 {
@@ -100,12 +115,38 @@ struct ItinerarioView: View {
                                     }
                                 }
                                 if !open.isEmpty && open[i]{
-                                    Image("\(tappa.foto)")
-                                        .resizable()
-                                        .scaledToFit()
-                                    Link("Apri in Mappe", destination: URL(string: "\(tappa.maps)")!)
-                                        .foregroundColor(.blue)
-                                        .font(.system(size:20))
+                                     HStack {
+                                         Spacer()
+                                         VStack(spacing: 12) {
+                                             Image("\(tappa.foto)")
+                                                 .resizable()
+                                                 .scaledToFit()
+                                                 .frame(maxWidth: 320, maxHeight: 180)
+                                                 .cornerRadius(16)
+                                             let url: URL = {
+                                                 func appleMapsURL(from original: String, nome: String, citta: String?) -> URL {
+                                                     if original.contains("maps.app.goo.gl") || original.contains("google.com/maps") {
+                                                         let query = (nome + (citta != nil ? ", " + citta! : "")).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? nome
+                                                         return URL(string: "http://maps.apple.com/?q=\(query)")!
+                                                     }
+                                                     if let u = URL(string: original), UIApplication.shared.canOpenURL(u) {
+                                                         return u
+                                                     }
+                                                     return URL(string: "http://maps.apple.com/?q=Piazza+Navona+Roma")!
+                                                 }
+                                                 return appleMapsURL(from: tappa.maps, nome: tappa.nome, citta: itinerario.citta)
+                                             }()
+                                             Link("Apri in Mappe", destination: url)
+                                                 .foregroundColor(.blue)
+                                                 .font(.system(size:20))
+                                         }
+                                         .padding()
+                                         .background(Color(.systemBackground).opacity(0.95))
+                                         .cornerRadius(20)
+                                         .shadow(radius: 8)
+                                         .frame(maxWidth: 350)
+                                         Spacer()
+                                     }
                                 }
                             }
                         }
@@ -126,7 +167,7 @@ struct ItinerarioView: View {
             }
         }
         .sheet(isPresented: $mostraMap){
-            MapView()
+            MapView(tappe: itinerario.tappe)
         }
         
     }
