@@ -19,54 +19,67 @@ struct creaItinerarioView: View {
     @State var durataMinuti: Int = 0
     @State var preferenzaSelezionata: String? = nil
     
-    let preferenze = ["Natura","Cibo","Monumenti","Shopping"]
+    @State var aeroporti: [Aeroporto] = []
+    @State var risultatiFiltrati: [Aeroporto] = []
+    
+    let preferenze = ["Natura", "Cibo", "Monumenti", "Shopping"]
     
     var body: some View {
-        ZStack{
-            VStack{
+        ZStack {
+            VStack {
                 Image("sfondo")
                     .resizable()
                     .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius:60))
+                    .clipShape(RoundedRectangle(cornerRadius: 60))
                     .ignoresSafeArea()
                 Spacer()
             }
             
-            VStack(){
-                
-                HStack{
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.mint)
-                    TextField("città/aeroporto", text: $luogoScalo)
+            VStack {
+                VStack(spacing: 0) {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.mint)
+                        TextField("città/aeroporto", text: $luogoScalo)
+                            .onChange(of: luogoScalo) { query in
+                                if query.isEmpty {
+                                    risultatiFiltrati = []
+                                } else {
+                                    risultatiFiltrati = aeroporti.filter {
+                                        $0.city.localizedCaseInsensitiveContains(query) ||
+                                        $0.name.localizedCaseInsensitiveContains(query) ||
+                                        $0.iata.localizedCaseInsensitiveContains(query)
+                                    }.prefix(5).map { $0 }
+                                }
+                            }
+                    }
+                    .padding(20)
+                    .background(Color.white)
+                    .cornerRadius(16)
                 }
-                .padding(20)
-                .background(Color.white)
-                .cornerRadius(16)
                 .padding(.horizontal, 35)
-               
+                .padding(.top, 10)
                 
-                HStack{
+                // Durata scalo
+                HStack {
                     Image(systemName: "clock")
                         .foregroundColor(.mint)
                     Text("Durata scalo")
                         .font(.headline)
                         .padding(.leading)
-                    DatePicker("",
-                               selection: $durataScalo,
-                               displayedComponents: [.hourAndMinute])
-                    
+                    DatePicker("", selection: $durataScalo, displayedComponents: [.hourAndMinute])
                 }
                 .padding()
                 .background(Color.white)
                 .cornerRadius(16)
                 .padding(.horizontal, 35)
-                .padding(.top,10)
+                .padding(.top, 10)
                 
-                
-                VStack() {
+                // Preferenze
+                VStack {
                     Text("Scegli uno tra questi interessi")
                         .font(.headline)
-
+                    
                     LazyVGrid(columns: [GridItem(spacing: 15), GridItem()],
                               spacing: 15) {
                         ForEach(preferenze, id: \.self) { interest in
@@ -76,8 +89,8 @@ struct creaItinerarioView: View {
                                 Text(interest)
                                     .frame(maxWidth: .infinity)
                                     .padding()
-                                    .padding(.top,15)
-                                    .padding(.bottom,15)
+                                    .padding(.top, 15)
+                                    .padding(.bottom, 15)
                                     .background(preferenzaSelezionata == interest ? Color.mint : Color.gray.opacity(0.2))
                                     .foregroundColor(preferenzaSelezionata == interest ? .white : .gray)
                                     .cornerRadius(12)
@@ -94,7 +107,9 @@ struct creaItinerarioView: View {
                 
                 Spacer()
                 
-                Button(action: {}) {
+                Button(action: {
+                    // Azione per generare itinerario
+                }) {
                     Text("Genera itinerario")
                         .font(.headline)
                         .foregroundColor(.white)
@@ -106,10 +121,49 @@ struct creaItinerarioView: View {
                 }
                 .padding(.horizontal, 35)
                 .padding(.bottom, 50)
-                
             }
             .padding(.top, 90)
+            
+            // Lista suggerimenti posizionata in modo assoluto
+            VStack {
+                if !risultatiFiltrati.isEmpty {
+                    VStack(alignment: .leading, spacing: 0) {
+                        ForEach(risultatiFiltrati) { aeroporto in
+                            Button(action: {
+                                luogoScalo = aeroporto.displayName
+                                risultatiFiltrati = []
+                                hideKeyboard()
+                            }) {
+                                Text(aeroporto.displayName)
+                                    .padding()
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .background(Color.white)
+                                    .foregroundColor(.black)
+                            }
+                            if aeroporto.id != risultatiFiltrati.last?.id {
+                                Divider()
+                            }
+                        }
+                    }
+                    .background(Color.white)
+                    .cornerRadius(12)
+                    .shadow(radius: 4)
+                    .padding(.horizontal, 35)
+                    .padding(.top, 170) // Posiziona sotto al TextField
+                } else {
+                    Spacer()
+                }
+                Spacer()
+            }
+            .zIndex(1) // Assicura che sia sopra gli altri elementi
         }
+        .onAppear {
+            aeroporti = caricaAeroporti()
+        }
+    }
+    
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 

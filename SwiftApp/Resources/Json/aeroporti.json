@@ -1,0 +1,123 @@
+
+[
+  {
+    "name": "Hartsfield–Jackson Atlanta International Airport",
+    "city": "Atlanta",
+    "iata": "ATL",
+    "country": "United States"
+  },
+  {
+    "name": "Beijing Capital International Airport",
+    "city": "Beijing",
+    "iata": "PEK",
+    "country": "China"
+  },
+  {
+    "name": "Dubai International Airport",
+    "city": "Dubai",
+    "iata": "DXB",
+    "country": "United Arab Emirates"
+  },
+  {
+    "name": "Los Angeles International Airport",
+    "city": "Los Angeles",
+    "iata": "LAX",
+    "country": "United States"
+  },
+  {
+    "name": "Tokyo Haneda Airport",
+    "city": "Tokyo",
+    "iata": "HND",
+    "country": "Japan"
+  },
+  {
+    "name": "O'Hare International Airport",
+    "city": "Chicago",
+    "iata": "ORD",
+    "country": "United States"
+  },
+  {
+    "name": "London Heathrow Airport",
+    "city": "London",
+    "iata": "LHR",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Charles de Gaulle Airport",
+    "city": "Paris",
+    "iata": "CDG",
+    "country": "France"
+  },
+  {
+    "name": "Frankfurt am Main Airport",
+    "city": "Frankfurt",
+    "iata": "FRA",
+    "country": "Germany"
+  },
+  {
+    "name": "Amsterdam Schiphol Airport",
+    "city": "Amsterdam",
+    "iata": "AMS",
+    "country": "Netherlands"
+  },
+  {
+    "name": "Singapore Changi Airport",
+    "city": "Singapore",
+    "iata": "SIN",
+    "country": "Singapore"
+  },
+  {
+    "name": "Hong Kong International Airport",
+    "city": "Hong Kong",
+    "iata": "HKG",
+    "country": "Hong Kong"
+  },
+  {
+    "name": "Incheon International Airport",
+    "city": "Seoul",
+    "iata": "ICN",
+    "country": "South Korea"
+  },
+  {
+    "name": "Sydney Kingsford Smith Airport",
+    "city": "Sydney",
+    "iata": "SYD",
+    "country": "Australia"
+  },
+  {
+    "name": "Rome Fiumicino Airport",
+    "city": "Rome",
+    "iata": "FCO",
+    "country": "Italy"
+  },
+  {
+    "name": "Milan Malpensa Airport",
+    "city": "Milan",
+    "iata": "MXP",
+    "country": "Italy"
+  },
+  {
+    "name": "Madrid Barajas Airport",
+    "city": "Madrid",
+    "iata": "MAD",
+    "country": "Spain"
+  },
+  {
+    "name": "Toronto Pearson International Airport",
+    "city": "Toronto",
+    "iata": "YYZ",
+    "country": "Canada"
+  },
+  {
+    "name": "São Paulo Guarulhos International Airport",
+    "city": "São Paulo",
+    "iata": "GRU",
+    "country": "Brazil"
+  },
+  {
+    "name": "Istanbul Airport",
+    "city": "Istanbul",
+    "iata": "IST",
+    "country": "Turkey"
+  }
+]
