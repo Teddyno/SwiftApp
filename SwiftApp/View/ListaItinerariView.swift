@@ -6,10 +6,18 @@ enum Categoria: String, Codable {
 
 struct ListaItinerariView: View {
     @Binding var itinerari: [Itinerario]
+    @State var search=false
+    @State var text=""
     
     var body: some View {
         NavigationStack {
             VStack{
+                HStack{
+                    if search{
+                        TextField("Ricerca itinerario...",text:$text)
+                    }
+                }
+                .padding(30)
                 if itinerari.isEmpty{
                     Text("Nessun itinerario salvato!")
                         .font(.headline)
@@ -31,15 +39,13 @@ struct ListaItinerariView: View {
                                 }
                             }
                         }
-                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                        .swipeActions(edge: .trailing) {
                             Button {
                                 togglePreferito(itinerario)
                             } label: {
                                 Label("Preferiti", systemImage: itinerario.preferito ? "star.fill" : "star")
                             }
                             .tint(.mint)
-                        }
-                        .swipeActions(edge: .trailing) {
                             Button(role: .destructive) {
                                 eliminaItinerario(itinerario)
                             } label: {
@@ -54,12 +60,11 @@ struct ListaItinerariView: View {
             
             .toolbar{
                 ToolbarItem(placement: .topBarTrailing){
-                    Button(action:{}){
+                    Button(action:{search.toggle()}){
                         Image(systemName:"magnifyingglass")
-                            .foregroundColor(.mint)
+                            .padding(30)
+                            .padding(.top,60)
                     }
-                    .padding(30)
-                    .padding(.top, 90)
                 }
             }
         }
