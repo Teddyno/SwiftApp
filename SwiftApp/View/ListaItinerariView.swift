@@ -54,13 +54,13 @@ struct ListaItinerariView: View {
                         }
                         .swipeActions(edge: .trailing) {
                             Button {
-                                togglePreferito(itinerario)
+                                togglePreferito(itinerario);filtrati=itinerari
                             } label: {
                                 Label("Preferiti", systemImage: itinerario.preferito ? "star.fill" : "star")
                             }
                             .tint(.mint)
                             Button(role: .destructive) {
-                                eliminaItinerario(itinerario)
+                                eliminaItinerario(itinerario);filtrati=itinerari
                             } label: {
                                 Label("Elimina", systemImage: "trash")
                             }
