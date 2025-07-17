@@ -64,15 +64,12 @@ struct MapView: View {
                 HStack {
                     Spacer()
                     Button(action: { dismiss() }) {
-                        ZStack {
-                            Circle()
-                                .fill(Color.mint)
-                                .frame(width: 56, height: 56)
-                                .shadow(color: .black.opacity(0.18), radius: 8, x: 0, y: 4)
-                            Image(systemName: "xmark")
-                                .foregroundColor(.white)
-                                .font(.system(size: 28, weight: .bold))
-                        }
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.red)
+                            .font(.system(size: 32, weight: .bold))
+                            .shadow(radius: 2)
+                            .padding(.trailing, 18)
+                            .padding(.top, 32)
                     }
                     .padding(.trailing, 18)
                     .padding(.top, 32)
