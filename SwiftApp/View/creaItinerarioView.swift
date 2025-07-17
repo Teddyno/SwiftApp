@@ -288,6 +288,7 @@ struct creaItinerarioView: View {
             if let primoItinerario = itinerari.first {
                 // Salva l'itinerario nella variabile
                 self.itinerarioGenerato = primoItinerario
+                saveItinerarioCreato(primoItinerario)
                 print("Itinerario creato con successo per: \(primoItinerario.citta)")
             }
         } catch {
@@ -300,6 +301,7 @@ struct creaItinerarioView: View {
                     let itinerari = try JSONDecoder().decode([Itinerario].self, from: cleanedData)
                     if let primoItinerario = itinerari.first {
                         self.itinerarioGenerato = primoItinerario
+                        saveItinerarioCreato(primoItinerario)
                         print("Itinerario creato con successo (dopo pulizia JSON) per: \(primoItinerario.citta)")
                     }
                 } catch {
@@ -329,6 +331,36 @@ struct creaItinerarioView: View {
         }
         
         return cleaned
+    }
+    
+    // Salva l'itinerario generato in itinerariCreati.json
+    func saveItinerarioCreato(_ nuovo: Itinerario) {
+        let fileManager = FileManager.default
+        let filename = "itinerariCreati.json"
+        guard let docURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            print("Impossibile trovare la document directory")
+            return
+        }
+        let fileURL = docURL.appendingPathComponent(filename)
+        var itinerari: [Itinerario] = []
+        // Prova a leggere quelli già presenti
+        if let data = try? Data(contentsOf: fileURL) {
+            if let decoded = try? JSONDecoder().decode([Itinerario].self, from: data) {
+                itinerari = decoded
+            }
+        } else if let bundleURL = Bundle.main.url(forResource: "itinerariCreati", withExtension: "json"),
+                  let bundleData = try? Data(contentsOf: bundleURL),
+                  let decoded = try? JSONDecoder().decode([Itinerario].self, from: bundleData) {
+            itinerari = decoded
+        }
+        itinerari.append(nuovo)
+        do {
+            let encoded = try JSONEncoder().encode(itinerari)
+            try encoded.write(to: fileURL, options: .atomic)
+            print("Itinerario salvato in \(fileURL)")
+        } catch {
+            print("Errore nel salvataggio di itinerariCreati.json: \(error)")
+        }
     }
     
     // Helpers per calcolare ore e minuti da durataScalo
