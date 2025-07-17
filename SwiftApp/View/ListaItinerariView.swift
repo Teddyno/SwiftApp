@@ -25,8 +25,13 @@ struct ListaItinerariView: View {
                                 filtrati=itinerari.filter{$0.citta.localizedCaseInsensitiveContains(text)}
                             }
                         }
+                        .padding()
+                        .background(
+                            LinearGradient(gradient: Gradient(colors: [.white, .mint.opacity(0.15)]), startPoint: .trailing, endPoint: .leading))
+                        .cornerRadius(15)
                 }
-                .padding(30)
+                .padding(.horizontal, 30)
+                .padding(.vertical,10)
                 if itinerari.isEmpty{
                     Text("Nessun itinerario salvato!")
                         .font(.headline)
