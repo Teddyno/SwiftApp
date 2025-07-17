@@ -11,43 +11,47 @@ import MapKit
 struct MapView: View {
     @Environment(\.dismiss) var dismiss
     var tappe: [Tappa] = []
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 41.9028, longitude: 12.4964),
-        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    @State private var cameraPosition: MapCameraPosition = .region(
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 41.9028, longitude: 12.4964),
+            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        )
     )
     
     var body: some View {
         ZStack(alignment: .top) {
             // Mappa con bordo arrotondato e ombra su device grandi
             GeometryReader { geo in
-                Map(coordinateRegion: $region, annotationItems: tappeWithCoords()) { tappa in
-                    MapAnnotation(coordinate: tappa.coordinate) {
-                        VStack(spacing: 0) {
-                            ZStack {
-                                Image(systemName: "mappin.circle.fill")
-                                    .font(.system(size: 36))
-                                    .foregroundColor(.mint)
-                                    .shadow(color: .mint.opacity(0.3), radius: 6, x: 0, y: 4)
-                                if let idx = tappeWithCoords().firstIndex(where: { $0.id == tappa.id }) {
-                                    Text("\(idx+1)")
-                                        .font(.caption2)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .offset(y: 2)
+                Map(position: $cameraPosition) {
+                    ForEach(tappeWithCoords()) { tappa in
+                        Annotation(tappa.nome, coordinate: tappa.coordinate) {
+                            VStack(spacing: 0) {
+                                ZStack {
+                                    Image(systemName: "mappin.circle.fill")
+                                        .font(.system(size: 36))
+                                        .foregroundColor(.mint)
+                                        .shadow(color: .mint.opacity(0.3), radius: 6, x: 0, y: 4)
+                                    if let idx = tappeWithCoords().firstIndex(where: { $0.id == tappa.id }) {
+                                        Text("\(idx+1)")
+                                            .font(.caption2)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.white)
+                                            .offset(y: 2)
+                                    }
                                 }
+                                Text(tappa.nome)
+                                    .font(.caption)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.primary)
+                                    .padding(.horizontal, 8)
+                                    .padding(.vertical, 4)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .fill(Color(.systemBackground).opacity(0.85))
+                                            .shadow(radius: 2)
+                                    )
+                                    .padding(.top, 2)
                             }
-                            Text(tappa.nome)
-                                .font(.caption)
-                                .fontWeight(.semibold)
-                                .foregroundColor(.primary)
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 4)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .fill(Color(.systemBackground).opacity(0.85))
-                                        .shadow(radius: 2)
-                                )
-                                .padding(.top, 2)
                         }
                     }
                 }
@@ -67,12 +71,14 @@ struct MapView: View {
                             .padding(.trailing, 18)
                             .padding(.top, 32)
                     }
+                    .padding(.trailing, 18)
+                    .padding(.top, 32)
                 }
             }
         }
         .onAppear {
             if let first = tappeWithCoords().first {
-                region.center = first.coordinate
+                cameraPosition = .region(MKCoordinateRegion(center: first.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)))
             }
         }
     }
