@@ -41,14 +41,14 @@ struct creaItinerarioView: View {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.mint)
                         TextField("città/aeroporto", text: $luogoScalo)
-                            .onChange(of: luogoScalo) { query in
-                                if query.isEmpty {
+                            .onChange(of: luogoScalo) { oldValue, newValue in
+                                if newValue.isEmpty {
                                     risultatiFiltrati = []
                                 } else {
                                     risultatiFiltrati = aeroporti.filter {
-                                        $0.city.localizedCaseInsensitiveContains(query) ||
-                                        $0.name.localizedCaseInsensitiveContains(query) ||
-                                        $0.iata.localizedCaseInsensitiveContains(query)
+                                        $0.city.localizedCaseInsensitiveContains(newValue) ||
+                                        $0.name.localizedCaseInsensitiveContains(newValue) ||
+                                        $0.iata.localizedCaseInsensitiveContains(newValue)
                                     }.prefix(5).map { $0 }
                                 }
                             }
