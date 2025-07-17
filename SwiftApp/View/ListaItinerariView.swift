@@ -31,15 +31,13 @@ struct ListaItinerariView: View {
                                 }
                             }
                         }
-                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                        .swipeActions(edge: .trailing) {
                             Button {
                                 togglePreferito(itinerario)
                             } label: {
                                 Label("Preferiti", systemImage: itinerario.preferito ? "star.fill" : "star")
                             }
                             .tint(.mint)
-                        }
-                        .swipeActions(edge: .trailing) {
                             Button(role: .destructive) {
                                 eliminaItinerario(itinerario)
                             } label: {
