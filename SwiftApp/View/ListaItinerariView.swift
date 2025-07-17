@@ -31,6 +31,10 @@ struct ListaItinerariView: View {
                     Text("Nessun itinerario salvato!")
                         .font(.headline)
                         .padding(50)
+                }else if filtrati.isEmpty{
+                    Text("Nessun itinerario trovato!")
+                        .font(.headline)
+                        .padding(50)
                 }
                 List {
                     ForEach($filtrati,id: \.id) { $itinerario in
