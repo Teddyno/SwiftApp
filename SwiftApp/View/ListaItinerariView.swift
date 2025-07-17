@@ -6,17 +6,34 @@ enum Categoria: String, Codable {
 
 struct ListaItinerariView: View {
     @Binding var itinerari: [Itinerario]
+    @State var filtrati:[Itinerario]=[]
+    @State var search=false
+    @State var text=""
     
     var body: some View {
         NavigationStack {
             VStack{
+                HStack{
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.mint)
+                        .font(.system(size: 20))
+                    TextField("Ricerca itinerario...",text:$text)
+                        .onChange(of: text){testo in
+                            if text.isEmpty{
+                                filtrati=itinerari
+                            }else{
+                                filtrati=itinerari.filter{$0.citta.localizedCaseInsensitiveContains(testo)}
+                            }
+                        }
+                }
+                .padding(30)
                 if itinerari.isEmpty{
                     Text("Nessun itinerario salvato!")
                         .font(.headline)
                         .padding(50)
                 }
                 List {
-                    ForEach($itinerari,id: \.id) { $itinerario in
+                    ForEach($filtrati,id: \.id) { $itinerario in
                         NavigationLink(destination: ItinerarioView(itinerario:$itinerario)) {
                             HStack {
                                 VStack(alignment: .leading) {
@@ -50,16 +67,9 @@ struct ListaItinerariView: View {
             .navigationTitle("Itinerari")
             .navigationBarTitleDisplayMode(.large)
             
-            .toolbar{
-                ToolbarItem(placement: .topBarTrailing){
-                    Button(action:{}){
-                        Image(systemName:"magnifyingglass")
-                            .foregroundColor(.mint)
-                    }
-                    .padding(30)
-                    .padding(.top, 90)
-                }
-            }
+        }
+        .onAppear(){
+            filtrati=itinerari
         }
     }
     
