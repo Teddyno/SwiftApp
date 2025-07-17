@@ -61,7 +61,7 @@ struct MapView: View {
                     Spacer()
                     Button(action: { dismiss() }) {
                         Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(.mint)
+                            .foregroundColor(.red)
                             .font(.system(size: 32, weight: .bold))
                             .shadow(radius: 2)
                             .padding(.trailing, 18)
