@@ -18,11 +18,11 @@ struct ListaItinerariView: View {
                         .foregroundColor(.mint)
                         .font(.system(size: 20))
                     TextField("Ricerca itinerario...",text:$text)
-                        .onChange(of: text){testo in
+                        .onChange(of: text){
                             if text.isEmpty{
                                 filtrati=itinerari
                             }else{
-                                filtrati=itinerari.filter{$0.citta.localizedCaseInsensitiveContains(testo)}
+                                filtrati=itinerari.filter{$0.citta.localizedCaseInsensitiveContains(text)}
                             }
                         }
                 }
