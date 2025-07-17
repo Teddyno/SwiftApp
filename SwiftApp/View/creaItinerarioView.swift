@@ -67,7 +67,9 @@ struct creaItinerarioView: View {
                     Text("Durata scalo")
                         .font(.headline)
                         .padding(.leading)
+                        .foregroundColor(.gray)
                     DatePicker("", selection: $durataScalo, displayedComponents: [.hourAndMinute])
+                        .colorMultiply(.black)
                 }
                 .padding()
                 .background(Color.white)
@@ -79,6 +81,7 @@ struct creaItinerarioView: View {
                 VStack {
                     Text("Scegli uno tra questi interessi")
                         .font(.headline)
+                        .foregroundColor(.black)
                     
                     LazyVGrid(columns: [GridItem(spacing: 15), GridItem()],
                               spacing: 15) {
@@ -103,7 +106,7 @@ struct creaItinerarioView: View {
                 .background(Color.white)
                 .cornerRadius(30)
                 .padding(.horizontal, 35)
-                .padding(.top, 50)
+                .padding(.top, 40)
                 
                 Spacer()
                 
@@ -157,6 +160,7 @@ struct creaItinerarioView: View {
             }
             .zIndex(1) // Assicura che sia sopra gli altri elementi
         }
+        .background(Color.white)
         .onAppear {
             aeroporti = caricaAeroporti()
         }
