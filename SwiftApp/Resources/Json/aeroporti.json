@@ -1,4 +1,3 @@
-
 [
   {
     "name": "Hartsfield–Jackson Atlanta International Airport",
@@ -119,5 +118,185 @@
     "city": "Istanbul",
     "iata": "IST",
     "country": "Turkey"
+  },
+  {
+    "name": "San Francisco International Airport",
+    "city": "San Francisco",
+    "iata": "SFO",
+    "country": "United States"
+  },
+  {
+    "name": "Miami International Airport",
+    "city": "Miami",
+    "iata": "MIA",
+    "country": "United States"
+  },
+  {
+    "name": "Denver International Airport",
+    "city": "Denver",
+    "iata": "DEN",
+    "country": "United States"
+  },
+  {
+    "name": "Seattle-Tacoma International Airport",
+    "city": "Seattle",
+    "iata": "SEA",
+    "country": "United States"
+  },
+  {
+    "name": "Zurich Airport",
+    "city": "Zurich",
+    "iata": "ZRH",
+    "country": "Switzerland"
+  },
+  {
+    "name": "Vienna International Airport",
+    "city": "Vienna",
+    "iata": "VIE",
+    "country": "Austria"
+  },
+  {
+    "name": "Doha Hamad International Airport",
+    "city": "Doha",
+    "iata": "DOH",
+    "country": "Qatar"
+  },
+  {
+    "name": "Bangkok Suvarnabhumi Airport",
+    "city": "Bangkok",
+    "iata": "BKK",
+    "country": "Thailand"
+  },
+  {
+    "name": "Kuala Lumpur International Airport",
+    "city": "Kuala Lumpur",
+    "iata": "KUL",
+    "country": "Malaysia"
+  },
+  {
+    "name": "New Delhi Indira Gandhi International Airport",
+    "city": "New Delhi",
+    "iata": "DEL",
+    "country": "India"
+  },
+  {
+    "name": "Mumbai Chhatrapati Shivaji Maharaj International Airport",
+    "city": "Mumbai",
+    "iata": "BOM",
+    "country": "India"
+  },
+  {
+    "name": "Cairo International Airport",
+    "city": "Cairo",
+    "iata": "CAI",
+    "country": "Egypt"
+  },
+  {
+    "name": "Johannesburg OR Tambo International Airport",
+    "city": "Johannesburg",
+    "iata": "JNB",
+    "country": "South Africa"
+  },
+  {
+    "name": "Mexico City International Airport",
+    "city": "Mexico City",
+    "iata": "MEX",
+    "country": "Mexico"
+  },
+  {
+    "name": "Buenos Aires Ministro Pistarini International Airport",
+    "city": "Buenos Aires",
+    "iata": "EZE",
+    "country": "Argentina"
+  },
+  {
+    "name": "Osaka Kansai International Airport",
+    "city": "Osaka",
+    "iata": "KIX",
+    "country": "Japan"
+  },
+  {
+    "name": "Brussels Airport",
+    "city": "Brussels",
+    "iata": "BRU",
+    "country": "Belgium"
+  },
+  {
+    "name": "Helsinki-Vantaa Airport",
+    "city": "Helsinki",
+    "iata": "HEL",
+    "country": "Finland"
+  },
+  {
+    "name": "Lisbon Humberto Delgado Airport",
+    "city": "Lisbon",
+    "iata": "LIS",
+    "country": "Portugal"
+  },
+  {
+    "name": "Oslo Gardermoen Airport",
+    "city": "Oslo",
+    "iata": "OSL",
+    "country": "Norway"
+  },
+  {
+    "name": "Venice Marco Polo Airport",
+    "city": "Venice",
+    "iata": "VCE",
+    "country": "Italy"
+  },
+  {
+    "name": "Naples International Airport",
+    "city": "Naples",
+    "iata": "NAP",
+    "country": "Italy"
+  },
+  {
+    "name": "Bologna Guglielmo Marconi Airport",
+    "city": "Bologna",
+    "iata": "BLQ",
+    "country": "Italy"
+  },
+  {
+    "name": "Florence Peretola Airport",
+    "city": "Florence",
+    "iata": "FLR",
+    "country": "Italy"
+  },
+  {
+    "name": "Catania–Fontanarossa Airport",
+    "city": "Catania",
+    "iata": "CTA",
+    "country": "Italy"
+  },
+  {
+    "name": "Palermo Falcone–Borsellino Airport",
+    "city": "Palermo",
+    "iata": "PMO",
+    "country": "Italy"
+  },
+  {
+    "name": "Turin Airport",
+    "city": "Turin",
+    "iata": "TRN",
+    "country": "Italy"
+  },
+  {
+    "name": "Verona Villafranca Airport",
+    "city": "Verona",
+    "iata": "VRN",
+    "country": "Italy"
+  },
+  {
+    "name": "Pisa International Airport",
+    "city": "Pisa",
+    "iata": "PSA",
+    "country": "Italy"
+  },
+  {
+    "name": "Bari Karol Wojtyła Airport",
+    "city": "Bari",
+    "iata": "BRI",
+    "country": "Italy"
   }
 ]
