@@ -140,6 +140,8 @@
 /* Begin XCBuildConfiguration section */
 		1F24534F2E17DA69003119A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 1F2453432E17DA67003119A6 /* SwiftApp */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -204,6 +206,8 @@
 		};
 		1F2453502E17DA69003119A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 1F2453432E17DA67003119A6 /* SwiftApp */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -266,7 +270,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 79283AJLC6;
+				DEVELOPMENT_TEAM = 95SXZJXR3Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftApp/Info.plist;
@@ -299,7 +303,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 79283AJLC6;
+				DEVELOPMENT_TEAM = 95SXZJXR3Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftApp/Info.plist;

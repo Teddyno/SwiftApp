@@ -298,5 +298,11 @@
     "city": "Bari",
     "iata": "BRI",
     "country": "Italy"
+  },
+  {
+    "name": "Barcelona–El Prat Airport",
+    "city": "Barcelona",
+    "iata": "BCN",
+    "country": "Spain"
   }
 ]

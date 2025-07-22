@@ -1,5 +1,9 @@
 import SwiftUI
 
+enum Categoria: String, Codable {
+    case cibo, monumenti, natura, shopping
+}
+
 struct Itinerario: Identifiable, Equatable, Codable {
     var id: UUID = UUID()
     var citta: String

@@ -1,9 +1,5 @@
 import SwiftUI
 
-enum Categoria: String, Codable {
-    case cibo, monumenti, natura, shopping
-}
-
 struct ListaItinerariView: View {
     @Binding var itinerari: [Itinerario]
     @State var filtrati:[Itinerario]=[]
