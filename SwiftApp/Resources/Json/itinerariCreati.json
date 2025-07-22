@@ -12,82 +12,102 @@
         "descr": "Icona di Parigi, con vista panoramica",
         "oraArrivo": "09:00",
         "foto": "eiffel.jpg",
-        "maps": "https://maps.app.goo.gl/eiffel"
+        "maps": "https://maps.app.goo.gl/eiffel",
+        "latitudine": 48.8584,
+        "longitudine": 2.2945
       },
       {
         "nome": "Museo del Louvre",
         "descr": "Famoso museo d'arte con la Gioconda",
         "oraArrivo": "10:30",
         "foto": "louvre.jpg",
-        "maps": "https://maps.app.goo.gl/louvre"
+        "maps": "https://maps.app.goo.gl/louvre",
+        "latitudine": 48.8606,
+        "longitudine": 2.3376
       },
       {
         "nome": "Cattedrale di Notre-Dame",
         "descr": "Capolavoro gotico sul fiume Senna",
         "oraArrivo": "12:30",
         "foto": "notre_dame.jpg",
-        "maps": "https://maps.app.goo.gl/notredame"
+        "maps": "https://maps.app.goo.gl/notredame",
+        "latitudine": 48.8530,
+        "longitudine": 2.3499
       },
       {
         "nome": "Montmartre",
         "descr": "Quartiere artistico con vista su Parigi",
         "oraArrivo": "15:00",
         "foto": "montmartre.jpg",
-        "maps": "https://maps.app.goo.gl/montmartre"
+        "maps": "https://maps.app.goo.gl/montmartre",
+        "latitudine": 48.8867,
+        "longitudine": 2.3431
       },
       {
         "nome": "Arco di Trionfo",
         "descr": "Monumento storico su Champs-Élysées",
         "oraArrivo": "17:00",
         "foto": "arco_trionfo.jpg",
-        "maps": "https://maps.app.goo.gl/arco"
+        "maps": "https://maps.app.goo.gl/arco",
+        "latitudine": 48.8738,
+        "longitudine": 2.2950
       }
     ]
   },
   {
-    "citta": "Dublino",
-    "aeroporto": "Dublin Airport",
-    "ore": 2,
-    "minuti": 15,
-    "categoria": "natura",
-    "preferito": true,
-    "tappe": [
-      {
-        "nome": "Phoenix Park",
-        "descr": "Uno dei parchi urbani più grandi d'Europa",
-        "oraArrivo": "09:30",
-        "foto": "phoenix_park.jpg",
-        "maps": "https://maps.app.goo.gl/phoenix"
-      },
-      {
-        "nome": "Trinity College",
-        "descr": "Università storica con la Long Room Library",
-        "oraArrivo": "11:00",
-        "foto": "trinity.jpg",
-        "maps": "https://maps.app.goo.gl/trinity"
-      },
-      {
-        "nome": "Guinness Storehouse",
-        "descr": "Museo della birra Guinness con degustazione",
-        "oraArrivo": "13:00",
-        "foto": "guinness.jpg",
-        "maps": "https://maps.app.goo.gl/guinness"
-      },
-      {
-        "nome": "St. Stephen's Green",
-        "descr": "Parco centrale perfetto per rilassarsi",
-        "oraArrivo": "15:00",
-        "foto": "stephens_green.jpg",
-        "maps": "https://maps.app.goo.gl/stephens"
-      },
-      {
-        "nome": "Temple Bar",
-        "descr": "Zona vivace con pub e musica live",
-        "oraArrivo": "17:00",
-        "foto": "temple_bar.jpg",
-        "maps": "https://maps.app.goo.gl/templebar"
-      }
-    ]
+      "citta": "Dublino",
+      "aeroporto": "Dublin Airport",
+      "ore": 2,
+      "minuti": 15,
+      "categoria": "natura",
+      "preferito": true,
+      "tappe": [
+          {
+              "nome": "Phoenix Park",
+              "descr": "Uno dei parchi urbani più grandi d'Europa",
+              "oraArrivo": "09:30",
+              "foto": "phoenix_park.jpg",
+              "maps": "https://maps.app.goo.gl/phoenix",
+              "latitudine": 53.3550,
+              "longitudine": -6.3290
+          },
+          {
+              "nome": "Trinity College",
+              "descr": "Università storica con la Long Room Library",
+              "oraArrivo": "11:00",
+              "foto": "trinity.jpg",
+              "maps": "https://maps.app.goo.gl/trinity",
+              "latitudine": 53.3438,
+              "longitudine": -6.2546
+          },
+          {
+              "nome": "Guinness Storehouse",
+              "descr": "Museo della birra Guinness con degustazione",
+              "oraArrivo": "13:00",
+              "foto": "guinness.jpg",
+              "maps": "https://maps.app.goo.gl/guinness",
+              "latitudine": 53.3419,
+              "longitudine": -6.2869
+          },
+          {
+              "nome": "St. Stephen's Green",
+              "descr": "Parco centrale perfetto per rilassarsi",
+              "oraArrivo": "15:00",
+              "foto": "stephens_green.jpg",
+              "maps": "https://maps.app.goo.gl/stephens",
+              "latitudine": 53.3372,
+              "longitudine": -6.2591
+          },
+          {
+              "nome": "Temple Bar",
+              "descr": "Zona vivace con pub e musica live",
+              "oraArrivo": "17:00",
+              "foto": "temple_bar.jpg",
+              "maps": "https://maps.app.goo.gl/templebar",
+              "latitudine": 53.3456,
+              "longitudine": -6.2645
+          }
+      ]
   },
   {
     "citta": "Barcellona",
@@ -102,35 +122,45 @@
         "descr": "Capolavoro di Gaudí ancora in costruzione",
         "oraArrivo": "09:00",
         "foto": "sagrada_familia",
-        "maps": "https://maps.apple.com/?q=Sagrada+Familia"
+        "maps": "https://maps.apple.com/?q=Sagrada+Familia",
+        "latitudine": 41.4036,
+        "longitudine": 2.1744
       },
       {
         "nome": "Parc Güell",
         "descr": "Parco colorato con architetture di Gaudí",
         "oraArrivo": "10:45",
         "foto": "guell.jpg",
-        "maps": "https://maps.app.goo.gl/guell"
+        "maps": "https://maps.app.goo.gl/guell",
+        "latitudine": 41.4145,
+        "longitudine": 2.1527
       },
       {
         "nome": "Mercato della Boqueria",
         "descr": "Mercato alimentare nel cuore della Rambla",
         "oraArrivo": "12:30",
         "foto": "boqueria.jpg",
-        "maps": "https://maps.app.goo.gl/boqueria"
+        "maps": "https://maps.app.goo.gl/boqueria",
+        "latitudine": 41.3826,
+        "longitudine": 2.1722
       },
       {
         "nome": "Barceloneta",
         "descr": "Spiaggia urbana ideale per relax e tapas",
         "oraArrivo": "15:00",
         "foto": "barceloneta",
-        "maps": "https://maps.apple.com/?q=Barceloneta"
+        "maps": "https://maps.apple.com/?q=Barceloneta",
+        "latitudine": 41.3786,
+        "longitudine": 2.1896
       },
       {
         "nome": "Casa Batlló",
         "descr": "Edificio modernista con facciata fantasiosa",
         "oraArrivo": "17:00",
         "foto": "batllo.jpg",
-        "maps": "https://maps.app.goo.gl/batllo"
+        "maps": "https://maps.app.goo.gl/batllo",
+        "latitudine": 41.3917,
+        "longitudine": 2.1649
       }
     ]
   },
@@ -147,35 +177,45 @@
         "descr": "Il più grande castello antico del mondo",
         "oraArrivo": "09:00",
         "foto": "castello_praga.jpg",
-        "maps": "https://maps.app.goo.gl/castellopraga"
+        "maps": "https://maps.app.goo.gl/castellopraga",
+        "latitudine": 50.0900,
+        "longitudine": 14.4008
       },
       {
         "nome": "Ponte Carlo",
         "descr": "Storico ponte pedonale sul fiume Moldava",
         "oraArrivo": "10:30",
         "foto": "ponte_carlo.jpg",
-        "maps": "https://maps.app.goo.gl/pontecarlo"
+        "maps": "https://maps.app.goo.gl/pontecarlo",
+        "latitudine": 50.0865,
+        "longitudine": 14.4114
       },
       {
         "nome": "Orologio Astronomico",
         "descr": "Antico orologio medievale nella piazza",
         "oraArrivo": "12:00",
         "foto": "orologio.jpg",
-        "maps": "https://maps.app.goo.gl/orologio"
+        "maps": "https://maps.app.goo.gl/orologio",
+        "latitudine": 50.0870,
+        "longitudine": 14.4208
       },
       {
         "nome": "Piazza della Città Vecchia",
         "descr": "Cuore pulsante della città con bar e artisti",
         "oraArrivo": "14:00",
         "foto": "piazza_vecchia.jpg",
-        "maps": "https://maps.app.goo.gl/piazzavecchia"
+        "maps": "https://maps.app.goo.gl/piazzavecchia",
+        "latitudine": 50.0878,
+        "longitudine": 14.4214
       },
       {
         "nome": "Casa Danzante",
         "descr": "Struttura moderna nota anche come Fred & Ginger",
         "oraArrivo": "16:30",
         "foto": "casa_danzante.jpg",
-        "maps": "https://maps.app.goo.gl/danzante"
+        "maps": "https://maps.app.goo.gl/danzante",
+        "latitudine": 50.0755,
+        "longitudine": 14.4140
       }
     ]
   },
@@ -192,35 +232,45 @@
         "descr": "Anfiteatro romano simbolo di Roma",
         "oraArrivo": "09:00",
         "foto": "colosseo.jpg",
-        "maps": "https://maps.app.goo.gl/colosseo"
+        "maps": "https://maps.app.goo.gl/colosseo",
+        "latitudine": 41.8902,
+        "longitudine": 12.4922
       },
       {
         "nome": "Fori Imperiali",
         "descr": "Resti archeologici del centro dell’antica Roma",
         "oraArrivo": "10:30",
         "foto": "fori.jpg",
-        "maps": "https://maps.app.goo.gl/fori"
+        "maps": "https://maps.app.goo.gl/fori",
+        "latitudine": 41.8931,
+        "longitudine": 12.4858
       },
       {
         "nome": "Piazza Navona",
         "descr": "Piazza barocca con fontane e artisti",
         "oraArrivo": "12:00",
         "foto": "navona.jpg",
-        "maps": "https://maps.app.goo.gl/navona"
+        "maps": "https://maps.app.goo.gl/navona",
+        "latitudine": 41.8992,
+        "longitudine": 12.4731
       },
       {
         "nome": "Pantheon",
         "descr": "Tempio romano trasformato in chiesa",
         "oraArrivo": "14:00",
         "foto": "pantheon.jpg",
-        "maps": "https://maps.app.goo.gl/pantheon"
+        "maps": "https://maps.app.goo.gl/pantheon",
+        "latitudine": 41.8986,
+        "longitudine": 12.4768
       },
       {
         "nome": "Fontana di Trevi",
         "descr": "Famosa fontana barocca, perfetta per una moneta",
         "oraArrivo": "15:30",
         "foto": "fontana_trevi.jpg",
-        "maps": "https://maps.app.goo.gl/trevi"
+        "maps": "https://maps.app.goo.gl/trevi",
+        "latitudine": 41.9009,
+        "longitudine": 12.4833
       }
     ]
   }
