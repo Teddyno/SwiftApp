@@ -72,7 +72,7 @@ struct AnteprimaItinerarioView: View {
             }
             if let info = dati.info {
                 ForEach(info.sorted(by: { $0.key < $1.key }), id: \.key) { k, v in
-                    if k != "volo" && k != "giornoAnno" && k != "compagnia" {
+                    if k != "volo" && k != "giornoAnno" && k != "compagnia" && k != "orario" {
                         Text("\(k.capitalized): \(v)")
                             .font(.footnote)
                             .foregroundColor(.gray)
