@@ -48,7 +48,7 @@ struct ListaItinerariView: View {
                                 }
                             }
                         }
-                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                             Button {
                                 togglePreferito(for: itinerario)
                             } label: {
