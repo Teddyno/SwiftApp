@@ -182,6 +182,11 @@ struct creaItinerarioView: View {
     
     func promptItinerario() {
         
+        guard let chiaveAPI = Bundle.main.infoDictionary?["GROQ_API_KEY"] as? String else {
+                print("❌ Chiave API non trovata.")
+                return
+        }
+        
         let preferenza = preferenzaSelezionata ?? "nessuna preferenza"
         let aeroporto = luogoScalo.isEmpty ? "[inserisci aeroporto]" : luogoScalo
         let ore = durataScaloOre()
@@ -234,7 +239,7 @@ struct creaItinerarioView: View {
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(chiaveAPI)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         let body: [String: Any] = [
