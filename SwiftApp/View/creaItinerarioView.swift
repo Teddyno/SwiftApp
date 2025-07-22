@@ -32,7 +32,7 @@ struct creaItinerarioView: View {
                 Image("sfondo")
                     .resizable()
                     .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 60))
+                    .clipShape(RoundedRectangle(cornerRadius: 50))
                     .ignoresSafeArea()
                 Spacer()
             }
