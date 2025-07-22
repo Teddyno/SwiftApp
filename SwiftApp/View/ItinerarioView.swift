@@ -181,28 +181,36 @@ struct ItinerarioView: View {
             descr: "La basilica iconica di Antoni Gaudí, capolavoro in costruzione dal 1882.",
             oraArrivo: "09:00",
             foto: "sagrada_familia",
-            maps: "https://maps.apple.com/?q=Sagrada+Familia"
+            maps: "https://maps.apple.com/?q=Sagrada+Familia",
+            latitudine: 0.0,
+            longitudine:0.0
         ),
         Tappa(
             nome: "Passeig de Gràcia",
             descr: "Elegante via dello shopping e dell'architettura modernista, con Casa Batlló e Casa Milà.",
             oraArrivo: "10:30",
             foto: "passeig_de_gracia",
-            maps: "https://maps.apple.com/?q=Passeig+de+Gracia"
+            maps: "https://maps.apple.com/?q=Passeig+de+Gracia",
+            latitudine: 0.0,
+            longitudine:0.0
         ),
         Tappa(
             nome: "Mercato della Boqueria",
             descr: "Mercato storico e colorato lungo La Rambla, ideale per uno spuntino.",
             oraArrivo: "12:00",
             foto: "mercato_boqueria",
-            maps: "https://maps.apple.com/?q=Mercado+de+La+Boqueria"
+            maps: "https://maps.apple.com/?q=Mercado+de+La+Boqueria",
+            latitudine: 0.0,
+            longitudine:0.0
         ),
         Tappa(
             nome: "Barceloneta",
             descr: "Passeggiata rilassante lungo la spiaggia più famosa di Barcellona.",
             oraArrivo: "13:30",
             foto: "barceloneta",
-            maps: "https://maps.apple.com/?q=Barceloneta"
+            maps: "https://maps.apple.com/?q=Barceloneta",
+            latitudine: 0.0,
+            longitudine:0.0
         )
     ])))
 }
