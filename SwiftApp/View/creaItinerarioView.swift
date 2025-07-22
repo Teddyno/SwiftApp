@@ -9,7 +9,7 @@ import SwiftUI
 
 struct creaItinerarioView: View {
     
-    @State var luogoScalo: String = ""
+    @EnvironmentObject var rootState: RootState
     @State var durataScalo: Date  = Calendar.current.date(
         bySettingHour: 0,
         minute: 0,
@@ -163,7 +163,86 @@ struct creaItinerarioView: View {
                     HStack {
                         Image(systemName: "clock")
                             .foregroundColor(.mint)
-                        Text("Durata scalo")
+                        TextField("città/aeroporto", text: $rootState.scaloPrecompilato)
+                            .onChange(of: rootState.scaloPrecompilato) { oldValue, newValue in
+                                if newValue.isEmpty {
+                                    risultatiFiltrati = []
+                                } else {
+                                    risultatiFiltrati = aeroporti.filter {
+                                        $0.city.localizedCaseInsensitiveContains(newValue) ||
+                                        $0.name.localizedCaseInsensitiveContains(newValue) ||
+                                        $0.iata.localizedCaseInsensitiveContains(newValue)
+                                    }.prefix(5).map { $0 }
+                                }
+                            }
+                    }
+                    .padding(20)
+                    .background(Color.white)
+                    .cornerRadius(16)
+                }
+                .padding(.horizontal, 35)
+                .padding(.top, 10)
+                
+                // Durata scalo
+                HStack {
+                    Image(systemName: "clock")
+                        .foregroundColor(.mint)
+                    Text("Durata scalo")
+                        .font(.headline)
+                        .padding(.leading)
+                        .foregroundColor(.gray)
+                    DatePicker("", selection: $durataScalo, displayedComponents: [.hourAndMinute])
+                        .colorMultiply(.black)
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(16)
+                .padding(.horizontal, 35)
+                .padding(.top, 10)
+                
+                // Preferenze
+                VStack {
+                    Text("Scegli uno tra questi interessi")
+                        .font(.headline)
+                        .foregroundColor(.black)
+                    
+                    LazyVGrid(columns: [GridItem(spacing: 15), GridItem()],
+                              spacing: 15) {
+                        ForEach(preferenze, id: \.self) { interest in
+                            Button(action: {
+                                preferenzaSelezionata = interest.lowercased()
+                            }) {
+                                Text(interest)
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .padding(.top, 15)
+                                    .padding(.bottom, 15)
+                                    .background(preferenzaSelezionata == interest.lowercased() ? Color.mint : Color.gray.opacity(0.2))
+                                    .foregroundColor(preferenzaSelezionata == interest.lowercased() ? .white : .gray)
+                                    .cornerRadius(12)
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(30)
+                .padding(.horizontal, 35)
+                .padding(.top, 40)
+                
+                Spacer()
+                
+                Button(action: {
+                    promptItinerario() // Azione per generare itinerario
+                }) {
+                    HStack {
+                        if isLoading {
+                            ProgressView()
+                                .scaleEffect(0.8)
+                                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        }
+                        Text(isLoading ? "Generando..." : "Genera itinerario")
                             .font(.headline)
                             .padding(.leading)
                             .foregroundColor(.black)
@@ -171,6 +250,37 @@ struct creaItinerarioView: View {
                             .colorMultiply(.black)
                     }
                     .padding()
+                    .background(isLoading ? Color.gray : Color.mint)
+                    .cornerRadius(20)
+                    .shadow(color: .gray.opacity(0.4), radius: 5, x: 0, y: 4)
+                }
+                .disabled(isLoading)
+                .padding(.horizontal, 35)
+                .padding(.bottom, 50)
+            }
+            .padding(.top, 90)
+            
+            // Lista suggerimenti posizionata in modo assoluto
+            VStack {
+                if !risultatiFiltrati.isEmpty {
+                    VStack(alignment: .leading, spacing: 0) {
+                        ForEach(risultatiFiltrati) { aeroporto in
+                            Button(action: {
+                                rootState.scaloPrecompilato = aeroporto.displayName
+                                risultatiFiltrati = []
+                                hideKeyboard()
+                            }) {
+                                Text(aeroporto.displayName)
+                                    .padding()
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .background(Color.white)
+                                    .foregroundColor(.black)
+                            }
+                            if aeroporto.id != risultatiFiltrati.last?.id {
+                                Divider()
+                            }
+                        }
+                    }
                     .background(Color.white)
                     .cornerRadius(16)
                     .padding(.horizontal, 35)
@@ -207,7 +317,7 @@ struct creaItinerarioView: View {
         }
         
         let preferenza = preferenzaSelezionata ?? "nessuna preferenza"
-        let aeroporto = luogoScalo.isEmpty ? "[inserisci aeroporto]" : luogoScalo
+        let aeroporto = rootState.scaloPrecompilato.isEmpty ? "[inserisci aeroporto]" : rootState.scaloPrecompilato
         let ore = durataScaloOre()
         let minuti = durataScaloMinuti()
 

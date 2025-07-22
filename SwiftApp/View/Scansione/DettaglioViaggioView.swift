@@ -6,12 +6,25 @@
 // - Include una preview SwiftUI e componenti riutilizzabili per la timeline
 
 import SwiftUI
+import Foundation
 
 struct DettaglioViaggioView: View {
     let viaggio: Viaggio
+    @EnvironmentObject var rootState: RootState
+    @Environment(\.presentationMode) var presentationMode
     private var estrattoPartenza: ItinerarioEstratto { ItinerarioEstratto.parse(from: viaggio.partenza) }
     private var estrattoDest: ItinerarioEstratto { ItinerarioEstratto.parse(from: viaggio.destinazione) }
     private var scalo: String { viaggio.scalo }
+    private static let aeroporti: [Aeroporto] = caricaAeroporti()
+    
+    private func nomeAeroporto(iata: String?) -> String {
+        guard let iata = iata else { return "-" }
+        return Self.aeroporti.first(where: { $0.iata.uppercased() == iata.uppercased() })?.displayName ?? iata
+    }
+    private func cittaAeroporto(iata: String?) -> String? {
+        guard let iata = iata else { return nil }
+        return Self.aeroporti.first(where: { $0.iata.uppercased() == iata.uppercased() })?.city
+    }
     var body: some View {
         ZStack {
             Color.white.ignoresSafeArea()
@@ -26,7 +39,7 @@ struct DettaglioViaggioView: View {
                 VStack(spacing: 0) {
                     TimelineStepCard(
                         title: "Partenza",
-                        code: estrattoPartenza.partenza ?? "-",
+                        code: nomeAeroporto(iata: estrattoPartenza.partenza),
                         time: estrattoPartenza.info?["orario"],
                         icon: "airplane.departure",
                         color: .mint
@@ -34,7 +47,7 @@ struct DettaglioViaggioView: View {
                     TimelineConnector()
                     TimelineStepCard(
                         title: "Scalo",
-                        code: (!scalo.isEmpty && scalo != "Scalo") ? scalo : "-",
+                        code: (!scalo.isEmpty && scalo != "Scalo") ? nomeAeroporto(iata: scalo) : "-",
                         time: nil,
                         icon: "arrow.triangle.branch",
                         color: .orange
@@ -42,7 +55,7 @@ struct DettaglioViaggioView: View {
                     TimelineConnector()
                     TimelineStepCard(
                         title: "Destinazione",
-                        code: estrattoDest.destinazione ?? estrattoPartenza.destinazione ?? "-",
+                        code: nomeAeroporto(iata: estrattoDest.destinazione ?? estrattoPartenza.destinazione),
                         time: estrattoDest.info?["orario"],
                         icon: "flag.checkered",
                         color: .blue
@@ -64,7 +77,15 @@ struct DettaglioViaggioView: View {
                     .padding(.top, 32)
                 }
                 Spacer()
-                Button(action: {}, label: {
+                Button(action: {
+                    if let citta = cittaAeroporto(iata: scalo) {
+                        rootState.scaloPrecompilato = citta
+                    } else {
+                        rootState.scaloPrecompilato = scalo
+                    }
+                    rootState.selectedTab = 1
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
                     Text("Genera itinerario")
                         .font(.headline)
                         .foregroundColor(.white)
@@ -73,7 +94,7 @@ struct DettaglioViaggioView: View {
                         .background(Color.mint)
                         .cornerRadius(20)
                 })
-                .disabled(true)
+                .disabled(false)
                 .padding(.bottom, 32)
             }
         }

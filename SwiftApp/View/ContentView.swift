@@ -8,12 +8,17 @@
 import SwiftUI
 import CoreData
 
+class RootState: ObservableObject {
+    @Published var selectedTab: Int = 1
+    @Published var scaloPrecompilato: String = ""
+}
+
 struct ContentView: View {
     
     @State private var selectedTab: Int = 1
     
     var body: some View {
-        TabView(selection: $selectedTab) {
+        TabView(selection: $rootState.selectedTab) {
             ScansioneView()
                 .tabItem {
                     Image(systemName: "qrcode")

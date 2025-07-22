@@ -57,8 +57,10 @@ struct ScansioneView: View {
                     ForEach(viaggi) { viaggio in
                         Button(action: { viaggioDaMostrare = viaggio }) {
                             makeViaggioRow(for: viaggio)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .contentShape(Rectangle())
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.plain)
                         .swipeActions(edge: .trailing) {
                             Button(role: .destructive) {
                                 if let idx = viaggi.firstIndex(where: { $0.id == viaggio.id }) {
@@ -195,14 +197,17 @@ struct ScansioneView: View {
         )
     }
 
-    func riconosciCodiceDaImmagine(image: UIImage, isPrimo: Bool) {
-        guard let cgImage = image.cgImage else { return }
-        let request = VNDetectBarcodesRequest { request, _ in
+    func riconosciCodiceDaImmagine(image: UIImage, isPrimo: Bool, completion: ((Bool) -> Void)? = nil) {
+        guard let cgImage = image.cgImage else { completion?(false); return }
+        let request = VNDetectBarcodesRequest { request, error in
             if let results = request.results as? [VNBarcodeObservation], let first = results.first, let payload = first.payloadStringValue {
                 DispatchQueue.main.async {
                     anteprimaDati = ItinerarioEstratto.parse(from: payload)
                     anteprimaIndex = isPrimo ? 1 : 2
+                    completion?(true)
                 }
+            } else {
+                completion?(false)
             }
         }
         let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])

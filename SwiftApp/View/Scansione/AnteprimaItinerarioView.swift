@@ -6,11 +6,17 @@
 
 
 import SwiftUI
+import Foundation
 
 struct AnteprimaItinerarioView: View {
     let dati: ItinerarioEstratto
     let conferma: () -> Void
     @State private var copied = false
+    private static let aeroporti: [Aeroporto] = caricaAeroporti()
+    private func nomeAeroporto(iata: String?) -> String {
+        guard let iata = iata else { return "-" }
+        return Self.aeroporti.first(where: { $0.iata.uppercased() == iata.uppercased() })?.displayName ?? iata
+    }
     var body: some View {
         VStack(spacing: 20) {
             Text("Anteprima biglietto")
@@ -62,10 +68,10 @@ struct AnteprimaItinerarioView: View {
                 }
             }
             if let p = dati.partenza {
-                Text("Partenza: \(p)")
+                Text("Partenza: \(nomeAeroporto(iata: p))")
             }
             if let d = dati.destinazione {
-                Text("Destinazione: \(d)")
+                Text("Destinazione: \(nomeAeroporto(iata: d))")
             }
             if let info = dati.info {
                 ForEach(info.sorted(by: { $0.key < $1.key }), id: \.key) { k, v in
