@@ -120,8 +120,8 @@ struct ItinerarioView: View {
                                          VStack(spacing: 12) {
                                              Image("\(tappa.foto)")
                                                  .resizable()
-                                                 .scaledToFit()
-                                                 .frame(maxWidth: 320, maxHeight: 180)
+                                                 .scaledToFill()
+                                                 .frame(maxWidth: 900, maxHeight: 600)
                                                  .cornerRadius(16)
                                              let url: URL = {
                                                  func appleMapsURL(from original: String, nome: String, citta: String?) -> URL {
@@ -144,7 +144,6 @@ struct ItinerarioView: View {
                                          .background(Color(.systemBackground).opacity(0.95))
                                          .cornerRadius(20)
                                          .shadow(radius: 8)
-                                         .frame(maxWidth: 350)
                                          Spacer()
                                      }
                                 }
