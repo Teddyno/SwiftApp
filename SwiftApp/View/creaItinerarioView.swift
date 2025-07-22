@@ -346,29 +346,34 @@ struct creaItinerarioView: View {
     func saveItinerarioCreato(_ nuovo: Itinerario) {
         let fileManager = FileManager.default
         let filename = "itinerariCreati.json"
+        
         guard let docURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            print("Impossibile trovare la document directory")
+            print("❌ Impossibile trovare la document directory")
             return
         }
+        
         let fileURL = docURL.appendingPathComponent(filename)
         var itinerari: [Itinerario] = []
-        // Prova a leggere quelli già presenti
-        if let data = try? Data(contentsOf: fileURL) {
-            if let decoded = try? JSONDecoder().decode([Itinerario].self, from: data) {
-                itinerari = decoded
+
+        // Se il file esiste, carica gli itinerari esistenti
+        if fileManager.fileExists(atPath: fileURL.path) {
+            do {
+                let data = try Data(contentsOf: fileURL)
+                itinerari = try JSONDecoder().decode([Itinerario].self, from: data)
+            } catch {
+                print("⚠️ Errore durante la lettura del file esistente: \(error)")
             }
-        } else if let bundleURL = Bundle.main.url(forResource: "itinerariCreati", withExtension: "json"),
-                  let bundleData = try? Data(contentsOf: bundleURL),
-                  let decoded = try? JSONDecoder().decode([Itinerario].self, from: bundleData) {
-            itinerari = decoded
         }
+
+        // Aggiunge il nuovo itinerario e salva
         itinerari.append(nuovo)
+        
         do {
             let encoded = try JSONEncoder().encode(itinerari)
-            try encoded.write(to: fileURL, options: .atomic)
-            print("Itinerario salvato in \(fileURL)")
+            try encoded.write(to: fileURL, options: [.atomic, .completeFileProtection])
+            print("✅ Itinerario salvato in \(fileURL)")
         } catch {
-            print("Errore nel salvataggio di itinerariCreati.json: \(error)")
+            print("❌ Errore nel salvataggio di \(filename): \(error)")
         }
     }
     
