@@ -8,33 +8,49 @@
 import SwiftUI
 import AVFoundation
 import Foundation
+import PhotosUI
+import Vision
 
 struct ScansioneView: View {
     @State private var viaggi: [Viaggio] = []
     @State private var primoBiglietto: String? = nil
     @State private var mostraScannerPrimo = false
     @State private var mostraScannerSecondo = false
-    @State private var viaggioDaMostrare: Viaggio? = nil
+    @State private var mostraActionSheetPrimo = false
+    @State private var mostraActionSheetSecondo = false
+    @State private var mostraImagePicker = false
+    @State private var imagePickerForPrimo = false
+    @State private var selectedImage: UIImage? = nil
     @State private var anteprimaDati: ItinerarioEstratto? = nil
     @State private var anteprimaIndex: Int? = nil
     @State private var pendingSecondoBiglietto: String? = nil
+    @State private var viaggioDaMostrare: Viaggio? = nil
     
+    // Viaggi di esempio
+    let viaggiEsempio: [Viaggio] = [
+        Viaggio(
+            partenza: "M1ROSSI/MARIO  AZ123FCONAPJU4274 355 3C  532  10A2585752900",
+            destinazione: "M1ROSSI/MARIO  AZ123NAPOTPJU4274 355 3C  532  10A2585752900",
+            scalo: "NAP",
+            itinerario: "FCO → OTP"
+        ),
+        Viaggio(
+            partenza: "M1BIANCHI/LUCA  LH456MXPFRAJU4274 355 3C  532  10A2585752900",
+            destinazione: "M1BIANCHI/LUCA  LH456FRABCNJU4274 355 3C  532  10A2585752900",
+            scalo: "FRA",
+            itinerario: "MXP → BCN"
+        )
+    ]
     var body: some View {
+        NavigationStack {
         VStack(alignment: .leading, spacing: 0) {
-            Text("Scan biglietti")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.top, 24)
-                .padding(.horizontal)
-            Divider()
-                .padding(.bottom, 16)
             HStack(spacing: 32) {
                 VStack {
                     Text("Scansiona il\nprimo biglietto")
                         .multilineTextAlignment(.center)
                         .font(.body)
                         .padding(.bottom, 8)
-                    Button(action: { mostraScannerPrimo = true }) {
+                        Button(action: { mostraActionSheetPrimo = true }) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 24)
                                 .fill(Color(.systemGray6))
@@ -43,8 +59,8 @@ struct ScansioneView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 72, height: 72)
-                                .foregroundColor(primoBiglietto == nil ? .black : .mint)
-                        }
+                                    .foregroundColor(.mint)
+                            }
                     }
                 }
                 VStack {
@@ -52,7 +68,7 @@ struct ScansioneView: View {
                         .multilineTextAlignment(.center)
                         .font(.body)
                         .padding(.bottom, 8)
-                    Button(action: { mostraScannerSecondo = true }) {
+                        Button(action: { mostraActionSheetSecondo = true }) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 24)
                                 .fill(Color(.systemGray6))
@@ -61,10 +77,10 @@ struct ScansioneView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 72, height: 72)
-                                .foregroundColor(primoBiglietto != nil ? .black : .gray)
+                                    .foregroundColor(primoBiglietto != nil ? .mint : .gray)
+                            }
                         }
-                    }
-                    .disabled(primoBiglietto == nil)
+                        .disabled(primoBiglietto == nil)
                 }
             }
             .frame(maxWidth: .infinity)
@@ -73,54 +89,82 @@ struct ScansioneView: View {
             Text("Viaggi scansionati in precedenza")
                 .font(.title3)
                 .fontWeight(.medium)
-                .padding(.horizontal)
-                .padding(.bottom, 8)
+                    .padding(.horizontal, 20)
+                    .padding(.top, 8)
+                    .padding(.bottom, 4)
             List {
                 ForEach(viaggi) { viaggio in
+                        Button(action: { viaggioDaMostrare = viaggio }) {
                     HStack {
-                        let estratto = ItinerarioEstratto.parse(from: viaggio.partenza)
-                        let estrattoDest = ItinerarioEstratto.parse(from: viaggio.destinazione)
                         VStack(alignment: .leading) {
-                            if let passeggero = estratto.passeggero {
-                                Text(passeggero)
-                                    .fontWeight(.semibold)
-                            }
-                            HStack(spacing: 8) {
-                                if let partenza = estratto.partenza {
-                                    Text(partenza)
-                                        .foregroundColor(.mint)
-                                }
-                                Image(systemName: "arrow.right")
-                                    .font(.caption)
-                                    .foregroundColor(.gray)
-                                if let destinazione = estrattoDest.destinazione ?? estratto.destinazione {
-                                    Text(destinazione)
-                                        .foregroundColor(.mint)
-                                }
-                                if let orario = estratto.info?["orario"], !orario.isEmpty {
-                                    Text("\(orario)")
-                                        .font(.caption)
+                                    let estratto = ItinerarioEstratto.parse(from: viaggio.partenza)
+                                    let estrattoDest = ItinerarioEstratto.parse(from: viaggio.destinazione)
+                                    // Titolo principale: passeggero o tratta
+                                    if let passeggero = estratto.passeggero {
+                                        Text(passeggero)
+                                    } else {
+                                        Text((estratto.partenza ?? "-") + " → " + (estrattoDest.destinazione ?? estratto.destinazione ?? "-"))
+                                    }
+                                    // Sottotitolo: categoria o info
+                                    Text(viaggio.itinerario)
                                         .foregroundColor(.gray)
+                                .font(.subheadline)
                                 }
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                .foregroundColor(.gray)
                             }
+                            .padding(.vertical, 4)
                         }
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                            .onTapGesture { viaggioDaMostrare = viaggio }
-                    }
-                    .swipeActions(edge: .trailing) {
-                        Button(role: .destructive) {
-                            if let idx = viaggi.firstIndex(where: { $0.id == viaggio.id }) {
-                                viaggi.remove(at: idx)
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                if let idx = viaggi.firstIndex(where: { $0.id == viaggio.id }) {
+                                    viaggi.remove(at: idx)
+                                }
+                            } label: {
+                                Label("Elimina", systemImage: "trash")
                             }
-                        } label: {
-                            Label("Elimina", systemImage: "trash")
                         }
                     }
                 }
+                .listStyle(.plain)
+                .padding(.horizontal, 12)
+                .padding(.bottom, 8)
             }
-            .listStyle(.plain)
+            .navigationTitle("Scansione")
+            .navigationBarTitleDisplayMode(.large)
+        }
+        .onAppear {
+            if viaggi.isEmpty {
+                viaggi = viaggiEsempio
+            }
+        }
+        // ActionSheet per il primo biglietto
+        .confirmationDialog("Scegli sorgente", isPresented: $mostraActionSheetPrimo, titleVisibility: .visible) {
+            Button("Fotocamera") { mostraScannerPrimo = true }
+            Button("File") {
+                imagePickerForPrimo = true
+                mostraImagePicker = true
+            }
+            Button("Annulla", role: .cancel) {}
+        }
+        // ActionSheet per il secondo biglietto
+        .confirmationDialog("Scegli sorgente", isPresented: $mostraActionSheetSecondo, titleVisibility: .visible) {
+            Button("Fotocamera") { mostraScannerSecondo = true }
+            Button("File") {
+                imagePickerForPrimo = false
+                mostraImagePicker = true
+            }
+            Button("Annulla", role: .cancel) {}
+        }
+        // ImagePicker
+        .sheet(isPresented: $mostraImagePicker, onDismiss: {
+            if let image = selectedImage {
+                riconosciCodiceDaImmagine(image: image, isPrimo: imagePickerForPrimo)
+                selectedImage = nil
+            }
+        }) {
+            ImagePicker(image: $selectedImage)
         }
         .sheet(isPresented: $mostraScannerPrimo) {
             QRCodeScannerView { result in
@@ -160,10 +204,31 @@ struct ScansioneView: View {
             let primoEstratto = ItinerarioEstratto.parse(from: partenzaRaw)
             let secondoEstratto = ItinerarioEstratto.parse(from: secondoRaw)
             let scalo = primoEstratto.destinazione ?? "Scalo"
-            let viaggio = Viaggio(partenza: partenzaRaw, destinazione: secondoRaw, scalo: scalo)
+            let itinerarioString = (primoEstratto.partenza ?? "-") + " → " + (secondoEstratto.destinazione ?? primoEstratto.destinazione ?? "-")
+            let viaggio = Viaggio(partenza: partenzaRaw, destinazione: secondoRaw, scalo: scalo, itinerario: itinerarioString)
             viaggi.append(viaggio)
             primoBiglietto = nil
             pendingSecondoBiglietto = nil
+            viaggioDaMostrare = viaggio
+        }
+    }
+    // Funzione per riconoscere codice da immagine
+    func riconosciCodiceDaImmagine(image: UIImage, isPrimo: Bool) {
+        guard let cgImage = image.cgImage else { return }
+        let request = VNDetectBarcodesRequest { request, error in
+            if let results = request.results as? [VNBarcodeObservation], let first = results.first, let payload = first.payloadStringValue {
+                DispatchQueue.main.async {
+                    anteprimaDati = ItinerarioEstratto.parse(from: payload)
+                    anteprimaIndex = isPrimo ? 1 : 2
+                }
+            } else {
+                // Nessun codice trovato
+                // Potresti mostrare un alert
+            }
+        }
+        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+        DispatchQueue.global(qos: .userInitiated).async {
+            try? handler.perform([request])
         }
     }
 }
@@ -221,27 +286,27 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         // Tutta la configurazione della sessione su thread in background
         DispatchQueue.global(qos: .userInitiated).async {
             self.captureSession = AVCaptureSession()
-            guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
+        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
                 DispatchQueue.main.async { self.delegate?.didFail() }
                 return
-            }
-            let videoInput: AVCaptureDeviceInput
-            do {
-                videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
-            } catch {
+        }
+        let videoInput: AVCaptureDeviceInput
+        do {
+            videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
+        } catch {
                 DispatchQueue.main.async { self.delegate?.didFail() }
                 return
-            }
+        }
             if self.captureSession.canAddInput(videoInput) {
                 self.captureSession.addInput(videoInput)
-            } else {
+        } else {
                 DispatchQueue.main.async { self.delegate?.didFail() }
                 return
-            }
-            let metadataOutput = AVCaptureMetadataOutput()
+        }
+        let metadataOutput = AVCaptureMetadataOutput()
             if self.captureSession.canAddOutput(metadataOutput) {
                 self.captureSession.addOutput(metadataOutput)
-                metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
                 metadataOutput.metadataObjectTypes = [
                     .qr,
                     .pdf417,
@@ -255,7 +320,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                     .itf14,
                     .dataMatrix
                 ]
-            } else {
+        } else {
                 DispatchQueue.main.async { self.delegate?.didFail() }
                 return
             }
@@ -291,84 +356,80 @@ struct DettaglioViaggioView: View {
         let estrattoPartenza = ItinerarioEstratto.parse(from: viaggio.partenza)
         let estrattoDest = ItinerarioEstratto.parse(from: viaggio.destinazione)
         let scalo = viaggio.scalo
-        VStack(spacing: 0) {
-            Text("Dettaglio Viaggio")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.top, 24)
-            Spacer().frame(height: 12)
-            // Timeline verticale
-            VStack(alignment: .center, spacing: 0) {
-                TimelineStepView(
-                    title: "Partenza",
-                    code: estrattoPartenza.partenza ?? "-",
-                    time: estrattoPartenza.info?["orario"],
-                    icon: "airplane.departure",
-                    color: .mint,
-                    subtitle: estrattoPartenza.info?["volo"],
-                    extra: estrattoPartenza.info?["compagnia"]
-                )
-                TimelineConnector()
-                TimelineStepView(
-                    title: "Scalo",
-                    code: (!scalo.isEmpty && scalo != "Scalo") ? scalo : "-",
-                    time: nil,
-                    icon: "arrow.triangle.branch",
-                    color: .orange,
-                    subtitle: nil,
-                    extra: nil
-                )
-                TimelineConnector()
-                TimelineStepView(
-                    title: "Destinazione",
-                    code: estrattoDest.destinazione ?? estrattoPartenza.destinazione ?? "-",
-                    time: estrattoDest.info?["orario"],
-                    icon: "flag.checkered",
-                    color: .blue,
-                    subtitle: estrattoDest.info?["volo"],
-                    extra: estrattoDest.info?["compagnia"]
-                )
-            }
-            .padding(.vertical, 16)
-            // Nome passeggero sotto la timeline
-            if let passeggero = estrattoPartenza.passeggero {
-                HStack(spacing: 8) {
-                    Image(systemName: "person.fill")
-                        .foregroundColor(.mint)
-                    Text(passeggero)
-                        .font(.headline)
-                        .foregroundColor(.primary)
+        ZStack {
+            Color.white.ignoresSafeArea()
+            VStack(spacing: 0) {
+                Text("Dettaglio Viaggio")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.top, 32)
+                    .padding(.bottom, 12)
+                    .frame(maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                VStack(spacing: 0) {
+                    TimelineStepCard(
+                        title: "Partenza",
+                        code: estrattoPartenza.partenza ?? "-",
+                        time: estrattoPartenza.info?["orario"],
+                        icon: "airplane.departure",
+                        color: .mint
+                    )
+                    TimelineConnector()
+                    TimelineStepCard(
+                        title: "Scalo",
+                        code: (!scalo.isEmpty && scalo != "Scalo") ? scalo : "-",
+                        time: nil,
+                        icon: "arrow.triangle.branch",
+                        color: .orange
+                    )
+                    TimelineConnector()
+                    TimelineStepCard(
+                        title: "Destinazione",
+                        code: estrattoDest.destinazione ?? estrattoPartenza.destinazione ?? "-",
+                        time: estrattoDest.info?["orario"],
+                        icon: "flag.checkered",
+                        color: .blue
+                    )
                 }
-                .padding(.top, 16)
+                .padding(.horizontal, 12)
+                .padding(.top, 8)
+                if let passeggero = estrattoPartenza.passeggero {
+                    HStack(spacing: 8) {
+                        Image(systemName: "person.fill")
+                            .foregroundColor(.mint)
+                        Text(passeggero)
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(.primary)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 32)
+                }
+                Spacer()
+                Button(action: {}, label: {
+                    Text("Genera itinerario")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding(.vertical, 14)
+                        .padding(.horizontal, 40)
+                        .background(Color.mint)
+                        .cornerRadius(20)
+                })
+                .disabled(true)
+                .padding(.bottom, 32)
             }
-            Spacer()
-            Button(action: {}, label: {
-                Text("Genera itinerario")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding(.vertical, 14)
-                    .padding(.horizontal, 40)
-                    .background(Color.mint)
-                    .cornerRadius(20)
-                    .opacity(0.7)
-            })
-            .disabled(true)
-            .padding(.top, 24)
-            Spacer()
         }
-        .padding()
     }
 }
 
-// Timeline step view arricchita
-struct TimelineStepView: View {
+// Card orizzontale per la timeline
+struct TimelineStepCard: View {
     let title: String
     let code: String
     let time: String?
     let icon: String
     let color: Color
-    let subtitle: String?
-    let extra: String?
     var body: some View {
         HStack(alignment: .center, spacing: 16) {
             ZStack {
@@ -387,27 +448,7 @@ struct TimelineStepView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundColor(color)
-                if let subtitle = subtitle, !subtitle.isEmpty {
-                    HStack(spacing: 4) {
-                        Image(systemName: "number")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                        Text("Volo: \(subtitle)")
-                            .font(.footnote)
-                            .foregroundColor(.gray)
-                    }
-                }
-                if let extra = extra, !extra.isEmpty {
-                    HStack(spacing: 4) {
-                        Image(systemName: "airplane")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                        Text("Compagnia: \(extra)")
-                            .font(.footnote)
-                            .foregroundColor(.gray)
-                    }
-                }
-                if let time = time, !time.isEmpty {
+                if let time = time {
                     HStack(spacing: 4) {
                         Image(systemName: "clock")
                             .font(.caption)
@@ -420,11 +461,10 @@ struct TimelineStepView: View {
             }
             Spacer()
         }
-        .padding(.vertical, 14)
+        .padding()
         .background(Color(.systemGray6))
-        .cornerRadius(18)
-        .shadow(color: color.opacity(0.08), radius: 4, x: 0, y: 2)
-        .padding(.horizontal, 8)
+        .cornerRadius(24)
+        .padding(.vertical, 10)
     }
 }
 
@@ -662,8 +702,8 @@ struct AnteprimaItinerarioView: View {
                 ForEach(info.sorted(by: { $0.key < $1.key }), id: \.key) { k, v in
                     if k != "volo" && k != "giornoAnno" && k != "compagnia" {
                         Text("\(k.capitalized): \(v)")
-                            .font(.footnote)
-                            .foregroundColor(.gray)
+                .font(.footnote)
+                .foregroundColor(.gray)
                     }
                 }
             }
@@ -679,6 +719,32 @@ struct AnteprimaItinerarioView: View {
         .padding()
         .onAppear {
             print("[DEBUG] Testo grezzo scansionato:\n\(dati.raw)")
+        }
+    }
+}
+
+// ImagePicker UIKit wrapper
+struct ImagePicker: UIViewControllerRepresentable {
+    @Binding var image: UIImage?
+    func makeCoordinator() -> Coordinator { Coordinator(self) }
+    func makeUIViewController(context: Context) -> UIImagePickerController {
+        let picker = UIImagePickerController()
+        picker.delegate = context.coordinator
+        picker.sourceType = .photoLibrary
+        return picker
+    }
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        let parent: ImagePicker
+        init(_ parent: ImagePicker) { self.parent = parent }
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let image = info[.originalImage] as? UIImage {
+                parent.image = image
+            }
+            picker.dismiss(animated: true)
+        }
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true)
         }
     }
 }
