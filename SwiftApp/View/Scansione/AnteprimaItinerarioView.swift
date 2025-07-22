@@ -57,9 +57,6 @@ struct AnteprimaItinerarioView: View {
                 Text("Compagnia: \(c)")
             }
             if let info = dati.info {
-                if let orario = info["orario"], !orario.isEmpty {
-                    Text("Orario: \(orario)")
-                }
                 if let volo = info["volo"], !volo.isEmpty {
                     Text("Volo: \(volo)")
                 }

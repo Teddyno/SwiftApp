@@ -52,7 +52,11 @@ struct ListaItinerariView: View {
                             Button {
                                 togglePreferito(for: itinerario)
                             } label: {
-                                Label("Preferiti", systemImage: itinerario.preferito ? "star.fill" : "star")
+                                if itinerario.preferito {
+                                    Label("Rimuovi dai preferiti", systemImage: "star.slash.fill")
+                                } else {
+                                    Label("Aggiungi ai preferiti", systemImage: "star")
+                                }
                             }
                             .tint(.mint)
                         }
