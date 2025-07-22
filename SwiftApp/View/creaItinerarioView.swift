@@ -213,6 +213,9 @@ struct creaItinerarioView: View {
                   \"oraArrivo\": \"HH:mm\",
                   \"foto\": \"nome_immagine.jpg\",
                   \"maps\": \"URL apple Maps\"
+                  \"latitudine\": valore decimale (es. 41.4036),
+                  \"longitudine\": valore decimale (es. 2.1744)
+            
                 },
                 ...
               ]

@@ -134,9 +134,42 @@ struct MapView: View {
 
 #Preview {
     MapView(tappe: [
-        Tappa(nome: "Sagrada Família", descr: "", oraArrivo: "09:00", foto: "", maps: ""),
-        Tappa(nome: "Barceloneta", descr: "", oraArrivo: "13:30", foto: "", maps: ""),
-        Tappa(nome: "Mercato della Boqueria", descr: "", oraArrivo: "12:00", foto: "", maps: ""),
-        Tappa(nome: "Passeig de Gràcia", descr: "", oraArrivo: "10:30", foto: "", maps: "")
+        Tappa(
+            nome: "Sagrada Família",
+            descr: "",
+            oraArrivo: "09:00",
+            foto: "",
+            maps: "",
+            latitudine: 41.4036,
+            longitudine: 2.1744
+        ),
+        Tappa(
+            nome: "Barceloneta",
+            descr: "",
+            oraArrivo: "13:30",
+            foto: "",
+            maps: "",
+            latitudine: 41.3766,
+            longitudine: 2.1925
+        ),
+        Tappa(
+            nome: "Mercato della Boqueria",
+            descr: "",
+            oraArrivo: "12:00",
+            foto: "",
+            maps: "",
+            latitudine: 41.3826,
+            longitudine: 2.1722
+        ),
+        Tappa(
+            nome: "Passeig de Gràcia",
+            descr: "",
+            oraArrivo: "10:30",
+            foto: "",
+            maps: "",
+            latitudine: 41.3917,
+            longitudine: 2.1649
+        )
     ])
+
 }
