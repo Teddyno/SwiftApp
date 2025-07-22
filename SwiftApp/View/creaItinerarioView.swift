@@ -109,14 +109,14 @@ struct creaItinerarioView: View {
                         LazyVGrid(columns: [GridItem(spacing: 15), GridItem()], spacing: 15) {
                             ForEach(preferenze, id: \.self) { interest in
                                 Button(action: {
-                                    preferenzaSelezionata = interest
+                                    preferenzaSelezionata = interest.lowercased()
                                 }) {
                                     Text(interest)
                                         .frame(maxWidth: .infinity)
                                         .padding()
                                         .padding(.top, 15)
                                         .padding(.bottom, 15)
-                                        .background(preferenzaSelezionata == interest ? Color.mint : Color.gray.opacity(0.2))
+                                        .background(preferenzaSelezionata == interest.lowercased() ? Color.mint : Color.gray.opacity(0.2))
                                         .foregroundColor(.black)
                                         .cornerRadius(12)
                                 }
