@@ -217,7 +217,7 @@ struct creaItinerarioView: View {
           - almeno 1 ora all'arrivo per immigrazione e dogana
           - almeno 2 ore prima del volo successivo per rientrare in aeroporto e superare i controlli
           - tempi medi di trasporto A/R tra aeroporto e città, se rilevanti (es. treno, taxi, navetta)
-        - Inserisci al massimo 5 tappe coerenti con la durata utile
+        - Inserisci tappe coerenti con la durata utile
         - Le tappe devono riflettere la categoria preferita inserita da \(preferenza)
         - Inserisci solo tappe realisticamente raggiungibili e visitabili nel tempo utile
         - `preferito` sarà `false` sempre
