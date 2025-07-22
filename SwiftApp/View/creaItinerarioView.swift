@@ -173,10 +173,11 @@ struct creaItinerarioView: View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     func promptItinerario() {
-        guard let chiaveAPI = Bundle.main.infoDictionary?["GROQ_API_KEY"] as? String else {
-            print("❌ Chiave API non trovata.")
+        guard let chiaveAPI = ProcessInfo.processInfo.environment["GROQ_API_KEY"] else {
+            print("❌ Variabile di ambiente GROQ_API_KEY non trovata.")
             return
         }
+        
         let preferenza = preferenzaSelezionata ?? "nessuna preferenza"
         let aeroporto = rootState.scaloPrecompilato.isEmpty ? "[inserisci aeroporto]" : rootState.scaloPrecompilato
         let ore = durataScaloOre()
