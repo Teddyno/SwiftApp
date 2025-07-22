@@ -58,31 +58,6 @@ struct creaItinerarioView: View {
                         .background(Color.white)
                         .cornerRadius(16)
                         .padding(.horizontal, 35)
-                        if !risultatiFiltrati.isEmpty {
-                            VStack(alignment: .leading, spacing: 0) {
-                                ForEach(risultatiFiltrati) { aeroporto in
-                                    Button(action: {
-                                        rootState.scaloPrecompilato = aeroporto.displayName
-                                        risultatiFiltrati = []
-                                        hideKeyboard()
-                                    }) {
-                                        Text(aeroporto.displayName)
-                                            .padding()
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                            .background(Color.white)
-                                            .foregroundColor(.black)
-                                    }
-                                    if aeroporto.id != risultatiFiltrati.last?.id {
-                                        Divider()
-                                    }
-                                }
-                            }
-                            .background(Color.white)
-                            .cornerRadius(12)
-                            .shadow(radius: 4)
-                            .padding(.horizontal, 35)
-                            .zIndex(1)
-                        }
                     }
                     .padding(.top, 10)
                     // Durata scalo
@@ -162,6 +137,37 @@ struct creaItinerarioView: View {
                     }
                 }
                 .padding(.top, 90)
+                VStack {
+                    if !risultatiFiltrati.isEmpty {
+                        VStack(alignment: .leading, spacing: 0) {
+                            ForEach(risultatiFiltrati) { aeroporto in
+                                Button(action: {
+                                    rootState.scaloPrecompilato = aeroporto.displayName
+                                    risultatiFiltrati = []
+                                    hideKeyboard()
+                                }) {
+                                    Text(aeroporto.displayName)
+                                        .padding()
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .background(Color.white)
+                                        .foregroundColor(.black)
+                                }
+                                if aeroporto.id != risultatiFiltrati.last?.id {
+                                    Divider()
+                                }
+                            }
+                        }
+                        .background(Color.white)
+                        .cornerRadius(12)
+                        .shadow(radius: 4)
+                        .padding(.horizontal, 35)
+                        .padding(.top, 170) // Posiziona sotto al TextField
+                    } else {
+                        Spacer()
+                    }
+                    Spacer()
+                }
+                .zIndex(1) // Assicura che sia sopra gli altri elementi
             }
             .background(Color.white.edgesIgnoringSafeArea(.all))
             .onAppear {
