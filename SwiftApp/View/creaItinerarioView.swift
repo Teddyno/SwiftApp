@@ -23,157 +23,175 @@ struct creaItinerarioView: View {
     
     @State var isLoading: Bool = false
     @State var itinerarioGenerato: Itinerario? = nil
+    @State private var navigateToItinerario = false
     
     let preferenze = ["Natura", "Cibo", "Monumenti", "Shopping"]
     
+    var searchBar: some View {
+        VStack(spacing: 0) {
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.mint)
+                TextField("città/aeroporto", text: $luogoScalo)
+                    .onChange(of: luogoScalo) { oldValue, newValue in
+                        if newValue.isEmpty {
+                            risultatiFiltrati = []
+                        } else {
+                            risultatiFiltrati = aeroporti.filter {
+                                $0.city.localizedCaseInsensitiveContains(newValue) ||
+                                $0.name.localizedCaseInsensitiveContains(newValue) ||
+                                $0.iata.localizedCaseInsensitiveContains(newValue)
+                            }.prefix(5).map { $0 }
+                        }
+                    }
+                    .foregroundColor(.black)
+            }
+            .padding(20)
+            .background(Color.white)
+            .cornerRadius(16)
+            .padding(.horizontal, 35)
+
+            if !risultatiFiltrati.isEmpty {
+                VStack(alignment: .leading, spacing: 0) {
+                    ForEach(risultatiFiltrati) { aeroporto in
+                        Button(action: {
+                            luogoScalo = aeroporto.displayName
+                            risultatiFiltrati = []
+                            hideKeyboard()
+                        }) {
+                            Text(aeroporto.displayName)
+                                .padding()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(Color.white)
+                                .foregroundColor(.black)
+                        }
+                        if aeroporto.id != risultatiFiltrati.last?.id {
+                            Divider()
+                        }
+                    }
+                }
+                .background(Color.white)
+                .cornerRadius(12)
+                .shadow(radius: 4)
+                .padding(.horizontal, 35)
+                .zIndex(1)
+            }
+        }
+    }
+
+    var interessiSection: some View {
+        VStack {
+            Text("Scegli uno tra questi interessi")
+                .font(.headline)
+                .foregroundColor(.black)
+            LazyVGrid(columns: [GridItem(spacing: 15), GridItem()], spacing: 15) {
+                ForEach(preferenze, id: \.self) { interest in
+                    Button(action: {
+                        preferenzaSelezionata = interest
+                    }) {
+                        Text(interest)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .padding(.top, 15)
+                            .padding(.bottom, 15)
+                            .background(preferenzaSelezionata == interest ? Color.mint : Color.gray.opacity(0.2))
+                            .foregroundColor(.black)
+                            .cornerRadius(12)
+                    }
+                }
+            }
+            .padding(.horizontal)
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(30)
+        .padding(.horizontal, 35)
+        .padding(.top, 40)
+    }
+
+    var generaButton: some View {
+        Button(action: {
+            promptItinerario()
+        }) {
+            HStack {
+                if isLoading {
+                    ProgressView()
+                        .scaleEffect(0.8)
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                }
+                Text(isLoading ? "Generando..." : "Genera itinerario")
+                    .font(.headline)
+                    .foregroundColor(.white)
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(isLoading ? Color.gray : Color.mint)
+            .cornerRadius(20)
+            .shadow(color: .gray.opacity(0.4), radius: 5, x: 0, y: 4)
+        }
+        .disabled(isLoading)
+        .padding(.horizontal, 35)
+        .padding(.bottom, 50)
+    }
+
+    var itinerarioNavigationLink: some View {
+        NavigationLink(
+            destination: itinerarioGenerato.map { ItinerarioView(itinerario: .constant($0)) },
+            isActive: $navigateToItinerario
+        ) {
+            EmptyView()
+        }
+    }
+
     var body: some View {
-        ZStack {
-            VStack {
-                Image("sfondo")
-                    .resizable()
-                    .scaledToFill()
-                    .clipShape(RoundedRectangle(cornerRadius: 60))
-                    .ignoresSafeArea()
-                    .frame(maxWidth: .infinity,maxHeight: 500)
-                Spacer()
-            }
-            
-            VStack {
-                VStack(spacing: 0) {
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.mint)
-                        TextField("città/aeroporto", text: $luogoScalo)
-                            .onChange(of: luogoScalo) { oldValue, newValue in
-                                if newValue.isEmpty {
-                                    risultatiFiltrati = []
-                                } else {
-                                    risultatiFiltrati = aeroporti.filter {
-                                        $0.city.localizedCaseInsensitiveContains(newValue) ||
-                                        $0.name.localizedCaseInsensitiveContains(newValue) ||
-                                        $0.iata.localizedCaseInsensitiveContains(newValue)
-                                    }.prefix(5).map { $0 }
-                                }
-                            }
-                    }
-                    .padding(20)
-                    .background(Color.white)
-                    .cornerRadius(16)
-                }
-                .padding(.horizontal, 35)
-                .padding(.top, 10)
-                
-                // Durata scalo
-                HStack {
-                    Image(systemName: "clock")
-                        .foregroundColor(.mint)
-                    Text("Durata scalo")
-                        .font(.headline)
-                        .padding(.leading)
-                        .foregroundColor(.gray)
-                    DatePicker("", selection: $durataScalo, displayedComponents: [.hourAndMinute])
-                        .colorMultiply(.black)
-                }
-                .padding()
-                .background(Color.white)
-                .cornerRadius(16)
-                .padding(.horizontal, 35)
-                .padding(.top, 10)
-                
-                // Preferenze
+        NavigationStack {
+            ZStack {
                 VStack {
-                    Text("Scegli uno tra questi interessi")
-                        .font(.headline)
-                        .foregroundColor(.black)
-                    
-                    LazyVGrid(columns: [GridItem(spacing: 15), GridItem()],
-                              spacing: 15) {
-                        ForEach(preferenze, id: \.self) { interest in
-                            Button(action: {
-                                preferenzaSelezionata = interest.lowercased()
-                            }) {
-                                Text(interest)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .padding(.top, 15)
-                                    .padding(.bottom, 15)
-                                    .background(preferenzaSelezionata == interest.lowercased() ? Color.mint : Color.gray.opacity(0.2))
-                                    .foregroundColor(preferenzaSelezionata == interest.lowercased() ? .white : .gray)
-                                    .cornerRadius(12)
-                            }
-                        }
-                    }
-                    .padding(.horizontal)
-                }
-                .padding()
-                .background(Color.white)
-                .cornerRadius(30)
-                .padding(.horizontal, 35)
-                .padding(.top, 40)
-                
-                Spacer()
-                
-                Button(action: {
-                    promptItinerario() // Azione per generare itinerario
-                }) {
-                    HStack {
-                        if isLoading {
-                            ProgressView()
-                                .scaleEffect(0.8)
-                                .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                        }
-                        Text(isLoading ? "Generando..." : "Genera itinerario")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(isLoading ? Color.gray : Color.mint)
-                    .cornerRadius(20)
-                    .shadow(color: .gray.opacity(0.4), radius: 5, x: 0, y: 4)
-                }
-                .disabled(isLoading)
-                .padding(.horizontal, 35)
-                .padding(.bottom, 50)
-            }
-            .padding(.top, 90)
-            
-            // Lista suggerimenti posizionata in modo assoluto
-            VStack {
-                if !risultatiFiltrati.isEmpty {
-                    VStack(alignment: .leading, spacing: 0) {
-                        ForEach(risultatiFiltrati) { aeroporto in
-                            Button(action: {
-                                luogoScalo = aeroporto.displayName
-                                risultatiFiltrati = []
-                                hideKeyboard()
-                            }) {
-                                Text(aeroporto.displayName)
-                                    .padding()
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .background(Color.white)
-                                    .foregroundColor(.black)
-                            }
-                            if aeroporto.id != risultatiFiltrati.last?.id {
-                                Divider()
-                            }
-                        }
-                    }
-                    .background(Color.white)
-                    .cornerRadius(12)
-                    .shadow(radius: 4)
-                    .padding(.horizontal, 35)
-                    .padding(.top, 170) // Posiziona sotto al TextField
-                } else {
+                    Image("sfondo")
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 60))
+                        .ignoresSafeArea()
                     Spacer()
                 }
-                Spacer()
+                
+                VStack {
+                    searchBar // Uso la subview qui
+                        .padding(.top, 10)
+                    
+                    // Durata scalo
+                    HStack {
+                        Image(systemName: "clock")
+                            .foregroundColor(.mint)
+                        Text("Durata scalo")
+                            .font(.headline)
+                            .padding(.leading)
+                            .foregroundColor(.black)
+                        DatePicker("", selection: $durataScalo, displayedComponents: [.hourAndMinute])
+                            .colorMultiply(.black)
+                    }
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(16)
+                    .padding(.horizontal, 35)
+                    .padding(.top, 10)
+                    
+                    interessiSection
+                    
+                    Spacer()
+                    
+                    generaButton
+                    itinerarioNavigationLink
+                }
+                .padding(.top, 90)
+                
+                // Link di navigazione invisibile
+                
             }
-            .zIndex(1) // Assicura che sia sopra gli altri elementi
-        }
-        .background(Color.white)
-        .onAppear {
-            aeroporti = caricaAeroporti()
+            .background(Color.white.edgesIgnoringSafeArea(.all))
+            .onAppear {
+                aeroporti = caricaAeroporti()
+            }
         }
     }
     
@@ -230,7 +248,7 @@ struct creaItinerarioView: View {
         - Inserisci al massimo 5 tappe coerenti con la durata utile
         - Le tappe devono riflettere la categoria preferita inserita da \(preferenza)
         - Inserisci solo tappe realisticamente raggiungibili e visitabili nel tempo utile
-        - `preferito` sarà `true` se la categoria corrisponde ad attività culturali o paesaggistiche
+        - `preferito` sarà `false` sempre
         - Ogni tappa deve includere: nome, descrizione, orario di arrivo stimato, nome del file immagine (fittizio o generico), e link Apple Maps
 
         Restituisci solo il JSON come testo puro, **senza usare markdown, senza backtick**, né altri caratteri extra.
@@ -298,6 +316,7 @@ struct creaItinerarioView: View {
                 // Salva l'itinerario nella variabile
                 self.itinerarioGenerato = primoItinerario
                 saveItinerarioCreato(primoItinerario)
+                self.navigateToItinerario = true // Attiva la navigazione
                 print("Itinerario creato con successo per: \(primoItinerario.citta)")
             }
         } catch {
@@ -311,6 +330,7 @@ struct creaItinerarioView: View {
                     if let primoItinerario = itinerari.first {
                         self.itinerarioGenerato = primoItinerario
                         saveItinerarioCreato(primoItinerario)
+                        self.navigateToItinerario = true // Attiva la navigazione
                         print("Itinerario creato con successo (dopo pulizia JSON) per: \(primoItinerario.citta)")
                     }
                 } catch {
