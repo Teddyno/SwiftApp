@@ -72,6 +72,7 @@ struct ListaItinerariView: View {
                         }
                     }
                 }
+                .listStyle(.plain)
             }
             .navigationTitle("Itinerari")
             .navigationBarTitleDisplayMode(.large)

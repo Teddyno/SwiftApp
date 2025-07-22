@@ -29,9 +29,10 @@ struct creaItinerarioView: View {
             VStack {
                 Image("sfondo")
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
                     .clipShape(RoundedRectangle(cornerRadius: 60))
                     .ignoresSafeArea()
+                    .frame(maxWidth: .infinity,maxHeight: 500)
                 Spacer()
             }
             
