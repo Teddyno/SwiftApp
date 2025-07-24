@@ -173,15 +173,13 @@ struct creaItinerarioView: View {
                     .padding(.top, 30)
                     .padding(.bottom, 50)
                     .frame(maxWidth: 500)
-                    // NavigationLink invisibile
-                    NavigationLink(
-                        destination: itinerarioGenerato.map { ItinerarioView(itinerario: .constant($0)) },
-                        isActive: $navigateToItinerario
-                    ) {
-                        EmptyView()
-                    }
                 }
                 .padding(.top, 60)
+                .navigationDestination(isPresented: $navigateToItinerario) {
+                    if let itinerario = itinerarioGenerato {
+                        ItinerarioView(itinerario: .constant(itinerario))
+                    }
+                }
                 VStack {
                     if !risultatiFiltrati.isEmpty {
                         VStack(alignment: .leading, spacing: 0) {
