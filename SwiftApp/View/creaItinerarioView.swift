@@ -35,8 +35,9 @@ struct creaItinerarioView: View {
                 VStack {
                     Image("sfondo")
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
                         .clipShape(RoundedRectangle(cornerRadius: 50))
+                        .frame(maxWidth: .infinity, maxHeight: 500)
                         .ignoresSafeArea()
                     Spacer()
                 }
@@ -242,7 +243,7 @@ struct creaItinerarioView: View {
               \"ore\": numero intero (ore di scalo),
               \"minuti\": numero intero (minuti di scalo),
               \"categoria\": categoria preferita (es. \"monumenti\", \"cibo\", \"natura\"),
-              \"preferito\": true/false,
+              \"preferito\": false,
               \"tappe\": [
                 {
                   \"nome\": \"Nome della tappa\",
@@ -265,7 +266,6 @@ struct creaItinerarioView: View {
         - Inserisci al massimo 7 tappe coerenti con la durata utile
         - Le tappe devono riflettere la categoria preferita inserita da \(preferenza)
         - Inserisci solo tappe realisticamente raggiungibili e visitabili nel tempo utile
-        - `preferito` sarà `false` sempre
         - Ogni tappa deve includere: nome, descrizione, orario di arrivo stimato, nome del file immagine (fittizio o generico), e link Apple Maps
         Restituisci solo il JSON come testo puro, **senza usare markdown, senza backtick**, né altri caratteri extra.
     """;
