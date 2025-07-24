@@ -304,5 +304,89 @@
     "city": "Barcelona",
     "iata": "BCN",
     "country": "Spain"
+  },
+  {
+    "name": "John F. Kennedy International Airport",
+    "city": "New York",
+    "iata": "JFK",
+    "country": "United States"
+  },
+  {
+    "name": "Dallas/Fort Worth International Airport",
+    "city": "Dallas",
+    "iata": "DFW",
+    "country": "United States"
+  },
+  {
+    "name": "Boston Logan International Airport",
+    "city": "Boston",
+    "iata": "BOS",
+    "country": "United States"
+  },
+  {
+    "name": "Panama Tocumen International Airport",
+    "city": "Panama City",
+    "iata": "PTY",
+    "country": "Panama"
+  },
+  {
+    "name": "Abu Dhabi International Airport",
+    "city": "Abu Dhabi",
+    "iata": "AUH",
+    "country": "United Arab Emirates"
+  },
+  {
+    "name": "Riyadh King Khalid International Airport",
+    "city": "Riyadh",
+    "iata": "RUH",
+    "country": "Saudi Arabia"
+  },
+  {
+    "name": "Tehran Imam Khomeini International Airport",
+    "city": "Tehran",
+    "iata": "IKA",
+    "country": "Iran"
+  },
+  {
+    "name": "Muscat International Airport",
+    "city": "Muscat",
+    "iata": "MCT",
+    "country": "Oman"
+  },
+  {
+    "name": "Athens International Airport",
+    "city": "Athens",
+    "iata": "ATH",
+    "country": "Greece"
+  },
+  {
+    "name": "Warsaw Chopin Airport",
+    "city": "Warsaw",
+    "iata": "WAW",
+    "country": "Poland"
+  },
+  {
+    "name": "Stockholm Arlanda Airport",
+    "city": "Stockholm",
+    "iata": "ARN",
+    "country": "Sweden"
+  },
+  {
+    "name": "Prague Václav Havel Airport",
+    "city": "Prague",
+    "iata": "PRG",
+    "country": "Czech Republic"
+  },
+  {
+    "name": "Auckland Airport",
+    "city": "Auckland",
+    "iata": "AKL",
+    "country": "New Zealand"
+  },
+  {
+    "name": "Reykjavik Keflavik International Airport",
+    "city": "Reykjavik",
+    "iata": "KEF",
+    "country": "Iceland"
   }
 ]

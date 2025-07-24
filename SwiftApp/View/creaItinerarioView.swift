@@ -46,9 +46,9 @@ struct creaItinerarioView: View {
                     Spacer()
                 }
                 
-                VStack(spacing: 0) {
+                VStack() {
                     // Campo ricerca aeroporto
-                    VStack(spacing: 0) {
+                    VStack() {
                         HStack {
                             Image(systemName: "magnifyingglass")
                                 .foregroundColor(.mint)
@@ -72,79 +72,70 @@ struct creaItinerarioView: View {
                         .cornerRadius(20)
                         .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                         .padding(.horizontal, 30)
+                        .frame(maxWidth: 500)
                         .padding(.top, 18)
-                        .toolbar {
-                            ToolbarItemGroup(placement: .keyboard) {
-                                Spacer()
-                                Button("Fine") { isTextFieldFocused = false }
-                            }
-                        }
                     }
-                    .frame(maxWidth: 500)
                     
                     // Orario di arrivo
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Orario di arrivo all'aeroporto di scalo")
+                    HStack(spacing: 8){
+                        Image(systemName: "clock.arrow.circlepath")
+                            .foregroundColor(.mint)
+                            .font(.system(size: 20, weight: .semibold))
+                            .padding(.horizontal,20)
+                            .padding(.vertical, 20)
+                        Spacer()
+                        Text("Orario di arrivo")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                             .padding(.leading, 15)
                             .padding(.top,5)
-                        HStack {
-                            Image(systemName: "clock.arrow.circlepath")
-                                .foregroundColor(.mint)
-                                .font(.system(size: 20, weight: .semibold))
-                                .padding(.horizontal,20)
-                            Spacer()
-                            DatePicker("", selection: $orarioArrivo, displayedComponents: [.hourAndMinute])
-                                .labelsHidden()
-                                .colorMultiply(.black)
-                                .padding(.horizontal,20)
-                        }
-                        .padding(.bottom,5)
+                        Spacer()
+                        DatePicker("", selection: $orarioArrivo, displayedComponents: [.hourAndMinute])
+                            .labelsHidden()
+                            .colorMultiply(.black)
+                            .padding(.horizontal,20)
                     }
                     .background(Color.white)
                     .cornerRadius(20)
                     .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
-                    .padding(.vertical, 3)
                     .padding(.horizontal, 30)
-                    .padding(.top, 35)
                     .frame(maxWidth: 500)
+                    .padding(.vertical, 3)
+                    .padding(.top, 25)
                     
                     // Durata scalo
-                    VStack(alignment: .leading, spacing: 6) {
+                    HStack(spacing: 8){
+                        Image(systemName: "clock.arrow.circlepath")
+                            .foregroundColor(.mint)
+                            .font(.system(size: 20, weight: .semibold))
+                            .padding(.horizontal,20)
+                            .padding(.vertical, 20)
+                        Spacer()
                         Text("Durata scalo")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                             .padding(.leading, 15)
                             .padding(.top,5)
-                        HStack {
-                            Image(systemName: "clock")
-                                .foregroundColor(.mint)
-                                .font(.system(size: 20, weight: .semibold))
-                                .padding(.horizontal,20)
-                            Spacer()
-                            DatePicker("", selection: $durataScalo, displayedComponents: [.hourAndMinute])
-                                .labelsHidden()
-                                .colorMultiply(.black)
-                                .padding(.horizontal,20)
-                        }
-                        .padding(.bottom,5)
+                        Spacer()
+                        DatePicker("", selection: $durataScalo, displayedComponents: [.hourAndMinute])
+                            .labelsHidden()
+                            .colorMultiply(.black)
+                            .padding(.horizontal,20)
                     }
                     .background(Color.white)
                     .cornerRadius(20)
-                    .shadow(color: .mint.opacity(0.07), radius: 6, x: 0, y: 2)
-                    .padding(.vertical, 3)
+                    .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                     .padding(.horizontal, 30)
-                    .padding(.top, 5)
                     .frame(maxWidth: 500)
+                    .padding(.vertical, 3)
                     
                     // Preferenze/interessi
                     VStack {
                         Text("Scegli uno tra questi interessi")
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                            .padding(.bottom, 8)
-                        LazyVGrid(columns: [GridItem(spacing: 15), GridItem()], spacing: 10) {
+                            .font(.headline)
+                            .foregroundColor(.black)
+                            .padding(.top,10)
+                        LazyVGrid(columns: [GridItem(spacing: 15), GridItem()], spacing: 15) {
                             ForEach(preferenze, id: \.self) { interest in
                                 Button(action: {
                                     preferenzaSelezionata = interest.lowercased()
@@ -159,14 +150,14 @@ struct creaItinerarioView: View {
                             }
                         }
                         .padding(.horizontal)
+                        .padding(.bottom,10)
                     }
-                    .padding()
                     .background(Color.white)
                     .cornerRadius(20)
                     .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                     .padding(.horizontal, 30)
-                    .padding(.top, 35)
                     .frame(maxWidth: 500)
+                    .padding(.top, 35)
                     
                     Spacer(minLength: 0)
                     
