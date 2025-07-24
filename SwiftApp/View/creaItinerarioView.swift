@@ -27,6 +27,9 @@ struct creaItinerarioView: View {
     @State var isLoading: Bool = false
     @State var itinerarioGenerato: Itinerario? = nil
     @State private var navigateToItinerario = false
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    @State private var showOrarioPicker = false
     let preferenze = ["Natura", "Cibo", "Monumenti", "Shopping"]
 
     var body: some View {
@@ -69,29 +72,28 @@ struct creaItinerarioView: View {
                     }
                     .frame(maxWidth: 500)
                     // Orario di arrivo
-                    VStack(alignment: .leading, spacing: 6) {
+                    VStack(alignment: .leading, spacing: 8) {
                         Text("Orario di arrivo all'aeroporto di scalo")
-                            .font(.caption)
+                            .font(.subheadline)
                             .foregroundColor(.gray)
-                            .padding(.leading, 2)
+                            .padding(.leading, 4)
                         HStack {
                             Image(systemName: "clock.arrow.circlepath")
                                 .foregroundColor(.mint)
-                                .font(.system(size: 20, weight: .semibold))
+                                .font(.system(size: 22, weight: .semibold))
                             Spacer()
                             DatePicker("", selection: $orarioArrivo, displayedComponents: [.hourAndMinute])
                                 .labelsHidden()
                                 .colorMultiply(.black)
                         }
-                        .padding(.horizontal, 2)
+                        .padding(.horizontal, 4)
                     }
-                    .padding(.vertical, 10)
-                    .padding(.horizontal, 12)
+                    .padding(.vertical, 12)
                     .background(Color.white)
-                    .cornerRadius(16)
-                    .shadow(color: .mint.opacity(0.07), radius: 6, x: 0, y: 2)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
+                    .cornerRadius(20)
+                    .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 24)
                     .frame(maxWidth: 500)
                     // Durata scalo
                     VStack(alignment: .leading, spacing: 6) {
@@ -150,6 +152,17 @@ struct creaItinerarioView: View {
                     Spacer(minLength: 0)
                     // Bottone genera itinerario
                     Button(action: {
+                        let durataTotaleMinuti = durataScaloOre() * 60 + durataScaloMinuti()
+                        if durataTotaleMinuti == 0 {
+                            alertMessage = "Inserisci la durata dello scalo."
+                            showAlert = true
+                            return
+                        }
+                        if durataTotaleMinuti < 90 {
+                            alertMessage = "Con la durata inserita non è consigliato uscire dall'aeroporto."
+                            showAlert = true
+                            return
+                        }
                         promptItinerario()
                     }) {
                         HStack {
@@ -169,10 +182,13 @@ struct creaItinerarioView: View {
                         .shadow(color: .gray.opacity(0.2), radius: 8, x: 0, y: 4)
                     }
                     .disabled(isLoading)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 20)
                     .padding(.top, 30)
                     .padding(.bottom, 50)
                     .frame(maxWidth: 500)
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Attenzione"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                    }
                 }
                 .padding(.top, 60)
                 .navigationDestination(isPresented: $navigateToItinerario) {
@@ -230,7 +246,7 @@ struct creaItinerarioView: View {
         let aeroporto = rootState.scaloPrecompilato.isEmpty ? "[inserisci aeroporto]" : rootState.scaloPrecompilato
         let ore = durataScaloOre()
         let minuti = durataScaloMinuti()
-        let orarioArrivoString = DateFormatter.orario.string(from: orarioArrivo)
+        let orarioArrivoString = DateFormatter.orario.string(from: orarioArrivo) 
         let prompt = """
         Genera un itinerario di viaggio per un passeggero in scalo presso l'aeroporto \(aeroporto), con arrivo previsto alle ore \(orarioArrivoString), durata di scalo pari a \(ore) ore e \(minuti) minuti, e preferenza di attività \(preferenza).
         Requisiti:
