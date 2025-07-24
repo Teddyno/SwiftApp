@@ -15,6 +15,12 @@ struct creaItinerarioView: View {
         second: 0,
         of: Date()
     )!
+    @State var orarioArrivo: Date = Calendar.current.date(
+        bySettingHour: 8, // default 08:00
+        minute: 0,
+        second: 0,
+        of: Date()
+    )!
     @State var preferenzaSelezionata: String? = nil
     @State var aeroporti: [Aeroporto] = []
     @State var risultatiFiltrati: [Aeroporto] = []
@@ -56,41 +62,101 @@ struct creaItinerarioView: View {
                         }
                         .padding(20)
                         .background(Color.white)
-                        .cornerRadius(16)
-                        .padding(.horizontal, 35)
+                        .cornerRadius(20)
+                        .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
+                        .padding(.horizontal, 24)
+                        .padding(.top, 18)
+                        if !risultatiFiltrati.isEmpty {
+                            VStack(alignment: .leading, spacing: 0) {
+                                ForEach(risultatiFiltrati) { aeroporto in
+                                    Button(action: {
+                                        rootState.scaloPrecompilato = aeroporto.displayName
+                                        risultatiFiltrati = []
+                                        hideKeyboard()
+                                    }) {
+                                        Text(aeroporto.displayName)
+                                            .padding()
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .background(Color.white)
+                                            .foregroundColor(.black)
+                                    }
+                                    if aeroporto.id != risultatiFiltrati.last?.id {
+                                        Divider()
+                                    }
+                                }
+                            }
+                            .background(Color.white)
+                            .cornerRadius(16)
+                            .shadow(radius: 4)
+                            .padding(.horizontal, 24)
+                            .zIndex(1)
+                        }
                     }
-                    .padding(.top, 10)
-                    // Durata scalo
-                    HStack {
-                        Image(systemName: "clock")
-                            .foregroundColor(.mint)
-                        Text("Durata scalo")
-                            .font(.headline)
-                            .padding(.leading)
+                    .frame(maxWidth: 500)
+                    // Orario di arrivo
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Orario di arrivo all'aeroporto di scalo")
+                            .font(.caption)
                             .foregroundColor(.gray)
-                        DatePicker("", selection: $durataScalo, displayedComponents: [.hourAndMinute])
-                            .colorMultiply(.black)
+                            .padding(.leading, 2)
+                        HStack {
+                            Image(systemName: "clock.arrow.circlepath")
+                                .foregroundColor(.mint)
+                                .font(.system(size: 20, weight: .semibold))
+                            Spacer()
+                            DatePicker("", selection: $orarioArrivo, displayedComponents: [.hourAndMinute])
+                                .labelsHidden()
+                                .colorMultiply(.black)
+                        }
+                        .padding(.horizontal, 2)
                     }
-                    .padding()
+                    .padding(.vertical, 10)
+                    .padding(.horizontal, 12)
                     .background(Color.white)
                     .cornerRadius(16)
-                    .padding(.horizontal, 35)
-                    .padding(.top, 10)
+                    .shadow(color: .mint.opacity(0.07), radius: 6, x: 0, y: 2)
+                    .padding(.horizontal, 20)
+                    .padding(.top, 20)
+                    .frame(maxWidth: 500)
+                    // Durata scalo
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Durata scalo")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                            .padding(.leading, 2)
+                        HStack {
+                            Image(systemName: "clock")
+                                .foregroundColor(.mint)
+                                .font(.system(size: 20, weight: .semibold))
+                            Spacer()
+                            DatePicker("", selection: $durataScalo, displayedComponents: [.hourAndMinute])
+                                .labelsHidden()
+                                .colorMultiply(.black)
+                        }
+                        .padding(.horizontal, 2)
+                    }
+                    .padding(.vertical, 10)
+                    .padding(.horizontal, 12)
+                    .background(Color.white)
+                    .cornerRadius(16)
+                    .shadow(color: .mint.opacity(0.07), radius: 6, x: 0, y: 2)
+                    .padding(.horizontal, 20)
+                    .padding(.top, 14)
+                    .frame(maxWidth: 500)
                     // Preferenze/interessi
                     VStack {
                         Text("Scegli uno tra questi interessi")
-                            .font(.headline)
-                            .foregroundColor(.black)
-                        LazyVGrid(columns: [GridItem(spacing: 15), GridItem()], spacing: 15) {
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .padding(.bottom, 8)
+                        LazyVGrid(columns: [GridItem(spacing: 15), GridItem()], spacing: 10) {
                             ForEach(preferenze, id: \.self) { interest in
                                 Button(action: {
                                     preferenzaSelezionata = interest.lowercased()
                                 }) {
                                     Text(interest)
                                         .frame(maxWidth: .infinity)
-                                        .padding()
-                                        .padding(.top, 15)
-                                        .padding(.bottom, 15)
+                                        .padding(.vertical, 10)
                                         .background(preferenzaSelezionata == interest.lowercased() ? Color.mint : Color.gray.opacity(0.2))
                                         .foregroundColor(.black)
                                         .cornerRadius(12)
@@ -101,10 +167,12 @@ struct creaItinerarioView: View {
                     }
                     .padding()
                     .background(Color.white)
-                    .cornerRadius(30)
-                    .padding(.horizontal, 35)
-                    .padding(.top, 40)
-                    Spacer()
+                    .cornerRadius(20)
+                    .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 24)
+                    .frame(maxWidth: 500)
+                    Spacer(minLength: 0)
                     // Bottone genera itinerario
                     Button(action: {
                         promptItinerario()
@@ -123,51 +191,24 @@ struct creaItinerarioView: View {
                         .padding()
                         .background(isLoading ? Color.gray : Color.mint)
                         .cornerRadius(20)
-                        .shadow(color: .gray.opacity(0.4), radius: 5, x: 0, y: 4)
+                        .shadow(color: .gray.opacity(0.2), radius: 8, x: 0, y: 4)
                     }
                     .disabled(isLoading)
-                    .padding(.horizontal, 35)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 30)
                     .padding(.bottom, 50)
-                }
-                .padding(.top, 90)
-                .navigationDestination(isPresented: $navigateToItinerario) {
-                    if let itinerario = itinerarioGenerato {
-                        ItinerarioView(itinerario: .constant(itinerario))
+                    .frame(maxWidth: 500)
+                    // NavigationLink invisibile
+                    NavigationLink(
+                        destination: itinerarioGenerato.map { ItinerarioView(itinerario: .constant($0)) },
+                        isActive: $navigateToItinerario
+                    ) {
+                        EmptyView()
                     }
                 }
-                VStack {
-                    if !risultatiFiltrati.isEmpty {
-                        VStack(alignment: .leading, spacing: 0) {
-                            ForEach(risultatiFiltrati) { aeroporto in
-                                Button(action: {
-                                    rootState.scaloPrecompilato = aeroporto.displayName
-                                    risultatiFiltrati = []
-                                    hideKeyboard()
-                                }) {
-                                    Text(aeroporto.displayName)
-                                        .padding()
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .background(Color.white)
-                                        .foregroundColor(.black)
-                                }
-                                if aeroporto.id != risultatiFiltrati.last?.id {
-                                    Divider()
-                                }
-                            }
-                        }
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        .shadow(radius: 4)
-                        .padding(.horizontal, 35)
-                        .padding(.top, 170) // Posiziona sotto al TextField
-                    } else {
-                        Spacer()
-                    }
-                    Spacer()
-                }
-                .zIndex(1) // Assicura che sia sopra gli altri elementi
+                .padding(.top, 60)
             }
-            .background(Color.white.edgesIgnoringSafeArea(.all))
+            .background(Color(.systemGroupedBackground).ignoresSafeArea())
             .onAppear {
                 aeroporti = caricaAeroporti()
             }
@@ -178,16 +219,16 @@ struct creaItinerarioView: View {
     }
     func promptItinerario() {
         guard let chiaveAPI = ProcessInfo.processInfo.environment["GROQ_API_KEY"] else {
-            print("❌ Variabile di ambiente GROQ_API_KEY non trovata.")
-            return
-        }
-        
+                    print("❌ Variabile di ambiente GROQ_API_KEY non trovata.")
+                    return
+                }
         let preferenza = preferenzaSelezionata ?? "nessuna preferenza"
         let aeroporto = rootState.scaloPrecompilato.isEmpty ? "[inserisci aeroporto]" : rootState.scaloPrecompilato
         let ore = durataScaloOre()
         let minuti = durataScaloMinuti()
+        let orarioArrivoString = DateFormatter.orario.string(from: orarioArrivo)
         let prompt = """
-        Genera un itinerario di viaggio per un passeggero in scalo presso l'aeroporto \(aeroporto), con durata di scalo pari a \(ore) ore e \(minuti) minuti, e preferenza di attività \(preferenza).
+        Genera un itinerario di viaggio per un passeggero in scalo presso l'aeroporto \(aeroporto), con arrivo previsto alle ore \(orarioArrivoString), durata di scalo pari a \(ore) ore e \(minuti) minuti, e preferenza di attività \(preferenza).
         Requisiti:
         - L'output deve essere **esclusivamente un JSON**, strutturato esattamente come il seguente esempio:
           [
@@ -217,7 +258,7 @@ struct creaItinerarioView: View {
           - almeno 1 ora all'arrivo per immigrazione e dogana
           - almeno 2 ore prima del volo successivo per rientrare in aeroporto e superare i controlli
           - tempi medi di trasporto A/R tra aeroporto e città, se rilevanti (es. treno, taxi, navetta)
-        - Inserisci tappe coerenti con la durata utile
+        - Inserisci al massimo 7 tappe coerenti con la durata utile
         - Le tappe devono riflettere la categoria preferita inserita da \(preferenza)
         - Inserisci solo tappe realisticamente raggiungibili e visitabili nel tempo utile
         - `preferito` sarà `false` sempre
@@ -341,6 +382,14 @@ struct creaItinerarioView: View {
         let components = calendar.dateComponents([.hour, .minute], from: calendar.startOfDay(for: Date()), to: durataScalo)
         return components.minute ?? 0
     }
+}
+
+extension DateFormatter {
+    static let orario: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "HH:mm"
+        return df
+    }()
 }
 
 #Preview {

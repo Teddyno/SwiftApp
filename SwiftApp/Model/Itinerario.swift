@@ -13,6 +13,7 @@ struct Itinerario: Identifiable, Equatable, Codable {
     var categoria: Categoria
     var preferito: Bool = false
     var tappe: [Tappa]
+    var orarioArrivoScalo: String? = nil
     
     func testo() -> String {
         if self.minuti < 10 {
@@ -23,10 +24,10 @@ struct Itinerario: Identifiable, Equatable, Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case id, citta, aeroporto, ore, minuti, categoria, preferito, tappe
+        case id, citta, aeroporto, ore, minuti, categoria, preferito, tappe, orarioArrivoScalo
     }
     
-    init(id: UUID = UUID(), citta: String, aeroporto: String, ore: Int, minuti: Int, categoria: Categoria, preferito: Bool = false, tappe: [Tappa]) {
+    init(id: UUID = UUID(), citta: String, aeroporto: String, ore: Int, minuti: Int, categoria: Categoria, preferito: Bool = false, tappe: [Tappa], orarioArrivoScalo: String? = nil) {
         self.id = id
         self.citta = citta
         self.aeroporto = aeroporto
@@ -35,6 +36,7 @@ struct Itinerario: Identifiable, Equatable, Codable {
         self.categoria = categoria
         self.preferito = preferito
         self.tappe = tappe
+        self.orarioArrivoScalo = orarioArrivoScalo
     }
     
     init(from decoder: Decoder) throws {
@@ -47,6 +49,7 @@ struct Itinerario: Identifiable, Equatable, Codable {
         categoria = try container.decode(Categoria.self, forKey: .categoria)
         preferito = (try? container.decode(Bool.self, forKey: .preferito)) ?? false
         tappe = try container.decode([Tappa].self, forKey: .tappe)
+        orarioArrivoScalo = try? container.decodeIfPresent(String.self, forKey: .orarioArrivoScalo)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -59,6 +62,7 @@ struct Itinerario: Identifiable, Equatable, Codable {
         try container.encode(categoria, forKey: .categoria)
         try container.encode(preferito, forKey: .preferito)
         try container.encode(tappe, forKey: .tappe)
+        try container.encodeIfPresent(orarioArrivoScalo, forKey: .orarioArrivoScalo)
     }
 } 
 

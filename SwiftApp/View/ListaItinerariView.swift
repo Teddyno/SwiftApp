@@ -37,8 +37,8 @@ struct ListaItinerariView: View {
                         NavigationLink(destination: ItinerarioView(itinerario: .constant(itinerario))) {
                             HStack {
                                 VStack(alignment: .leading) {
-                                    Text(itinerario.testo())
-                                    Text("\(itinerario.categoria.rawValue)")
+                                    Text(itinerario.testo().uppercased())
+                                    Text("\(itinerario.categoria.rawValue.capitalized)")
                                         .foregroundColor(.gray)
                                 }
                                 Spacer()

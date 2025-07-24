@@ -21,6 +21,11 @@ struct ItinerarioView: View {
                 Text("\(itinerario.aeroporto)")
                     .font(.system(size: 20))
                     .fontWeight(.bold)
+                if let orarioArrivo = itinerario.orarioArrivoScalo {
+                    Text("Arrivo in aeroporto: \(orarioArrivo)")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
                 Divider()
                     .frame(height:1)
                     .background(.black)
@@ -118,11 +123,6 @@ struct ItinerarioView: View {
                                      HStack {
                                          Spacer()
                                          VStack(spacing: 12) {
-                                             Image("\(tappa.foto)")
-                                                 .resizable()
-                                                 .scaledToFill()
-                                                 .frame(maxWidth: 900, maxHeight: 600)
-                                                 .cornerRadius(16)
                                              let url: URL = {
                                                  func appleMapsURL(from original: String, nome: String, citta: String?) -> URL {
                                                      if original.contains("maps.app.goo.gl") || original.contains("google.com/maps") {
