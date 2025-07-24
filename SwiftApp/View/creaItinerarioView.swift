@@ -78,7 +78,7 @@ struct creaItinerarioView: View {
                     
                     // Orario di arrivo
                     HStack(spacing: 8){
-                        Image(systemName: "clock.arrow.circlepath")
+                        Image(systemName: "clock")
                             .foregroundColor(.mint)
                             .font(.system(size: 20, weight: .semibold))
                             .padding(.horizontal,20)
@@ -89,6 +89,8 @@ struct creaItinerarioView: View {
                             .foregroundColor(.gray)
                             .padding(.leading, 15)
                             .padding(.top,5)
+                            .lineLimit(1)
+                            .fixedSize(horizontal: true, vertical: false)
                         Spacer()
                         DatePicker("", selection: $orarioArrivo, displayedComponents: [.hourAndMinute])
                             .labelsHidden()
