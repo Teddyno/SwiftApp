@@ -206,7 +206,13 @@ struct creaItinerarioView: View {
                         Alert(title: Text("Attenzione"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                     }
                 }
-                .padding(.top, 60)
+                .padding(.top,60)
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        Button("Fine") { isTextFieldFocused = false }
+                    }
+                }
                 .navigationDestination(isPresented: $navigateToItinerario) {
                     if let itinerario = itinerarioGenerato {
                         ItinerarioView(itinerario: .constant(itinerario))
@@ -221,7 +227,7 @@ struct creaItinerarioView: View {
                                 Button(action: {
                                     rootState.scaloPrecompilato = aeroporto.displayName
                                     risultatiFiltrati = []
-                                    hideKeyboard()
+                                    isTextFieldFocused = false
                                 }) {
                                     Text(aeroporto.displayName)
                                         .padding()
@@ -238,7 +244,8 @@ struct creaItinerarioView: View {
                         .cornerRadius(12)
                         .shadow(radius: 4)
                         .padding(.horizontal, 35)
-                        .padding(.top, 150) // Posiziona sotto al TextField
+                        .frame(maxWidth: 500)
+                        .padding(.top, 160) // Posiziona sotto al TextField
                     } else {
                         Spacer()
                     }
