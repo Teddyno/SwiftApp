@@ -54,6 +54,7 @@ struct creaItinerarioView: View {
                                 .foregroundColor(.mint)
                             TextField("città/aeroporto", text: $rootState.scaloPrecompilato)
                                 .focused($isTextFieldFocused)
+                                .focused($isTextFieldFocused)
                                 .onChange(of: rootState.scaloPrecompilato) { oldValue, newValue in
                                     if newValue.isEmpty {
                                         risultatiFiltrati = []
@@ -79,12 +80,19 @@ struct creaItinerarioView: View {
                                 Button("Fine") { isTextFieldFocused = false }
                             }
                         }
+                        .toolbar {
+                            ToolbarItemGroup(placement: .keyboard) {
+                                Spacer()
+                                Button("Fine") { isTextFieldFocused = false }
+                            }
+                        }
                     }
                     .frame(maxWidth: 500)
                     
                     // Orario di arrivo
-                    VStack(alignment: .leading, spacing: 6) {
+                    VStack(alignment: .leading, spacing: 8) {
                         Text("Orario di arrivo all'aeroporto di scalo")
+                            .font(.subheadline)
                             .font(.subheadline)
                             .foregroundColor(.gray)
                             .padding(.leading, 15)
@@ -183,6 +191,17 @@ struct creaItinerarioView: View {
                             showAlert = true
                             return
                         }
+                        let durataTotaleMinuti = durataScaloOre() * 60 + durataScaloMinuti()
+                        if durataTotaleMinuti == 0 {
+                            alertMessage = "Inserisci la durata dello scalo."
+                            showAlert = true
+                            return
+                        }
+                        if durataTotaleMinuti < 90 {
+                            alertMessage = "Con la durata inserita non è consigliato uscire dall'aeroporto."
+                            showAlert = true
+                            return
+                        }
                         promptItinerario()
                     }) {
                         HStack {
@@ -203,9 +222,13 @@ struct creaItinerarioView: View {
                     }
                     .disabled(isLoading)
                     .padding(.horizontal, 20)
+                    .padding(.horizontal, 20)
                     .padding(.top, 30)
                     .padding(.bottom, 50)
                     .frame(maxWidth: 500)
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Attenzione"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                    }
                     .alert(isPresented: $showAlert) {
                         Alert(title: Text("Attenzione"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                     }
@@ -266,6 +289,7 @@ struct creaItinerarioView: View {
         let aeroporto = rootState.scaloPrecompilato.isEmpty ? "[inserisci aeroporto]" : rootState.scaloPrecompilato
         let ore = durataScaloOre()
         let minuti = durataScaloMinuti()
+        let orarioArrivoString = DateFormatter.orario.string(from: orarioArrivo) 
         let orarioArrivoString = DateFormatter.orario.string(from: orarioArrivo) 
         let prompt = """
         Genera un itinerario di viaggio per un passeggero in scalo presso l'aeroporto \(aeroporto), con arrivo previsto alle ore \(orarioArrivoString), durata di scalo pari a \(ore) ore e \(minuti) minuti, e preferenza di attività \(preferenza).
