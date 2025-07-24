@@ -27,6 +27,10 @@ struct creaItinerarioView: View {
     @State var isLoading: Bool = false
     @State var itinerarioGenerato: Itinerario? = nil
     @State private var navigateToItinerario = false
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    @State private var showOrarioPicker = false
+    @FocusState private var isTextFieldFocused: Bool
     let preferenze = ["Natura", "Cibo", "Monumenti", "Shopping"]
 
     var body: some View {
@@ -49,6 +53,7 @@ struct creaItinerarioView: View {
                             Image(systemName: "magnifyingglass")
                                 .foregroundColor(.mint)
                             TextField("città/aeroporto", text: $rootState.scaloPrecompilato)
+                                .focused($isTextFieldFocused)
                                 .onChange(of: rootState.scaloPrecompilato) { oldValue, newValue in
                                     if newValue.isEmpty {
                                         risultatiFiltrati = []
@@ -67,17 +72,23 @@ struct creaItinerarioView: View {
                         .cornerRadius(20)
                         .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                         .padding(.horizontal, 24)
-                        .padding(.top, 25)
+                        .padding(.top, 18)
+                        .toolbar {
+                            ToolbarItemGroup(placement: .keyboard) {
+                                Spacer()
+                                Button("Fine") { isTextFieldFocused = false }
+                            }
+                        }
                     }
                     .frame(maxWidth: 500)
                     
                     // Orario di arrivo
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Orario di arrivo all'aeroporto di scalo")
-                            .font(.caption)
+                            .font(.subheadline)
                             .foregroundColor(.gray)
                             .padding(.leading, 15)
-                            .padding(.vertical,5)
+                            .padding(.top,5)
                         HStack {
                             Image(systemName: "clock.arrow.circlepath")
                                 .foregroundColor(.mint)
@@ -92,8 +103,9 @@ struct creaItinerarioView: View {
                         .padding(.bottom,5)
                     }
                     .background(Color.white)
-                    .cornerRadius(16)
-                    .shadow(color: .mint.opacity(0.07), radius: 6, x: 0, y: 2)
+                    .cornerRadius(20)
+                    .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
+                    .padding(.vertical, 3)
                     .padding(.horizontal, 24)
                     .padding(.top, 35)
                     .frame(maxWidth: 500)
@@ -101,10 +113,10 @@ struct creaItinerarioView: View {
                     // Durata scalo
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Durata scalo")
-                            .font(.caption)
+                            .font(.subheadline)
                             .foregroundColor(.gray)
                             .padding(.leading, 15)
-                            .padding(.vertical,5)
+                            .padding(.top,5)
                         HStack {
                             Image(systemName: "clock")
                                 .foregroundColor(.mint)
@@ -119,10 +131,11 @@ struct creaItinerarioView: View {
                         .padding(.bottom,5)
                     }
                     .background(Color.white)
-                    .cornerRadius(16)
+                    .cornerRadius(20)
                     .shadow(color: .mint.opacity(0.07), radius: 6, x: 0, y: 2)
+                    .padding(.vertical, 3)
                     .padding(.horizontal, 24)
-                    .padding(.top, 15)
+                    .padding(.top, 5)
                     .frame(maxWidth: 500)
                     
                     // Preferenze/interessi
@@ -159,6 +172,17 @@ struct creaItinerarioView: View {
                     
                     // Bottone genera itinerario
                     Button(action: {
+                        let durataTotaleMinuti = durataScaloOre() * 60 + durataScaloMinuti()
+                        if durataTotaleMinuti == 0 {
+                            alertMessage = "Inserisci la durata dello scalo."
+                            showAlert = true
+                            return
+                        }
+                        if durataTotaleMinuti < 90 {
+                            alertMessage = "Con la durata inserita non è consigliato uscire dall'aeroporto."
+                            showAlert = true
+                            return
+                        }
                         promptItinerario()
                     }) {
                         HStack {
@@ -178,10 +202,13 @@ struct creaItinerarioView: View {
                         .shadow(color: .gray.opacity(0.2), radius: 8, x: 0, y: 4)
                     }
                     .disabled(isLoading)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 20)
                     .padding(.top, 30)
                     .padding(.bottom, 50)
                     .frame(maxWidth: 500)
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Attenzione"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                    }
                 }
                 .padding(.top, 60)
                 .navigationDestination(isPresented: $navigateToItinerario) {
@@ -239,7 +266,7 @@ struct creaItinerarioView: View {
         let aeroporto = rootState.scaloPrecompilato.isEmpty ? "[inserisci aeroporto]" : rootState.scaloPrecompilato
         let ore = durataScaloOre()
         let minuti = durataScaloMinuti()
-        let orarioArrivoString = DateFormatter.orario.string(from: orarioArrivo)
+        let orarioArrivoString = DateFormatter.orario.string(from: orarioArrivo) 
         let prompt = """
         Genera un itinerario di viaggio per un passeggero in scalo presso l'aeroporto \(aeroporto), con arrivo previsto alle ore \(orarioArrivoString), durata di scalo pari a \(ore) ore e \(minuti) minuti, e preferenza di attività \(preferenza).
         Requisiti:
