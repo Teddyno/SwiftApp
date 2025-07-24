@@ -30,6 +30,7 @@ struct creaItinerarioView: View {
     @State private var showAlert = false
     @State private var alertMessage = ""
     @State private var showOrarioPicker = false
+    @FocusState private var isTextFieldFocused: Bool
     let preferenze = ["Natura", "Cibo", "Monumenti", "Shopping"]
 
     var body: some View {
@@ -51,6 +52,7 @@ struct creaItinerarioView: View {
                             Image(systemName: "magnifyingglass")
                                 .foregroundColor(.mint)
                             TextField("città/aeroporto", text: $rootState.scaloPrecompilato)
+                                .focused($isTextFieldFocused)
                                 .onChange(of: rootState.scaloPrecompilato) { oldValue, newValue in
                                     if newValue.isEmpty {
                                         risultatiFiltrati = []
@@ -70,6 +72,12 @@ struct creaItinerarioView: View {
                         .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                         .padding(.horizontal, 24)
                         .padding(.top, 18)
+                        .toolbar {
+                            ToolbarItemGroup(placement: .keyboard) {
+                                Spacer()
+                                Button("Fine") { isTextFieldFocused = false }
+                            }
+                        }
                     }
                     .frame(maxWidth: 500)
                     // Orario di arrivo
