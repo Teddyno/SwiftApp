@@ -54,7 +54,6 @@ struct creaItinerarioView: View {
                                 .foregroundColor(.mint)
                             TextField("città/aeroporto", text: $rootState.scaloPrecompilato)
                                 .focused($isTextFieldFocused)
-                                .focused($isTextFieldFocused)
                                 .onChange(of: rootState.scaloPrecompilato) { oldValue, newValue in
                                     if newValue.isEmpty {
                                         risultatiFiltrati = []
@@ -80,19 +79,12 @@ struct creaItinerarioView: View {
                                 Button("Fine") { isTextFieldFocused = false }
                             }
                         }
-                        .toolbar {
-                            ToolbarItemGroup(placement: .keyboard) {
-                                Spacer()
-                                Button("Fine") { isTextFieldFocused = false }
-                            }
-                        }
                     }
                     .frame(maxWidth: 500)
                     
                     // Orario di arrivo
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Orario di arrivo all'aeroporto di scalo")
-                            .font(.subheadline)
                             .font(.subheadline)
                             .foregroundColor(.gray)
                             .padding(.leading, 15)
@@ -211,13 +203,9 @@ struct creaItinerarioView: View {
                     }
                     .disabled(isLoading)
                     .padding(.horizontal, 20)
-                    .padding(.horizontal, 20)
                     .padding(.top, 30)
                     .padding(.bottom, 50)
                     .frame(maxWidth: 500)
-                    .alert(isPresented: $showAlert) {
-                        Alert(title: Text("Attenzione"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-                    }
                     .alert(isPresented: $showAlert) {
                         Alert(title: Text("Attenzione"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                     }
@@ -313,7 +301,7 @@ struct creaItinerarioView: View {
         - Inserisci al massimo 7 tappe coerenti con la durata utile
         - Le tappe devono riflettere la categoria preferita inserita da \(preferenza)
         - Inserisci solo tappe realisticamente raggiungibili e visitabili nel tempo utile
-        - Ogni tappa deve includere: nome, descrizione, orario di arrivo stimato, nome del file immagine (fittizio o generico), e link Apple Maps
+        - Ogni tappa deve includere: nome, descrizione, orario di arrivo stimato, nome del file immagine (fittizio o generico), link Apple Maps, latitudine e longitudine corretti
         Restituisci solo il JSON come testo puro, **senza usare markdown, senza backtick**, né altri caratteri extra.
     """;
         print("\(prompt)");
