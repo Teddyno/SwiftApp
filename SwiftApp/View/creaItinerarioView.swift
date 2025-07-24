@@ -37,7 +37,7 @@ struct creaItinerarioView: View {
                         .resizable()
                         .scaledToFill()
                         .clipShape(RoundedRectangle(cornerRadius: 50))
-                        .frame(maxWidth: .infinity, maxHeight: 500)
+                        .frame(maxWidth: .infinity, maxHeight: 650)
                         .ignoresSafeArea()
                     Spacer()
                 }
