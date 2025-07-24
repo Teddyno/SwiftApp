@@ -41,7 +41,7 @@ struct creaItinerarioView: View {
                         .resizable()
                         .scaledToFill()
                         .clipShape(RoundedRectangle(cornerRadius: 50))
-                        .frame(maxWidth: .infinity, maxHeight: 650)
+                        .frame(maxWidth: .infinity, maxHeight: 620)
                         .ignoresSafeArea()
                     Spacer()
                 }
@@ -71,7 +71,7 @@ struct creaItinerarioView: View {
                         .background(Color.white)
                         .cornerRadius(20)
                         .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, 30)
                         .padding(.top, 18)
                         .toolbar {
                             ToolbarItemGroup(placement: .keyboard) {
@@ -106,7 +106,7 @@ struct creaItinerarioView: View {
                     .cornerRadius(20)
                     .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                     .padding(.vertical, 3)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 30)
                     .padding(.top, 35)
                     .frame(maxWidth: 500)
                     
@@ -134,7 +134,7 @@ struct creaItinerarioView: View {
                     .cornerRadius(20)
                     .shadow(color: .mint.opacity(0.07), radius: 6, x: 0, y: 2)
                     .padding(.vertical, 3)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 30)
                     .padding(.top, 5)
                     .frame(maxWidth: 500)
                     
@@ -164,7 +164,7 @@ struct creaItinerarioView: View {
                     .background(Color.white)
                     .cornerRadius(20)
                     .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 30)
                     .padding(.top, 35)
                     .frame(maxWidth: 500)
                     
@@ -202,7 +202,7 @@ struct creaItinerarioView: View {
                         .shadow(color: .gray.opacity(0.2), radius: 8, x: 0, y: 4)
                     }
                     .disabled(isLoading)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 30)
                     .padding(.top, 30)
                     .padding(.bottom, 50)
                     .frame(maxWidth: 500)
