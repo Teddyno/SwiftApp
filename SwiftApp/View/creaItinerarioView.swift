@@ -48,7 +48,7 @@ struct creaItinerarioView: View {
                 
                 VStack() {
                     // Campo ricerca aeroporto
-                    VStack() {
+                    VStack {
                         HStack {
                             Image(systemName: "magnifyingglass")
                                 .foregroundColor(.mint)
@@ -66,15 +66,18 @@ struct creaItinerarioView: View {
                                     }
                                 }
                                 .foregroundColor(.black)
+                                .frame(minHeight: 27)  // altezza minima tappabile
                         }
-                        .padding(20)
+                        .padding(20)  // padding sull'intero HStack per area tappabile più grande
+                        .contentShape(Rectangle())  // estende l'area tappabile a tutto il rettangolo
                         .background(Color.white)
                         .cornerRadius(20)
                         .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                         .padding(.horizontal, 30)
                         .frame(maxWidth: 500)
-                        .padding(.top, 18)
+                        .padding(.top, 25)
                     }
+
                     
                     // Orario di arrivo
                     HStack(spacing: 8){
@@ -159,7 +162,7 @@ struct creaItinerarioView: View {
                     .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                     .padding(.horizontal, 30)
                     .frame(maxWidth: 500)
-                    .padding(.top, 35)
+                    .padding(.top, 30)
                     
                     Spacer(minLength: 0)
                     
@@ -209,6 +212,8 @@ struct creaItinerarioView: View {
                         ItinerarioView(itinerario: .constant(itinerario))
                     }
                 }
+                
+                //suggerimenti aeroporti
                 VStack {
                     if !risultatiFiltrati.isEmpty {
                         VStack(alignment: .leading, spacing: 0) {
@@ -250,6 +255,7 @@ struct creaItinerarioView: View {
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
+
     func promptItinerario() {
         guard let chiaveAPI = ProcessInfo.processInfo.environment["GROQ_API_KEY"] else {
                     print("❌ Variabile di ambiente GROQ_API_KEY non trovata.")
