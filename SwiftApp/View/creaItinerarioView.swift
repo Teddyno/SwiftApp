@@ -41,6 +41,7 @@ struct creaItinerarioView: View {
                         .ignoresSafeArea()
                     Spacer()
                 }
+                
                 VStack(spacing: 0) {
                     // Campo ricerca aeroporto
                     VStack(spacing: 0) {
@@ -66,59 +67,64 @@ struct creaItinerarioView: View {
                         .cornerRadius(20)
                         .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                         .padding(.horizontal, 24)
-                        .padding(.top, 18)
+                        .padding(.top, 25)
                     }
                     .frame(maxWidth: 500)
+                    
                     // Orario di arrivo
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Orario di arrivo all'aeroporto di scalo")
                             .font(.caption)
                             .foregroundColor(.gray)
-                            .padding(.leading, 2)
+                            .padding(.leading, 15)
+                            .padding(.vertical,5)
                         HStack {
                             Image(systemName: "clock.arrow.circlepath")
                                 .foregroundColor(.mint)
                                 .font(.system(size: 20, weight: .semibold))
+                                .padding(.horizontal,20)
                             Spacer()
                             DatePicker("", selection: $orarioArrivo, displayedComponents: [.hourAndMinute])
                                 .labelsHidden()
                                 .colorMultiply(.black)
+                                .padding(.horizontal,20)
                         }
-                        .padding(.horizontal, 2)
+                        .padding(.bottom,5)
                     }
-                    .padding(.vertical, 10)
-                    .padding(.horizontal, 12)
                     .background(Color.white)
                     .cornerRadius(16)
                     .shadow(color: .mint.opacity(0.07), radius: 6, x: 0, y: 2)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 35)
                     .frame(maxWidth: 500)
+                    
                     // Durata scalo
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Durata scalo")
                             .font(.caption)
                             .foregroundColor(.gray)
-                            .padding(.leading, 2)
+                            .padding(.leading, 15)
+                            .padding(.vertical,5)
                         HStack {
                             Image(systemName: "clock")
                                 .foregroundColor(.mint)
                                 .font(.system(size: 20, weight: .semibold))
+                                .padding(.horizontal,20)
                             Spacer()
                             DatePicker("", selection: $durataScalo, displayedComponents: [.hourAndMinute])
                                 .labelsHidden()
                                 .colorMultiply(.black)
+                                .padding(.horizontal,20)
                         }
-                        .padding(.horizontal, 2)
+                        .padding(.bottom,5)
                     }
-                    .padding(.vertical, 10)
-                    .padding(.horizontal, 12)
                     .background(Color.white)
                     .cornerRadius(16)
                     .shadow(color: .mint.opacity(0.07), radius: 6, x: 0, y: 2)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 14)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 15)
                     .frame(maxWidth: 500)
+                    
                     // Preferenze/interessi
                     VStack {
                         Text("Scegli uno tra questi interessi")
@@ -132,7 +138,7 @@ struct creaItinerarioView: View {
                                 }) {
                                     Text(interest)
                                         .frame(maxWidth: .infinity)
-                                        .padding(.vertical, 10)
+                                        .padding(.vertical, 15)
                                         .background(preferenzaSelezionata == interest.lowercased() ? Color.mint : Color.gray.opacity(0.2))
                                         .foregroundColor(.black)
                                         .cornerRadius(12)
@@ -146,9 +152,11 @@ struct creaItinerarioView: View {
                     .cornerRadius(20)
                     .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                     .padding(.horizontal, 24)
-                    .padding(.top, 24)
+                    .padding(.top, 35)
                     .frame(maxWidth: 500)
+                    
                     Spacer(minLength: 0)
+                    
                     // Bottone genera itinerario
                     Button(action: {
                         promptItinerario()
