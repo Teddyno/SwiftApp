@@ -191,17 +191,6 @@ struct creaItinerarioView: View {
                             showAlert = true
                             return
                         }
-                        let durataTotaleMinuti = durataScaloOre() * 60 + durataScaloMinuti()
-                        if durataTotaleMinuti == 0 {
-                            alertMessage = "Inserisci la durata dello scalo."
-                            showAlert = true
-                            return
-                        }
-                        if durataTotaleMinuti < 90 {
-                            alertMessage = "Con la durata inserita non è consigliato uscire dall'aeroporto."
-                            showAlert = true
-                            return
-                        }
                         promptItinerario()
                     }) {
                         HStack {
@@ -289,8 +278,7 @@ struct creaItinerarioView: View {
         let aeroporto = rootState.scaloPrecompilato.isEmpty ? "[inserisci aeroporto]" : rootState.scaloPrecompilato
         let ore = durataScaloOre()
         let minuti = durataScaloMinuti()
-        let orarioArrivoString = DateFormatter.orario.string(from: orarioArrivo) 
-        let orarioArrivoString = DateFormatter.orario.string(from: orarioArrivo) 
+        let orarioArrivoString = DateFormatter.orario.string(from: orarioArrivo)
         let prompt = """
         Genera un itinerario di viaggio per un passeggero in scalo presso l'aeroporto \(aeroporto), con arrivo previsto alle ore \(orarioArrivoString), durata di scalo pari a \(ore) ore e \(minuti) minuti, e preferenza di attività \(preferenza).
         Requisiti:
