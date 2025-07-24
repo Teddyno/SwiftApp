@@ -66,31 +66,6 @@ struct creaItinerarioView: View {
                         .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                         .padding(.horizontal, 24)
                         .padding(.top, 18)
-                        if !risultatiFiltrati.isEmpty {
-                            VStack(alignment: .leading, spacing: 0) {
-                                ForEach(risultatiFiltrati) { aeroporto in
-                                    Button(action: {
-                                        rootState.scaloPrecompilato = aeroporto.displayName
-                                        risultatiFiltrati = []
-                                        hideKeyboard()
-                                    }) {
-                                        Text(aeroporto.displayName)
-                                            .padding()
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                            .background(Color.white)
-                                            .foregroundColor(.black)
-                                    }
-                                    if aeroporto.id != risultatiFiltrati.last?.id {
-                                        Divider()
-                                    }
-                                }
-                            }
-                            .background(Color.white)
-                            .cornerRadius(16)
-                            .shadow(radius: 4)
-                            .padding(.horizontal, 24)
-                            .zIndex(1)
-                        }
                     }
                     .frame(maxWidth: 500)
                     // Orario di arrivo
@@ -207,6 +182,37 @@ struct creaItinerarioView: View {
                     }
                 }
                 .padding(.top, 60)
+                VStack {
+                    if !risultatiFiltrati.isEmpty {
+                        VStack(alignment: .leading, spacing: 0) {
+                            ForEach(risultatiFiltrati) { aeroporto in
+                                Button(action: {
+                                    rootState.scaloPrecompilato = aeroporto.displayName
+                                    risultatiFiltrati = []
+                                    hideKeyboard()
+                                }) {
+                                    Text(aeroporto.displayName)
+                                        .padding()
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .background(Color.white)
+                                        .foregroundColor(.black)
+                                }
+                                if aeroporto.id != risultatiFiltrati.last?.id {
+                                    Divider()
+                                }
+                            }
+                        }
+                        .background(Color.white)
+                        .cornerRadius(12)
+                        .shadow(radius: 4)
+                        .padding(.horizontal, 35)
+                        .padding(.top, 150) // Posiziona sotto al TextField
+                    } else {
+                        Spacer()
+                    }
+                    Spacer()
+                }
+                .zIndex(1) // Assicura che sia sopra gli altri elementi
             }
             .background(Color(.systemGroupedBackground).ignoresSafeArea())
             .onAppear {
