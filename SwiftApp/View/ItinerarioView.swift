@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItinerarioView: View {
     @Binding var itinerario: Itinerario
-    @State var progresso=0
+    @State var progresso = -1
     @State var open:[Bool]=[]
     @State var mostraMap=false
     var body: some View {
@@ -123,6 +123,7 @@ struct ItinerarioView: View {
                                      HStack {
                                          Spacer()
                                          VStack(spacing: 12) {
+                                             TappaImageView(titolo: tappa.nome)
                                              let url: URL = {
                                                  func appleMapsURL(from original: String, nome: String, citta: String?) -> URL {
                                                      if original.contains("maps.app.goo.gl") || original.contains("google.com/maps") {
@@ -157,6 +158,7 @@ struct ItinerarioView: View {
         }
         .onAppear{
             open=Array(repeating: false, count: itinerario.tappe.count)
+            print(itinerario.tappe[0].foto)
         }
         .toolbar{
             ToolbarItem(placement: .topBarTrailing){
@@ -168,9 +170,7 @@ struct ItinerarioView: View {
         .sheet(isPresented: $mostraMap){
             MapView(tappe: itinerario.tappe)
         }
-        
     }
-
 }
 
 #Preview {
@@ -185,7 +185,7 @@ struct ItinerarioView: View {
                 nome: "Sagrada Família",
                 descr: "La basilica iconica di Antoni Gaudí, capolavoro in costruzione dal 1882.",
                 oraArrivo: "09:00",
-                foto: "sagrada_familia",
+                foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Galleria_Vittorio_Emanuele_II_Milano.jpg",
                 maps: "https://maps.apple.com/?q=Sagrada+Familia",
                 latitudine: 41.4036,
                 longitudine: 2.1744
@@ -194,7 +194,7 @@ struct ItinerarioView: View {
                 nome: "Passeig de Gràcia",
                 descr: "Elegante via dello shopping e dell'architettura modernista, con Casa Batlló e Casa Milà.",
                 oraArrivo: "10:30",
-                foto: "passeig_de_gracia",
+                foto: "https://commons.wikimedia.org/wiki/File:Galleria_Vittorio_Emanuele_II_Milano.jpg",
                 maps: "https://maps.apple.com/?q=Passeig+de+Gracia",
                 latitudine: 41.3917,
                 longitudine: 2.1649
@@ -203,7 +203,7 @@ struct ItinerarioView: View {
                 nome: "Mercato della Boqueria",
                 descr: "Mercato storico e colorato lungo La Rambla, ideale per uno spuntino.",
                 oraArrivo: "12:00",
-                foto: "mercato_boqueria",
+                foto: "",
                 maps: "https://maps.apple.com/?q=Mercado+de+La+Boqueria",
                 latitudine: 41.3826,
                 longitudine: 2.1722
@@ -212,7 +212,7 @@ struct ItinerarioView: View {
                 nome: "Barceloneta",
                 descr: "Passeggiata rilassante lungo la spiaggia più famosa di Barcellona.",
                 oraArrivo: "13:30",
-                foto: "barceloneta",
+                foto: "",
                 maps: "https://maps.apple.com/?q=Barceloneta",
                 latitudine: 41.3766,
                 longitudine: 2.1925

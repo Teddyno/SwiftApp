@@ -307,7 +307,7 @@ struct creaItinerarioView: View {
         - Inserisci al massimo 7 tappe coerenti con la durata utile
         - Le tappe devono riflettere la categoria preferita inserita da \(preferenza)
         - Inserisci solo tappe realisticamente raggiungibili e visitabili nel tempo utile
-        - Ogni tappa deve includere: nome, descrizione, orario di arrivo stimato, nome del file immagine (fittizio o generico), link Apple Maps, latitudine e longitudine corretti
+        - Ogni tappa deve includere: nome in lingua originale, descrizione, orario di arrivo stimato, l'URL assoluto della prima immagine che appare su Google Immagini, link Apple Maps, latitudine e longitudine corretti
         Restituisci solo il JSON come testo puro, **senza usare markdown, senza backtick**, né altri caratteri extra.
     """;
         print("\(prompt)");
