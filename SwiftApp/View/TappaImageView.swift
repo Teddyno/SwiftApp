@@ -12,6 +12,7 @@ struct TappaImageView: View {
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(10)
+                    .frame(maxWidth: .infinity,maxHeight: 600)
                     .clipped()
             case .empty, .failure:
                 placeholderImage
