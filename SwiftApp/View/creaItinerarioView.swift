@@ -264,10 +264,16 @@ struct creaItinerarioView: View {
     }
 
     func promptItinerario() {
+        /*
         guard let chiaveAPI = ProcessInfo.processInfo.environment["GROQ_API_KEY"] else {
                     print("❌ Variabile di ambiente GROQ_API_KEY non trovata.")
                     return
+                }*/
+        
+        guard let chiaveAPI = Bundle.main.object(forInfoDictionaryKey: "GROG_API_KEY") as? String else {
+                    fatalError("❌ Variabile di ambiente GROQ_API_KEY non trovata.")
                 }
+        
         let preferenza = preferenzaSelezionata ?? "nessuna preferenza"
         let aeroporto = rootState.scaloPrecompilato.isEmpty ? "[inserisci aeroporto]" : rootState.scaloPrecompilato
         let ore = durataScaloOre()
