@@ -123,7 +123,7 @@ struct ItinerarioView: View {
                                      HStack {
                                          Spacer()
                                          VStack(spacing: 12) {
-                                             TappaImageView(titolo: tappa.nome)
+                                             TappaImageView(titolo: tappa.nome,foto: tappa.foto)
                                              let url: URL = {
                                                  func appleMapsURL(from original: String, nome: String, citta: String?) -> URL {
                                                      if original.contains("maps.app.goo.gl") || original.contains("google.com/maps") {
@@ -158,7 +158,9 @@ struct ItinerarioView: View {
         }
         .onAppear{
             open=Array(repeating: false, count: itinerario.tappe.count)
-            print(itinerario.tappe[0].foto)
+            for i in 0...itinerario.tappe.count-1{
+                print(itinerario.tappe[i].foto)
+            }
         }
         .toolbar{
             ToolbarItem(placement: .topBarTrailing){
