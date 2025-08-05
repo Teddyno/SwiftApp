@@ -1,0 +1,33 @@
+{
+  "images" : [
+    {
+      "filename" : "imageedit_2_8255462956-2-6.png",
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "imageedit_2_8255462956-2-4.png",
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "imageedit_2_8255462956-2-3.png",
+      "idiom" : "iphone",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "ChatGPT Image 26 giu 2025, 15_45_21-2-4.png",
+      "idiom" : "ipad",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "ChatGPT Image 26 giu 2025, 15_45_21-2-3.png",
+      "idiom" : "ipad",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
