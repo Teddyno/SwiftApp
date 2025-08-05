@@ -47,6 +47,8 @@ struct creaItinerarioView: View {
                 }
                 
                 VStack() {
+                    Image("Logo")
+                        .padding(0)
                     // Campo ricerca aeroporto
                     VStack {
                         HStack {
@@ -75,7 +77,7 @@ struct creaItinerarioView: View {
                         .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                         .padding(.horizontal, 30)
                         .frame(maxWidth: 500)
-                        .padding(.top, 25)
+                        .padding(.top, 5)
                     }
 
                     
@@ -206,7 +208,7 @@ struct creaItinerarioView: View {
                         Alert(title: Text("Attenzione"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                     }
                 }
-                .padding(.top,60)
+                .padding(.top,0)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()
