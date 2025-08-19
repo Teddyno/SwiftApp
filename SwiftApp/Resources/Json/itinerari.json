@@ -3340,6 +3340,467 @@
     ]
   },
   {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "07:30",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita dall'aeroporto e transfer verso la città",
+        "descr": "Trasferimento con MRT o taxi verso Marina Bay.",
+        "oraArrivo": "08:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      },
+      {
+        "nome": "Merlion Park",
+        "descr": "Simbolo di Singapore, con la famosa statua metà leone metà pesce.",
+        "oraArrivo": "09:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Merlion_in_Singapore_(2018).jpg",
+        "maps": "https://maps.apple.com/?q=Merlion+Park+Singapore",
+        "latitudine": 1.2868,
+        "longitudine": 103.8545
+      },
+      {
+        "nome": "Esplanade - Theatres on the Bay",
+        "descr": "Centro culturale con architettura unica a forma di durian.",
+        "oraArrivo": "10:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Esplanade_(Theatres_on_the_Bay),Singapore-_20140125.jpg",
+        "maps": "https://maps.apple.com/?q=Esplanade+Singapore",
+        "latitudine": 1.2895,
+        "longitudine": 103.8550
+      },
+      {
+        "nome": "Ritorno all'aeroporto",
+        "descr": "Trasferimento con MRT o taxi verso Changi.",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "09:00",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita dall'aeroporto e transfer verso Chinatown",
+        "descr": "Metro o taxi per Chinatown.",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      },
+      {
+        "nome": "Chinatown Complex Food Centre",
+        "descr": "Mercato gastronomico famoso per lo street food, incluso il pollo al riso Hainanese.",
+        "oraArrivo": "10:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Chinatown_Complex_Food_Centre_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Chinatown+Complex+Singapore",
+        "latitudine": 1.2819,
+        "longitudine": 103.8440
+      },
+      {
+        "nome": "Maxwell Food Centre",
+        "descr": "Altro hawker center celebre, tappa immancabile per i dumpling.",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Maxwell_Road_Food_Centre.JPG",
+        "maps": "https://maps.apple.com/?q=Maxwell+Food+Centre+Singapore",
+        "latitudine": 1.2803,
+        "longitudine": 103.8449
+      },
+      {
+        "nome": "Ritorno all'aeroporto",
+        "descr": "Ritorno in taxi o MRT da Chinatown al Changi.",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "06:00",
+    "ore": 10,
+    "minuti": 0,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita dall'aeroporto e transfer verso Gardens by the Bay",
+        "descr": "Metro o taxi per i giardini futuristici di Singapore.",
+        "oraArrivo": "07:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Gardens_by_the_Bay,Singapore-_20140125.jpg",
+        "maps": "https://maps.apple.com/?q=Gardens+by+the+Bay+Singapore",
+        "latitudine": 1.2816,
+        "longitudine": 103.8636
+      },
+      {
+        "nome": "Cloud Forest",
+        "descr": "Una delle cupole di Gardens by the Bay, con foresta pluviale artificiale.",
+        "oraArrivo": "08:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Cloud_Forest_at_Gardens_by_the_Bay_2015.jpg",
+        "maps": "https://maps.apple.com/?q=Cloud+Forest+Singapore",
+        "latitudine": 1.2831,
+        "longitudine": 103.8650
+      },
+      {
+        "nome": "Singapore Botanic Gardens",
+        "descr": "Patrimonio UNESCO, ospita il famoso National Orchid Garden.",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_Botanic_Gardens_2012.jpg",
+        "maps": "https://maps.apple.com/?q=Singapore+Botanic+Gardens",
+        "latitudine": 1.3138,
+        "longitudine": 103.8159
+      },
+      {
+        "nome": "Ritorno all'aeroporto",
+        "descr": "Ritorno in taxi o MRT verso Changi.",
+        "oraArrivo": "14:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "12:15",
+    "ore": 7,
+    "minuti": 15,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita dall'aeroporto e transfer verso Orchard Road",
+        "descr": "Trasferimento con MRT o taxi verso la famosa via dello shopping.",
+        "oraArrivo": "13:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Orchard_Road_Singapore_2016.jpg",
+        "maps": "https://maps.apple.com/?q=Orchard+Road+Singapore",
+        "latitudine": 1.3048,
+        "longitudine": 103.8318
+      },
+      {
+        "nome": "ION Orchard",
+        "descr": "Centro commerciale iconico di Singapore, con boutique di lusso e food court.",
+        "oraArrivo": "13:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/ION_Orchard_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=ION+Orchard+Singapore",
+        "latitudine": 1.3040,
+        "longitudine": 103.8317
+      },
+      {
+        "nome": "Paragon Shopping Centre",
+        "descr": "Uno dei centri commerciali più grandi e lussuosi di Singapore.",
+        "oraArrivo": "14:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Paragon_Shopping_Centre_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Paragon+Shopping+Centre+Singapore",
+        "latitudine": 1.3053,
+        "longitudine": 103.8312
+      },
+      {
+        "nome": "Ritorno all'aeroporto",
+        "descr": "Ritorno in taxi o MRT verso Changi.",
+        "oraArrivo": "19:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "05:45",
+    "ore": 9,
+    "minuti": 15,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita dall'aeroporto e transfer verso Civic District",
+        "descr": "Trasferimento in taxi o MRT verso il centro storico.",
+        "oraArrivo": "06:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      },
+      {
+        "nome": "Raffles Hotel",
+        "descr": "Iconico hotel coloniale, famoso per il cocktail Singapore Sling.",
+        "oraArrivo": "07:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Raffles_Hotel_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Raffles+Hotel+Singapore",
+        "latitudine": 1.2945,
+        "longitudine": 103.8550
+      },
+      {
+        "nome": "St. Andrew's Cathedral",
+        "descr": "Magnifica cattedrale anglicana in stile gotico.",
+        "oraArrivo": "08:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Andrew's_Cathedral_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=St.+Andrew's+Cathedral+Singapore",
+        "latitudine": 1.2893,
+        "longitudine": 103.8512
+      },
+      {
+        "nome": "Ritorno all'aeroporto",
+        "descr": "Trasferimento in taxi o MRT verso Changi.",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "11:00",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita dall'aeroporto e transfer verso Little India",
+        "descr": "Taxi o MRT verso il quartiere indiano.",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Little_India_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Little+India+Singapore",
+        "latitudine": 1.3070,
+        "longitudine": 103.8490
+      },
+      {
+        "nome": "Tekka Centre",
+        "descr": "Hawker centre con piatti tipici indiani e asiatici.",
+        "oraArrivo": "12:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Tekka_Centre_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Tekka+Centre+Singapore",
+        "latitudine": 1.3075,
+        "longitudine": 103.8497
+      },
+      {
+        "nome": "Mustafa Centre",
+        "descr": "Grande centro commerciale aperto 24h con cibo e prodotti vari.",
+        "oraArrivo": "13:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Mustafa_Centre_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Mustafa+Centre+Singapore",
+        "latitudine": 1.3068,
+        "longitudine": 103.8530
+      },
+      {
+        "nome": "Ritorno all'aeroporto",
+        "descr": "Taxi o MRT verso Changi.",
+        "oraArrivo": "17:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "08:30",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita dall'aeroporto e transfer verso Sentosa Island",
+        "descr": "Taxi o monorotaia verso l'isola turistica di Sentosa.",
+        "oraArrivo": "09:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sentosa_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Sentosa+Island+Singapore",
+        "latitudine": 1.2494,
+        "longitudine": 103.8303
+      },
+      {
+        "nome": "Universal Studios Singapore",
+        "descr": "Parco a tema con attrazioni cinematografiche.",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Universal_Studios_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Universal+Studios+Singapore",
+        "latitudine": 1.2540,
+        "longitudine": 103.8238
+      },
+      {
+        "nome": "S.E.A. Aquarium",
+        "descr": "Uno degli acquari più grandi al mondo.",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/SEA_Aquarium_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=SEA+Aquarium+Singapore",
+        "latitudine": 1.2542,
+        "longitudine": 103.8183
+      },
+      {
+        "nome": "Ritorno all'aeroporto",
+        "descr": "Taxi o monorotaia verso Changi.",
+        "oraArrivo": "15:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "07:00",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita dall'aeroporto e transfer verso Bugis Street",
+        "descr": "Taxi o MRT verso Bugis Street, noto mercato di moda e souvenir.",
+        "oraArrivo": "08:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Bugis_Street_Market_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Bugis+Street+Singapore",
+        "latitudine": 1.3000,
+        "longitudine": 103.8550
+      },
+      {
+        "nome": "Bugis Junction",
+        "descr": "Centro commerciale con mix di negozi tradizionali e moderni.",
+        "oraArrivo": "08:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Bugis_Junction_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Bugis+Junction+Singapore",
+        "latitudine": 1.2998,
+        "longitudine": 103.8555
+      },
+      {
+        "nome": "Arab Street & Haji Lane",
+        "descr": "Quartiere trendy con boutique, street art e caffè.",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Haji_Lane_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Haji+Lane+Singapore",
+        "latitudine": 1.3061,
+        "longitudine": 103.8576
+      },
+      {
+        "nome": "Ritorno all'aeroporto",
+        "descr": "Taxi o MRT verso Changi.",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "10:00",
+    "ore": 9,
+    "minuti": 0,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita dall'aeroporto e transfer verso MacRitchie Reservoir",
+        "descr": "Taxi o bus verso il parco naturale con sentieri e foresta tropicale.",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/MacRitchie_Reservoir_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=MacRitchie+Reservoir+Singapore",
+        "latitudine": 1.3476,
+        "longitudine": 103.8265
+      },
+      {
+        "nome": "TreeTop Walk",
+        "descr": "Passeggiata sospesa tra gli alberi con viste panoramiche.",
+        "oraArrivo": "11:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/MacRitchie_Treetop_Walk_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=TreeTop+Walk+Singapore",
+        "latitudine": 1.3483,
+        "longitudine": 103.8315
+      },
+      {
+        "nome": "Ritorno all'aeroporto",
+        "descr": "Taxi o bus verso Changi.",
+        "oraArrivo": "19:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "06:30",
+    "ore": 8,
+    "minuti": 30,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita dall'aeroporto e transfer verso Marina Bay Sands",
+        "descr": "Taxi o MRT verso il complesso iconico di Singapore.",
+        "oraArrivo": "07:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Sands_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Marina+Bay+Sands+Singapore",
+        "latitudine": 1.2834,
+        "longitudine": 103.8607
+      },
+      {
+        "nome": "SkyPark Observation Deck",
+        "descr": "Panorama spettacolare della città dall'alto.",
+        "oraArrivo": "08:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Sands_SkyPark_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=SkyPark+Observation+Deck+Singapore",
+        "latitudine": 1.2834,
+        "longitudine": 103.8607
+      },
+      {
+        "nome": "ArtScience Museum",
+        "descr": "Museo di arte e scienza a forma di fiore di loto.",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/ArtScience_Museum_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=ArtScience+Museum+Singapore",
+        "latitudine": 1.2863,
+        "longitudine": 103.8590
+      },
+      {
+        "nome": "Ritorno all'aeroporto",
+        "descr": "Taxi o MRT verso Changi.",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Changi_Airport_Terminal_4_Facade_2017.jpg",
+        "maps": "https://maps.apple.com/?q=Changi+Airport+Singapore",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
     "citta": "Istanbul",
     "aeroporto": "Istanbul Airport (IST)",
     "orarioArrivo": "08:00",

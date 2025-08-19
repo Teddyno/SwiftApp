@@ -189,7 +189,7 @@ struct creaItinerarioView: View {
                         }()
                         if durataTotaleMinuti < sogliaMinuti {
                             alertMessage = "Con la durata inserita non è consigliato uscire dall'aeroporto."
-                            showAlert = true
+                            showAlert = true //
                             return
                         }
                         promptItinerario()
