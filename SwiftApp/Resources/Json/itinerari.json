@@ -1,0 +1,333 @@
+
+[
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma–Fiumicino",
+    "ore": 5,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Colosseo",
+        "descr": "Il Colosseo è l’anfiteatro romano più iconico al mondo, simbolo dell’antica Roma",
+        "oraArrivo": "09:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5e/The_Colosseum.jpg",
+        "maps": "https://maps.apple.com/?ll=41.89028,12.49222",
+        "latitudine": 41.89028,
+        "longitudine": 12.49222
+      },
+      {
+        "nome": "Foro Romano",
+        "descr": "Il centro dell’antica Roma, con rovine di templi, piazze e edifici pubblici",
+        "oraArrivo": "09:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Roman_Forum_%28Rome%29.jpg",
+        "maps": "https://maps.apple.com/?ll=41.8925,12.4853",
+        "latitudine": 41.8925,
+        "longitudine": 12.4853
+      },
+      {
+        "nome": "Palatino",
+        "descr": "Una delle sette colline di Roma, con rovine di antichi palazzi imperiali",
+        "oraArrivo": "10:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Palatino_Roma.jpg",
+        "maps": "https://maps.apple.com/?ll=41.8894,12.4873",
+        "latitudine": 41.8894,
+        "longitudine": 12.4873
+      },
+      {
+        "nome": "Pantheon",
+        "descr": "Tempio romano ben conservato, dedicato a tutti gli dei dell’antica Roma",
+        "oraArrivo": "11:15",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/3/30/Pantheon_Roma.jpg",
+        "maps": "https://maps.apple.com/?ll=41.8986,12.4769",
+        "latitudine": 41.8986,
+        "longitudine": 12.4769
+      },
+      {
+        "nome": "Piazza Navona",
+        "descr": "Celebre piazza barocca con fontane monumentali e atmosfera vivace",
+        "oraArrivo": "11:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Piazza_Navona_Rome.jpg",
+        "maps": "https://maps.apple.com/?ll=41.8992,12.4731",
+        "latitudine": 41.8992,
+        "longitudine": 12.4731
+      }
+    ]
+  },
+  {
+    "citta": "Madrid",
+    "aeroporto": "Adolfo Suárez Madrid–Barajas Airport",
+    "ore": 5,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Palacio Real de Madrid",
+        "descr": "Residenza ufficiale del re di Spagna, grande palazzo storico e monumento barocco",
+        "oraArrivo": "09:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Palacio_Real_de_Madrid_-_03.jpg",
+        "maps": "https://maps.apple.com/?ll=40.41795,-3.71431",
+        "latitudine": 40.41795,
+        "longitudine": -3.71431
+      },
+      {
+        "nome": "Plaza Mayor",
+        "descr": "Storica piazza centrale di Madrid, circondata da edifici con portici",
+        "oraArrivo": "09:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/1/14/Plaza_Mayor_Madrid.jpg",
+        "maps": "https://maps.apple.com/?ll=40.4155,-3.7074",
+        "latitudine": 40.4155,
+        "longitudine": -3.7074
+      },
+      {
+        "nome": "Puerta del Sol",
+        "descr": "Iconica piazza del centro di Madrid, punto da cui si misurano le distanze in Spagna",
+        "oraArrivo": "10:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Puerta_del_Sol_Madrid.jpg",
+        "maps": "https://maps.apple.com/?ll=40.4168,-3.7038",
+        "latitudine": 40.4168,
+        "longitudine": -3.7038
+      },
+      {
+        "nome": "Catedral de la Almudena",
+        "descr": "La cattedrale moderna accanto al Palazzo Reale, con viste panoramiche dalla cupola",
+        "oraArrivo": "11:15",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Catedral_de_la_Almudena.jpg",
+        "maps": "https://maps.apple.com/?ll=40.4153,-3.7153",
+        "latitudine": 40.4153,
+        "longitudine": -3.7153
+      },
+      {
+        "nome": "Museo del Prado",
+        "descr": "Museo nazionale d’arte con capolavori di Goya, Velázquez e altri maestri",
+        "oraArrivo": "11:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Museo_del_Prado_%28Madrid%29.jpg",
+        "maps": "https://maps.apple.com/?ll=40.4138,-3.6921",
+        "latitudine": 40.4138,
+        "longitudine": -3.6921
+      }
+    ]
+  },
+  {
+    "citta": "Abu Dhabi",
+    "aeroporto": "Abu Dhabi International Airport",
+    "ore": 5,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Sheikh Zayed Grand Mosque",
+        "descr": "La moschea dello Sceicco Zayed è un capolavoro dell’architettura islamica moderna",
+        "oraArrivo": "09:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Sheikh_Zayed_Grand_Mosque_Carpet_1-WikiRug.jpg",
+        "maps": "https://maps.apple.com/?ll=24.4120,54.4740",
+        "latitudine": 24.412,
+        "longitudine": 54.474
+      },
+      {
+        "nome": "Qasr Al Watan",
+        "descr": "Il palazzo presidenziale e culturale, con splendidi interni e giardini",
+        "oraArrivo": "09:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Qasr_Al_Watan_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?ll=24.4667,54.3667",
+        "latitudine": 24.4667,
+        "longitudine": 54.3667
+      },
+      {
+        "nome": "Heritage Village",
+        "descr": "Ricostruzione di un villaggio tradizionale degli Emirati, museo a cielo aperto",
+        "oraArrivo": "10:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Abu_Dhabi_Heritage_Village.jpg",
+        "maps": "https://maps.apple.com/?ll=24.4605,54.3219",
+        "latitudine": 24.4605,
+        "longitudine": 54.3219
+      },
+      {
+        "nome": "Louvre Abu Dhabi",
+        "descr": "Museo d’arte universale con collezioni da tutto il mondo",
+        "oraArrivo": "11:15",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Louvre_Abu_Dhabi_approach.jpg",
+        "maps": "https://maps.apple.com/?ll=24.5330,54.3977",
+        "latitudine": 24.533,
+        "longitudine": 54.3977
+      },
+      {
+        "nome": "Marina Mall Tower",
+        "descr": "Torre panoramica con vista sulla Corniche e sulla città",
+        "oraArrivo": "11:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Marina_Mall_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?ll=24.4920,54.3700",
+        "latitudine": 24.492,
+        "longitudine": 54.37
+      }
+    ]
+  },
+  {
+  "citta": "Parigi",
+  "aeroporto": "Aeroporto Charles de Gaulle",
+  "ore": 11,
+  "minuti": 0,
+  "categoria": "monumenti",
+  "preferito": false,
+  "tappe": [
+      {
+      "nome": "Eiffel Tower",
+      "descr": "Torre simbolo di Parigi, vista spettacolare dalla cima",
+      "oraArrivo": "09:00",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg",
+      "maps": "https://maps.apple.com/?ll=48.8584,2.2945",
+      "latitudine": 48.8584,
+      "longitudine": 2.2945
+      },
+      {
+      "nome": "Louvre Museum",
+      "descr": "Uno dei musei più grandi e famosi al mondo, con la Gioconda",
+      "oraArrivo": "10:00",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Louvre_Museum_Wikimedia.jpg",
+      "maps": "https://maps.apple.com/?ll=48.8606,2.3376",
+      "latitudine": 48.8606,
+      "longitudine": 2.3376
+      },
+      {
+      "nome": "Cathédrale Notre‑Dame de Paris",
+      "descr": "Cattedrale gotica iconica sulla Île de la Cité",
+      "oraArrivo": "11:30",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Notre-Dame_de_Paris_Wikimedia.jpg",
+      "maps": "https://maps.apple.com/?ll=48.8530,2.3499",
+      "latitudine": 48.8530,
+      "longitudine": 2.3499
+      },
+      {
+      "nome": "Arc de Triomphe",
+      "descr": "Monumento nazionale al centro di Place Charles de Gaulle",
+      "oraArrivo": "13:00",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Arc_de_Triomphe_Wikimedia.jpg",
+      "maps": "https://maps.apple.com/?ll=48.8738,2.2950",
+      "latitudine": 48.8738,
+      "longitudine": 2.2950
+      },
+      {
+      "nome": "Sacré‑Cœur",
+      "descr": "Basilica bianca sulla collina di Montmartre con vista panoramica",
+      "oraArrivo": "14:00",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Sacre_Coeur_Wikimedia.jpg",
+      "maps": "https://maps.apple.com/?ll=48.8867,2.3431",
+      "latitudine": 48.8867,
+      "longitudine": 2.3431
+      }
+      ]
+  },
+  {
+  "citta": "Londra",
+  "aeroporto": "Heathrow Airport",
+  "ore": 9,
+  "minuti": 0,
+  "categoria": "monumenti",
+  "preferito": false,
+  "tappe": [
+      {
+      "nome": "Tower of London",
+      "descr": "Fortezza storica e residenza reale, custodisce i Gioielli della Corona",
+      "oraArrivo": "09:00",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Tower_of_London_Wikimedia.jpg",
+      "maps": "https://maps.apple.com/?ll=51.5081,-0.0759",
+      "latitudine": 51.5081,
+      "longitudine": -0.0759
+      },
+      {
+      "nome": "Westminster Abbey",
+      "descr": "Abazia gotica dove si tengono incoronazioni e cerimonie reali",
+      "oraArrivo": "10:00",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Westminster_Abbey_Wikimedia.jpg",
+      "maps": "https://maps.apple.com/?ll=51.4993,-0.1273",
+      "latitudine": 51.4993,
+      "longitudine": -0.1273
+      },
+      {
+      "nome": "Big Ben",
+      "descr": "Il celebre orologio della Houses of Parliament",
+      "oraArrivo": "11:00",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Big_Ben_Wikimedia.jpg",
+      "maps": "https://maps.apple.com/?ll=51.5007,-0.1246",
+      "latitudine": 51.5007,
+      "longitudine": -0.1246
+      },
+      {
+      "nome": "London Eye",
+      "descr": "Ruota panoramica sul Tamigi con vista sulla città",
+      "oraArrivo": "12:00",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1a/London_Eye_Wikimedia.jpg",
+      "maps": "https://maps.apple.com/?ll=51.5033,-0.1196",
+      "latitudine": 51.5033,
+      "longitudine": -0.1196
+      },
+      {
+      "nome": "Buckingham Palace",
+      "descr": "Residenza ufficiale della regina, con cambio della guardia",
+      "oraArrivo": "13:00",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Buckingham_Palace_Wikimedia.jpg",
+      "maps": "https://maps.apple.com/?ll=51.5014,-0.1419",
+      "latitudine": 51.5014,
+      "longitudine": -0.1419
+      }
+    ]
+  },
+  {
+      "citta": "Tokyo",
+      "aeroporto": "Narita International Airport",
+      "ore": 7,
+      "minuti": 0,
+      "categoria": "monumenti",
+      "preferito": false,
+      "tappe": [
+          {
+              "nome": "Tokyo Skytree",
+              "descr": "Torre di trasmissione con piattaforma panoramica sulla città",
+              "oraArrivo": "09:00",
+              "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Tokyo_Skytree_2012.jpg",
+              "maps": "https://maps.apple.com/?ll=35.7100,139.8107",
+              "latitudine": 35.7100,
+              "longitudine": 139.8107
+          },
+          {
+              "nome": "Senso‑ji Temple",
+              "descr": "Tempio buddhista storico nel quartiere di Asakusa",
+              "oraArrivo": "10:00",
+              "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Sensoji_Tokyo_Wikimedia.jpg",
+              "maps": "https://maps.apple.com/?ll=35.7148,139.7967",
+              "latitudine": 35.7148,
+              "longitudine": 139.7967
+          },
+          {
+              "nome": "Imperial Palace",
+              "descr": "Residenza ufficiale dell’imperatore del Giappone, circondata da giardini",
+              "oraArrivo": "11:15",
+              "foto": "https://upload.wikimedia.org/wikipedia/commons/1/18/Imperial_Palace_Tokyo.jpg",
+              "maps": "https://maps.apple.com/?ll=35.6852,139.7528",
+              "latitudine": 35.6852,
+              "longitudine": 139.7528
+          },
+          {
+              "nome": "Meiji Jingu",
+              "descr": "Santuario shintoista immerso in un bosco urbano",
+              "oraArrivo": "12:30",
+              "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Meiji_Shrine_Tokyo.jpg",
+              "maps": "https://maps.apple.com/?ll=35.6764,139.6993",
+              "latitudine": 35.6764,
+              "longitudine": 139.6993
+          },
+          {
+              "nome": "Shibuya Crossing",
+              "descr": "Attraversamento pedonale iconico con vista dall’alto",
+              "oraArrivo": "13:30",
+              "foto": "https://upload.wikimedia.org/wikipedia/commons/2/26/Shibuya_Crossing_Wikimedia.jpg",
+              "maps": "https://maps.apple.com/?ll=35.6595,139.7004",
+              "latitudine": 35.6595,
+              "longitudine": 139.7004
+          }
+      ]
+  }
+]
