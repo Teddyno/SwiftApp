@@ -43,49 +43,49 @@
   },
   {
     "name": "London Heathrow Airport",
-    "city": "London",
+    "city": "Londra",
     "iata": "LHR",
     "country": "United Kingdom",
     "min": 6
   },
   {
     "name": "London Gatwick Airport",
-    "city": "London",
+    "city": "Londra",
     "iata": "LGW",
     "country": "United Kingdom",
     "min": 6
   },
   {
     "name": "London Stansted Airport",
-    "city": "London",
+    "city": "Londra",
     "iata": "STN",
     "country": "United Kingdom",
     "min": 6
   },
   {
     "name": "London Luton Airport",
-    "city": "London",
+    "city": "Londra",
     "iata": "LTN",
     "country": "United Kingdom",
     "min": 6
   },
   {
     "name": "London City Airport",
-    "city": "London",
+    "city": "Londra",
     "iata": "LCY",
     "country": "United Kingdom",
     "min": 6
   },
   {
     "name": "London Southend Airport",
-    "city": "London",
+    "city": "Londra",
     "iata": "SEN",
     "country": "United Kingdom",
     "min": 6
   },
   {
     "name": "Charles de Gaulle Airport",
-    "city": "Paris",
+    "city": "Parigi",
     "iata": "CDG",
     "country": "France",
     "min": 6
@@ -134,14 +134,14 @@
   },
   {
     "name": "Rome Fiumicino Airport",
-    "city": "Rome",
+    "city": "Roma",
     "iata": "FCO",
     "country": "Italy",
     "min": 6
   },
   {
     "name": "Milan Malpensa Airport",
-    "city": "Milan",
+    "city": "Milano",
     "iata": "MXP",
     "country": "Italy",
     "min": 6
@@ -204,7 +204,7 @@
   },
   {
     "name": "Zurich Airport",
-    "city": "Zurich",
+    "city": "Zurigo",
     "iata": "ZRH",
     "country": "Switzerland",
     "min": 6
@@ -267,7 +267,7 @@
   },
   {
     "name": "Mexico City International Airport",
-    "city": "Mexico City",
+    "city": "città del messico",
     "iata": "MEX",
     "country": "Mexico",
     "min": 6
@@ -302,7 +302,7 @@
   },
   {
     "name": "Lisbon Humberto Delgado Airport",
-    "city": "Lisbon",
+    "city": "Lisbona",
     "iata": "LIS",
     "country": "Portugal",
     "min": 6
@@ -316,14 +316,14 @@
   },
   {
     "name": "Venice Marco Polo Airport",
-    "city": "Venice",
+    "city": "Venezia",
     "iata": "VCE",
     "country": "Italy",
     "min": 6
   },
   {
     "name": "Naples International Airport",
-    "city": "Naples",
+    "city": "Napoli",
     "iata": "NAP",
     "country": "Italy",
     "min": 6
@@ -337,7 +337,7 @@
   },
   {
     "name": "Florence Peretola Airport",
-    "city": "Florence",
+    "city": "Firenze",
     "iata": "FLR",
     "country": "Italy",
     "min": 6
@@ -358,7 +358,7 @@
   },
   {
     "name": "Turin Airport",
-    "city": "Turin",
+    "city": "Torino",
     "iata": "TRN",
     "country": "Italy",
     "min": 6

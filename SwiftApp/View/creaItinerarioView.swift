@@ -277,10 +277,12 @@ struct creaItinerarioView: View {
     }
 
     private func normalizza(_ s: String) -> String {
+        // Normalizza stringhe (rimuove accenti e maiuscole) per confronti 
         return s.folding(options: .diacriticInsensitive, locale: .current).lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     private func cittàDaInput() -> String? {
+        // Ricava la città dall'input dell'utente: prima da confronto esatto su displayName, poi dal testo (prima della parentesi)
         if let match = aeroporti.first(where: { $0.displayName == rootState.scaloPrecompilato }) {
             return match.city
         }
@@ -293,6 +295,7 @@ struct creaItinerarioView: View {
     }
 
     private func iataDaInput() -> String? {
+        // Ricava il codice IATA dall'input: prima da confronto esatto su displayName, poi dal testo (prima della parentesi)
         if let match = aeroporti.first(where: { $0.displayName == rootState.scaloPrecompilato }) {
             return match.iata
         }
@@ -316,16 +319,19 @@ struct creaItinerarioView: View {
     }
 
     private func minutesOfDay(from date: Date) -> Int {
+        // Converte una data nei minuti dall'inizio del giorno (HH*60+mm)
         let comps = Calendar.current.dateComponents([.hour, .minute], from: date)
         return (comps.hour ?? 0) * 60 + (comps.minute ?? 0)
     }
 
     private func minutesOfDay(fromHHmm string: String) -> Int? {
+        // Converte una stringa HH:mm in minuti dall'inizio del giorno
         guard let d = DateFormatter.orario.date(from: string) else { return nil }
         return minutesOfDay(from: d)
     }
 
     private func trovaItinerarioLocale() -> Itinerario? {
+        // Cerca un itinerario nel file locale in base a città/IATA, orario (±60m), durata (−60..0m), e preferenza
         guard let url = Bundle.main.url(forResource: "itinerari", withExtension: "json") else { return nil }
         guard let data = try? Data(contentsOf: url),
               let lista = try? JSONDecoder().decode([Itinerario].self, from: data) else { return nil }
@@ -357,7 +363,7 @@ struct creaItinerarioView: View {
                 return abs(itMinutes - userMinutes) <= 60
             }()
             
-            // match durata: accetta da durata utente a durata utente + 60 minuti
+            // match durata: accetta da durata utente - 60 minuti fino alla durata utente (mai superiore)
             let durataOk: Bool = {
                 let localTotal = it.ore * 60 + it.minuti
                 let userTotal = userOre * 60 + userMinuti

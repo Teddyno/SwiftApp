@@ -12,6 +12,7 @@ struct Aeroporto: Codable, Identifiable {
     let city: String
     let iata: String
     let country: String
+    // Minimo consigliato (in ore) per poter uscire dall'aeroporto durante lo scalo
     let min: Int?
     
     var id: String { iata } // Usa IATA come identificatore univoco
