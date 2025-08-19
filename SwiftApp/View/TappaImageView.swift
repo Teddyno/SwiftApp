@@ -1,27 +1,38 @@
 import SwiftUI
 
 struct TappaImageView: View {
-    let titolo: String
-    @State private var imageURL: String = ""
+    let titolo:String
+    let foto:String
+    @State private var imageURL:String=""
+    @State private var notFound=false
+    
     
     var body: some View {
-        AsyncImage(url: URL(string: imageURL)) { phase in
-            switch phase {
-            case .success(let image):
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(10)
-                    .frame(maxWidth: .infinity,maxHeight: 600)
-                    .clipped()
-            case .empty, .failure:
-                placeholderImage
-            @unknown default:
-                placeholderImage
+        if notFound{
+            placeholderImage
+        }else{
+            AsyncImage(url: URL(string: imageURL)) { phase in
+                switch phase {
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(10)
+                        .frame(maxWidth: .infinity,maxHeight: 600)
+                        .clipped()
+                case .empty:
+                    ProgressView()
+                        .frame(width: 300,height: 200)
+                        .tint(.mint)
+                case  .failure:
+                    placeholderImage
+                @unknown default:
+                    placeholderImage
+                }
             }
-        }
-        .task {
-            await fetchImageURL()
+            .task {
+                await fetchImageURL()
+            }
         }
     }
     
@@ -33,19 +44,40 @@ struct TappaImageView: View {
     }
     
     private func fetchImageURL() async {
-        // 1. Prova prima con Wikipedia API
+        if let link=await Self.fetchDiretto(indirizzo: foto){
+            imageURL=link.absoluteString
+            return
+        }
+        
         if let wikiURL = await fetchFromPageSummary() {
             imageURL = wikiURL
             return
         }
         
-        // 2. Se Wikipedia fallisce, prova con Commons
         if let commonsURL = await Self.fetchFromCommons(placeName: titolo)?.absoluteString {
             imageURL = commonsURL
             return
         }
-        
+        notFound=true
         print("Nessuna immagine trovata per: \(titolo)")
+    }
+    
+    private static func fetchDiretto(indirizzo: String) async -> URL? {
+        guard let url = URL(string: indirizzo) else { return nil }
+        
+        do {
+            var request = URLRequest(url: url)
+            request.httpMethod = "HEAD"
+            
+            let (_, response) = try await URLSession.shared.data(for: request)
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+                return nil
+            }
+            return url
+        } catch {
+            print("Errore Commons: \(error.localizedDescription)")
+            return nil
+        }
     }
     
     private func fetchFromPageSummary() async -> String? {

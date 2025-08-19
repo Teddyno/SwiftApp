@@ -47,6 +47,8 @@ struct creaItinerarioView: View {
                 }
                 
                 VStack() {
+                    Image("Logo")
+                        .padding(0)
                     // Campo ricerca aeroporto
                     VStack {
                         HStack {
@@ -75,7 +77,7 @@ struct creaItinerarioView: View {
                         .shadow(color: .mint.opacity(0.08), radius: 8, x: 0, y: 2)
                         .padding(.horizontal, 30)
                         .frame(maxWidth: 500)
-                        .padding(.top, 25)
+                        .padding(.top, 5)
                     }
 
                     
@@ -206,7 +208,7 @@ struct creaItinerarioView: View {
                         Alert(title: Text("Attenzione"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                     }
                 }
-                .padding(.top,60)
+                .padding(.top,0)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()
@@ -273,7 +275,6 @@ struct creaItinerarioView: View {
         guard let chiaveAPI = Bundle.main.object(forInfoDictionaryKey: "GROG_API_KEY") as? String else {
                     fatalError("❌ Variabile di ambiente GROQ_API_KEY non trovata.")
                 }
-        
         let preferenza = preferenzaSelezionata ?? "nessuna preferenza"
         let aeroporto = rootState.scaloPrecompilato.isEmpty ? "[inserisci aeroporto]" : rootState.scaloPrecompilato
         let ore = durataScaloOre()
@@ -296,7 +297,7 @@ struct creaItinerarioView: View {
                   \"nome\": \"Nome della tappa\",
                   \"descr\": \"Breve descrizione della tappa\",
                   \"oraArrivo\": \"HH:mm\",
-                  \"foto\": \"nome_immagine.jpg\",
+                  \"foto\": \"url a una foto online, reperibile e visualizzabile della tappa, in formato .jpg o .png\",
                   \"maps\": \"URL apple Maps\"
                   \"latitudine\": valore decimale (es. 41.4036),
                   \"longitudine\": valore decimale (es. 2.1744)
@@ -314,9 +315,10 @@ struct creaItinerarioView: View {
         - Le tappe devono riflettere la categoria preferita inserita da \(preferenza)
         - Inserisci solo tappe realisticamente raggiungibili e visitabili nel tempo utile
         - Ogni tappa deve includere: nome in lingua originale, descrizione, orario di arrivo stimato, l'URL assoluto della prima immagine che appare su Google Immagini, link Apple Maps, latitudine e longitudine corretti
+        -Le immagini devono risultare url che restituiscono una foto visualizzabile, devono essere immagini commons di wikipedia con link https://commons.wikimedia.org/wiki/Special:FilePath/..., prova a cercare il nome completo della tappa e tra parentesi il nome della città
         Restituisci solo il JSON come testo puro, **senza usare markdown, senza backtick**, né altri caratteri extra.
     """;
-        print("\(prompt)");
+        //print("\(prompt)");
         let messagePayload = [["role": "user", "content": prompt]]
         guard let url = URL(string: "https://api.groq.com/openai/v1/chat/completions") else { return }
         var request = URLRequest(url: url)
@@ -343,8 +345,7 @@ struct creaItinerarioView: View {
                   let message = choices.first?["message"] as? [String: Any],
                   let content = message["content"] as? String else {
                 DispatchQueue.main.async {
-                    print("⚠️ Errore nella risposta API")
-                }
+                    print("⚠️ Errore nella risposta API")                }
                 return
             }
             print("JSON ricevuto:\n\(content)")

@@ -34,7 +34,18 @@ struct ListaItinerariView: View {
                 }
                 List {
                     ForEach(itinerariFiltrati, id: \.id) { itinerario in
-                        NavigationLink(destination: ItinerarioView(itinerario: .constant(itinerario))) {
+                        NavigationLink(
+                            destination: ItinerarioView(
+                                itinerario: Binding(
+                                    get: { itinerario },
+                                    set: { newValue in
+                                        if let index = itinerari.firstIndex(where: { $0.id == newValue.id }) {
+                                            itinerari[index] = newValue
+                                        }
+                                    }
+                                )
+                            )
+                        ) {
                             HStack {
                                 VStack(alignment: .leading) {
                                     Text(itinerario.testo().uppercased())
@@ -66,6 +77,9 @@ struct ListaItinerariView: View {
                             } label: {
                                 Label("Elimina", systemImage: "trash")
                             }
+                        }
+                        .onChange(of: itinerariFiltrati){
+                            saveItinerari()
                         }
                     }
                 }

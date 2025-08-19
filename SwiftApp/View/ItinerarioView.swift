@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ItinerarioView: View {
     @Binding var itinerario: Itinerario
-    @State var progresso = -1
     @State var open:[Bool]=[]
     @State var mostraMap=false
     var body: some View {
@@ -35,24 +34,28 @@ struct ItinerarioView: View {
                         HStack(spacing: 18){
                             let totalSteps=itinerario.tappe.count
                             ForEach(0..<totalSteps, id: \.self) { index in
-                                Button(action: { withAnimation(.spring()) { progresso = index } }) {
+                                Button(action: {
+                                    withAnimation(.spring()) {
+                                        itinerario.progress = index
+                                    }
+                                }) {
                                     VStack(spacing: 4){
                                         if !itinerario.tappe.isEmpty{
                                             Text("\(itinerario.tappe[index].oraArrivo)")
                                                 .frame(width:58)
-                                                .fontWeight(index == progresso ? .bold : .regular)
-                                                .foregroundColor(index == progresso ? .mint : .gray)
+                                                .fontWeight(index == itinerario.progress ? .bold : .regular)
+                                                .foregroundColor(index == itinerario.progress ? .mint : .gray)
                                                 .lineLimit(1)
                                                 .minimumScaleFactor(0.7)
-                                                .animation(.easeInOut, value: progresso)
+                                                .animation(.easeInOut, value: itinerario.progress)
                                         }
                                         Circle()
-                                            .fill(index <= progresso ? Color.mint : Color.gray.opacity(0.3))
+                                            .fill(index <= itinerario.progress ? Color.mint : Color.gray.opacity(0.3))
                                             .frame(width: 30, height: 30)
                                             .overlay(
                                                 Circle()
-                                                    .stroke(index == progresso ? Color.mint : Color.clear, lineWidth: index == progresso ? 4 : 0)
-                                                    .shadow(color: index == progresso ? Color.mint.opacity(0.4) : .clear, radius: 8, x: 0, y: 2)
+                                                    .stroke(index == itinerario.progress ? Color.mint : Color.clear, lineWidth: index == itinerario.progress ? 4 : 0)
+                                                    .shadow(color: index == itinerario.progress ? Color.mint.opacity(0.4) : .clear, radius: 8, x: 0, y: 2)
                                             )
                                             .overlay(
                                                 Text("\(index + 1)")
@@ -60,7 +63,7 @@ struct ItinerarioView: View {
                                                     .foregroundColor(.white)
                                                     .fontWeight(.bold)
                                             )
-                                            .animation(.spring(), value: progresso)
+                                            .animation(.spring(), value: itinerario.progress)
                                             .padding(4)
                                             .padding(.horizontal, 6)
                                     }
@@ -71,7 +74,7 @@ struct ItinerarioView: View {
                                         Text(".")
                                             .foregroundColor(.white)
                                         Rectangle()
-                                            .fill(index < progresso ? Color.mint : Color.gray.opacity(0.3))
+                                            .fill(index < itinerario.progress ? Color.mint : Color.gray.opacity(0.3))
                                             .frame(height: 2)
                                             .frame(width: 35)
                                             .padding(0)
@@ -88,9 +91,12 @@ struct ItinerarioView: View {
                             VStack{
                                 Divider()
                                 HStack(alignment: .center){
-                                    Button(action: {progresso=i}){
-                                        Image(systemName: i>progresso ? "xmark.circle.fill" : "checkmark.circle.fill")
-                                            .foregroundColor(i>progresso ? .gray : .mint)
+                                    Button(action:{
+                                                    itinerario.progress = i
+                                                }
+                                            ){
+                                        Image(systemName: i>itinerario.progress ? "xmark.circle.fill" : "checkmark.circle.fill")
+                                            .foregroundColor(i>itinerario.progress ? .gray : .mint)
                                             .font(.system(size: 24))
                                         
                                     }
@@ -123,7 +129,7 @@ struct ItinerarioView: View {
                                      HStack {
                                          Spacer()
                                          VStack(spacing: 12) {
-                                             TappaImageView(titolo: tappa.nome)
+                                             TappaImageView(titolo: tappa.nome,foto: tappa.foto)
                                              let url: URL = {
                                                  func appleMapsURL(from original: String, nome: String, citta: String?) -> URL {
                                                      if original.contains("maps.app.goo.gl") || original.contains("google.com/maps") {
@@ -158,7 +164,9 @@ struct ItinerarioView: View {
         }
         .onAppear{
             open=Array(repeating: false, count: itinerario.tappe.count)
-            print(itinerario.tappe[0].foto)
+            for i in 0...itinerario.tappe.count-1{
+                print(itinerario.tappe[i].foto)
+            }
         }
         .toolbar{
             ToolbarItem(placement: .topBarTrailing){
@@ -171,6 +179,7 @@ struct ItinerarioView: View {
             MapView(tappe: itinerario.tappe)
         }
     }
+    
 }
 
 #Preview {
@@ -217,7 +226,7 @@ struct ItinerarioView: View {
                 latitudine: 41.3766,
                 longitudine: 2.1925
             )
-        ]
-    )))
-
+        ],progress:-1
+    ))
+    )
 }

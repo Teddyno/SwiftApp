@@ -14,6 +14,7 @@ struct Itinerario: Identifiable, Equatable, Codable {
     var preferito: Bool = false
     var tappe: [Tappa]
     var orarioArrivoScalo: String? = nil
+    var progress:Int = -1
     
     func testo() -> String {
         if self.minuti < 10 {
@@ -24,10 +25,10 @@ struct Itinerario: Identifiable, Equatable, Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case id, citta, aeroporto, ore, minuti, categoria, preferito, tappe, orarioArrivoScalo
+        case id, citta, aeroporto, ore, minuti, categoria, preferito, tappe, orarioArrivoScalo, progress
     }
     
-    init(id: UUID = UUID(), citta: String, aeroporto: String, ore: Int, minuti: Int, categoria: Categoria, preferito: Bool = false, tappe: [Tappa], orarioArrivoScalo: String? = nil) {
+    init(id: UUID = UUID(), citta: String, aeroporto: String, ore: Int, minuti: Int, categoria: Categoria, preferito: Bool = false, tappe: [Tappa], orarioArrivoScalo: String? = nil, progress:Int = -1) {
         self.id = id
         self.citta = citta
         self.aeroporto = aeroporto
@@ -37,6 +38,7 @@ struct Itinerario: Identifiable, Equatable, Codable {
         self.preferito = preferito
         self.tappe = tappe
         self.orarioArrivoScalo = orarioArrivoScalo
+        self.progress=progress
     }
     
     init(from decoder: Decoder) throws {
@@ -50,6 +52,7 @@ struct Itinerario: Identifiable, Equatable, Codable {
         preferito = (try? container.decode(Bool.self, forKey: .preferito)) ?? false
         tappe = try container.decode([Tappa].self, forKey: .tappe)
         orarioArrivoScalo = try? container.decodeIfPresent(String.self, forKey: .orarioArrivoScalo)
+        progress = (try? container.decode(Int.self, forKey: .progress)) ?? -1
     }
     
     func encode(to encoder: Encoder) throws {
@@ -63,7 +66,9 @@ struct Itinerario: Identifiable, Equatable, Codable {
         try container.encode(preferito, forKey: .preferito)
         try container.encode(tappe, forKey: .tappe)
         try container.encodeIfPresent(orarioArrivoScalo, forKey: .orarioArrivoScalo)
+        try container.encode(progress, forKey: .progress)
     }
-} 
+    
+}
 
 

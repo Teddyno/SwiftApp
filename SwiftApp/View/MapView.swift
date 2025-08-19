@@ -13,7 +13,7 @@ struct MapView: View {
     var tappe: [Tappa] = []
     @State private var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 41.9028, longitude: 12.4964),
+            center: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0),
             span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         )
     )
@@ -59,7 +59,6 @@ struct MapView: View {
                 .shadow(color: .black.opacity(geo.size.width > 500 ? 0.12 : 0), radius: geo.size.width > 500 ? 16 : 0)
                 .edgesIgnoringSafeArea(.all)
             }
-            // Barra superiore con sfondo sfumato e titolo grande
             VStack(spacing: 0) {
                 HStack {
                     Spacer()
