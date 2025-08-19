@@ -1742,6 +1742,503 @@
     ]
   },
   {
+    "citta": "Amsterdam",
+    "aeroporto": "Schiphol (AMS)",
+    "orarioArrivo": "08:00",
+    "ore": 7,
+    "minuti": 30,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Schiphol e treno per Amsterdam Centraal",
+        "descr": "Prendi il treno diretto dall’aeroporto Schiphol verso Amsterdam Centraal (circa 20 minuti).",
+        "oraArrivo": "09:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol%20train%20station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      },
+      {
+        "nome": "Rijksmuseum",
+        "descr": "Il museo nazionale dei Paesi Bassi con opere di Rembrandt e Vermeer.",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Rijksmuseum_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Rijksmuseum+Amsterdam",
+        "latitudine": 52.359997,
+        "longitudine": 4.885219
+      },
+      {
+        "nome": "Museumplein",
+        "descr": "La piazza dei musei, cuore culturale di Amsterdam.",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Museumplein_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Museumplein+Amsterdam",
+        "latitudine": 52.3584,
+        "longitudine": 4.8811
+      },
+      {
+        "nome": "Ritorno verso Schiphol",
+        "descr": "Trasferimento in treno da Amsterdam Centraal a Schiphol.",
+        "oraArrivo": "14:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Centraal_station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      }
+    ]
+  },
+  {
+    "citta": "Amsterdam",
+    "aeroporto": "Schiphol (AMS)",
+    "orarioArrivo": "09:30",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Treno per Amsterdam Centraal",
+        "descr": "Collegamento ferroviario rapido dall’aeroporto al centro città.",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol%20train%20station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      },
+      {
+        "nome": "Albert Cuypmarkt",
+        "descr": "Il mercato più famoso di Amsterdam, ricco di street food e specialità locali.",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Cuypmarkt_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Albert+Cuypmarkt",
+        "latitudine": 52.3572,
+        "longitudine": 4.8976
+      },
+      {
+        "nome": "De Foodhallen",
+        "descr": "Un’ex rimessa per tram trasformata in food court moderna.",
+        "oraArrivo": "13:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Foodhallen_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Foodhallen+Amsterdam",
+        "latitudine": 52.3697,
+        "longitudine": 4.8727
+      },
+      {
+        "nome": "Ritorno in aeroporto",
+        "descr": "Rientro in treno da Amsterdam Centraal verso Schiphol.",
+        "oraArrivo": "15:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Centraal_station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      }
+    ]
+  },
+  {
+    "citta": "Amsterdam",
+    "aeroporto": "Schiphol (AMS)",
+    "orarioArrivo": "07:45",
+    "ore": 10,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento ad Amsterdam Centraal",
+        "descr": "Treno diretto Schiphol – Amsterdam Centraal.",
+        "oraArrivo": "09:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol%20train%20station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      },
+      {
+        "nome": "Kalverstraat",
+        "descr": "La via commerciale più popolare della città.",
+        "oraArrivo": "09:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalverstraat_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Kalverstraat+Amsterdam",
+        "latitudine": 52.3709,
+        "longitudine": 4.8940
+      },
+      {
+        "nome": "De Bijenkorf",
+        "descr": "Storico grande magazzino di lusso nel centro di Amsterdam.",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/De_Bijenkorf_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=De+Bijenkorf+Amsterdam",
+        "latitudine": 52.3731,
+        "longitudine": 4.8922
+      },
+      {
+        "nome": "Nine Streets (De Negen Straatjes)",
+        "descr": "Zona pittoresca con boutique e negozi di design.",
+        "oraArrivo": "13:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/De_Negen_Straatjes_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Negen+Straatjes+Amsterdam",
+        "latitudine": 52.3732,
+        "longitudine": 4.8836
+      },
+      {
+        "nome": "Ritorno a Schiphol",
+        "descr": "Rientro ad Amsterdam Centraal e treno per l’aeroporto.",
+        "oraArrivo": "15:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Centraal_station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      }
+    ]
+  },
+  {
+    "citta": "Amsterdam",
+    "aeroporto": "Schiphol (AMS)",
+    "orarioArrivo": "13:15",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Viaggio verso Amsterdam Sloterdijk",
+        "descr": "Prendi un treno rapido per Sloterdijk e poi un bus verso Westerpark.",
+        "oraArrivo": "14:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Sloterdijk_station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Sloterdijk",
+        "latitudine": 52.3881,
+        "longitudine": 4.8366
+      },
+      {
+        "nome": "Westerpark",
+        "descr": "Grande parco urbano, perfetto per una passeggiata rilassante.",
+        "oraArrivo": "14:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Westerpark_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Westerpark+Amsterdam",
+        "latitudine": 52.3860,
+        "longitudine": 4.8737
+      },
+      {
+        "nome": "Vondelpark",
+        "descr": "Il parco più famoso della città, nel cuore di Amsterdam.",
+        "oraArrivo": "16:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Vondelpark_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Vondelpark+Amsterdam",
+        "latitudine": 52.3570,
+        "longitudine": 4.8686
+      },
+      {
+        "nome": "Ritorno in aeroporto",
+        "descr": "Trasferimento verso Schiphol.",
+        "oraArrivo": "18:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol_airport.jpg",
+        "maps": "https://maps.apple.com/?q=Schiphol",
+        "latitudine": 52.3105,
+        "longitudine": 4.7683
+      }
+    ]
+  },
+  {
+    "citta": "Amsterdam",
+    "aeroporto": "Schiphol (AMS)",
+    "orarioArrivo": "06:30",
+    "ore": 9,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Treno Schiphol - Amsterdam Centraal",
+        "descr": "Arrivo al centro città.",
+        "oraArrivo": "07:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol%20train%20station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      },
+      {
+        "nome": "Dam Square",
+        "descr": "La piazza principale di Amsterdam, cuore della città.",
+        "oraArrivo": "08:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Dam_Square_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Dam+Square+Amsterdam",
+        "latitudine": 52.3731,
+        "longitudine": 4.8922
+      },
+      {
+        "nome": "Bloemenmarkt",
+        "descr": "Il famoso mercato galleggiante dei fiori.",
+        "oraArrivo": "09:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Bloemenmarkt_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Bloemenmarkt+Amsterdam",
+        "latitudine": 52.3663,
+        "longitudine": 4.8932
+      },
+      {
+        "nome": "Canal Cruise",
+        "descr": "Un giro in battello per ammirare i canali UNESCO di Amsterdam.",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_canal_cruise.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Canals",
+        "latitudine": 52.3728,
+        "longitudine": 4.8936
+      },
+      {
+        "nome": "Ritorno a Schiphol",
+        "descr": "Treno per Schiphol.",
+        "oraArrivo": "13:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol_airport.jpg",
+        "maps": "https://maps.apple.com/?q=Schiphol",
+        "latitudine": 52.3105,
+        "longitudine": 4.7683
+      }
+    ]
+  },
+  {
+    "citta": "Amsterdam",
+    "aeroporto": "Schiphol (AMS)",
+    "orarioArrivo": "11:00",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Treno per il centro città",
+        "descr": "Trasferimento a Centraal.",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol%20train%20station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      },
+      {
+        "nome": "Anne Frank Huis",
+        "descr": "La casa museo di Anna Frank, simbolo della memoria.",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Anne_Frank_House_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Anne+Frank+House+Amsterdam",
+        "latitudine": 52.3752,
+        "longitudine": 4.8837
+      },
+      {
+        "nome": "Nieuwe Kerk",
+        "descr": "Chiesa storica utilizzata per incoronazioni e mostre.",
+        "oraArrivo": "14:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Nieuwe_Kerk_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Nieuwe+Kerk+Amsterdam",
+        "latitudine": 52.3730,
+        "longitudine": 4.8916
+      },
+      {
+        "nome": "Ritorno a Schiphol",
+        "descr": "Treno di ritorno.",
+        "oraArrivo": "15:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Centraal_station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      }
+    ]
+  },
+  {
+    "citta": "Amsterdam",
+    "aeroporto": "Schiphol (AMS)",
+    "orarioArrivo": "15:00",
+    "ore": 6,
+    "minuti": 45,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento al centro",
+        "descr": "Treno Schiphol – Centraal.",
+        "oraArrivo": "16:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol%20train%20station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      },
+      {
+        "nome": "Café Winkel 43",
+        "descr": "Famoso per la torta di mele olandese.",
+        "oraArrivo": "16:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Winkel43_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Winkel+43+Amsterdam",
+        "latitudine": 52.3793,
+        "longitudine": 4.8841
+      },
+      {
+        "nome": "Stroopwafel Stand (Albert Cuypmarkt)",
+        "descr": "Degusta i famosi stroopwafels freschi.",
+        "oraArrivo": "18:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Stroopwafel_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Albert+Cuypmarkt",
+        "latitudine": 52.3572,
+        "longitudine": 4.8976
+      },
+      {
+        "nome": "Ritorno in aeroporto",
+        "descr": "Trasferimento verso Schiphol.",
+        "oraArrivo": "20:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol_airport.jpg",
+        "maps": "https://maps.apple.com/?q=Schiphol",
+        "latitudine": 52.3105,
+        "longitudine": 4.7683
+      }
+    ]
+  },
+  {
+    "citta": "Amsterdam",
+    "aeroporto": "Schiphol (AMS)",
+    "orarioArrivo": "10:15",
+    "ore": 11,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Schiphol",
+        "descr": "Treno diretto a Centraal.",
+        "oraArrivo": "11:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol%20train%20station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      },
+      {
+        "nome": "Magna Plaza",
+        "descr": "Centro commerciale in un palazzo storico.",
+        "oraArrivo": "11:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Magna_Plaza_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Magna+Plaza+Amsterdam",
+        "latitudine": 52.3735,
+        "longitudine": 4.8895
+      },
+      {
+        "nome": "Kalverpassage",
+        "descr": "Galleria commerciale coperta su Kalverstraat.",
+        "oraArrivo": "13:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalverpassage_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Kalverpassage+Amsterdam",
+        "latitudine": 52.3698,
+        "longitudine": 4.8936
+      },
+      {
+        "nome": "PC Hooftstraat",
+        "descr": "La via dello shopping di lusso di Amsterdam.",
+        "oraArrivo": "14:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/PC_Hooftstraat_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=PC+Hooftstraat+Amsterdam",
+        "latitudine": 52.3576,
+        "longitudine": 4.8804
+      },
+      {
+        "nome": "Ritorno a Schiphol",
+        "descr": "Treno Centraal – aeroporto.",
+        "oraArrivo": "17:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Centraal_station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      }
+    ]
+  },
+  {
+    "citta": "Amsterdam",
+    "aeroporto": "Schiphol (AMS)",
+    "orarioArrivo": "12:30",
+    "ore": 7,
+    "minuti": 45,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Treno Schiphol – Amsterdam Zuid",
+        "descr": "Trasferimento rapido verso sud città.",
+        "oraArrivo": "13:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Zuid_station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Zuid",
+        "latitudine": 52.3389,
+        "longitudine": 4.8731
+      },
+      {
+        "nome": "Amstelpark",
+        "descr": "Parco verde con giardini tematici.",
+        "oraArrivo": "13:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amstelpark_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Amstelpark+Amsterdam",
+        "latitudine": 52.3358,
+        "longitudine": 4.8927
+      },
+      {
+        "nome": "Beatrixpark",
+        "descr": "Piccolo parco urbano, perfetto per relax.",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Beatrixpark_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Beatrixpark+Amsterdam",
+        "latitudine": 52.3405,
+        "longitudine": 4.8851
+      },
+      {
+        "nome": "Ritorno a Schiphol",
+        "descr": "Trasferimento verso l’aeroporto.",
+        "oraArrivo": "17:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol_airport.jpg",
+        "maps": "https://maps.apple.com/?q=Schiphol",
+        "latitudine": 52.3105,
+        "longitudine": 4.7683
+      }
+    ]
+  },
+  {
+    "citta": "Amsterdam",
+    "aeroporto": "Schiphol (AMS)",
+    "orarioArrivo": "14:00",
+    "ore": 8,
+    "minuti": 15,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Treno Schiphol – Amsterdam Centraal",
+        "descr": "Raggiungi il cuore della città.",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol%20train%20station.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3784,
+        "longitudine": 4.9009
+      },
+      {
+        "nome": "Oude Kerk",
+        "descr": "La più antica chiesa di Amsterdam.",
+        "oraArrivo": "15:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Oude_Kerk_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Oude+Kerk+Amsterdam",
+        "latitudine": 52.3740,
+        "longitudine": 4.9002
+      },
+      {
+        "nome": "Red Light District passeggiata",
+        "descr": "Esplora il quartiere più noto e controverso della città.",
+        "oraArrivo": "16:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Light_District_Amsterdam.jpg",
+        "maps": "https://maps.apple.com/?q=Red+Light+District+Amsterdam",
+        "latitudine": 52.3746,
+        "longitudine": 4.9009
+      },
+      {
+        "nome": "Ritorno in aeroporto",
+        "descr": "Rientro a Schiphol.",
+        "oraArrivo": "19:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Schiphol_airport.jpg",
+        "maps": "https://maps.apple.com/?q=Schiphol",
+        "latitudine": 52.3105,
+        "longitudine": 4.7683
+      }
+    ]
+  },
+  {
     "citta": "Parigi",
     "aeroporto": "Paris Charles de Gaulle (CDG)",
     "orarioArrivo": "08:30",
@@ -2047,6 +2544,357 @@
         "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
         "latitudine": 24.4330,
         "longitudine": 54.6511
+      }
+    ]
+  },
+  {
+    "citta": "Abu Dhabi",
+    "aeroporto": "Abu Dhabi International Airport (AUH)",
+    "orarioArrivo": "06:00",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto e taxi per la Città",
+        "descr": "Taxi diretto al centro di Abu Dhabi (circa 25-30 min).",
+        "oraArrivo": "07:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_skyline.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+city+centre",
+        "latitudine": 24.4539,
+        "longitudine": 54.3773
+      },
+      {
+        "nome": "Sheikh Zayed Grand Mosque",
+        "descr": "Imponente moschea simbolo con architettura mozzafiato.",
+        "oraArrivo": "07:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sheikh_Zayed_Grand_Mosque_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?q=Sheikh+Zayed+Grand+Mosque+Abu+Dhabi",
+        "latitudine": 24.4125,
+        "longitudine": 54.4747
+      },
+      {
+        "nome": "Qasr Al Hosn",
+        "descr": "Forte storico più antico della città, ora museo.",
+        "oraArrivo": "09:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Qasr_Al_Hosn_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?q=Qasr+Al+Hosn+Abu+Dhabi",
+        "latitudine": 24.5010,
+        "longitudine": 54.3771
+      },
+      {
+        "nome": "Ritorno in Aeroporto",
+        "descr": "Taxi per tornare all’AUH con margine per i controlli.",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_International_Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
+      }
+    ]
+  },
+  {
+    "citta": "Abu Dhabi",
+    "aeroporto": "Abu Dhabi International Airport (AUH)",
+    "orarioArrivo": "08:15",
+    "ore": 7,
+    "minuti": 30,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Taxi per Mina Zayed Fish Market",
+        "descr": "Tappa mercato locale di pesce fresco e atmosfera araba.",
+        "oraArrivo": "09:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Mina_Zayed_Fish_Market_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?q=Mina+Zayed+Fish+Market+Abu+Dhabi",
+        "latitudine": 24.4937,
+        "longitudine": 54.3674
+      },
+      {
+        "nome": "Souk-style Buffet (Sofra)",
+        "descr": "Buffet con cucine Emirati, iraniane, indiane e altro.",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Soufra_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?q=Sofra+restaurant+Abu+Dhabi",
+        "latitudine": 24.4669,
+        "longitudine": 54.3883
+      },
+      {
+        "nome": "Ritorno in Aeroporto",
+        "descr": "Taxi per l’AUH in tempo per i controlli.",
+        "oraArrivo": "12:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_International_Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
+      }
+    ]
+  },
+  {
+    "citta": "Abu Dhabi",
+    "aeroporto": "Abu Dhabi International Airport (AUH)",
+    "orarioArrivo": "07:30",
+    "ore": 9,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Taxi per Yas Mall",
+        "descr": "Centro commerciale vasto e moderno a Yas Island.",
+        "oraArrivo": "08:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Yas_Mall_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?q=Yas+Mall+Abu+Dhabi",
+        "latitudine": 24.4950,
+        "longitudine": 54.6078
+      },
+      {
+        "nome": "Shopping & pausa caffè",
+        "descr": "Negozi, ristoranti e atmosfera rilassata nel mall.",
+        "oraArrivo": "08:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Yas_Mall_Interior_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?q=Yas+Mall+restaurants",
+        "latitudine": 24.4950,
+        "longitudine": 54.6078
+      },
+      {
+        "nome": "Ritorno in Aeroporto",
+        "descr": "Taxi per l’AUH.",
+        "oraArrivo": "11:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_International_Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
+      }
+    ]
+  },
+  {
+    "citta": "Abu Dhabi",
+    "aeroporto": "Abu Dhabi International Airport (AUH)",
+    "orarioArrivo": "10:00",
+    "ore": 6,
+    "minuti": 45,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Taxi per Saadiyat Beach Club",
+        "descr": "Spiaggia su Saadiyat Island per relax tra mare e sabbia.",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Saadiyat_Beach_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?q=Saadiyat+Beach+Abu+Dhabi",
+        "latitudine": 24.5450,
+        "longitudine": 54.3970
+      },
+      {
+        "nome": "Relax in spiaggia",
+        "descr": "Tempo per nuotare o rilassarsi con una bevanda.",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Saadiyat_Beach_Abu_Dhabi2.jpg",
+        "maps": "https://maps.apple.com/?q=Saadiyat+Beach+Club",
+        "latitudine": 24.5450,
+        "longitudine": 54.3970
+      },
+      {
+        "nome": "Ritorno in Aeroporto",
+        "descr": "Taxi verso l’AUH.",
+        "oraArrivo": "13:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_International_Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
+      }
+    ]
+  },
+  {
+    "citta": "Abu Dhabi",
+    "aeroporto": "Abu Dhabi International Airport (AUH)",
+    "orarioArrivo": "09:00",
+    "ore": 10,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Taxi per Louvre Abu Dhabi",
+        "descr": "Museo d’arte internazionale su Saadiyat Island.",
+        "oraArrivo": "09:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Louvre_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?q=Louvre+Abu+Dhabi",
+        "latitudine": 24.5330,
+        "longitudine": 54.3970
+      },
+      {
+        "nome": "Tour del Museo",
+        "descr": "Esplora mostre con opere di Monet, Van Gogh, e altro.",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Louvre_Abu_Dhabi_Interior.jpg",
+        "maps": "https://maps.apple.com/?q=Louvre+Abu+Dhabi+entrance",
+        "latitudine": 24.5330,
+        "longitudine": 54.3970
+      },
+      {
+        "nome": "Ritorno in Aeroporto",
+        "descr": "Taxi per tornare all’AUH con margine.",
+        "oraArrivo": "13:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_International_Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
+      }
+    ]
+  },
+  {
+    "citta": "Abu Dhabi",
+    "aeroporto": "Abu Dhabi International Airport (AUH)",
+    "orarioArrivo": "05:45",
+    "ore": 7,
+    "minuti": 30,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Taxi per la Corniche",
+        "descr": "Passeggiata panoramica lungo la Corniche ad Abu Dhabi.",
+        "oraArrivo": "06:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_Corniche.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+Corniche",
+        "latitudine": 24.4839,
+        "longitudine": 54.3224
+      },
+      {
+        "nome": "Passeggiata e caffè sul lungomare",
+        "descr": "Goditi la vista, fontane e caffè lungo la passeggiata.",
+        "oraArrivo": "06:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_Corniche_Cafe.jpg",
+        "maps": "https://maps.apple.com/?q=Corniche+cafe+Abu+Dhabi",
+        "latitudine": 24.4839,
+        "longitudine": 54.3224
+      },
+      {
+        "nome": "Ritorno in Aeroporto",
+        "descr": "Taxi per l’AUH.",
+        "oraArrivo": "09:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_International_Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
+      }
+    ]
+  },
+  {
+    "citta": "Abu Dhabi",
+    "aeroporto": "Abu Dhabi International Airport (AUH)",
+    "orarioArrivo": "11:30",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Shopping Shop-in-terminal (Duty Free)",
+        "descr": "Shopping in aeroporto: profumi, datteri, souvenirs.",
+        "oraArrivo": "11:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_Airport_Duty_Free.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+Airport+Duty+Free",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
+      },
+      {
+        "nome": "Skypark (aria fresca)",
+        "descr": "Terrazza con vista pista, jogging leggero e relax.",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_Airport_Skypark.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+Airport+Skypark",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
+      },
+      {
+        "nome": "Rientro controlli",
+        "descr": "Tempo per rientrare e superare i controlli",
+        "oraArrivo": "14:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_International_Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
+      }
+    ]
+  },
+  {
+    "citta": "Abu Dhabi",
+    "aeroporto": "Abu Dhabi International Airport (AUH)",
+    "orarioArrivo": "07:15",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Taxi per Falcon Hospital (Falcon World Tour)",
+        "descr": "Visita al Falconry Heritage Tour (circa 2 h).",
+        "oraArrivo": "07:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_Falcon_Hospital.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+Falcon+Hospital",
+        "latitudine": 24.4430,
+        "longitudine": 54.4570
+      },
+      {
+        "nome": "Esperienza con falchi",
+        "descr": "Impara e interagisci con falchi, patrimonio locale.",
+        "oraArrivo": "08:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_Falconry.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+Falconry",
+        "latitudine": 24.4430,
+        "longitudine": 54.4570
+      },
+      {
+        "nome": "Rientro in Aeroporto",
+        "descr": "Taxi per A UH con margine di tempo.",
+        "oraArrivo": "10:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_International_Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
+      }
+    ]
+  },
+  {
+    "citta": "Abu Dhabi",
+    "aeroporto": "Abu Dhabi International Airport (AUH)",
+    "orarioArrivo": "12:00",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Taxi per Abrahamic Family House",
+        "descr": "Centro inter-religioso di convivenza su Saadiyat Island.",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abrahamic_Family_House_Abu_Dhabi.jpg",
+        "maps": "https://maps.apple.com/?q=Abrahamic+Family+House+Abu+Dhabi",
+        "latitudine": 24.5335,
+        "longitudine": 54.3965
+      },
+      {
+        "nome": "Tour guidato",
+        "descr": "Visita guidata delle tre sedi: moschea, chiesa, sinagoga.",
+        "oraArrivo": "12:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abrahamic_Family_House_Interior.jpg",
+        "maps": "https://maps.apple.com/?q=Abrahamic+Family+House+interior",
+        "latitudine": 24.5335,
+        "longitudine": 54.3965
+      },
+      {
+        "nome": "Ritorno all’Aeroporto",
+        "descr": "Taxi per tornare all’AUH con anticipo.",
+        "oraArrivo": "15:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_International_Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
+        "latitudine": 24.4322,
+        "longitudine": 54.6510
       }
     ]
   },
