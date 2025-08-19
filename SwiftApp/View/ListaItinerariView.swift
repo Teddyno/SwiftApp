@@ -49,7 +49,7 @@ struct ListaItinerariView: View {
                             HStack {
                                 VStack(alignment: .leading) {
                                     Text(itinerario.testo().uppercased())
-                                    Text("\(itinerario.categoria.rawValue.capitalized)")
+                                    Text("\(itinerario.categoria?.rawValue.capitalized ?? "Senza categoria")")
                                         .foregroundColor(.gray)
                                 }
                                 Spacer()

@@ -265,12 +265,114 @@ struct creaItinerarioView: View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 
+    private func normalizza(_ s: String) -> String {
+        return s.folding(options: .diacriticInsensitive, locale: .current).lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    private func cittàDaInput() -> String? {
+        if let match = aeroporti.first(where: { $0.displayName == rootState.scaloPrecompilato }) {
+            return match.city
+        }
+        let testo = rootState.scaloPrecompilato
+        if let idx = testo.firstIndex(of: "(") {
+            let city = String(testo[..<idx]).trimmingCharacters(in: .whitespacesAndNewlines)
+            return city.isEmpty ? nil : city
+        }
+        return testo.isEmpty ? nil : testo
+    }
+
+    private func iataDaInput() -> String? {
+        if let match = aeroporti.first(where: { $0.displayName == rootState.scaloPrecompilato }) {
+            return match.iata
+        }
+        let testo = rootState.scaloPrecompilato
+        if let open = testo.firstIndex(of: "("), let close = testo.firstIndex(of: ")"), open < close {
+            let code = testo[testo.index(after: open)..<close]
+            let value = String(code).trimmingCharacters(in: .whitespacesAndNewlines)
+            return value.isEmpty ? nil : value
+        }
+        return nil
+    }
+
+    private func estraIataDaAeroportoString(_ s: String) -> String? {
+        // estrae il contenuto tra parentesi tonde, es: "Roma–Fiumicino (FCO)" -> "FCO"
+        if let open = s.firstIndex(of: "("), let close = s.firstIndex(of: ")"), open < close {
+            let code = s[s.index(after: open)..<close]
+            let value = String(code).trimmingCharacters(in: .whitespacesAndNewlines)
+            return value.isEmpty ? nil : value
+        }
+        return nil
+    }
+
+    private func minutesOfDay(from date: Date) -> Int {
+        let comps = Calendar.current.dateComponents([.hour, .minute], from: date)
+        return (comps.hour ?? 0) * 60 + (comps.minute ?? 0)
+    }
+
+    private func minutesOfDay(fromHHmm string: String) -> Int? {
+        guard let d = DateFormatter.orario.date(from: string) else { return nil }
+        return minutesOfDay(from: d)
+    }
+
+    private func trovaItinerarioLocale() -> Itinerario? {
+        guard let url = Bundle.main.url(forResource: "itinerari", withExtension: "json") else { return nil }
+        guard let data = try? Data(contentsOf: url),
+              let lista = try? JSONDecoder().decode([Itinerario].self, from: data) else { return nil }
+        
+        let cityInput = cittàDaInput()
+        let iataInput = iataDaInput()?.uppercased()
+        let userMinutes = minutesOfDay(from: orarioArrivo)
+        let userOre = durataScaloOre()
+        let userMinuti = durataScaloMinuti()
+        let userPref = (preferenzaSelezionata?.lowercased() ?? "nessuna").trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let trovato = lista.first { it in
+            // match città o IATA
+            let cityOk: Bool = {
+                if let c = cityInput { return normalizza(it.citta) == normalizza(c) }
+                return false
+            }()
+            let iataOk: Bool = {
+                if let iataIn = iataInput, let iataIt = estraIataDaAeroportoString(it.aeroporto)?.uppercased() {
+                    return iataIn == iataIt
+                }
+                return false
+            }()
+            let luogoOk = cityOk || iataOk
+            
+            // match orario arrivo con tolleranza ±60 minuti
+            let orarioOk: Bool = {
+                guard let s = it.orarioArrivoScalo, let itMinutes = minutesOfDay(fromHHmm: s) else { return false }
+                return abs(itMinutes - userMinutes) <= 60
+            }()
+            
+            // match durata: accetta da durata utente a durata utente + 60 minuti
+            let durataOk: Bool = {
+                let localTotal = it.ore * 60 + it.minuti
+                let userTotal = userOre * 60 + userMinuti
+                return localTotal <= userTotal && localTotal >= userTotal - 60
+            }()
+            
+            // match preferenza
+            let prefOk: Bool = {
+                if userPref == "nessuna" {
+                    return it.categoria == nil
+                }
+                return it.categoria?.rawValue == userPref
+            }()
+            
+            return luogoOk && orarioOk && durataOk && prefOk
+        }
+        return trovato
+    }
+
     func promptItinerario() {
-        /*
-        guard let chiaveAPI = ProcessInfo.processInfo.environment["GROQ_API_KEY"] else {
-                    print("❌ Variabile di ambiente GROQ_API_KEY non trovata.")
-                    return
-                }*/
+        if let locale = trovaItinerarioLocale() {
+            self.itinerarioGenerato = locale
+            saveItinerarioCreato(locale)
+            self.navigateToItinerario = true
+            return
+        }
         
         guard let chiaveAPI = Bundle.main.object(forInfoDictionaryKey: "GROG_API_KEY") as? String else {
                     fatalError("❌ Variabile di ambiente GROQ_API_KEY non trovata.")
@@ -287,7 +389,8 @@ struct creaItinerarioView: View {
           [
             {
               \"citta\": \"Nome della città\",
-              \"aeroporto\": \"Nome dell'aeroporto\",
+              \"aeroporto\": \"Nome dell'aeroporto (codice IATA)\",
+              \"orarioArrivo\": \(orarioArrivoString)
               \"ore\": numero intero (ore di scalo),
               \"minuti\": numero intero (minuti di scalo),
               \"categoria\": categoria preferita (es. \"monumenti\", \"cibo\", \"natura\"),
@@ -309,8 +412,11 @@ struct creaItinerarioView: View {
         Regole aggiuntive:
         - Calcola in automatico il tempo utile per l'itinerario, togliendo:
           - almeno 1 ora all'arrivo per immigrazione e dogana
-          - almeno 2 ore prima del volo successivo per rientrare in aeroporto e superare i controlli
-          - tempi medi di trasporto A/R tra aeroporto e città, se rilevanti (es. treno, taxi, navetta)
+          - almeno 1 ore e mezza prima del volo successivo per rientrare in aeroporto e superare i controlli
+          - tempi medi di trasporto A/R tra aeroporto e città (es. treno, taxi, navetta)
+          - se il tempo è sufficiente solo per 1 o 2 tappe, inserire 2 tappe di contorno vicino all'unica possibile
+        - aggiungi una tappa iniziale con le indicazioni per uscire dall'aeroporto e arrivare in città
+        - aggiungi una tappa finale con orario di partenza per tornare in aeroporto
         - Inserisci al massimo 7 tappe coerenti con la durata utile
         - Le tappe devono riflettere la categoria preferita inserita da \(preferenza)
         - Inserisci solo tappe realisticamente raggiungibili e visitabili nel tempo utile
@@ -326,7 +432,7 @@ struct creaItinerarioView: View {
         request.addValue("Bearer \(chiaveAPI)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         let body: [String: Any] = [
-            "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+            "model": "openai/gpt-oss-20b",
             "messages": messagePayload,
             "temperature": 0.7
         ]

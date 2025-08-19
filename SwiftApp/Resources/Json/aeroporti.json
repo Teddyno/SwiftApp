@@ -42,6 +42,36 @@
     "country": "United Kingdom"
   },
   {
+    "name": "London Gatwick Airport",
+    "city": "London",
+    "iata": "LGW",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "London Stansted Airport",
+    "city": "London",
+    "iata": "STN",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "London Luton Airport",
+    "city": "London",
+    "iata": "LTN",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "London City Airport",
+    "city": "London",
+    "iata": "LCY",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "London Southend Airport",
+    "city": "London",
+    "iata": "SEN",
+    "country": "United Kingdom"
+  },
+  {
     "name": "Charles de Gaulle Airport",
     "city": "Paris",
     "iata": "CDG",

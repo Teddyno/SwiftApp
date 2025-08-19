@@ -88,17 +88,20 @@ struct ItinerarioView: View {
                     VStack(alignment: .leading){
                         ForEach($itinerario.tappe){$tappa in
                             let i=itinerario.tappe.firstIndex(of: tappa)!
+                            let isEdge = i == 0 || i == itinerario.tappe.count - 1
                             VStack{
                                 Divider()
                                 HStack(alignment: .center){
-                                    Button(action:{
-                                                    itinerario.progress = i
-                                                }
-                                            ){
-                                        Image(systemName: i>itinerario.progress ? "xmark.circle.fill" : "checkmark.circle.fill")
-                                            .foregroundColor(i>itinerario.progress ? .gray : .mint)
-                                            .font(.system(size: 24))
-                                        
+                                    if !isEdge {
+                                        Button(action:{
+                                                        itinerario.progress = i
+                                                    }
+                                                ){
+                                            Image(systemName: i>itinerario.progress ? "xmark.circle.fill" : "checkmark.circle.fill")
+                                                .foregroundColor(i>itinerario.progress ? .gray : .mint)
+                                                .font(.system(size: 24))
+                                            
+                                        }
                                     }
                                     VStack(alignment: .leading){
                                         Text("\(tappa.oraArrivo) - \(tappa.nome)")
@@ -109,7 +112,7 @@ struct ItinerarioView: View {
                                         
                                     }
                                     Spacer()
-                                    if !open.isEmpty && open[i]{
+                                    if !isEdge && !open.isEmpty && open[i]{
                                         Button(action:{open[i].toggle()}){
                                             VStack{Image(systemName: "chevron.down.circle")
                                                     .foregroundColor(.mint)
@@ -117,7 +120,7 @@ struct ItinerarioView: View {
                                             }
                                         }
                                         
-                                    }else if !open.isEmpty && !open[i]{
+                                    }else if !isEdge && !open.isEmpty && !open[i]{
                                         Button(action:{open[i].toggle()}){
                                             Image(systemName: "chevron.right.circle")
                                                 .foregroundColor(.mint)
@@ -125,7 +128,7 @@ struct ItinerarioView: View {
                                         }
                                     }
                                 }
-                                if !open.isEmpty && open[i]{
+                                if !isEdge && !open.isEmpty && open[i]{
                                      HStack {
                                          Spacer()
                                          VStack(spacing: 12) {

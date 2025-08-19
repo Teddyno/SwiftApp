@@ -10,7 +10,7 @@ struct Itinerario: Identifiable, Equatable, Codable {
     var aeroporto: String
     var ore: Int
     var minuti: Int
-    var categoria: Categoria
+    var categoria: Categoria?
     var preferito: Bool = false
     var tappe: [Tappa]
     var orarioArrivoScalo: String? = nil
@@ -26,9 +26,10 @@ struct Itinerario: Identifiable, Equatable, Codable {
     
     enum CodingKeys: String, CodingKey {
         case id, citta, aeroporto, ore, minuti, categoria, preferito, tappe, orarioArrivoScalo, progress
+        case orarioArrivo // mappa dal JSON esterno
     }
     
-    init(id: UUID = UUID(), citta: String, aeroporto: String, ore: Int, minuti: Int, categoria: Categoria, preferito: Bool = false, tappe: [Tappa], orarioArrivoScalo: String? = nil, progress:Int = -1) {
+    init(id: UUID = UUID(), citta: String, aeroporto: String, ore: Int, minuti: Int, categoria: Categoria?, preferito: Bool = false, tappe: [Tappa], orarioArrivoScalo: String? = nil, progress:Int = -1) {
         self.id = id
         self.citta = citta
         self.aeroporto = aeroporto
@@ -48,10 +49,19 @@ struct Itinerario: Identifiable, Equatable, Codable {
         aeroporto = try container.decode(String.self, forKey: .aeroporto)
         ore = try container.decode(Int.self, forKey: .ore)
         minuti = try container.decode(Int.self, forKey: .minuti)
-        categoria = try container.decode(Categoria.self, forKey: .categoria)
+        // categoria: prova come String, mappa a enum se possibile, altrimenti nil; in alternativa usa decodeIfPresent su enum
+        if let raw = try? container.decode(String.self, forKey: .categoria) {
+            categoria = Categoria(rawValue: raw.lowercased())
+        } else {
+            categoria = try? container.decodeIfPresent(Categoria.self, forKey: .categoria)
+        }
         preferito = (try? container.decode(Bool.self, forKey: .preferito)) ?? false
         tappe = try container.decode([Tappa].self, forKey: .tappe)
+        // mappa orarioArrivoScalo anche da chiave "orarioArrivo" se presente
         orarioArrivoScalo = try? container.decodeIfPresent(String.self, forKey: .orarioArrivoScalo)
+        if orarioArrivoScalo == nil {
+            orarioArrivoScalo = try? container.decodeIfPresent(String.self, forKey: .orarioArrivo)
+        }
         progress = (try? container.decode(Int.self, forKey: .progress)) ?? -1
     }
     
@@ -62,7 +72,7 @@ struct Itinerario: Identifiable, Equatable, Codable {
         try container.encode(aeroporto, forKey: .aeroporto)
         try container.encode(ore, forKey: .ore)
         try container.encode(minuti, forKey: .minuti)
-        try container.encode(categoria, forKey: .categoria)
+        try container.encodeIfPresent(categoria, forKey: .categoria)
         try container.encode(preferito, forKey: .preferito)
         try container.encode(tappe, forKey: .tappe)
         try container.encodeIfPresent(orarioArrivoScalo, forKey: .orarioArrivoScalo)

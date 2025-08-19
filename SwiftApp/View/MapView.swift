@@ -87,8 +87,12 @@ struct MapView: View {
         let nome: String
         let coordinate: CLLocationCoordinate2D
     }
+    func filteredTappe() -> [Tappa] {
+        guard tappe.count >= 3 else { return [] }
+        return Array(tappe[1..<(tappe.count - 1)])
+    }
     func tappeWithCoords() -> [TappaMap] {
-        tappe.map { tappa in
+        filteredTappe().map { tappa in
             let coords = coordsForTappa(tappa)
             return TappaMap(nome: tappa.nome, coordinate: coords)
         }

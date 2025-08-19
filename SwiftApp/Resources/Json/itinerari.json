@@ -1,333 +1,2662 @@
-
 [
   {
     "citta": "Roma",
-    "aeroporto": "Aeroporto di Roma–Fiumicino",
-    "ore": 5,
+    "aeroporto": "Roma–Fiumicino (FCO)",
+    "orarioArrivo": "10:00",
+    "ore": 6,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Trasferimento tramite treno Leonardo Express o taxi verso il centro città (Piazza dei Cinquecento, vicino Termini)",
+        "oraArrivo": "10:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg",
+        "maps": "https://maps.apple.com/?q=Roma+Termini+Station",
+        "latitudine": 41.9010,
+        "longitudine": 12.5008
+      },
+      {
+        "nome": "Colosseo",
+        "descr": "Visita esterna al simbolo di Roma antica, l’anfiteatro Flavio, patrimonio UNESCO",
+        "oraArrivo": "11:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseo%20(­27758444591).jpg",
+        "maps": "https://maps.apple.com/?q=Colosseo",
+        "latitudine": 41.8902,
+        "longitudine": 12.4922
+      },
+      {
+        "nome": "Foro Romano (vista esterna)",
+        "descr": "Passeggiata nell’area archeologica adiacente al Colosseo, per una panoramica del Foro Romano",
+        "oraArrivo": "11:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Forum_from_the_Colosseum.jpg",
+        "maps": "https://maps.apple.com/?q=Foro+Romano",
+        "latitudine": 41.8925,
+        "longitudine": 12.4853
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Rientro con treno o taxi verso l’aeroporto per i controlli e l’imbarco",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseo%20(­27758444591).jpg",
+        "maps": "https://maps.apple.com/?q=Roma+Termini+Station",
+        "latitudine": 41.9010,
+        "longitudine": 12.5008
+      }
+    ]
+  },
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma-Fiumicino (FCO)",
+    "orarioArrivo": "07:00",
+    "ore": 8,
     "minuti": 0,
     "categoria": "monumenti",
     "preferito": false,
     "tappe": [
       {
+        "nome": "Transfer aeroporto → Colosseo",
+        "descr": "Treno Leonardo Express fino a Termini e metro B fino al Colosseo",
+        "oraArrivo": "08:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome,Italy-_April_2007.jpg",
+        "maps": "https://maps.apple.com/?q=Colosseo+Roma",
+        "latitudine": 41.8902,
+        "longitudine": 12.4922
+      },
+      {
         "nome": "Colosseo",
-        "descr": "Il Colosseo è l’anfiteatro romano più iconico al mondo, simbolo dell’antica Roma",
-        "oraArrivo": "09:00",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5e/The_Colosseum.jpg",
-        "maps": "https://maps.apple.com/?ll=41.89028,12.49222",
-        "latitudine": 41.89028,
-        "longitudine": 12.49222
+        "descr": "Anfiteatro simbolo di Roma imperiale",
+        "oraArrivo": "08:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome,Italy-April_2007.jpg",
+        "maps": "https://maps.apple.com/?q=Colosseo+Roma",
+        "latitudine": 41.8902,
+        "longitudine": 12.4922
       },
       {
         "nome": "Foro Romano",
-        "descr": "Il centro dell’antica Roma, con rovine di templi, piazze e edifici pubblici",
-        "oraArrivo": "09:45",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Roman_Forum_%28Rome%29.jpg",
-        "maps": "https://maps.apple.com/?ll=41.8925,12.4853",
+        "descr": "Rovine del centro politico e sociale della Roma antica",
+        "oraArrivo": "09:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_forum_caecilia_metella.jpg",
+        "maps": "https://maps.apple.com/?q=Foro+Romano",
         "latitudine": 41.8925,
         "longitudine": 12.4853
       },
       {
-        "nome": "Palatino",
-        "descr": "Una delle sette colline di Roma, con rovine di antichi palazzi imperiali",
-        "oraArrivo": "10:30",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Palatino_Roma.jpg",
-        "maps": "https://maps.apple.com/?ll=41.8894,12.4873",
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Metro e Leonardo Express per tornare a FCO",
+        "oraArrivo": "11:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiumicino_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Aeroporto+Fiumicino",
+        "latitudine": 41.8003,
+        "longitudine": 12.2389
+      }
+    ]
+  },
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma-Fiumicino (FCO)",
+    "orarioArrivo": "09:30",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Campo de’ Fiori",
+        "descr": "Taxi fino al centro storico",
+        "oraArrivo": "10:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Campo_de_Fiori-Roma-panoramio.jpg",
+        "maps": "https://maps.apple.com/?q=Campo+de+Fiori",
+        "latitudine": 41.8959,
+        "longitudine": 12.4728
+      },
+      {
+        "nome": "Campo de’ Fiori",
+        "descr": "Mercato tipico con frutta, verdura e prodotti locali",
+        "oraArrivo": "10:20",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Campo_de_Fiori-Roma-_panoramio.jpg",
+        "maps": "https://maps.apple.com/?q=Campo+de+Fiori",
+        "latitudine": 41.8959,
+        "longitudine": 12.4728
+      },
+      {
+        "nome": "Trattoria romana",
+        "descr": "Pranzo con specialità come carbonara o amatriciana",
+        "oraArrivo": "11:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Pasta_alla_carbonara.jpg",
+        "maps": "https://maps.apple.com/?q=Trastevere+Roma",
         "latitudine": 41.8894,
-        "longitudine": 12.4873
+        "longitudine": 12.4708
+      },
+      {
+        "nome": "Gelateria artigianale",
+        "descr": "Degustazione di gelato romano",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Gelato_al_pistacchio.jpg",
+        "maps": "https://maps.apple.com/?q=Gelateria+Roma",
+        "latitudine": 41.8947,
+        "longitudine": 12.4811
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Taxi fino a FCO",
+        "oraArrivo": "13:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiumicino_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Aeroporto+Fiumicino",
+        "latitudine": 41.8003,
+        "longitudine": 12.2389
+      }
+    ]
+  },
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma-Fiumicino (FCO)",
+    "orarioArrivo": "12:00",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Via del Corso",
+        "descr": "Taxi o treno fino a Termini e poi bus",
+        "oraArrivo": "12:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Via_del_Corso_Rome_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Via+del+Corso+Roma",
+        "latitudine": 41.9010,
+        "longitudine": 12.4789
+      },
+      {
+        "nome": "Via del Corso",
+        "descr": "Principale via dello shopping romano",
+        "oraArrivo": "12:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Via_del_Corso_Rome_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Via+del+Corso+Roma",
+        "latitudine": 41.9010,
+        "longitudine": 12.4789
+      },
+      {
+        "nome": "Galleria Alberto Sordi",
+        "descr": "Storica galleria commerciale",
+        "oraArrivo": "13:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Galleria_Alberto_Sordi_Roma_2006.jpg",
+        "maps": "https://maps.apple.com/?q=Galleria+Alberto+Sordi+Roma",
+        "latitudine": 41.9002,
+        "longitudine": 12.4796
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Bus e treno verso FCO",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiumicino_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Aeroporto+Fiumicino",
+        "latitudine": 41.8003,
+        "longitudine": 12.2389
+      }
+    ]
+  },
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma-Fiumicino (FCO)",
+    "orarioArrivo": "14:30",
+    "ore": 5,
+    "minuti": 0,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Villa Borghese",
+        "descr": "Taxi fino al parco",
+        "oraArrivo": "15:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Villa_Borghese_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Villa+Borghese+Roma",
+        "latitudine": 41.9109,
+        "longitudine": 12.4924
+      },
+      {
+        "nome": "Villa Borghese",
+        "descr": "Passeggiata tra i giardini più famosi di Roma",
+        "oraArrivo": "15:20",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Villa_Borghese_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Villa+Borghese+Roma",
+        "latitudine": 41.9109,
+        "longitudine": 12.4924
+      },
+      {
+        "nome": "Terrazza del Pincio",
+        "descr": "Panorama mozzafiato su Piazza del Popolo",
+        "oraArrivo": "16:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Terrazza_del_Pincio_Roma.jpg",
+        "maps": "https://maps.apple.com/?q=Terrazza+del+Pincio+Roma",
+        "latitudine": 41.9100,
+        "longitudine": 12.4787
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Taxi per tornare a FCO",
+        "oraArrivo": "17:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiumicino_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Aeroporto+Fiumicino",
+        "latitudine": 41.8003,
+        "longitudine": 12.2389
+      }
+    ]
+  },
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma-Fiumicino (FCO)",
+    "orarioArrivo": "16:00",
+    "ore": 9,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → San Pietro",
+        "descr": "Treno Leonardo Express fino a Termini e poi metro A",
+        "oraArrivo": "17:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_San_Pietro_Roma.jpg",
+        "maps": "https://maps.apple.com/?q=Piazza+San+Pietro",
+        "latitudine": 41.9022,
+        "longitudine": 12.4539
+      },
+      {
+        "nome": "Basilica di San Pietro",
+        "descr": "La chiesa più grande del mondo, cuore della cristianità",
+        "oraArrivo": "17:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_San_Pietro_Roma.jpg",
+        "maps": "https://maps.apple.com/?q=Basilica+San+Pietro",
+        "latitudine": 41.9022,
+        "longitudine": 12.4539
+      },
+      {
+        "nome": "Castel Sant’Angelo",
+        "descr": "Antico mausoleo romano divenuto fortezza papale",
+        "oraArrivo": "18:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Castel_Sant%27Angelo_Roma.jpg",
+        "maps": "https://maps.apple.com/?q=Castel+Sant%27Angelo+Roma",
+        "latitudine": 41.9031,
+        "longitudine": 12.4663
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Bus e treno per FCO",
+        "oraArrivo": "20:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiumicino_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Aeroporto+Fiumicino",
+        "latitudine": 41.8003,
+        "longitudine": 12.2389
+      }
+    ]
+  },
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma-Fiumicino (FCO)",
+    "orarioArrivo": "06:30",
+    "ore": 7,
+    "minuti": 30,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Trastevere",
+        "descr": "Taxi diretto al quartiere di Trastevere",
+        "oraArrivo": "07:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Trastevere_in_the_morning.jpg",
+        "maps": "https://maps.apple.com/?q=Trastevere+Roma",
+        "latitudine": 41.8894,
+        "longitudine": 12.4708
+      },
+      {
+        "nome": "Colazione tipica",
+        "descr": "Cornetto e cappuccino in una storica caffetteria",
+        "oraArrivo": "07:20",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappuccino_with_croissant.jpg",
+        "maps": "https://maps.apple.com/?q=Bar+Roma",
+        "latitudine": 41.8890,
+        "longitudine": 12.4720
+      },
+      {
+        "nome": "Pranzo in osteria",
+        "descr": "Assaggio di piatti tipici come coda alla vaccinara o saltimbocca",
+        "oraArrivo": "11:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Coda_alla_vaccinara.jpg",
+        "maps": "https://maps.apple.com/?q=Trastevere+Roma",
+        "latitudine": 41.8894,
+        "longitudine": 12.4708
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Taxi diretto a FCO",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiumicino_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Aeroporto+Fiumicino",
+        "latitudine": 41.8003,
+        "longitudine": 12.2389
+      }
+    ]
+  },
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma-Fiumicino (FCO)",
+    "orarioArrivo": "08:15",
+    "ore": 5,
+    "minuti": 45,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Via Condotti",
+        "descr": "Taxi fino al centro",
+        "oraArrivo": "09:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Via_Condotti_Roma.jpg",
+        "maps": "https://maps.apple.com/?q=Via+Condotti+Roma",
+        "latitudine": 41.9051,
+        "longitudine": 12.4802
+      },
+      {
+        "nome": "Via Condotti",
+        "descr": "Shopping tra le boutique di lusso",
+        "oraArrivo": "09:05",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Via_Condotti_Roma.jpg",
+        "maps": "https://maps.apple.com/?q=Via+Condotti+Roma",
+        "latitudine": 41.9051,
+        "longitudine": 12.4802
+      },
+      {
+        "nome": "Piazza di Spagna",
+        "descr": "Relax vicino alla scalinata di Trinità dei Monti",
+        "oraArrivo": "10:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Spanish_Steps_in_Rome_2012.jpg",
+        "maps": "https://maps.apple.com/?q=Piazza+di+Spagna+Roma",
+        "latitudine": 41.9059,
+        "longitudine": 12.4823
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Taxi per tornare a FCO",
+        "oraArrivo": "11:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiumicino_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Aeroporto+Fiumicino",
+        "latitudine": 41.8003,
+        "longitudine": 12.2389
+      }
+    ]
+  },
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma-Fiumicino (FCO)",
+    "orarioArrivo": "11:00",
+    "ore": 10,
+    "minuti": 0,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Parco degli Acquedotti",
+        "descr": "Taxi diretto al parco archeologico",
+        "oraArrivo": "11:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Parco_degli_Acquedotti_Roma.jpg",
+        "maps": "https://maps.apple.com/?q=Parco+degli+Acquedotti",
+        "latitudine": 41.8570,
+        "longitudine": 12.5663
+      },
+      {
+        "nome": "Parco degli Acquedotti",
+        "descr": "Passeggiata tra resti di acquedotti romani immersi nel verde",
+        "oraArrivo": "11:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Parco_degli_Acquedotti_Roma.jpg",
+        "maps": "https://maps.apple.com/?q=Parco+degli+Acquedotti",
+        "latitudine": 41.8570,
+        "longitudine": 12.5663
+      },
+      {
+        "nome": "Caffè in zona Appia",
+        "descr": "Pausa relax in una caffetteria locale",
+        "oraArrivo": "13:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappuccino_Rome.jpg",
+        "maps": "https://maps.apple.com/?q=Via+Appia+Roma",
+        "latitudine": 41.8550,
+        "longitudine": 12.5125
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Taxi per tornare a FCO",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiumicino_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Aeroporto+Fiumicino",
+        "latitudine": 41.8003,
+        "longitudine": 12.2389
+      }
+    ]
+  },
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma-Fiumicino (FCO)",
+    "orarioArrivo": "13:45",
+    "ore": 6,
+    "minuti": 15,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Piazza Venezia",
+        "descr": "Taxi fino al centro storico",
+        "oraArrivo": "14:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_Venezia_-Roma-panoramio.jpg",
+        "maps": "https://maps.apple.com/?q=Piazza+Venezia+Roma",
+        "latitudine": 41.8948,
+        "longitudine": 12.4823
+      },
+      {
+        "nome": "Piazza Venezia",
+        "descr": "Centro nevralgico della città, ai piedi dell’Altare della Patria",
+        "oraArrivo": "14:35",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_Venezia-Roma-panoramio.jpg",
+        "maps": "https://maps.apple.com/?q=Piazza+Venezia+Roma",
+        "latitudine": 41.8948,
+        "longitudine": 12.4823
+      },
+      {
+        "nome": "Passeggiata via del Corso",
+        "descr": "Camminata lungo la via più vivace del centro",
+        "oraArrivo": "15:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Via_del_Corso_Rome_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Via+del+Corso+Roma",
+        "latitudine": 41.9010,
+        "longitudine": 12.4789
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Taxi per tornare a FCO",
+        "oraArrivo": "16:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiumicino_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Aeroporto+Fiumicino",
+        "latitudine": 41.8003,
+        "longitudine": 12.2389
+      }
+    ]
+  },
+  {
+    "citta": "Roma",
+    "aeroporto": "Aeroporto di Roma-Fiumicino (FCO)",
+    "orarioArrivo": "18:00",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Pantheon",
+        "descr": "Taxi diretto in centro",
+        "oraArrivo": "18:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantheon-Rome-Italy.jpg",
+        "maps": "https://maps.apple.com/?q=Pantheon+Roma",
+        "latitudine": 41.8986,
+        "longitudine": 12.4769
       },
       {
         "nome": "Pantheon",
-        "descr": "Tempio romano ben conservato, dedicato a tutti gli dei dell’antica Roma",
-        "oraArrivo": "11:15",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/3/30/Pantheon_Roma.jpg",
-        "maps": "https://maps.apple.com/?ll=41.8986,12.4769",
+        "descr": "Tempio romano convertito in chiesa, celebre per la sua cupola",
+        "oraArrivo": "18:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantheon-Rome-_Italy.jpg",
+        "maps": "https://maps.apple.com/?q=Pantheon+Roma",
         "latitudine": 41.8986,
         "longitudine": 12.4769
       },
       {
         "nome": "Piazza Navona",
-        "descr": "Celebre piazza barocca con fontane monumentali e atmosfera vivace",
-        "oraArrivo": "11:45",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Piazza_Navona_Rome.jpg",
-        "maps": "https://maps.apple.com/?ll=41.8992,12.4731",
+        "descr": "Famosa piazza barocca con fontane e artisti di strada",
+        "oraArrivo": "19:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_Navona_Roma.jpg",
+        "maps": "https://maps.apple.com/?q=Piazza+Navona+Roma",
         "latitudine": 41.8992,
         "longitudine": 12.4731
+      },
+      {
+        "nome": "Cena in ristorante tipico",
+        "descr": "Piatti della tradizione romana vicino a Piazza Navona",
+        "oraArrivo": "20:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Pasta_all%27amatriciana.jpg",
+        "maps": "https://maps.apple.com/?q=Ristorante+Roma",
+        "latitudine": 41.8990,
+        "longitudine": 12.4740
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Taxi diretto a FCO",
+        "oraArrivo": "22:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiumicino_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Aeroporto+Fiumicino",
+        "latitudine": 41.8003,
+        "longitudine": 12.2389
       }
     ]
   },
   {
-    "citta": "Madrid",
-    "aeroporto": "Adolfo Suárez Madrid–Barajas Airport",
-    "ore": 5,
+    "citta": "Londra",
+    "aeroporto": "London Heathrow (LHR)",
+    "orarioArrivo": "10:00",
+    "ore": 6,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Trasferimento con Heathrow Express fino a Paddington Station",
+        "oraArrivo": "10:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/London_Paddington_Station_MMB_05_332012.jpg",
+        "maps": "https://maps.apple.com/?q=Paddington+Station",
+        "latitudine": 51.5150,
+        "longitudine": -0.1754
+      },
+      {
+        "nome": "Hyde Park",
+        "descr": "Passeggiata nel parco più famoso di Londra, vicino a Paddington",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hyde_Park_-London-September_2013.jpg",
+        "maps": "https://maps.apple.com/?q=Hyde+Park+London",
+        "latitudine": 51.5073,
+        "longitudine": -0.1657
+      },
+      {
+        "nome": "Kensington Palace (esterni)",
+        "descr": "Breve visita agli esterni del palazzo reale situato ai margini di Hyde Park",
+        "oraArrivo": "11:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Kensington_Palace_South_Front_London-_Nov_2006.jpg",
+        "maps": "https://maps.apple.com/?q=Kensington+Palace",
+        "latitudine": 51.5059,
+        "longitudine": -0.1877
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Rientro a Paddington e Heathrow Express verso l’aeroporto",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Heathrow_Express_train_332014_at_Paddington_Station_2.jpg",
+        "maps": "https://maps.apple.com/?q=Paddington+Station",
+        "latitudine": 51.5150,
+        "longitudine": -0.1754
+      }
+    ]
+  },
+  {
+    "citta": "Londra",
+    "aeroporto": "Heathrow (LHR)",
+    "orarioArrivo": "08:00",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Paddington",
+        "descr": "Trasferimento in centro città",
+        "oraArrivo": "08:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Heathrow_Terminal_5_station.jpg",
+        "maps": "https://maps.apple.com/?q=Heathrow+Paddington",
+        "latitudine": 51.515,
+        "longitudine": -0.175
+      },
+      {
+        "nome": "Big Ben",
+        "descr": "Iconica torre dell’orologio di Westminster",
+        "oraArrivo": "09:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Ben%2C_London_%2830977153027%29.jpg",
+        "maps": "https://maps.apple.com/?q=Big+Ben+London",
+        "latitudine": 51.5007,
+        "longitudine": -0.1241
+      },
+      {
+        "nome": "Westminster Abbey",
+        "descr": "Abbazia gotica patrimonio UNESCO",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Westminster_Abbey_West_Door.jpg",
+        "maps": "https://maps.apple.com/?q=Westminster+Abbey",
+        "latitudine": 51.4993,
+        "longitudine": -0.1273
+      },
+      {
+        "nome": "Trafalgar Square",
+        "descr": "Piazza storica nel cuore di Londra",
+        "oraArrivo": "10:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/London_-Trafalgar_Square-Big_Ben-140811_114241.jpg",
+        "maps": "https://maps.apple.com/?q=Trafalgar+Square+London",
+        "latitudine": 51.5083,
+        "longitudine": -0.1281
+      },
+      {
+        "nome": "Ritorno a Paddington",
+        "descr": "Transfer per tornare a Heathrow",
+        "oraArrivo": "12:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Paddington_Station(London).jpg",
+        "maps": "https://maps.apple.com/?q=Paddington+Station",
+        "latitudine": 51.5156,
+        "longitudine": -0.1754
+      }
+    ]
+  },
+  {
+    "citta": "Londra",
+    "aeroporto": "Heathrow (LHR)",
+    "orarioArrivo": "09:30",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a London Bridge",
+        "descr": "Transfer verso South Bank",
+        "oraArrivo": "10:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Heathrow_Terminal_5_station.jpg",
+        "maps": "https://maps.apple.com/?q=Heathrow+London+Bridge",
+        "latitudine": 51.5079,
+        "longitudine": -0.0877
+      },
+      {
+        "nome": "Borough Market",
+        "descr": "Mercato storico con street food e bancarelle",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Borough_Market_(London).jpg",
+        "maps": "https://maps.apple.com/?q=Borough+Market+London",
+        "latitudine": 51.5055,
+        "longitudine": -0.0910
+      },
+      {
+        "nome": "Southbank Centre Food Market",
+        "descr": "Mercato gastronomico vivace lungo il Tamigi",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Southbank_Centre_Food_Market_London.jpg",
+        "maps": "https://maps.apple.com/?q=Southbank+Centre+Food+Market",
+        "latitudine": 51.5069,
+        "longitudine": -0.1159
+      },
+      {
+        "nome": "Covent Garden Market",
+        "descr": "Mercato coperto con ristoranti e spettacoli",
+        "oraArrivo": "13:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Covent_Garden_London.jpg",
+        "maps": "https://maps.apple.com/?q=Covent+Garden+London",
+        "latitudine": 51.5116,
+        "longitudine": -0.1235
+      },
+      {
+        "nome": "Ritorno a London Bridge",
+        "descr": "Transfer per Heathrow",
+        "oraArrivo": "14:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/London_Bridge.jpg",
+        "maps": "https://maps.apple.com/?q=London+Bridge",
+        "latitudine": 51.5079,
+        "longitudine": -0.0877
+      }
+    ]
+  },
+  {
+    "citta": "Londra",
+    "aeroporto": "Heathrow (LHR)",
+    "orarioArrivo": "07:00",
+    "ore": 6,
+    "minuti": 45,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Bond Street",
+        "descr": "Transfer verso il cuore dello shopping",
+        "oraArrivo": "07:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Bond_Street_Station.jpg",
+        "maps": "https://maps.apple.com/?q=Bond+Street+Station+London",
+        "latitudine": 51.5145,
+        "longitudine": -0.1497
+      },
+      {
+        "nome": "Oxford Street",
+        "descr": "La strada commerciale più famosa di Londra",
+        "oraArrivo": "08:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Oxford_Street_London.jpg",
+        "maps": "https://maps.apple.com/?q=Oxford+Street+London",
+        "latitudine": 51.5154,
+        "longitudine": -0.1410
+      },
+      {
+        "nome": "Regent Street",
+        "descr": "Elegante via dello shopping",
+        "oraArrivo": "09:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Regent_Street_London.jpg",
+        "maps": "https://maps.apple.com/?q=Regent+Street+London",
+        "latitudine": 51.5133,
+        "longitudine": -0.1400
+      },
+      {
+        "nome": "Liberty London",
+        "descr": "Iconico grande magazzino",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Liberty_London.jpg",
+        "maps": "https://maps.apple.com/?q=Liberty+London",
+        "latitudine": 51.5130,
+        "longitudine": -0.1413
+      },
+      {
+        "nome": "Ritorno a Bond Street",
+        "descr": "Transfer per rientrare a Heathrow",
+        "oraArrivo": "11:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Bond_Street_Station.jpg",
+        "maps": "https://maps.apple.com/?q=Bond+Street+Station+London",
+        "latitudine": 51.5145,
+        "longitudine": -0.1497
+      }
+    ]
+  },
+  {
+    "citta": "Londra",
+    "aeroporto": "Heathrow (LHR)",
+    "orarioArrivo": "12:00",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Hyde Park",
+        "descr": "Transfer diretto verso il parco",
+        "oraArrivo": "12:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Heathrow_Terminal_5_station.jpg",
+        "maps": "https://maps.apple.com/?q=Heathrow+Hyde+Park",
+        "latitudine": 51.5073,
+        "longitudine": -0.1657
+      },
+      {
+        "nome": "Hyde Park",
+        "descr": "Grande parco urbano con laghetti",
+        "oraArrivo": "13:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hyde_Park_London.jpg",
+        "maps": "https://maps.apple.com/?q=Hyde+Park+London",
+        "latitudine": 51.5073,
+        "longitudine": -0.1657
+      },
+      {
+        "nome": "Kensington Gardens",
+        "descr": "Parco adiacente con palazzo reale",
+        "oraArrivo": "14:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Kensington_Gardens_London.jpg",
+        "maps": "https://maps.apple.com/?q=Kensington+Gardens+London",
+        "latitudine": 51.5050,
+        "longitudine": -0.1798
+      },
+      {
+        "nome": "Green Park",
+        "descr": "Parco reale vicino a Buckingham Palace",
+        "oraArrivo": "15:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Green_Park_London.jpg",
+        "maps": "https://maps.apple.com/?q=Green+Park+London",
+        "latitudine": 51.503,
+        "longitudine": -0.143
+      },
+      {
+        "nome": "Ritorno a Paddington",
+        "descr": "Transfer per Heathrow",
+        "oraArrivo": "16:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Paddington_Station_(London).jpg",
+        "maps": "https://maps.apple.com/?q=Paddington+Station",
+        "latitudine": 51.5156,
+        "longitudine": -0.1754
+      }
+    ]
+  },
+  {
+    "citta": "Londra",
+    "aeroporto": "Heathrow (LHR)",
+    "orarioArrivo": "10:15",
+    "ore": 6,
+    "minuti": 15,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Southbank",
+        "descr": "Transfer verso il Tamigi",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Heathrow_Terminal_5_station.jpg",
+        "maps": "https://maps.apple.com/?q=Heathrow+Southbank",
+        "latitudine": 51.5050,
+        "longitudine": -0.1150
+      },
+      {
+        "nome": "Passeggiata sul South Bank",
+        "descr": "Camminata panoramica lungo il Tamigi",
+        "oraArrivo": "11:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Southbank_London.jpg",
+        "maps": "https://maps.apple.com/?q=Southbank+London",
+        "latitudine": 51.5050,
+        "longitudine": -0.1150
+      },
+      {
+        "nome": "London Bridge",
+        "descr": "Storico ponte sul Tamigi",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/London_Bridge.jpg",
+        "maps": "https://maps.apple.com/?q=London+Bridge",
+        "latitudine": 51.5079,
+        "longitudine": -0.0877
+      },
+      {
+        "nome": "Tower Bridge (vista esterna)",
+        "descr": "Il ponte levatoio più famoso",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Tower_Bridge_from_Shad_Thames.jpg",
+        "maps": "https://maps.apple.com/?q=Tower+Bridge+London",
+        "latitudine": 51.5055,
+        "longitudine": -0.0754
+      },
+      {
+        "nome": "Ritorno a London Bridge",
+        "descr": "Transfer per Heathrow",
+        "oraArrivo": "13:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/London_Bridge.jpg",
+        "maps": "https://maps.apple.com/?q=London+Bridge",
+        "latitudine": 51.5079,
+        "longitudine": -0.0877
+      }
+    ]
+  },
+  {
+    "citta": "Londra",
+    "aeroporto": "Heathrow (LHR)",
+    "orarioArrivo": "06:30",
+    "ore": 6,
+    "minuti": 45,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Tower of London",
+        "descr": "Trasferimento verso la Torre di Londra",
+        "oraArrivo": "07:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Tower_of_London_viewed_from_the_River_Thames.jpg",
+        "maps": "https://maps.apple.com/?q=Tower+of+London",
+        "latitudine": 51.5081,
+        "longitudine": -0.0759
+      },
+      {
+        "nome": "Tower of London",
+        "descr": "Storica fortezza e simbolo della città",
+        "oraArrivo": "07:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Tower_of_London_viewed_from_the_River_Thames.jpg",
+        "maps": "https://maps.apple.com/?q=Tower+of+London",
+        "latitudine": 51.5081,
+        "longitudine": -0.0759
+      },
+      {
+        "nome": "Tower Bridge",
+        "descr": "Ponte levatoio più famoso del mondo",
+        "oraArrivo": "08:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Tower_Bridge_from_Shad_Thames.jpg",
+        "maps": "https://maps.apple.com/?q=Tower+Bridge",
+        "latitudine": 51.5055,
+        "longitudine": -0.0754
+      },
+      {
+        "nome": "St. Paul’s Cathedral",
+        "descr": "Cattedrale barocca con cupola imponente",
+        "oraArrivo": "09:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Pauls_Cathedral_London.jpg",
+        "maps": "https://maps.apple.com/?q=St+Pauls+Cathedral",
+        "latitudine": 51.5138,
+        "longitudine": -0.0984
+      },
+      {
+        "nome": "Ritorno a Heathrow",
+        "descr": "Transfer di rientro",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Heathrow_Terminal_5_station.jpg",
+        "maps": "https://maps.apple.com/?q=Heathrow+Airport",
+        "latitudine": 51.4700,
+        "longitudine": -0.4543
+      }
+    ]
+  },
+  {
+    "citta": "Londra",
+    "aeroporto": "Heathrow (LHR)",
+    "orarioArrivo": "14:00",
+    "ore": 7,
+    "minuti": 30,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Harrods",
+        "descr": "Trasferimento a Knightsbridge",
+        "oraArrivo": "14:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Harrods_Department_Store.jpg",
+        "maps": "https://maps.apple.com/?q=Harrods+London",
+        "latitudine": 51.4994,
+        "longitudine": -0.1636
+      },
+      {
+        "nome": "Harrods",
+        "descr": "Il grande magazzino più famoso di Londra",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Harrods_Department_Store.jpg",
+        "maps": "https://maps.apple.com/?q=Harrods+London",
+        "latitudine": 51.4994,
+        "longitudine": -0.1636
+      },
+      {
+        "nome": "Sloane Street",
+        "descr": "Via dello shopping di lusso",
+        "oraArrivo": "16:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sloane_Street_London.jpg",
+        "maps": "https://maps.apple.com/?q=Sloane+Street+London",
+        "latitudine": 51.4945,
+        "longitudine": -0.1593
+      },
+      {
+        "nome": "King’s Road",
+        "descr": "Strada trendy con boutique e negozi vintage",
+        "oraArrivo": "17:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Kings_Road_London.jpg",
+        "maps": "https://maps.apple.com/?q=Kings+Road+London",
+        "latitudine": 51.4876,
+        "longitudine": -0.1684
+      },
+      {
+        "nome": "Ritorno a Heathrow",
+        "descr": "Transfer di rientro",
+        "oraArrivo": "18:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Heathrow_Terminal_5_station.jpg",
+        "maps": "https://maps.apple.com/?q=Heathrow+Airport",
+        "latitudine": 51.4700,
+        "longitudine": -0.4543
+      }
+    ]
+  },
+  {
+    "citta": "Londra",
+    "aeroporto": "Heathrow (LHR)",
+    "orarioArrivo": "11:00",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Chinatown",
+        "descr": "Transfer verso Soho",
+        "oraArrivo": "11:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Gerrard_Street_London_Chinatown.jpg",
+        "maps": "https://maps.apple.com/?q=Chinatown+London",
+        "latitudine": 51.5110,
+        "longitudine": -0.1310
+      },
+      {
+        "nome": "Chinatown",
+        "descr": "Quartiere ricco di ristoranti asiatici",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Gerrard_Street_London_Chinatown.jpg",
+        "maps": "https://maps.apple.com/?q=Chinatown+London",
+        "latitudine": 51.5110,
+        "longitudine": -0.1310
+      },
+      {
+        "nome": "Soho food tour",
+        "descr": "Degustazioni in locali tipici di Soho",
+        "oraArrivo": "13:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Soho_Square_London.jpg",
+        "maps": "https://maps.apple.com/?q=Soho+London",
+        "latitudine": 51.5150,
+        "longitudine": -0.1310
+      },
+      {
+        "nome": "Seven Dials Market",
+        "descr": "Mercato coperto moderno con street food",
+        "oraArrivo": "14:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Seven_Dials_Market_London.jpg",
+        "maps": "https://maps.apple.com/?q=Seven+Dials+Market+London",
+        "latitudine": 51.5135,
+        "longitudine": -0.1250
+      },
+      {
+        "nome": "Ritorno a Heathrow",
+        "descr": "Transfer di rientro",
+        "oraArrivo": "15:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Heathrow_Terminal_5_station.jpg",
+        "maps": "https://maps.apple.com/?q=Heathrow+Airport",
+        "latitudine": 51.4700,
+        "longitudine": -0.4543
+      }
+    ]
+  },
+  {
+    "citta": "Londra",
+    "aeroporto": "Heathrow (LHR)",
+    "orarioArrivo": "13:30",
+    "ore": 9,
     "minuti": 0,
     "categoria": "monumenti",
     "preferito": false,
     "tappe": [
       {
-        "nome": "Palacio Real de Madrid",
-        "descr": "Residenza ufficiale del re di Spagna, grande palazzo storico e monumento barocco",
-        "oraArrivo": "09:00",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Palacio_Real_de_Madrid_-_03.jpg",
-        "maps": "https://maps.apple.com/?ll=40.41795,-3.71431",
-        "latitudine": 40.41795,
-        "longitudine": -3.71431
+        "nome": "Da aeroporto a Buckingham Palace",
+        "descr": "Transfer verso la residenza reale",
+        "oraArrivo": "14:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Buckingham_Palace_from_gardens%2C_London%2C_UK_-_Diliff.jpg",
+        "maps": "https://maps.apple.com/?q=Buckingham+Palace",
+        "latitudine": 51.5014,
+        "longitudine": -0.1419
       },
       {
-        "nome": "Plaza Mayor",
-        "descr": "Storica piazza centrale di Madrid, circondata da edifici con portici",
-        "oraArrivo": "09:45",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/1/14/Plaza_Mayor_Madrid.jpg",
-        "maps": "https://maps.apple.com/?ll=40.4155,-3.7074",
-        "latitudine": 40.4155,
-        "longitudine": -3.7074
+        "nome": "Buckingham Palace",
+        "descr": "Residenza ufficiale della monarchia britannica",
+        "oraArrivo": "14:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Buckingham_Palace_from_gardens%2C_London%2C_UK_-_Diliff.jpg",
+        "maps": "https://maps.apple.com/?q=Buckingham+Palace",
+        "latitudine": 51.5014,
+        "longitudine": -0.1419
       },
       {
-        "nome": "Puerta del Sol",
-        "descr": "Iconica piazza del centro di Madrid, punto da cui si misurano le distanze in Spagna",
+        "nome": "St. James’s Park",
+        "descr": "Parco reale vicino al palazzo",
+        "oraArrivo": "15:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/St_James%27s_Park_in_London_-_April_2007.jpg",
+        "maps": "https://maps.apple.com/?q=St+James+Park+London",
+        "latitudine": 51.502,
+        "longitudine": -0.134
+      },
+      {
+        "nome": "Piccadilly Circus",
+        "descr": "Famosa piazza luminosa",
+        "oraArrivo": "16:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Piccadilly_Circus_2012.jpg",
+        "maps": "https://maps.apple.com/?q=Piccadilly+Circus+London",
+        "latitudine": 51.5098,
+        "longitudine": -0.1342
+      },
+      {
+        "nome": "British Museum",
+        "descr": "Museo tra i più visitati al mondo",
+        "oraArrivo": "17:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/British_Museum_from_NE_2.JPG",
+        "maps": "https://maps.apple.com/?q=British+Museum+London",
+        "latitudine": 51.5194,
+        "longitudine": -0.1269
+      },
+      {
+        "nome": "Ritorno a Heathrow",
+        "descr": "Transfer di rientro",
+        "oraArrivo": "20:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Heathrow_Terminal_5_station.jpg",
+        "maps": "https://maps.apple.com/?q=Heathrow+Airport",
+        "latitudine": 51.4700,
+        "longitudine": -0.4543
+      }
+    ]
+  },
+  {
+    "citta": "Londra",
+    "aeroporto": "Heathrow (LHR)",
+    "orarioArrivo": "15:00",
+    "ore": 8,
+    "minuti": 15,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Kew Gardens",
+        "descr": "Transfer ai famosi giardini botanici",
+        "oraArrivo": "15:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Palm_House_Kew_Gardens_London.jpg",
+        "maps": "https://maps.apple.com/?q=Kew+Gardens+London",
+        "latitudine": 51.4780,
+        "longitudine": -0.2950
+      },
+      {
+        "nome": "Royal Botanic Gardens, Kew",
+        "descr": "Patrimonio UNESCO con serre e giardini",
+        "oraArrivo": "16:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Palm_House_Kew_Gardens_London.jpg",
+        "maps": "https://maps.apple.com/?q=Kew+Gardens+London",
+        "latitudine": 51.4780,
+        "longitudine": -0.2950
+      },
+      {
+        "nome": "Richmond Park",
+        "descr": "Grande parco con cervi allo stato libero",
+        "oraArrivo": "17:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Richmond_Park_Deer.jpg",
+        "maps": "https://maps.apple.com/?q=Richmond+Park+London",
+        "latitudine": 51.4427,
+        "longitudine": -0.2736
+      },
+      {
+        "nome": "Thames Riverside Walk",
+        "descr": "Passeggiata panoramica lungo il Tamigi",
+        "oraArrivo": "18:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Richmond_Riverside_London.jpg",
+        "maps": "https://maps.apple.com/?q=Richmond+Riverside",
+        "latitudine": 51.4613,
+        "longitudine": -0.3053
+      },
+      {
+        "nome": "Ritorno a Heathrow",
+        "descr": "Transfer di rientro",
+        "oraArrivo": "20:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Heathrow_Terminal_5_station.jpg",
+        "maps": "https://maps.apple.com/?q=Heathrow+Airport",
+        "latitudine": 51.4700,
+        "longitudine": -0.4543
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "Frankfurt am Main Flughafen (FRA)",
+    "orarioArrivo": "10:00",
+    "ore": 6,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Trasferimento con treno regionale S-Bahn fino a Frankfurt (Main) Hauptbahnhof",
         "oraArrivo": "10:30",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Puerta_del_Sol_Madrid.jpg",
-        "maps": "https://maps.apple.com/?ll=40.4168,-3.7038",
-        "latitudine": 40.4168,
-        "longitudine": -3.7038
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Hauptbahnhof_April_2013.JPG",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Hauptbahnhof",
+        "latitudine": 50.1072,
+        "longitudine": 8.6638
       },
       {
-        "nome": "Catedral de la Almudena",
-        "descr": "La cattedrale moderna accanto al Palazzo Reale, con viste panoramiche dalla cupola",
+        "nome": "Römerberg",
+        "descr": "La piazza storica di Francoforte con edifici tradizionali ricostruiti",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Roemerberg_in_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Römerberg+Frankfurt",
+        "latitudine": 50.1106,
+        "longitudine": 8.6822
+      },
+      {
+        "nome": "Eiserner Steg",
+        "descr": "Passeggiata sul ponte pedonale sul fiume Meno con vista sullo skyline",
+        "oraArrivo": "11:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiserner_Steg_Frankfurt_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Eiserner+Steg+Frankfurt",
+        "latitudine": 50.1081,
+        "longitudine": 8.6840
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Rientro con S-Bahn verso l’aeroporto",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Hauptbahnhof_April_2013.JPG",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Hauptbahnhof",
+        "latitudine": 50.1072,
+        "longitudine": 8.6638
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "FRA",
+    "orarioArrivo": "08:00",
+    "ore": 6,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Römerberg",
+        "descr": "Trasferimento in centro storico",
+        "oraArrivo": "08:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Roemerberg_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Roemerberg+Frankfurt",
+        "latitudine": 50.1106,
+        "longitudine": 8.6822
+      },
+      {
+        "nome": "Römer",
+        "descr": "Antico municipio, simbolo di Francoforte",
+        "oraArrivo": "09:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Roemer_Frankfurt_am_Main.jpg",
+        "maps": "https://maps.apple.com/?q=Roemer+Frankfurt",
+        "latitudine": 50.1106,
+        "longitudine": 8.6822
+      },
+      {
+        "nome": "Kaiserdom St. Bartholomäus",
+        "descr": "Cattedrale gotica imperiale",
+        "oraArrivo": "09:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurter_Dom.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Cathedral",
+        "latitudine": 50.1103,
+        "longitudine": 8.6857
+      },
+      {
+        "nome": "Ponte di Ferro (Eiserner Steg)",
+        "descr": "Passerella pedonale sul Meno",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiserner_Steg_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Eiserner+Steg+Frankfurt",
+        "latitudine": 50.1079,
+        "longitudine": 8.6833
+      },
+      {
+        "nome": "Ritorno a FRA",
+        "descr": "Transfer in aeroporto",
         "oraArrivo": "11:15",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Catedral_de_la_Almudena.jpg",
-        "maps": "https://maps.apple.com/?ll=40.4153,-3.7153",
-        "latitudine": 40.4153,
-        "longitudine": -3.7153
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "FRA",
+    "orarioArrivo": "09:00",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Kleinmarkthalle",
+        "descr": "Trasferimento al mercato coperto",
+        "oraArrivo": "09:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Kleinmarkthalle_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Kleinmarkthalle+Frankfurt",
+        "latitudine": 50.1131,
+        "longitudine": 8.6858
       },
       {
-        "nome": "Museo del Prado",
-        "descr": "Museo nazionale d’arte con capolavori di Goya, Velázquez e altri maestri",
+        "nome": "Kleinmarkthalle",
+        "descr": "Mercato tradizionale con street food locale",
+        "oraArrivo": "09:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Kleinmarkthalle_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Kleinmarkthalle+Frankfurt",
+        "latitudine": 50.1131,
+        "longitudine": 8.6858
+      },
+      {
+        "nome": "Apfelweinviertel (Sachsenhausen)",
+        "descr": "Quartiere tipico con taverne di sidro",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Apfelwein_Sachsenhausen.jpg",
+        "maps": "https://maps.apple.com/?q=Sachsenhausen+Frankfurt",
+        "latitudine": 50.103,
+        "longitudine": 8.682
+      },
+      {
+        "nome": "Museumsufer passeggiata",
+        "descr": "Lungofiume con ristoranti e locali",
+        "oraArrivo": "12:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Museumsufer_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Museumsufer+Frankfurt",
+        "latitudine": 50.106,
+        "longitudine": 8.678
+      },
+      {
+        "nome": "Ritorno a FRA",
+        "descr": "Transfer in aeroporto",
+        "oraArrivo": "13:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "FRA",
+    "orarioArrivo": "10:30",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Zeil",
+        "descr": "Trasferimento al principale viale dello shopping",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Zeil_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Zeil+Frankfurt",
+        "latitudine": 50.1128,
+        "longitudine": 8.683
+      },
+      {
+        "nome": "Zeil",
+        "descr": "Via dello shopping con negozi famosi",
+        "oraArrivo": "11:10",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Zeil_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Zeil+Frankfurt",
+        "latitudine": 50.1128,
+        "longitudine": 8.683
+      },
+      {
+        "nome": "MyZeil Shopping Center",
+        "descr": "Centro commerciale moderno con architettura spettacolare",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/MyZeil_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=MyZeil+Frankfurt",
+        "latitudine": 50.1129,
+        "longitudine": 8.6832
+      },
+      {
+        "nome": "Ritorno a FRA",
+        "descr": "Transfer in aeroporto",
+        "oraArrivo": "17:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "FRA",
+    "orarioArrivo": "09:15",
+    "ore": 6,
+    "minuti": 45,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Palmengarten",
+        "descr": "Trasferimento al giardino botanico",
+        "oraArrivo": "09:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Palmengarten_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Palmengarten+Frankfurt",
+        "latitudine": 50.1234,
+        "longitudine": 8.653
+      },
+      {
+        "nome": "Palmengarten",
+        "descr": "Uno dei giardini botanici più importanti d’Europa",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Palmengarten_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Palmengarten+Frankfurt",
+        "latitudine": 50.1234,
+        "longitudine": 8.653
+      },
+      {
+        "nome": "Grüneburgpark",
+        "descr": "Parco cittadino per passeggiate rilassanti",
+        "oraArrivo": "11:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Gruenburgpark_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Gruenburgpark+Frankfurt",
+        "latitudine": 50.1246,
+        "longitudine": 8.6705
+      },
+      {
+        "nome": "Ritorno a FRA",
+        "descr": "Transfer in aeroporto",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "FRA",
+    "orarioArrivo": "07:30",
+    "ore": 6,
+    "minuti": 15,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a centro città",
+        "descr": "Trasferimento generale per un giro veloce",
+        "oraArrivo": "08:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Cityscape.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+city",
+        "latitudine": 50.1109,
+        "longitudine": 8.6821
+      },
+      {
+        "nome": "Römerberg",
+        "descr": "Piazza centrale, ideale per foto e passeggiata",
+        "oraArrivo": "08:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Roemerberg_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Roemerberg+Frankfurt",
+        "latitudine": 50.1106,
+        "longitudine": 8.6822
+      },
+      {
+        "nome": "Ponte di Ferro",
+        "descr": "Piccola passeggiata sul fiume Meno",
+        "oraArrivo": "09:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiserner_Steg_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Eiserner+Steg+Frankfurt",
+        "latitudine": 50.1079,
+        "longitudine": 8.6833
+      },
+      {
+        "nome": "Ritorno a FRA",
+        "descr": "Transfer in aeroporto",
+        "oraArrivo": "13:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "FRA",
+    "orarioArrivo": "11:00",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Alte Oper",
+        "descr": "Trasferimento al famoso teatro d'opera",
+        "oraArrivo": "11:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Alte_Oper_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Alte+Oper+Frankfurt",
+        "latitudine": 50.1151,
+        "longitudine": 8.6796
+      },
+      {
+        "nome": "Alte Oper",
+        "descr": "Iconico teatro e centro culturale",
+        "oraArrivo": "11:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Alte_Oper_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Alte+Oper+Frankfurt",
+        "latitudine": 50.1151,
+        "longitudine": 8.6796
+      },
+      {
+        "nome": "Kaiserdom St. Bartholomäus",
+        "descr": "Cattedrale storica e gotica",
+        "oraArrivo": "12:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurter_Dom.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Cathedral",
+        "latitudine": 50.1103,
+        "longitudine": 8.6857
+      },
+      {
+        "nome": "Ritorno a FRA",
+        "descr": "Transfer in aeroporto",
+        "oraArrivo": "16:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "FRA",
+    "orarioArrivo": "08:45",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Apfelweinviertel",
+        "descr": "Trasferimento al quartiere del sidro",
+        "oraArrivo": "09:20",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Apfelwein_Sachsenhausen.jpg",
+        "maps": "https://maps.apple.com/?q=Sachsenhausen+Frankfurt",
+        "latitudine": 50.103,
+        "longitudine": 8.682
+      },
+      {
+        "nome": "Apfelweinviertel",
+        "descr": "Quartiere storico con taverne tradizionali",
+        "oraArrivo": "09:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Apfelwein_Sachsenhausen.jpg",
+        "maps": "https://maps.apple.com/?q=Sachsenhausen+Frankfurt",
+        "latitudine": 50.103,
+        "longitudine": 8.682
+      },
+      {
+        "nome": "Kleinmarkthalle",
+        "descr": "Mercato con prodotti locali e street food",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Kleinmarkthalle_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Kleinmarkthalle+Frankfurt",
+        "latitudine": 50.1131,
+        "longitudine": 8.6858
+      },
+      {
+        "nome": "Ritorno a FRA",
+        "descr": "Transfer in aeroporto",
+        "oraArrivo": "14:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "FRA",
+    "orarioArrivo": "10:00",
+    "ore": 7,
+    "minuti": 15,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Zeil",
+        "descr": "Trasferimento al principale viale dello shopping",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Zeil_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Zeil+Frankfurt",
+        "latitudine": 50.1128,
+        "longitudine": 8.683
+      },
+      {
+        "nome": "MyZeil",
+        "descr": "Centro commerciale moderno",
+        "oraArrivo": "10:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/MyZeil_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=MyZeil+Frankfurt",
+        "latitudine": 50.1129,
+        "longitudine": 8.6832
+      },
+      {
+        "nome": "Goethestraße",
+        "descr": "Via di lusso per lo shopping internazionale",
+        "oraArrivo": "12:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Goethestrasse_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Goethestrasse+Frankfurt",
+        "latitudine": 50.1137,
+        "longitudine": 8.6835
+      },
+      {
+        "nome": "Ritorno a FRA",
+        "descr": "Transfer in aeroporto",
+        "oraArrivo": "17:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "FRA",
+    "orarioArrivo": "07:50",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto a Palmengarten",
+        "descr": "Trasferimento al giardino botanico",
+        "oraArrivo": "08:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Palmengarten_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Palmengarten+Frankfurt",
+        "latitudine": 50.1234,
+        "longitudine": 8.653
+      },
+      {
+        "nome": "Palmengarten",
+        "descr": "Passeggiata tra piante tropicali e serre",
+        "oraArrivo": "08:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Palmengarten_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Palmengarten+Frankfurt",
+        "latitudine": 50.1234,
+        "longitudine": 8.653
+      },
+      {
+        "nome": "Grüneburgpark",
+        "descr": "Parco per relax e camminate",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Gruenburgpark_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Gruenburgpark+Frankfurt",
+        "latitudine": 50.1246,
+        "longitudine": 8.6705
+      },
+      {
+        "nome": "Ritorno a FRA",
+        "descr": "Transfer in aeroporto",
+        "oraArrivo": "13:20",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "FRA",
+    "orarioArrivo": "09:30",
+    "ore": 6,
+    "minuti": 45,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Da aeroporto al centro",
+        "descr": "Trasferimento generale",
+        "oraArrivo": "10:10",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Cityscape.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+city",
+        "latitudine": 50.1109,
+        "longitudine": 8.6821
+      },
+      {
+        "nome": "Römerberg",
+        "descr": "Piazza centrale e passeggiata",
+        "oraArrivo": "10:20",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Roemerberg_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Roemerberg+Frankfurt",
+        "latitudine": 50.1106,
+        "longitudine": 8.6822
+      },
+      {
+        "nome": "Ponte di Ferro",
+        "descr": "Camminata sul Meno",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiserner_Steg_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Eiserner+Steg+Frankfurt",
+        "latitudine": 50.1079,
+        "longitudine": 8.6833
+      },
+      {
+        "nome": "Kleinmarkthalle",
+        "descr": "Mercato locale",
+        "oraArrivo": "11:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Kleinmarkthalle_Frankfurt.jpg",
+        "maps": "https://maps.apple.com/?q=Kleinmarkthalle+Frankfurt",
+        "latitudine": 50.1131,
+        "longitudine": 8.6858
+      },
+      {
+        "nome": "Ritorno a FRA",
+        "descr": "Transfer in aeroporto",
+        "oraArrivo": "15:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Amsterdam",
+    "aeroporto": "Amsterdam Schiphol (AMS)",
+    "orarioArrivo": "10:00",
+    "ore": 6,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Trasferimento con treno NS diretto fino a Amsterdam Centraal",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Centraal_station_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3780,
+        "longitudine": 4.9000
+      },
+      {
+        "nome": "Damrak & Dam Square",
+        "descr": "Passeggiata lungo Damrak fino a Piazza Dam, cuore della città",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Dam_Square_Amsterdam_2016.jpg",
+        "maps": "https://maps.apple.com/?q=Dam+Square+Amsterdam",
+        "latitudine": 52.3731,
+        "longitudine": 4.8922
+      },
+      {
+        "nome": "Canali di Amsterdam",
+        "descr": "Passeggiata lungo i canali storici patrimonio UNESCO",
+        "oraArrivo": "11:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Canals_Dusk_2015.jpg",
+        "maps": "https://maps.apple.com/?q=Herengracht+Amsterdam",
+        "latitudine": 52.3728,
+        "longitudine": 4.8895
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Treno NS di ritorno verso l’aeroporto",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Centraal_station_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Amsterdam+Centraal",
+        "latitudine": 52.3780,
+        "longitudine": 4.9000
+      }
+    ]
+  },
+  {
+    "citta": "Parigi",
+    "aeroporto": "Paris Charles de Gaulle (CDG)",
+    "orarioArrivo": "08:30",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Trasferimento con RER B da CDG a Gare du Nord",
+        "oraArrivo": "09:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Gare_du_Nord_Main_Hall.jpg",
+        "maps": "https://maps.apple.com/?q=Gare+du+Nord+Paris",
+        "latitudine": 48.8809,
+        "longitudine": 2.3553
+      },
+      {
+        "nome": "Montmartre & Basilique du Sacré-Cœur",
+        "descr": "Visita panoramica dal quartiere di Montmartre e alla basilica",
+        "oraArrivo": "09:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sacre_Coeur_Basilica_Paris_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Sacré-Cœur+Paris",
+        "latitudine": 48.8867,
+        "longitudine": 2.3431
+      },
+      {
+        "nome": "Tour Eiffel (esterni)",
+        "descr": "Passeggiata sotto la Torre Eiffel e Champ de Mars",
+        "oraArrivo": "11:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Tour_Eiffel_Wikimedia_Commons.jpg",
+        "maps": "https://maps.apple.com/?q=Eiffel+Tower",
+        "latitudine": 48.8584,
+        "longitudine": 2.2945
+      },
+      {
+        "nome": "Louvre (esterni)",
+        "descr": "Visita veloce all’esterno e alla Piramide del Louvre",
+        "oraArrivo": "12:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Louvre_Museum_Wikimedia_Commons.jpg",
+        "maps": "https://maps.apple.com/?q=Louvre+Paris",
+        "latitudine": 48.8606,
+        "longitudine": 2.3376
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Rientro con RER B verso l’aeroporto CDG",
+        "oraArrivo": "13:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Gare_du_Nord_Main_Hall.jpg",
+        "maps": "https://maps.apple.com/?q=Gare+du+Nord+Paris",
+        "latitudine": 48.8809,
+        "longitudine": 2.3553
+      }
+    ]
+  },
+  {
+    "citta": "Doha",
+    "aeroporto": "Hamad International Airport (DOH)",
+    "orarioArrivo": "16:00",
+    "ore": 5,
+    "minuti": 30,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Trasferimento in taxi o metro verso Souq Waqif",
+        "oraArrivo": "16:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Souq_Waqif_in_Doha.jpg",
+        "maps": "https://maps.apple.com/?q=Souq+Waqif+Doha",
+        "latitudine": 25.2886,
+        "longitudine": 51.5330
+      },
+      {
+        "nome": "Souq Waqif",
+        "descr": "Mercato tradizionale, luogo ideale per passeggiare e scoprire la cultura locale",
+        "oraArrivo": "16:35",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Souq_Waqif_in_Doha.jpg",
+        "maps": "https://maps.apple.com/?q=Souq+Waqif+Doha",
+        "latitudine": 25.2886,
+        "longitudine": 51.5330
+      },
+      {
+        "nome": "Corniche di Doha",
+        "descr": "Passeggiata sul lungomare con vista skyline",
+        "oraArrivo": "17:20",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Doha_Corniche_Skyline.jpg",
+        "maps": "https://maps.apple.com/?q=Doha+Corniche",
+        "latitudine": 25.2969,
+        "longitudine": 51.5206
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Trasferimento di ritorno in taxi o metro verso Hamad International Airport",
+        "oraArrivo": "18:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamad_International_Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Hamad+International+Airport",
+        "latitudine": 25.2611,
+        "longitudine": 51.5650
+      }
+    ]
+  },
+  {
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "13:15",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Trasferimento con MRT fino a Marina Bay",
+        "oraArrivo": "14:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Sands_in_Singapore_-_20101120.jpg",
+        "maps": "https://maps.apple.com/?q=Marina+Bay+Singapore",
+        "latitudine": 1.2834,
+        "longitudine": 103.8607
+      },
+      {
+        "nome": "Marina Bay Sands (esterni)",
+        "descr": "Iconico hotel e complesso sul mare con architettura unica",
+        "oraArrivo": "14:05",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Sands_Hotel_Skyline.jpg",
+        "maps": "https://maps.apple.com/?q=Marina+Bay+Sands",
+        "latitudine": 1.2834,
+        "longitudine": 103.8607
+      },
+      {
+        "nome": "Gardens by the Bay",
+        "descr": "Passeggiata tra i Supertree Grove e giardini futuristici",
+        "oraArrivo": "14:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Supertree_Grove%2C_Gardens_by_the_Bay%2C_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Gardens+by+the+Bay",
+        "latitudine": 1.2816,
+        "longitudine": 103.8636
+      },
+      {
+        "nome": "Merlion Park",
+        "descr": "Breve sosta presso la statua del Merlion, simbolo di Singapore",
+        "oraArrivo": "15:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Merlion_Park_Singapore_2018.jpg",
+        "maps": "https://maps.apple.com/?q=Merlion+Park",
+        "latitudine": 1.2868,
+        "longitudine": 103.8545
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Rientro in MRT verso l’aeroporto Changi",
+        "oraArrivo": "16:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_Changi_Airport_Terminal_3_interior_2008.jpg",
+        "maps": "https://maps.apple.com/?q=Singapore+Changi+Airport",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "09:00",
+    "ore": 9,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Trasferimento in taxi o navetta verso Sultanahmet",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sultanahmet_Square_Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Sultanahmet+Istanbul",
+        "latitudine": 41.0054,
+        "longitudine": 28.9768
+      },
+      {
+        "nome": "Hagia Sophia (esterni)",
+        "descr": "Ammirare l’iconica ex basilica e moschea",
+        "oraArrivo": "10:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagia_Sophia_Mars_2013.jpg",
+        "maps": "https://maps.apple.com/?q=Hagia+Sophia+Istanbul",
+        "latitudine": 41.0086,
+        "longitudine": 28.9802
+      },
+      {
+        "nome": "Moschea Blu (esterni)",
+        "descr": "Visita veloce agli esterni della Moschea Sultan Ahmet",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Mosque_Istanbul_2013.jpg",
+        "maps": "https://maps.apple.com/?q=Blue+Mosque+Istanbul",
+        "latitudine": 41.0054,
+        "longitudine": 28.9768
+      },
+      {
+        "nome": "Gran Bazaar",
+        "descr": "Passeggiata tra i mercati coperti storici di Istanbul",
         "oraArrivo": "11:45",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Museo_del_Prado_%28Madrid%29.jpg",
-        "maps": "https://maps.apple.com/?ll=40.4138,-3.6921",
-        "latitudine": 40.4138,
-        "longitudine": -3.6921
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Bazaar_Istanbul_2007.jpg",
+        "maps": "https://maps.apple.com/?q=Grand+Bazaar+Istanbul",
+        "latitudine": 41.0106,
+        "longitudine": 28.9684
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Rientro verso l’aeroporto Istanbul IST",
+        "oraArrivo": "13:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul_Airport_April_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Dubai",
+    "aeroporto": "Dubai International Airport (DXB)",
+    "orarioArrivo": "11:00",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Trasferimento in metro o taxi fino a Dubai Mall",
+        "oraArrivo": "11:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Mall_Atrium.jpg",
+        "maps": "https://maps.apple.com/?q=Dubai+Mall",
+        "latitudine": 25.1972,
+        "longitudine": 55.2796
+      },
+      {
+        "nome": "Burj Khalifa (esterni)",
+        "descr": "Ammirare la torre più alta del mondo dall’esterno",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Burj_Khalifa_2012.jpg",
+        "maps": "https://maps.apple.com/?q=Burj+Khalifa",
+        "latitudine": 25.1972,
+        "longitudine": 55.2744
+      },
+      {
+        "nome": "Dubai Fountain",
+        "descr": "Passeggiata vicino alle fontane danzanti",
+        "oraArrivo": "12:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Fountain_show.jpg",
+        "maps": "https://maps.apple.com/?q=Dubai+Fountain",
+        "latitudine": 25.1951,
+        "longitudine": 55.2750
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Trasferimento verso Dubai International Airport",
+        "oraArrivo": "13:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_International_Airport_2016.jpg",
+        "maps": "https://maps.apple.com/?q=Dubai+International+Airport",
+        "latitudine": 25.2532,
+        "longitudine": 55.3657
       }
     ]
   },
   {
     "citta": "Abu Dhabi",
-    "aeroporto": "Abu Dhabi International Airport",
+    "aeroporto": "Abu Dhabi International Airport (AUH)",
+    "orarioArrivo": "07:30",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Taxi verso la Moschea Sheikh Zayed",
+        "oraArrivo": "08:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sheikh_Zayed_Mosque_2014.jpg",
+        "maps": "https://maps.apple.com/?q=Sheikh+Zayed+Grand+Mosque",
+        "latitudine": 24.4120,
+        "longitudine": 54.4749
+      },
+      {
+        "nome": "Sheikh Zayed Grand Mosque",
+        "descr": "Visita esterna della moschea bianca simbolo di Abu Dhabi",
+        "oraArrivo": "08:05",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sheikh_Zayed_Mosque_Sunset_2012.jpg",
+        "maps": "https://maps.apple.com/?q=Sheikh+Zayed+Grand+Mosque",
+        "latitudine": 24.4120,
+        "longitudine": 54.4749
+      },
+      {
+        "nome": "Corniche di Abu Dhabi",
+        "descr": "Passeggiata sul lungomare con vista sul Golfo Persico",
+        "oraArrivo": "09:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_Corniche_2010.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+Corniche",
+        "latitudine": 24.4667,
+        "longitudine": 54.3667
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Taxi verso l’aeroporto AUH",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_International_Airport_Terminal_3.jpg",
+        "maps": "https://maps.apple.com/?q=Abu+Dhabi+International+Airport",
+        "latitudine": 24.4330,
+        "longitudine": 54.6511
+      }
+    ]
+  },
+  {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "15:00",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Airport Express fino a Hong Kong Station",
+        "oraArrivo": "15:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Station_Concourse_2013.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+Station",
+        "latitudine": 22.2847,
+        "longitudine": 114.1589
+      },
+      {
+        "nome": "Victoria Harbour",
+        "descr": "Passeggiata lungo il lungomare con vista skyline",
+        "oraArrivo": "15:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Harbour_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Victoria+Harbour+Hong+Kong",
+        "latitudine": 22.2930,
+        "longitudine": 114.1655
+      },
+      {
+        "nome": "Central District",
+        "descr": "Esplora il cuore finanziario e i grattacieli iconici",
+        "oraArrivo": "16:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Island_Skyline_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Central+Hong+Kong",
+        "latitudine": 22.2819,
+        "longitudine": 114.1589
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Airport Express ritorno a HKG",
+        "oraArrivo": "17:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Station_Concourse_2013.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+Station",
+        "latitudine": 22.2847,
+        "longitudine": 114.1589
+      }
+    ]
+  },
+  {
+    "citta": "Bangkok",
+    "aeroporto": "Suvarnabhumi Airport (BKK)",
+    "orarioArrivo": "18:00",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Airport Rail Link fino a Phaya Thai",
+        "oraArrivo": "18:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Phaya_Thai_station_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Phaya+Thai+Bangkok",
+        "latitudine": 13.7563,
+        "longitudine": 100.5322
+      },
+      {
+        "nome": "Wat Pho (esterni)",
+        "descr": "Breve visita esterna al famoso tempio del Buddha Sdraiato",
+        "oraArrivo": "19:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Pho_Bangkok_2010.jpg",
+        "maps": "https://maps.apple.com/?q=Wat+Pho+Bangkok",
+        "latitudine": 13.7467,
+        "longitudine": 100.4930
+      },
+      {
+        "nome": "Grand Palace (esterni)",
+        "descr": "Passeggiata davanti al palazzo reale",
+        "oraArrivo": "19:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Palace_Bangkok_2012.jpg",
+        "maps": "https://maps.apple.com/?q=Grand+Palace+Bangkok",
+        "latitudine": 13.7515,
+        "longitudine": 100.4927
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Airport Rail Link ritorno a BKK",
+        "oraArrivo": "20:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Phaya_Thai_station_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Phaya+Thai+Bangkok",
+        "latitudine": 13.7563,
+        "longitudine": 100.5322
+      }
+    ]
+  },
+  {
+    "citta": "Atlanta",
+    "aeroporto": "Hartsfield–Jackson Atlanta International Airport (ATL)",
+    "orarioArrivo": "12:00",
     "ore": 5,
+    "minuti": 30,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "MARTA train fino a Peachtree Center",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Peachtree_Center_MARTA_station.jpg",
+        "maps": "https://maps.apple.com/?q=Peachtree+Center+Atlanta",
+        "latitudine": 33.7593,
+        "longitudine": -84.3875
+      },
+      {
+        "nome": "Centennial Olympic Park",
+        "descr": "Passeggiata nel parco costruito per le Olimpiadi del 1996",
+        "oraArrivo": "12:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Centennial_Olympic_Park_2018.jpg",
+        "maps": "https://maps.apple.com/?q=Centennial+Olympic+Park",
+        "latitudine": 33.7603,
+        "longitudine": -84.3935
+      },
+      {
+        "nome": "World of Coca-Cola (esterni)",
+        "descr": "Sosta davanti al famoso museo della Coca-Cola",
+        "oraArrivo": "13:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/World_of_Coca-Cola_2019.jpg",
+        "maps": "https://maps.apple.com/?q=World+of+Coca-Cola",
+        "latitudine": 33.7627,
+        "longitudine": -84.3929
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "MARTA ritorno verso ATL",
+        "oraArrivo": "14:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Peachtree_Center_MARTA_station.jpg",
+        "maps": "https://maps.apple.com/?q=Peachtree+Center+Atlanta",
+        "latitudine": 33.7593,
+        "longitudine": -84.3875
+      }
+    ]
+  },
+  {
+    "citta": "New York",
+    "aeroporto": "John F. Kennedy International Airport (JFK)",
+    "orarioArrivo": "14:30",
+    "ore": 6,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Manhattan",
+        "descr": "AirTrain + LIRR fino a Penn Station",
+        "oraArrivo": "15:20",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Penn_Station_NYC_Interior_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Penn+Station+New+York",
+        "latitudine": 40.7506,
+        "longitudine": -73.9935
+      },
+      {
+        "nome": "Times Square",
+        "descr": "Passeggiata nella piazza più famosa di Manhattan",
+        "oraArrivo": "15:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Times_Square_New_York_City_2013.jpg",
+        "maps": "https://maps.apple.com/?q=Times+Square+NYC",
+        "latitudine": 40.7580,
+        "longitudine": -73.9855
+      },
+      {
+        "nome": "Bryant Park",
+        "descr": "Relax in uno dei parchi più iconici di Midtown",
+        "oraArrivo": "16:20",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Bryant_Park_New_York_2010.jpg",
+        "maps": "https://maps.apple.com/?q=Bryant+Park+NYC",
+        "latitudine": 40.7536,
+        "longitudine": -73.9832
+      },
+      {
+        "nome": "Ritorno Manhattan → aeroporto",
+        "descr": "AirTrain + LIRR ritorno a JFK",
+        "oraArrivo": "17:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Penn_Station_NYC_Interior_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Penn+Station+New+York",
+        "latitudine": 40.7506,
+        "longitudine": -73.9935
+      }
+    ]
+  },
+  {
+    "citta": "Miami",
+    "aeroporto": "Miami International Airport (MIA)",
+    "orarioArrivo": "09:15",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Miami Beach",
+        "descr": "Taxi o bus verso South Beach",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/South_Beach_Miami_2012.jpg",
+        "maps": "https://maps.apple.com/?q=South+Beach+Miami",
+        "latitudine": 25.7826,
+        "longitudine": -80.1341
+      },
+      {
+        "nome": "Ocean Drive",
+        "descr": "Passeggiata lungo la celebre via Art Deco",
+        "oraArrivo": "10:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Ocean_Drive_Miami_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Ocean+Drive+Miami",
+        "latitudine": 25.7792,
+        "longitudine": -80.1316
+      },
+      {
+        "nome": "Lummus Park",
+        "descr": "Relax sul lungomare di Miami Beach",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Lummus_Park_Miami_2014.jpg",
+        "maps": "https://maps.apple.com/?q=Lummus+Park+Miami",
+        "latitudine": 25.7805,
+        "longitudine": -80.1312
+      },
+      {
+        "nome": "Ritorno Miami Beach → aeroporto",
+        "descr": "Taxi o bus di ritorno verso MIA",
+        "oraArrivo": "12:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Miami_International_Airport_2016.jpg",
+        "maps": "https://maps.apple.com/?q=Miami+International+Airport",
+        "latitudine": 25.7959,
+        "longitudine": -80.2870
+      }
+    ]
+  },
+  {
+    "citta": "Los Angeles",
+    "aeroporto": "Los Angeles International Airport (LAX)",
+    "orarioArrivo": "17:00",
+    "ore": 6,
+    "minuti": 0,
+    "categoria": "nessuna",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Santa Monica",
+        "descr": "Taxi o bus fino a Santa Monica Pier",
+        "oraArrivo": "17:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Santa_Monica_Pier_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Santa+Monica+Pier",
+        "latitudine": 34.0092,
+        "longitudine": -118.4970
+      },
+      {
+        "nome": "Santa Monica Pier",
+        "descr": "Passeggiata sul celebre molo con giostre e vista sull’oceano",
+        "oraArrivo": "17:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Santa_Monica_Pier_at_Dusk.jpg",
+        "maps": "https://maps.apple.com/?q=Santa+Monica+Pier",
+        "latitudine": 34.0092,
+        "longitudine": -118.4970
+      },
+      {
+        "nome": "Third Street Promenade",
+        "descr": "Passeggiata tra negozi e locali vicino al mare",
+        "oraArrivo": "18:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Third_Street_Promenade_Santa_Monica_2009.jpg",
+        "maps": "https://maps.apple.com/?q=Third+Street+Promenade",
+        "latitudine": 34.0165,
+        "longitudine": -118.4966
+      },
+      {
+        "nome": "Ritorno Santa Monica → aeroporto",
+        "descr": "Taxi o bus verso LAX",
+        "oraArrivo": "19:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/LAX_2014.jpg",
+        "maps": "https://maps.apple.com/?q=Los+Angeles+International+Airport",
+        "latitudine": 33.9416,
+        "longitudine": -118.4085
+      }
+    ]
+  },
+  {
+    "citta": "Parigi",
+    "aeroporto": "Paris Charles de Gaulle (CDG)",
+    "orarioArrivo": "09:00",
+    "ore": 7,
     "minuti": 0,
     "categoria": "monumenti",
     "preferito": false,
     "tappe": [
       {
-        "nome": "Sheikh Zayed Grand Mosque",
-        "descr": "La moschea dello Sceicco Zayed è un capolavoro dell’architettura islamica moderna",
-        "oraArrivo": "09:00",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Sheikh_Zayed_Grand_Mosque_Carpet_1-WikiRug.jpg",
-        "maps": "https://maps.apple.com/?ll=24.4120,54.4740",
-        "latitudine": 24.412,
-        "longitudine": 54.474
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Trasferimento in RER B fino a Châtelet–Les Halles",
+        "oraArrivo": "10:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_RER_B_Chatelet_Les_Halles.jpg",
+        "maps": "https://maps.apple.com/?q=Châtelet-Les+Halles+Paris",
+        "latitudine": 48.8600,
+        "longitudine": 2.3470
       },
       {
-        "nome": "Qasr Al Watan",
-        "descr": "Il palazzo presidenziale e culturale, con splendidi interni e giardini",
-        "oraArrivo": "09:45",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Qasr_Al_Watan_Abu_Dhabi.jpg",
-        "maps": "https://maps.apple.com/?ll=24.4667,54.3667",
-        "latitudine": 24.4667,
-        "longitudine": 54.3667
+        "nome": "Cathédrale Notre-Dame de Paris",
+        "descr": "Visita esterna della celebre cattedrale gotica",
+        "oraArrivo": "10:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Notre_Dame_de_Paris_2014.jpg",
+        "maps": "https://maps.apple.com/?q=Notre+Dame+de+Paris",
+        "latitudine": 48.8529,
+        "longitudine": 2.3500
       },
       {
-        "nome": "Heritage Village",
-        "descr": "Ricostruzione di un villaggio tradizionale degli Emirati, museo a cielo aperto",
-        "oraArrivo": "10:30",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Abu_Dhabi_Heritage_Village.jpg",
-        "maps": "https://maps.apple.com/?ll=24.4605,54.3219",
-        "latitudine": 24.4605,
-        "longitudine": 54.3219
-      },
-      {
-        "nome": "Louvre Abu Dhabi",
-        "descr": "Museo d’arte universale con collezioni da tutto il mondo",
+        "nome": "Arc de Triomphe",
+        "descr": "Monumento simbolo di Parigi in Place Charles de Gaulle",
         "oraArrivo": "11:15",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Louvre_Abu_Dhabi_approach.jpg",
-        "maps": "https://maps.apple.com/?ll=24.5330,54.3977",
-        "latitudine": 24.533,
-        "longitudine": 54.3977
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Arc_de_Triomphe_Paris_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Arc+de+Triomphe+Paris",
+        "latitudine": 48.8738,
+        "longitudine": 2.2950
       },
       {
-        "nome": "Marina Mall Tower",
-        "descr": "Torre panoramica con vista sulla Corniche e sulla città",
-        "oraArrivo": "11:45",
-        "foto": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Marina_Mall_Abu_Dhabi.jpg",
-        "maps": "https://maps.apple.com/?ll=24.4920,54.3700",
-        "latitudine": 24.492,
-        "longitudine": 54.37
+        "nome": "Trocadéro",
+        "descr": "Vista panoramica sulla Tour Eiffel",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Trocadero_Paris_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Trocadero+Paris",
+        "latitudine": 48.8629,
+        "longitudine": 2.2875
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Rientro in RER B verso CDG",
+        "oraArrivo": "13:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/CDG_Terminal_2E_Hall_L.jpg",
+        "maps": "https://maps.apple.com/?q=Charles+de+Gaulle+Airport",
+        "latitudine": 49.0097,
+        "longitudine": 2.5479
       }
     ]
   },
   {
-  "citta": "Parigi",
-  "aeroporto": "Aeroporto Charles de Gaulle",
-  "ore": 11,
-  "minuti": 0,
-  "categoria": "monumenti",
-  "preferito": false,
-  "tappe": [
+    "citta": "Doha",
+    "aeroporto": "Hamad International Airport (DOH)",
+    "orarioArrivo": "11:00",
+    "ore": 6,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
       {
-      "nome": "Eiffel Tower",
-      "descr": "Torre simbolo di Parigi, vista spettacolare dalla cima",
-      "oraArrivo": "09:00",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg",
-      "maps": "https://maps.apple.com/?ll=48.8584,2.2945",
-      "latitudine": 48.8584,
-      "longitudine": 2.2945
+        "nome": "Transfer aeroporto → centro",
+        "descr": "Taxi verso il Museo di Arte Islamica",
+        "oraArrivo": "11:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Islamic_Art_Doha_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Museum+of+Islamic+Art+Doha",
+        "latitudine": 25.2950,
+        "longitudine": 51.5390
       },
       {
-      "nome": "Louvre Museum",
-      "descr": "Uno dei musei più grandi e famosi al mondo, con la Gioconda",
-      "oraArrivo": "10:00",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Louvre_Museum_Wikimedia.jpg",
-      "maps": "https://maps.apple.com/?ll=48.8606,2.3376",
-      "latitudine": 48.8606,
-      "longitudine": 2.3376
+        "nome": "Museum of Islamic Art",
+        "descr": "Museo simbolo di Doha, architettura di I.M. Pei",
+        "oraArrivo": "11:35",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Islamic_Art_in_Doha_Qatar.jpg",
+        "maps": "https://maps.apple.com/?q=Museum+of+Islamic+Art+Doha",
+        "latitudine": 25.2950,
+        "longitudine": 51.5390
       },
       {
-      "nome": "Cathédrale Notre‑Dame de Paris",
-      "descr": "Cattedrale gotica iconica sulla Île de la Cité",
-      "oraArrivo": "11:30",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Notre-Dame_de_Paris_Wikimedia.jpg",
-      "maps": "https://maps.apple.com/?ll=48.8530,2.3499",
-      "latitudine": 48.8530,
-      "longitudine": 2.3499
+        "nome": "Katara Cultural Village",
+        "descr": "Complesso culturale con anfiteatro e architettura araba",
+        "oraArrivo": "12:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Katara_Cultural_Village_Amphitheatre.jpg",
+        "maps": "https://maps.apple.com/?q=Katara+Cultural+Village",
+        "latitudine": 25.3573,
+        "longitudine": 51.5314
       },
       {
-      "nome": "Arc de Triomphe",
-      "descr": "Monumento nazionale al centro di Place Charles de Gaulle",
-      "oraArrivo": "13:00",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Arc_de_Triomphe_Wikimedia.jpg",
-      "maps": "https://maps.apple.com/?ll=48.8738,2.2950",
-      "latitudine": 48.8738,
-      "longitudine": 2.2950
-      },
-      {
-      "nome": "Sacré‑Cœur",
-      "descr": "Basilica bianca sulla collina di Montmartre con vista panoramica",
-      "oraArrivo": "14:00",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Sacre_Coeur_Wikimedia.jpg",
-      "maps": "https://maps.apple.com/?ll=48.8867,2.3431",
-      "latitudine": 48.8867,
-      "longitudine": 2.3431
-      }
-      ]
-  },
-  {
-  "citta": "Londra",
-  "aeroporto": "Heathrow Airport",
-  "ore": 9,
-  "minuti": 0,
-  "categoria": "monumenti",
-  "preferito": false,
-  "tappe": [
-      {
-      "nome": "Tower of London",
-      "descr": "Fortezza storica e residenza reale, custodisce i Gioielli della Corona",
-      "oraArrivo": "09:00",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Tower_of_London_Wikimedia.jpg",
-      "maps": "https://maps.apple.com/?ll=51.5081,-0.0759",
-      "latitudine": 51.5081,
-      "longitudine": -0.0759
-      },
-      {
-      "nome": "Westminster Abbey",
-      "descr": "Abazia gotica dove si tengono incoronazioni e cerimonie reali",
-      "oraArrivo": "10:00",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Westminster_Abbey_Wikimedia.jpg",
-      "maps": "https://maps.apple.com/?ll=51.4993,-0.1273",
-      "latitudine": 51.4993,
-      "longitudine": -0.1273
-      },
-      {
-      "nome": "Big Ben",
-      "descr": "Il celebre orologio della Houses of Parliament",
-      "oraArrivo": "11:00",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Big_Ben_Wikimedia.jpg",
-      "maps": "https://maps.apple.com/?ll=51.5007,-0.1246",
-      "latitudine": 51.5007,
-      "longitudine": -0.1246
-      },
-      {
-      "nome": "London Eye",
-      "descr": "Ruota panoramica sul Tamigi con vista sulla città",
-      "oraArrivo": "12:00",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1a/London_Eye_Wikimedia.jpg",
-      "maps": "https://maps.apple.com/?ll=51.5033,-0.1196",
-      "latitudine": 51.5033,
-      "longitudine": -0.1196
-      },
-      {
-      "nome": "Buckingham Palace",
-      "descr": "Residenza ufficiale della regina, con cambio della guardia",
-      "oraArrivo": "13:00",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Buckingham_Palace_Wikimedia.jpg",
-      "maps": "https://maps.apple.com/?ll=51.5014,-0.1419",
-      "latitudine": 51.5014,
-      "longitudine": -0.1419
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Taxi verso Hamad International Airport",
+        "oraArrivo": "13:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamad_International_Airport_Qatar.jpg",
+        "maps": "https://maps.apple.com/?q=Hamad+International+Airport",
+        "latitudine": 25.2611,
+        "longitudine": 51.5650
       }
     ]
   },
   {
-      "citta": "Tokyo",
-      "aeroporto": "Narita International Airport",
-      "ore": 7,
-      "minuti": 0,
-      "categoria": "monumenti",
-      "preferito": false,
-      "tappe": [
-          {
-              "nome": "Tokyo Skytree",
-              "descr": "Torre di trasmissione con piattaforma panoramica sulla città",
-              "oraArrivo": "09:00",
-              "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Tokyo_Skytree_2012.jpg",
-              "maps": "https://maps.apple.com/?ll=35.7100,139.8107",
-              "latitudine": 35.7100,
-              "longitudine": 139.8107
-          },
-          {
-              "nome": "Senso‑ji Temple",
-              "descr": "Tempio buddhista storico nel quartiere di Asakusa",
-              "oraArrivo": "10:00",
-              "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Sensoji_Tokyo_Wikimedia.jpg",
-              "maps": "https://maps.apple.com/?ll=35.7148,139.7967",
-              "latitudine": 35.7148,
-              "longitudine": 139.7967
-          },
-          {
-              "nome": "Imperial Palace",
-              "descr": "Residenza ufficiale dell’imperatore del Giappone, circondata da giardini",
-              "oraArrivo": "11:15",
-              "foto": "https://upload.wikimedia.org/wikipedia/commons/1/18/Imperial_Palace_Tokyo.jpg",
-              "maps": "https://maps.apple.com/?ll=35.6852,139.7528",
-              "latitudine": 35.6852,
-              "longitudine": 139.7528
-          },
-          {
-              "nome": "Meiji Jingu",
-              "descr": "Santuario shintoista immerso in un bosco urbano",
-              "oraArrivo": "12:30",
-              "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Meiji_Shrine_Tokyo.jpg",
-              "maps": "https://maps.apple.com/?ll=35.6764,139.6993",
-              "latitudine": 35.6764,
-              "longitudine": 139.6993
-          },
-          {
-              "nome": "Shibuya Crossing",
-              "descr": "Attraversamento pedonale iconico con vista dall’alto",
-              "oraArrivo": "13:30",
-              "foto": "https://upload.wikimedia.org/wikipedia/commons/2/26/Shibuya_Crossing_Wikimedia.jpg",
-              "maps": "https://maps.apple.com/?ll=35.6595,139.7004",
-              "latitudine": 35.6595,
-              "longitudine": 139.7004
-          }
-      ]
+    "citta": "Singapore",
+    "aeroporto": "Singapore Changi (SIN)",
+    "orarioArrivo": "15:00",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → centro",
+        "descr": "MRT fino a City Hall",
+        "oraArrivo": "15:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_MRT_Train_2011.jpg",
+        "maps": "https://maps.apple.com/?q=City+Hall+Singapore",
+        "latitudine": 1.2931,
+        "longitudine": 103.8520
+      },
+      {
+        "nome": "Merlion Park",
+        "descr": "Simbolo di Singapore, statua metà leone metà pesce",
+        "oraArrivo": "15:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Merlion_Park_Singapore_2018.jpg",
+        "maps": "https://maps.apple.com/?q=Merlion+Park",
+        "latitudine": 1.2868,
+        "longitudine": 103.8545
+      },
+      {
+        "nome": "Esplanade – Theatres on the Bay",
+        "descr": "Centro culturale noto come 'i durian' per l’architettura",
+        "oraArrivo": "16:20",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Esplanade_Theatres_on_the_Bay_Singapore.jpg",
+        "maps": "https://maps.apple.com/?q=Esplanade+Singapore",
+        "latitudine": 1.2894,
+        "longitudine": 103.8555
+      },
+      {
+        "nome": "Sri Mariamman Temple",
+        "descr": "Tempio hindu più antico di Singapore",
+        "oraArrivo": "17:10",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Mariamman_Temple_Singapore_2006.jpg",
+        "maps": "https://maps.apple.com/?q=Sri+Mariamman+Temple+Singapore",
+        "latitudine": 1.2826,
+        "longitudine": 103.8450
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "MRT verso Changi Airport",
+        "oraArrivo": "18:10",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_Changi_Airport_Terminal_3_interior_2008.jpg",
+        "maps": "https://maps.apple.com/?q=Singapore+Changi+Airport",
+        "latitudine": 1.3644,
+        "longitudine": 103.9915
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "08:00",
+    "ore": 9,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Sultanahmet",
+        "descr": "Trasferimento con metro e taxi fino al centro storico",
+        "oraArrivo": "09:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul_Metro_M7_train.jpg",
+        "maps": "https://maps.apple.com/?q=Sultanahmet+Istanbul",
+        "latitudine": 41.0053,
+        "longitudine": 28.9768
+      },
+      {
+        "nome": "Hagia Sophia (Ayasofya)",
+        "descr": "Antica basilica e moschea, simbolo di Istanbul",
+        "oraArrivo": "09:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagia_Sophia_Mars_2013.jpg",
+        "maps": "https://maps.apple.com/?q=Hagia+Sophia+Istanbul",
+        "latitudine": 41.0086,
+        "longitudine": 28.9802
+      },
+      {
+        "nome": "Moschea Blu (Sultanahmet Camii)",
+        "descr": "Celebre moschea ottomana con sei minareti",
+        "oraArrivo": "10:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sultan_Ahmed_Mosque_Istanbul_2013.jpg",
+        "maps": "https://maps.apple.com/?q=Sultanahmet+Mosque+Istanbul",
+        "latitudine": 41.0054,
+        "longitudine": 28.9768
+      },
+      {
+        "nome": "Topkapı Sarayı",
+        "descr": "Palazzo imperiale ottomano",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Topkapi_Palace_Istanbul_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Topkapi+Palace+Istanbul",
+        "latitudine": 41.0115,
+        "longitudine": 28.9834
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Taxi e metro verso Istanbul Airport",
+        "oraArrivo": "12:45",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul_Airport_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Francoforte",
+    "aeroporto": "Frankfurt am Main Airport (FRA)",
+    "orarioArrivo": "13:00",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Römerberg",
+        "descr": "S-Bahn verso il centro storico",
+        "oraArrivo": "13:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_S-Bahn_2010.jpg",
+        "maps": "https://maps.apple.com/?q=Römerberg+Frankfurt",
+        "latitudine": 50.1106,
+        "longitudine": 8.6822
+      },
+      {
+        "nome": "Römer",
+        "descr": "Storico municipio con facciata medievale",
+        "oraArrivo": "13:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Römer_Frankfurt_am_Main_2010.jpg",
+        "maps": "https://maps.apple.com/?q=Römer+Frankfurt",
+        "latitudine": 50.1103,
+        "longitudine": 8.6819
+      },
+      {
+        "nome": "Kaiserdom St. Bartholomäus",
+        "descr": "Cattedrale gotica che ospitava incoronazioni imperiali",
+        "oraArrivo": "14:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Cathedral_2012.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Cathedral",
+        "latitudine": 50.1106,
+        "longitudine": 8.6853
+      },
+      {
+        "nome": "Alte Oper",
+        "descr": "Storico teatro dell’opera ricostruito",
+        "oraArrivo": "15:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Alte_Oper_Frankfurt_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Alte+Oper+Frankfurt",
+        "latitudine": 50.1160,
+        "longitudine": 8.6718
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "S-Bahn verso FRA",
+        "oraArrivo": "16:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Airport_2015.jpg",
+        "maps": "https://maps.apple.com/?q=Frankfurt+Airport",
+        "latitudine": 50.0379,
+        "longitudine": 8.5622
+      }
+    ]
+  },
+  {
+    "citta": "Dubai",
+    "aeroporto": "Dubai International Airport (DXB)",
+    "orarioArrivo": "22:00",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Transfer aeroporto → Downtown",
+        "descr": "Metro verso Burj Khalifa",
+        "oraArrivo": "22:40",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Metro_2013.jpg",
+        "maps": "https://maps.apple.com/?q=Downtown+Dubai",
+        "latitudine": 25.1972,
+        "longitudine": 55.2744
+      },
+      {
+        "nome": "Burj Khalifa",
+        "descr": "Il grattacielo più alto del mondo",
+        "oraArrivo": "22:50",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Burj_Khalifa_Dubai_2012.jpg",
+        "maps": "https://maps.apple.com/?q=Burj+Khalifa",
+        "latitudine": 25.1972,
+        "longitudine": 55.2744
+      },
+      {
+        "nome": "Dubai Fountain",
+        "descr": "Spettacolo di fontane danzanti vicino al Burj Khalifa",
+        "oraArrivo": "23:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Fountain_2012.jpg",
+        "maps": "https://maps.apple.com/?q=Dubai+Fountain",
+        "latitudine": 25.1951,
+        "longitudine": 55.2750
+      },
+      {
+        "nome": "Dubai Frame",
+        "descr": "Monumento moderno a forma di cornice",
+        "oraArrivo": "00:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Frame_2018.jpg",
+        "maps": "https://maps.apple.com/?q=Dubai+Frame",
+        "latitudine": 25.2370,
+        "longitudine": 55.3000
+      },
+      {
+        "nome": "Ritorno centro → aeroporto",
+        "descr": "Metro e taxi verso DXB",
+        "oraArrivo": "01:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_International_Airport_2011.jpg",
+        "maps": "https://maps.apple.com/?q=Dubai+International+Airport",
+        "latitudine": 25.2532,
+        "longitudine": 55.3657
+      }
+    ]
   }
 ]
