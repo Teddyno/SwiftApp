@@ -176,7 +176,18 @@ struct creaItinerarioView: View {
                             showAlert = true
                             return
                         }
-                        if durataTotaleMinuti < 90 {
+                        let sogliaMinuti: Int = {
+                            // prova a trovare l'aeroporto selezionato e usare il suo `min` (ore) dal JSON
+                            if let match = aeroporti.first(where: { $0.displayName == rootState.scaloPrecompilato }) {
+                                if let h = match.min { return h * 60 }
+                            } else if let iata = iataDaInput(), let a = aeroporti.first(where: { $0.iata == iata }) {
+                                if let h = a.min { return h * 60 }
+                            } else if let citta = cittàDaInput(), let a = aeroporti.first(where: { normalizza($0.city) == normalizza(citta) }) {
+                                if let h = a.min { return h * 60 }
+                            }
+                            return 300 // fallback
+                        }()
+                        if durataTotaleMinuti < sogliaMinuti {
                             alertMessage = "Con la durata inserita non è consigliato uscire dall'aeroporto."
                             showAlert = true
                             return

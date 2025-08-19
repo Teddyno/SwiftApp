@@ -3,420 +3,490 @@
     "name": "Hartsfield–Jackson Atlanta International Airport",
     "city": "Atlanta",
     "iata": "ATL",
-    "country": "United States"
+    "country": "United States",
+    "min": 5
   },
   {
     "name": "Beijing Capital International Airport",
     "city": "Beijing",
     "iata": "PEK",
-    "country": "China"
+    "country": "China",
+    "min": 7
   },
   {
     "name": "Dubai International Airport",
     "city": "Dubai",
     "iata": "DXB",
-    "country": "United Arab Emirates"
+    "country": "United Arab Emirates",
+    "min": 6
   },
   {
     "name": "Los Angeles International Airport",
     "city": "Los Angeles",
     "iata": "LAX",
-    "country": "United States"
+    "country": "United States",
+    "min": 5
   },
   {
     "name": "Tokyo Haneda Airport",
     "city": "Tokyo",
     "iata": "HND",
-    "country": "Japan"
+    "country": "Japan",
+    "min": 6
   },
   {
     "name": "O'Hare International Airport",
     "city": "Chicago",
     "iata": "ORD",
-    "country": "United States"
+    "country": "United States",
+    "min": 5
   },
   {
     "name": "London Heathrow Airport",
     "city": "London",
     "iata": "LHR",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "min": 6
   },
   {
     "name": "London Gatwick Airport",
     "city": "London",
     "iata": "LGW",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "min": 6
   },
   {
     "name": "London Stansted Airport",
     "city": "London",
     "iata": "STN",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "min": 6
   },
   {
     "name": "London Luton Airport",
     "city": "London",
     "iata": "LTN",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "min": 6
   },
   {
     "name": "London City Airport",
     "city": "London",
     "iata": "LCY",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "min": 6
   },
   {
     "name": "London Southend Airport",
     "city": "London",
     "iata": "SEN",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "min": 6
   },
   {
     "name": "Charles de Gaulle Airport",
     "city": "Paris",
     "iata": "CDG",
-    "country": "France"
+    "country": "France",
+    "min": 6
   },
   {
     "name": "Frankfurt am Main Airport",
     "city": "Frankfurt",
     "iata": "FRA",
-    "country": "Germany"
+    "country": "Germany",
+    "min": 6
   },
   {
     "name": "Amsterdam Schiphol Airport",
     "city": "Amsterdam",
     "iata": "AMS",
-    "country": "Netherlands"
+    "country": "Netherlands",
+    "min": 6
   },
   {
     "name": "Singapore Changi Airport",
     "city": "Singapore",
     "iata": "SIN",
-    "country": "Singapore"
+    "country": "Singapore",
+    "min": 7
   },
   {
     "name": "Hong Kong International Airport",
     "city": "Hong Kong",
     "iata": "HKG",
-    "country": "Hong Kong"
+    "country": "Hong Kong",
+    "min": 6
   },
   {
     "name": "Incheon International Airport",
     "city": "Seoul",
     "iata": "ICN",
-    "country": "South Korea"
+    "country": "South Korea",
+    "min": 6
   },
   {
     "name": "Sydney Kingsford Smith Airport",
     "city": "Sydney",
     "iata": "SYD",
-    "country": "Australia"
+    "country": "Australia",
+    "min": 6
   },
   {
     "name": "Rome Fiumicino Airport",
     "city": "Rome",
     "iata": "FCO",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Milan Malpensa Airport",
     "city": "Milan",
     "iata": "MXP",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Madrid Barajas Airport",
     "city": "Madrid",
     "iata": "MAD",
-    "country": "Spain"
+    "country": "Spain",
+    "min": 6
   },
   {
     "name": "Toronto Pearson International Airport",
     "city": "Toronto",
     "iata": "YYZ",
-    "country": "Canada"
+    "country": "Canada",
+    "min": 5
   },
   {
     "name": "São Paulo Guarulhos International Airport",
     "city": "São Paulo",
     "iata": "GRU",
-    "country": "Brazil"
+    "country": "Brazil",
+    "min": 6
   },
   {
     "name": "Istanbul Airport",
     "city": "Istanbul",
     "iata": "IST",
-    "country": "Turkey"
+    "country": "Turkey",
+    "min": 6
   },
   {
     "name": "San Francisco International Airport",
     "city": "San Francisco",
     "iata": "SFO",
-    "country": "United States"
+    "country": "United States",
+    "min": 5
   },
   {
     "name": "Miami International Airport",
     "city": "Miami",
     "iata": "MIA",
-    "country": "United States"
+    "country": "United States",
+    "min": 5
   },
   {
     "name": "Denver International Airport",
     "city": "Denver",
     "iata": "DEN",
-    "country": "United States"
+    "country": "United States",
+    "min": 5
   },
   {
     "name": "Seattle-Tacoma International Airport",
     "city": "Seattle",
     "iata": "SEA",
-    "country": "United States"
+    "country": "United States",
+    "min": 5
   },
   {
     "name": "Zurich Airport",
     "city": "Zurich",
     "iata": "ZRH",
-    "country": "Switzerland"
+    "country": "Switzerland",
+    "min": 6
   },
   {
     "name": "Vienna International Airport",
     "city": "Vienna",
     "iata": "VIE",
-    "country": "Austria"
+    "country": "Austria",
+    "min": 6
   },
   {
     "name": "Doha Hamad International Airport",
     "city": "Doha",
     "iata": "DOH",
-    "country": "Qatar"
+    "country": "Qatar",
+    "min": 6
   },
   {
     "name": "Bangkok Suvarnabhumi Airport",
     "city": "Bangkok",
     "iata": "BKK",
-    "country": "Thailand"
+    "country": "Thailand",
+    "min": 6
   },
   {
     "name": "Kuala Lumpur International Airport",
     "city": "Kuala Lumpur",
     "iata": "KUL",
-    "country": "Malaysia"
+    "country": "Malaysia",
+    "min": 6
   },
   {
     "name": "New Delhi Indira Gandhi International Airport",
     "city": "New Delhi",
     "iata": "DEL",
-    "country": "India"
+    "country": "India",
+    "min": 7
   },
   {
     "name": "Mumbai Chhatrapati Shivaji Maharaj International Airport",
     "city": "Mumbai",
     "iata": "BOM",
-    "country": "India"
+    "country": "India",
+    "min": 7
   },
   {
     "name": "Cairo International Airport",
     "city": "Cairo",
     "iata": "CAI",
-    "country": "Egypt"
+    "country": "Egypt",
+    "min": 6
   },
   {
     "name": "Johannesburg OR Tambo International Airport",
     "city": "Johannesburg",
     "iata": "JNB",
-    "country": "South Africa"
+    "country": "South Africa",
+    "min": 6
   },
   {
     "name": "Mexico City International Airport",
     "city": "Mexico City",
     "iata": "MEX",
-    "country": "Mexico"
+    "country": "Mexico",
+    "min": 6
   },
   {
     "name": "Buenos Aires Ministro Pistarini International Airport",
     "city": "Buenos Aires",
     "iata": "EZE",
-    "country": "Argentina"
+    "country": "Argentina",
+    "min": 6
   },
   {
     "name": "Osaka Kansai International Airport",
     "city": "Osaka",
     "iata": "KIX",
-    "country": "Japan"
+    "country": "Japan",
+    "min": 6
   },
   {
     "name": "Brussels Airport",
     "city": "Brussels",
     "iata": "BRU",
-    "country": "Belgium"
+    "country": "Belgium",
+    "min": 6
   },
   {
     "name": "Helsinki-Vantaa Airport",
     "city": "Helsinki",
     "iata": "HEL",
-    "country": "Finland"
+    "country": "Finland",
+    "min": 6
   },
   {
     "name": "Lisbon Humberto Delgado Airport",
     "city": "Lisbon",
     "iata": "LIS",
-    "country": "Portugal"
+    "country": "Portugal",
+    "min": 6
   },
   {
     "name": "Oslo Gardermoen Airport",
     "city": "Oslo",
     "iata": "OSL",
-    "country": "Norway"
+    "country": "Norway",
+    "min": 6
   },
   {
     "name": "Venice Marco Polo Airport",
     "city": "Venice",
     "iata": "VCE",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Naples International Airport",
     "city": "Naples",
     "iata": "NAP",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Bologna Guglielmo Marconi Airport",
     "city": "Bologna",
     "iata": "BLQ",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Florence Peretola Airport",
     "city": "Florence",
     "iata": "FLR",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Catania–Fontanarossa Airport",
     "city": "Catania",
     "iata": "CTA",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Palermo Falcone–Borsellino Airport",
     "city": "Palermo",
     "iata": "PMO",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Turin Airport",
     "city": "Turin",
     "iata": "TRN",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Verona Villafranca Airport",
     "city": "Verona",
     "iata": "VRN",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Pisa International Airport",
     "city": "Pisa",
     "iata": "PSA",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Bari Karol Wojtyła Airport",
     "city": "Bari",
     "iata": "BRI",
-    "country": "Italy"
+    "country": "Italy",
+    "min": 6
   },
   {
     "name": "Barcelona–El Prat Airport",
     "city": "Barcelona",
     "iata": "BCN",
-    "country": "Spain"
+    "country": "Spain",
+    "min": 6
   },
   {
     "name": "John F. Kennedy International Airport",
     "city": "New York",
     "iata": "JFK",
-    "country": "United States"
+    "country": "United States",
+    "min": 5
   },
   {
     "name": "Dallas/Fort Worth International Airport",
     "city": "Dallas",
     "iata": "DFW",
-    "country": "United States"
+    "country": "United States",
+    "min": 5
   },
   {
     "name": "Boston Logan International Airport",
     "city": "Boston",
     "iata": "BOS",
-    "country": "United States"
+    "country": "United States",
+    "min": 5
   },
   {
     "name": "Panama Tocumen International Airport",
     "city": "Panama City",
     "iata": "PTY",
-    "country": "Panama"
+    "country": "Panama",
+    "min": 6
   },
   {
     "name": "Abu Dhabi International Airport",
     "city": "Abu Dhabi",
     "iata": "AUH",
-    "country": "United Arab Emirates"
+    "country": "United Arab Emirates",
+    "min": 6
   },
   {
     "name": "Riyadh King Khalid International Airport",
     "city": "Riyadh",
     "iata": "RUH",
-    "country": "Saudi Arabia"
+    "country": "Saudi Arabia",
+    "min": 6
   },
   {
     "name": "Tehran Imam Khomeini International Airport",
     "city": "Tehran",
     "iata": "IKA",
-    "country": "Iran"
+    "country": "Iran",
+    "min": 6
   },
   {
     "name": "Muscat International Airport",
     "city": "Muscat",
     "iata": "MCT",
-    "country": "Oman"
+    "country": "Oman",
+    "min": 6
   },
   {
     "name": "Athens International Airport",
     "city": "Athens",
     "iata": "ATH",
-    "country": "Greece"
+    "country": "Greece",
+    "min": 5
   },
   {
     "name": "Warsaw Chopin Airport",
     "city": "Warsaw",
     "iata": "WAW",
-    "country": "Poland"
+    "country": "Poland",
+    "min": 5
   },
   {
     "name": "Stockholm Arlanda Airport",
     "city": "Stockholm",
     "iata": "ARN",
-    "country": "Sweden"
+    "country": "Sweden",
+    "min": 5
   },
   {
     "name": "Prague Václav Havel Airport",
     "city": "Prague",
     "iata": "PRG",
-    "country": "Czech Republic"
+    "country": "Czech Republic",
+    "min": 5
   },
   {
     "name": "Auckland Airport",
     "city": "Auckland",
     "iata": "AKL",
-    "country": "New Zealand"
+    "country": "New Zealand",
+    "min": 7
   },
   {
     "name": "Reykjavik Keflavik International Airport",
     "city": "Reykjavik",
     "iata": "KEF",
-    "country": "Iceland"
+    "country": "Iceland",
+    "min": 5
   }
 ]
