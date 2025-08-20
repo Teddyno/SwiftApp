@@ -31,6 +31,7 @@ struct creaItinerarioView: View {
     @State private var alertMessage = ""
     @State private var showOrarioPicker = false
     @FocusState private var isTextFieldFocused: Bool
+    @State private var itinerari:[Itinerario] = []
     let preferenze = ["Natura", "Cibo", "Monumenti", "Shopping"]
 
     var body: some View {
@@ -228,11 +229,19 @@ struct creaItinerarioView: View {
                 }
                 .navigationDestination(isPresented: $navigateToItinerario) {
                                 if let itinerario = itinerarioGenerato {
-                                    // Crea un binding che punta allo stato interno
                                     ItinerarioView(itinerario: Binding(
                                         get: { self.itinerarioGenerato ?? itinerario },
                                         set: { self.itinerarioGenerato = $0 }
                                     ))
+                                    .onChange(of: itinerarioGenerato){
+                                        loadItinerari()
+                                        for i in 0...itinerari.count-1{
+                                            if itinerari[i].id==itinerarioGenerato!.id{
+                                                itinerari[i].progress=itinerarioGenerato!.progress
+                                            }
+                                        }
+                                        saveItinerari()
+                                    }
                                 }
                             }
                 
@@ -560,6 +569,49 @@ struct creaItinerarioView: View {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.hour, .minute], from: calendar.startOfDay(for: Date()), to: durataScalo)
         return components.minute ?? 0
+    }
+    private func getItinerariFileURL() -> URL? {
+        let fileManager = FileManager.default
+        guard let docURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return nil
+        }
+        return docURL.appendingPathComponent("itinerariCreati.json")
+    }
+
+    private func ensureItinerariFileExists() {
+        guard let fileURL = getItinerariFileURL() else { return }
+        if !FileManager.default.fileExists(atPath: fileURL.path) {
+            if let bundleURL = Bundle.main.url(forResource: "itinerariCreati", withExtension: "json") {
+                do {
+                    try FileManager.default.copyItem(at: bundleURL, to: fileURL)
+                } catch {
+                    print("Errore nella copia iniziale di itinerariCreati.json: \(error)")
+                }
+            }
+        }
+    }
+    private func loadItinerari() {
+        ensureItinerariFileExists()
+        guard let fileURL = getItinerariFileURL(),
+              let data = try? Data(contentsOf: fileURL),
+              let decodedItinerari = try? JSONDecoder().decode([Itinerario].self, from: data) else {
+            return
+        }
+        self.itinerari = decodedItinerari
+        self.itinerari.sort { $0.preferito && !$1.preferito }
+    }
+    
+    private func saveItinerari() {
+        guard let fileURL = getItinerariFileURL() else { return }
+        do {
+            let encodedData = try JSONEncoder().encode(itinerari)
+            try encodedData.write(to: fileURL, options: .atomic)
+        } catch {
+            print("Errore nel salvataggio degli itinerari: \(error)")
+        }
+    }
+    private func findItinerarioIndex(for id: UUID) -> Int? {
+        itinerari.firstIndex { $0.id == id }
     }
 }
 
