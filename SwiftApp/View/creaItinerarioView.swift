@@ -227,10 +227,14 @@ struct creaItinerarioView: View {
                     }
                 }
                 .navigationDestination(isPresented: $navigateToItinerario) {
-                    if let itinerario = itinerarioGenerato {
-                        ItinerarioView(itinerario: .constant(itinerario))
-                    }
-                }
+                                if let itinerario = itinerarioGenerato {
+                                    // Crea un binding che punta allo stato interno
+                                    ItinerarioView(itinerario: Binding(
+                                        get: { self.itinerarioGenerato ?? itinerario },
+                                        set: { self.itinerarioGenerato = $0 }
+                                    ))
+                                }
+                            }
                 
                 //suggerimenti aeroporti
                 VStack {
