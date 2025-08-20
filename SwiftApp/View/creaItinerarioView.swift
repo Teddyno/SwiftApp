@@ -455,7 +455,8 @@ struct creaItinerarioView: View {
         - Le tappe devono riflettere la categoria preferita inserita da \(preferenza)
         - Inserisci solo tappe realisticamente raggiungibili e visitabili nel tempo utile
         - Ogni tappa deve includere: nome in lingua originale, descrizione, orario di arrivo stimato, l'URL assoluto della prima immagine che appare su Google Immagini, link Apple Maps, latitudine e longitudine corretti
-        -Le immagini devono risultare url che restituiscono una foto visualizzabile, devono essere immagini commons di wikipedia con link https://commons.wikimedia.org/wiki/Special:FilePath/..., prova a cercare il nome completo della tappa e tra parentesi il nome della città
+        -Le immagini devono risultare url che restituiscono una foto visualizzabile
+        Assicurati che le mete esistano e siano presenti nella città dell'aeroporto ricercato
         Restituisci solo il JSON come testo puro, **senza usare markdown, senza backtick**, né altri caratteri extra.
     """;
         //print("\(prompt)");
