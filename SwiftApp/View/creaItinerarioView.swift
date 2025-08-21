@@ -358,7 +358,7 @@ struct creaItinerarioView: View {
         let userMinutes = minutesOfDay(from: orarioArrivo)
         let userOre = durataScaloOre()
         let userMinuti = durataScaloMinuti()
-        let userPref = (preferenzaSelezionata?.lowercased() ?? "nessuna").trimmingCharacters(in: .whitespacesAndNewlines)
+        // preferenzaSelezionata viene usata direttamente nel controllo della preferenza
         
         let trovato = lista.first { it in
             // match città o IATA
@@ -389,10 +389,10 @@ struct creaItinerarioView: View {
             
             // match preferenza
             let prefOk: Bool = {
-                if userPref == "nessuna" {
-                    return it.categoria == nil
-                }
-                return it.categoria?.rawValue == userPref
+                // Se l'utente non ha selezionato preferenze, accetta qualsiasi categoria
+                guard let selected = preferenzaSelezionata?.lowercased() else { return true }
+                // Altrimenti confronta la categoria
+                return it.categoria?.rawValue == selected
             }()
             
             return luogoOk && orarioOk && durataOk && prefOk
