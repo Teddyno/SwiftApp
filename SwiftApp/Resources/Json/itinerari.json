@@ -2454,6 +2454,561 @@
     ]
   },
   {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "07:00",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto - Trasferimento in città",
+        "descr": "Trasferimento dall’aeroporto al centro città in navetta/taxi.",
+        "oraArrivo": "08:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Hagia Sophia (Ayasofya)",
+        "descr": "Antica basilica bizantina, poi moschea, oggi museo e moschea.",
+        "oraArrivo": "09:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagia%20Sophia%20Istanbul%20(2020).jpg",
+        "maps": "https://maps.apple.com/?q=Hagia+Sophia+Istanbul",
+        "latitudine": 41.0086,
+        "longitudine": 28.9802
+      },
+      {
+        "nome": "Sultanahmet Camii (Moschea Blu)",
+        "descr": "Moschea ottomana famosa per le sue maioliche blu.",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue%20Mosque%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Blue+Mosque+Istanbul",
+        "latitudine": 41.0055,
+        "longitudine": 28.9768
+      },
+      {
+        "nome": "Rientro in aeroporto",
+        "descr": "Trasferimento di ritorno per il volo successivo.",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "09:30",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto - Trasferimento in città",
+        "descr": "Trasferimento in centro Istanbul in navetta/taxi.",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Spice Bazaar (Misir Carsisi)",
+        "descr": "Mercato storico di spezie, dolci e prodotti tipici turchi.",
+        "oraArrivo": "11:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian%20Bazaar%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Spice+Bazaar+Istanbul",
+        "latitudine": 41.0164,
+        "longitudine": 28.9711
+      },
+      {
+        "nome": "Karaköy Lokantası",
+        "descr": "Ristorante tradizionale turco per piatti locali.",
+        "oraArrivo": "13:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkish%20food%20kebab.jpg",
+        "maps": "https://maps.apple.com/?q=Karakoy+Lokantasi+Istanbul",
+        "latitudine": 41.022,
+        "longitudine": 28.977
+      },
+      {
+        "nome": "Rientro in aeroporto",
+        "descr": "Ritorno in aeroporto per controlli e imbarco.",
+        "oraArrivo": "16:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "07:00",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto - Trasferimento in città",
+        "descr": "Trasferimento dall’aeroporto al centro città in navetta/taxi.",
+        "oraArrivo": "08:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Hagia Sophia (Ayasofya)",
+        "descr": "Antica basilica bizantina, poi moschea, oggi museo e moschea.",
+        "oraArrivo": "09:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagia%20Sophia%20Istanbul%20(2020).jpg",
+        "maps": "https://maps.apple.com/?q=Hagia+Sophia+Istanbul",
+        "latitudine": 41.0086,
+        "longitudine": 28.9802
+      },
+      {
+        "nome": "Sultanahmet Camii (Moschea Blu)",
+        "descr": "Moschea ottomana famosa per le sue maioliche blu.",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue%20Mosque%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Blue+Mosque+Istanbul",
+        "latitudine": 41.0055,
+        "longitudine": 28.9768
+      },
+      {
+        "nome": "Rientro in aeroporto",
+        "descr": "Trasferimento di ritorno per il volo successivo.",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "09:30",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto - Trasferimento in città",
+        "descr": "Trasferimento in centro Istanbul in navetta/taxi.",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Spice Bazaar (Misir Carsisi)",
+        "descr": "Mercato storico di spezie, dolci e prodotti tipici turchi.",
+        "oraArrivo": "11:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian%20Bazaar%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Spice+Bazaar+Istanbul",
+        "latitudine": 41.0164,
+        "longitudine": 28.9711
+      },
+      {
+        "nome": "Karaköy Lokantası",
+        "descr": "Ristorante tradizionale turco per piatti locali.",
+        "oraArrivo": "13:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkish%20food%20kebab.jpg",
+        "maps": "https://maps.apple.com/?q=Karakoy+Lokantasi+Istanbul",
+        "latitudine": 41.022,
+        "longitudine": 28.977
+      },
+      {
+        "nome": "Rientro in aeroporto",
+        "descr": "Ritorno in aeroporto per controlli e imbarco.",
+        "oraArrivo": "16:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "06:00",
+    "ore": 9,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto - Trasferimento in città",
+        "descr": "Trasferimento verso il centro di Istanbul.",
+        "oraArrivo": "07:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Grand Bazaar (Kapalıçarşı)",
+        "descr": "Uno dei mercati coperti più grandi e antichi del mondo.",
+        "oraArrivo": "08:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Bazaar%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Grand+Bazaar+Istanbul",
+        "latitudine": 41.0106,
+        "longitudine": 28.968
+      },
+      {
+        "nome": "Istiklal Caddesi",
+        "descr": "Via pedonale famosa per negozi e locali.",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istiklal%20Avenue%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Istiklal+Avenue+Istanbul",
+        "latitudine": 41.0369,
+        "longitudine": 28.985
+      },
+      {
+        "nome": "Rientro in aeroporto",
+        "descr": "Trasferimento per il volo successivo.",
+        "oraArrivo": "14:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "11:00",
+    "ore": 7,
+    "minuti": 30,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto - Trasferimento",
+        "descr": "Raggiungi il centro città dall’aeroporto.",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Gülhane Parkı",
+        "descr": "Parco storico con giardini e vista sul Bosforo.",
+        "oraArrivo": "13:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Gulhane%20Park%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Gulhane+Park+Istanbul",
+        "latitudine": 41.012,
+        "longitudine": 28.981
+      },
+      {
+        "nome": "Bosforo - Passeggiata",
+        "descr": "Passeggiata panoramica lungo lo stretto del Bosforo.",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Bosphorus%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Bosphorus+Istanbul",
+        "latitudine": 41.041,
+        "longitudine": 29.003
+      },
+      {
+        "nome": "Rientro aeroporto",
+        "descr": "Trasferimento per rientrare in tempo al volo.",
+        "oraArrivo": "17:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "08:30",
+    "ore": 10,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto - Trasferimento",
+        "descr": "Navetta o taxi verso il centro storico.",
+        "oraArrivo": "09:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Topkapı Sarayı",
+        "descr": "Storico palazzo ottomano, residenza dei sultani.",
+        "oraArrivo": "10:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Topkapi%20Palace%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Topkapi+Palace+Istanbul",
+        "latitudine": 41.0115,
+        "longitudine": 28.9834
+      },
+      {
+        "nome": "Basilica Cisterna (Yerebatan Sarnıcı)",
+        "descr": "Cisterna sotterranea bizantina spettacolare.",
+        "oraArrivo": "12:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica%20Cistern%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Basilica+Cistern+Istanbul",
+        "latitudine": 41.0084,
+        "longitudine": 28.9779
+      },
+      {
+        "nome": "Rientro in aeroporto",
+        "descr": "Trasferimento e controlli di sicurezza.",
+        "oraArrivo": "16:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "13:00",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto",
+        "descr": "Navetta/taxi verso Karaköy.",
+        "oraArrivo": "14:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Balık Ekmek a Eminönü",
+        "descr": "Panino tipico con pesce alla griglia.",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Balik%20ekmek%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Eminonu+Istanbul",
+        "latitudine": 41.017,
+        "longitudine": 28.974
+      },
+      {
+        "nome": "Karaköy Güllüoğlu",
+        "descr": "Pasticceria storica famosa per il baklava.",
+        "oraArrivo": "16:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Baklava%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Karakoy+Gulluoglu",
+        "latitudine": 41.023,
+        "longitudine": 28.978
+      },
+      {
+        "nome": "Rientro aeroporto",
+        "descr": "Trasferimento per il volo.",
+        "oraArrivo": "18:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "05:30",
+    "ore": 12,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento in città",
+        "descr": "Taxi verso il centro.",
+        "oraArrivo": "06:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Grand Bazaar",
+        "descr": "Mercato storico con oltre 4000 negozi.",
+        "oraArrivo": "07:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Bazaar%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Grand+Bazaar+Istanbul",
+        "latitudine": 41.0106,
+        "longitudine": 28.968
+      },
+      {
+        "nome": "Nişantaşı",
+        "descr": "Quartiere moderno per shopping di lusso.",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Nisantasi%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Nisantasi+Istanbul",
+        "latitudine": 41.047,
+        "longitudine": 28.994
+      },
+      {
+        "nome": "Rientro in aeroporto",
+        "descr": "Trasferimento e imbarco.",
+        "oraArrivo": "15:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Sabiha Gökçen Airport (SAW)",
+    "orarioArrivo": "07:45",
+    "ore": 9,
+    "minuti": 30,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto",
+        "descr": "Trasferimento verso la costa asiatica.",
+        "oraArrivo": "08:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sabiha%20Gokcen%20Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Sabiha+Gokcen+Airport",
+        "latitudine": 40.905,
+        "longitudine": 29.308
+      },
+      {
+        "nome": "Çamlıca Tepesi",
+        "descr": "Collina panoramica sull’area asiatica di Istanbul.",
+        "oraArrivo": "09:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Camlica%20Hill%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Camlica+Hill+Istanbul",
+        "latitudine": 41.022,
+        "longitudine": 29.066
+      },
+      {
+        "nome": "Moda Parkı",
+        "descr": "Parco sul mare nella zona di Kadıköy.",
+        "oraArrivo": "11:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Moda%20Park%20Kadikoy.jpg",
+        "maps": "https://maps.apple.com/?q=Moda+Park+Kadikoy",
+        "latitudine": 40.984,
+        "longitudine": 29.025
+      },
+      {
+        "nome": "Rientro aeroporto",
+        "descr": "Trasferimento e imbarco.",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Sabiha%20Gokcen%20Airport.jpg",
+        "maps": "https://maps.apple.com/?q=Sabiha+Gokcen+Airport",
+        "latitudine": 40.905,
+        "longitudine": 29.308
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "10:15",
+    "ore": 6,
+    "minuti": 45,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento in città",
+        "descr": "Navetta verso Sultanahmet.",
+        "oraArrivo": "11:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Dolmabahçe Sarayı",
+        "descr": "Palazzo ottomano riccamente decorato.",
+        "oraArrivo": "12:30",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Dolmabahce%20Palace%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Dolmabahce+Palace+Istanbul",
+        "latitudine": 41.039,
+        "longitudine": 29.000
+      },
+      {
+        "nome": "Rientro aeroporto",
+        "descr": "Ritorno per prendere il volo.",
+        "oraArrivo": "15:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
+    "citta": "Istanbul",
+    "aeroporto": "Istanbul Airport (IST)",
+    "orarioArrivo": "14:20",
+    "ore": 8,
+    "minuti": 20,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Uscita Aeroporto",
+        "descr": "Taxi verso Kadıköy.",
+        "oraArrivo": "15:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      },
+      {
+        "nome": "Çiya Sofrası",
+        "descr": "Ristorante rinomato con cucina anatolica.",
+        "oraArrivo": "16:15",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkish%20Meze.jpg",
+        "maps": "https://maps.apple.com/?q=Ciya+Sofrasi+Kadikoy",
+        "latitudine": 40.991,
+        "longitudine": 29.025
+      },
+      {
+        "nome": "Kadıköy Çarşısı",
+        "descr": "Mercato locale con street food.",
+        "oraArrivo": "18:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Kadikoy%20Market%20Istanbul.jpg",
+        "maps": "https://maps.apple.com/?q=Kadikoy+Bazaar",
+        "latitudine": 40.991,
+        "longitudine": 29.025
+      },
+      {
+        "nome": "Rientro aeroporto",
+        "descr": "Trasferimento di ritorno.",
+        "oraArrivo": "21:00",
+        "foto": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Airport%20Exterior.jpg",
+        "maps": "https://maps.apple.com/?q=Istanbul+Airport",
+        "latitudine": 41.2753,
+        "longitudine": 28.7519
+      }
+    ]
+  },
+  {
     "citta": "Dubai",
     "aeroporto": "Dubai International Airport (DXB)",
     "orarioArrivo": "11:00",
@@ -2946,6 +3501,521 @@
     ]
   },
   {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "06:30",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento dall'aeroporto a Tung Chung",
+        "descr": "Prendi l'Airport Express o un taxi per raggiungere Tung Chung, punto di partenza della Ngong Ping Cable Car.",
+        "oraArrivo": "07:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Tung_Chung_Station_Concourse_2018.jpg",
+        "maps": "https://maps.apple.com/?q=Tung+Chung+Station+Hong+Kong",
+        "latitudine": 22.2892,
+        "longitudine": 113.9410
+      },
+      {
+        "nome": "Ngong Ping 360 Cable Car",
+        "descr": "Cabinovia panoramica che collega Tung Chung con Ngong Ping, con viste spettacolari sull'isola di Lantau.",
+        "oraArrivo": "07:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Ngong_Ping_360_Cable_Car_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Ngong+Ping+360+Cable+Car",
+        "latitudine": 22.2530,
+        "longitudine": 113.9062
+      },
+      {
+        "nome": "Tian Tan Buddha (Big Buddha)",
+        "descr": "Statua gigante di bronzo raffigurante il Buddha, simbolo di Hong Kong.",
+        "oraArrivo": "08:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/6/63/Tian_Tan_Buddha_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Tian+Tan+Buddha",
+        "latitudine": 22.2530,
+        "longitudine": 113.9048
+      },
+      {
+        "nome": "Po Lin Monastery",
+        "descr": "Monastero buddista vicino al Big Buddha, famoso per l'architettura tradizionale.",
+        "oraArrivo": "09:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/7/77/Po_Lin_Monastery_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Po+Lin+Monastery",
+        "latitudine": 22.2534,
+        "longitudine": 113.9060
+      },
+      {
+        "nome": "Ritorno verso l'aeroporto",
+        "descr": "Prendi la cabinovia di ritorno fino a Tung Chung e poi un taxi o Airport Express per tornare all'aeroporto.",
+        "oraArrivo": "12:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hong_Kong_International_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+International+Airport",
+        "latitudine": 22.3080,
+        "longitudine": 113.9185
+      }
+    ]
+  },
+  {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "09:00",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Central",
+        "descr": "Raggiungi Central con l'Airport Express in circa 30 minuti.",
+        "oraArrivo": "10:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Hong_Kong_Station_Interior.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+Station",
+        "latitudine": 22.2849,
+        "longitudine": 114.1589
+      },
+      {
+        "nome": "DimDimSum Dim Sum Specialty Store",
+        "descr": "Assaggia autentici piatti dim sum in uno dei ristoranti più popolari della città.",
+        "oraArrivo": "10:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Dim_Sum_in_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=DimDimSum+Central",
+        "latitudine": 22.2850,
+        "longitudine": 114.1540
+      },
+      {
+        "nome": "Lan Fong Yuen",
+        "descr": "Storico locale famoso per il milk tea e piatti locali.",
+        "oraArrivo": "11:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Milk_Tea_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Lan+Fong+Yuen+Central",
+        "latitudine": 22.2835,
+        "longitudine": 114.1542
+      },
+      {
+        "nome": "PMQ (ex Police Married Quarters)",
+        "descr": "Centro creativo con negozi e ristoranti innovativi.",
+        "oraArrivo": "12:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/4/4b/PMQ_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=PMQ+Hong+Kong",
+        "latitudine": 22.2831,
+        "longitudine": 114.1517
+      },
+      {
+        "nome": "Ritorno verso l'aeroporto",
+        "descr": "Rientro a Central Station e Airport Express per l'aeroporto.",
+        "oraArrivo": "15:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hong_Kong_International_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+International+Airport",
+        "latitudine": 22.3080,
+        "longitudine": 113.9185
+      }
+    ]
+  },
+  {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "07:45",
+    "ore": 9,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Tsim Sha Tsui",
+        "descr": "Airport Express fino a Kowloon e poi taxi verso Tsim Sha Tsui.",
+        "oraArrivo": "09:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Tsim_Sha_Tsui_Station_Concourse.jpg",
+        "maps": "https://maps.apple.com/?q=Tsim+Sha+Tsui",
+        "latitudine": 22.2973,
+        "longitudine": 114.1722
+      },
+      {
+        "nome": "Harbour City",
+        "descr": "Il più grande centro commerciale di Hong Kong, con brand internazionali e locali.",
+        "oraArrivo": "09:15",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Harbour_City_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Harbour+City+Hong+Kong",
+        "latitudine": 22.2956,
+        "longitudine": 114.1689
+      },
+      {
+        "nome": "1881 Heritage",
+        "descr": "Complesso storico con boutique di lusso e ristoranti.",
+        "oraArrivo": "11:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/2/2c/1881_Heritage_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=1881+Heritage",
+        "latitudine": 22.2952,
+        "longitudine": 114.1714
+      },
+      {
+        "nome": "Ladies' Market (Mong Kok)",
+        "descr": "Mercato popolare per souvenir, abbigliamento e street food.",
+        "oraArrivo": "12:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Ladies_Market_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Ladies+Market+Mong+Kok",
+        "latitudine": 22.3186,
+        "longitudine": 114.1703
+      },
+      {
+        "nome": "Ritorno all’aeroporto",
+        "descr": "Taxi fino a Kowloon Station e Airport Express per tornare in aeroporto.",
+        "oraArrivo": "16:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hong_Kong_International_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+International+Airport",
+        "latitudine": 22.3080,
+        "longitudine": 113.9185
+      }
+    ]
+  },
+  {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "13:15",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Kowloon",
+        "descr": "Prendi Airport Express fino a Kowloon Station.",
+        "oraArrivo": "14:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/8/84/Kowloon_Station_Concourse.jpg",
+        "maps": "https://maps.apple.com/?q=Kowloon+Station",
+        "latitudine": 22.3041,
+        "longitudine": 114.1618
+      },
+      {
+        "nome": "Kowloon Walled City Park",
+        "descr": "Parco storico e verde che celebra la memoria della vecchia Città murata.",
+        "oraArrivo": "14:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Kowloon_Walled_City_Park_2019.jpg",
+        "maps": "https://maps.apple.com/?q=Kowloon+Walled+City+Park",
+        "latitudine": 22.3320,
+        "longitudine": 114.1923
+      },
+      {
+        "nome": "Nan Lian Garden",
+        "descr": "Un giardino classico cinese, curato nei minimi dettagli, con padiglioni e laghetti.",
+        "oraArrivo": "15:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Nan_Lian_Garden_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Nan+Lian+Garden",
+        "latitudine": 22.3403,
+        "longitudine": 114.2034
+      },
+      {
+        "nome": "Ritorno in aeroporto",
+        "descr": "Metro fino a Kowloon Station e Airport Express per l’aeroporto.",
+        "oraArrivo": "18:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hong_Kong_International_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+International+Airport",
+        "latitudine": 22.3080,
+        "longitudine": 113.9185
+      }
+    ]
+  },
+  {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "11:00",
+    "ore": 7,
+    "minuti": 30,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Central",
+        "descr": "Airport Express fino a Hong Kong Station.",
+        "oraArrivo": "11:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Hong_Kong_Station_Interior.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+Station",
+        "latitudine": 22.2849,
+        "longitudine": 114.1589
+      },
+      {
+        "nome": "Man Mo Temple",
+        "descr": "Storico tempio dedicato al dio della letteratura e al dio della guerra.",
+        "oraArrivo": "12:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Man_Mo_Temple_Hollywood_Road_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Man+Mo+Temple",
+        "latitudine": 22.2857,
+        "longitudine": 114.1502
+      },
+      {
+        "nome": "Mid-Levels Escalator",
+        "descr": "Il sistema di scale mobili all’aperto più lungo del mondo.",
+        "oraArrivo": "13:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Central-Mid-Levels_escalator%2C_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Mid+Levels+Escalator",
+        "latitudine": 22.2827,
+        "longitudine": 114.1529
+      },
+      {
+        "nome": "Ritorno all’aeroporto",
+        "descr": "Airport Express da Central a HKG.",
+        "oraArrivo": "17:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hong_Kong_International_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+International+Airport",
+        "latitudine": 22.3080,
+        "longitudine": 113.9185
+      }
+    ]
+  },
+  {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "08:30",
+    "ore": 10,
+    "minuti": 0,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Sham Shui Po",
+        "descr": "Metro fino a Sham Shui Po per esplorare la scena gastronomica locale.",
+        "oraArrivo": "09:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Sham_Shui_Po_Station_Concourse.jpg",
+        "maps": "https://maps.apple.com/?q=Sham+Shui+Po",
+        "latitudine": 22.3306,
+        "longitudine": 114.1594
+      },
+      {
+        "nome": "Tim Ho Wan",
+        "descr": "Uno dei ristoranti dim sum più famosi al mondo, premiato con stella Michelin.",
+        "oraArrivo": "10:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Dim_Sum_in_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Tim+Ho+Wan+Sham+Shui+Po",
+        "latitudine": 22.3311,
+        "longitudine": 114.1599
+      },
+      {
+        "nome": "Street Food a Sham Shui Po",
+        "descr": "Esplora bancarelle locali con spuntini tradizionali come egg waffle e fish balls.",
+        "oraArrivo": "11:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Egg_Waffle_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Sham+Shui+Po+Street+Food",
+        "latitudine": 22.3314,
+        "longitudine": 114.1592
+      },
+      {
+        "nome": "Ritorno all’aeroporto",
+        "descr": "Metro fino a Kowloon Station e Airport Express.",
+        "oraArrivo": "16:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hong_Kong_International_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+International+Airport",
+        "latitudine": 22.3080,
+        "longitudine": 113.9185
+      }
+    ]
+  },
+  {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "06:00",
+    "ore": 8,
+    "minuti": 30,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Lantau Island",
+        "descr": "Prendi il bus o il taxi verso Tung Chung.",
+        "oraArrivo": "07:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/1/14/Tung_Chung_Station_Concourse.jpg",
+        "maps": "https://maps.apple.com/?q=Tung+Chung+Station",
+        "latitudine": 22.2896,
+        "longitudine": 113.9416
+      },
+      {
+        "nome": "Ngong Ping 360",
+        "descr": "Funivia panoramica che porta al villaggio di Ngong Ping.",
+        "oraArrivo": "07:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/8/87/Ngong_Ping_360_Cable_Car.jpg",
+        "maps": "https://maps.apple.com/?q=Ngong+Ping+360",
+        "latitudine": 22.2530,
+        "longitudine": 113.9026
+      },
+      {
+        "nome": "Tian Tan Buddha (Big Buddha)",
+        "descr": "Iconica statua gigante di Buddha sull’isola di Lantau.",
+        "oraArrivo": "08:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/6/63/Tian_Tan_Buddha_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Tian+Tan+Buddha",
+        "latitudine": 22.2530,
+        "longitudine": 113.9046
+      },
+      {
+        "nome": "Po Lin Monastery",
+        "descr": "Storico monastero buddhista, famoso per la sua sala principale.",
+        "oraArrivo": "10:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/56/Po_Lin_Monastery_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Po+Lin+Monastery",
+        "latitudine": 22.2533,
+        "longitudine": 113.9051
+      },
+      {
+        "nome": "Ritorno all’aeroporto",
+        "descr": "Bus da Tung Chung per HKG.",
+        "oraArrivo": "14:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hong_Kong_International_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+International+Airport",
+        "latitudine": 22.3080,
+        "longitudine": 113.9185
+      }
+    ]
+  },
+  {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "15:00",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Causeway Bay",
+        "descr": "Airport Express fino a Hong Kong Station e metro fino a Causeway Bay.",
+        "oraArrivo": "16:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Causeway_Bay_MTR_Station.jpg",
+        "maps": "https://maps.apple.com/?q=Causeway+Bay",
+        "latitudine": 22.2802,
+        "longitudine": 114.1859
+      },
+      {
+        "nome": "Times Square",
+        "descr": "Centro commerciale moderno con negozi e ristoranti.",
+        "oraArrivo": "16:15",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/57/Times_Square_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Times+Square+Hong+Kong",
+        "latitudine": 22.2789,
+        "longitudine": 114.1827
+      },
+      {
+        "nome": "Lee Gardens",
+        "descr": "Complesso commerciale di lusso con boutique internazionali.",
+        "oraArrivo": "17:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/7/72/Lee_Gardens_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Lee+Gardens+Hong+Kong",
+        "latitudine": 22.2784,
+        "longitudine": 114.1861
+      },
+      {
+        "nome": "Ritorno all’aeroporto",
+        "descr": "Metro fino a Hong Kong Station e Airport Express.",
+        "oraArrivo": "21:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hong_Kong_International_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+International+Airport",
+        "latitudine": 22.3080,
+        "longitudine": 113.9185
+      }
+    ]
+  },
+  {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "10:00",
+    "ore": 12,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Central",
+        "descr": "Airport Express fino a Hong Kong Station.",
+        "oraArrivo": "10:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Hong_Kong_Station_Interior.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+Station",
+        "latitudine": 22.2849,
+        "longitudine": 114.1589
+      },
+      {
+        "nome": "Victoria Peak",
+        "descr": "Il punto panoramico più famoso di Hong Kong.",
+        "oraArrivo": "11:15",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Victoria_Peak_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Victoria+Peak",
+        "latitudine": 22.2758,
+        "longitudine": 114.1455
+      },
+      {
+        "nome": "Hong Kong Museum of History",
+        "descr": "Museo che racconta la storia e le tradizioni di Hong Kong.",
+        "oraArrivo": "14:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/8/84/Hong_Kong_Museum_of_History.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+Museum+of+History",
+        "latitudine": 22.3029,
+        "longitudine": 114.1771
+      },
+      {
+        "nome": "Clock Tower",
+        "descr": "Storica torre dell’orologio simbolo del periodo coloniale.",
+        "oraArrivo": "16:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Clock_Tower_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Clock+Tower+Hong+Kong",
+        "latitudine": 22.2946,
+        "longitudine": 114.1699
+      },
+      {
+        "nome": "Ritorno in aeroporto",
+        "descr": "Airport Express da Kowloon Station.",
+        "oraArrivo": "20:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hong_Kong_International_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+International+Airport",
+        "latitudine": 22.3080,
+        "longitudine": 113.9185
+      }
+    ]
+  },
+  {
+    "citta": "Hong Kong",
+    "aeroporto": "Hong Kong International Airport (HKG)",
+    "orarioArrivo": "09:00",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Central",
+        "descr": "Airport Express fino a Hong Kong Station.",
+        "oraArrivo": "09:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Hong_Kong_Station_Interior.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+Station",
+        "latitudine": 22.2849,
+        "longitudine": 114.1589
+      },
+      {
+        "nome": "Lin Heung Tea House",
+        "descr": "Storico ristorante per autentico dim sum cantonese.",
+        "oraArrivo": "10:15",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Dim_Sum_in_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=Lin+Heung+Tea+House",
+        "latitudine": 22.2843,
+        "longitudine": 114.1532
+      },
+      {
+        "nome": "PMQ (ex Police Married Quarters)",
+        "descr": "Spazio creativo con negozi di design e ristoranti.",
+        "oraArrivo": "11:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/af/PMQ_Hong_Kong.jpg",
+        "maps": "https://maps.apple.com/?q=PMQ+Hong+Kong",
+        "latitudine": 22.2847,
+        "longitudine": 114.1517
+      },
+      {
+        "nome": "Ritorno all’aeroporto",
+        "descr": "Airport Express da Central.",
+        "oraArrivo": "15:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Hong_Kong_International_Airport_Terminal_1.jpg",
+        "maps": "https://maps.apple.com/?q=Hong+Kong+International+Airport",
+        "latitudine": 22.3080,
+        "longitudine": 113.9185
+      }
+    ]
+  },
+  {
     "citta": "Bangkok",
     "aeroporto": "Suvarnabhumi Airport (BKK)",
     "orarioArrivo": "18:00",
@@ -3083,6 +4153,335 @@
         "maps": "https://maps.apple.com/?q=Penn+Station+New+York",
         "latitudine": 40.7506,
         "longitudine": -73.9935
+      }
+    ]
+  },
+  {
+    "citta": "New York",
+    "aeroporto": "John F. Kennedy International Airport (JFK)",
+    "orarioArrivo": "06:00",
+    "ore": 8,
+    "minuti": 0,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Manhattan",
+        "descr": "Prendi l’AirTrain fino a Jamaica Station e poi la metro E verso Manhattan.",
+        "oraArrivo": "07:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/ad/AirTrain_JFK.jpg",
+        "maps": "https://maps.apple.com/?q=Jamaica+Station",
+        "latitudine": 40.7003,
+        "longitudine": -73.8070
+      },
+      {
+        "nome": "Statua della Libertà",
+        "descr": "Simbolo degli Stati Uniti e di New York, accessibile in traghetto.",
+        "oraArrivo": "08:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg",
+        "maps": "https://maps.apple.com/?q=Statue+of+Liberty",
+        "latitudine": 40.6892,
+        "longitudine": -74.0445
+      },
+      {
+        "nome": "Wall Street",
+        "descr": "Storico distretto finanziario di New York.",
+        "oraArrivo": "10:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Wall_Street_Sign_NYC.jpg",
+        "maps": "https://maps.apple.com/?q=Wall+Street",
+        "latitudine": 40.7066,
+        "longitudine": -74.0090
+      },
+      {
+        "nome": "Ritorno all’aeroporto",
+        "descr": "Metro E fino a Jamaica Station e AirTrain per JFK.",
+        "oraArrivo": "13:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e4/JFK_Terminal_4.jpg",
+        "maps": "https://maps.apple.com/?q=JFK+Airport",
+        "latitudine": 40.6413,
+        "longitudine": -73.7781
+      }
+    ]
+  },
+  {
+    "citta": "New York",
+    "aeroporto": "LaGuardia Airport (LGA)",
+    "orarioArrivo": "09:00",
+    "ore": 7,
+    "minuti": 0,
+    "categoria": "cibo",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Manhattan",
+        "descr": "Taxi o bus Q70 SBS fino a Jackson Heights e metro 7.",
+        "oraArrivo": "09:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3c/MTA_Q70_SBS_Bus.jpg",
+        "maps": "https://maps.apple.com/?q=Jackson+Heights",
+        "latitudine": 40.7557,
+        "longitudine": -73.8831
+      },
+      {
+        "nome": "Katz's Delicatessen",
+        "descr": "Famoso locale per il pastrami sandwich.",
+        "oraArrivo": "10:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/4/44/Katz%27s_Deli_inside.jpg",
+        "maps": "https://maps.apple.com/?q=Katz's+Delicatessen",
+        "latitudine": 40.7223,
+        "longitudine": -73.9874
+      },
+      {
+        "nome": "Chelsea Market",
+        "descr": "Mercato coperto con cibo internazionale e street food.",
+        "oraArrivo": "12:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Chelsea_Market_Interior.jpg",
+        "maps": "https://maps.apple.com/?q=Chelsea+Market",
+        "latitudine": 40.7424,
+        "longitudine": -74.0060
+      },
+      {
+        "nome": "Ritorno a LaGuardia",
+        "descr": "Taxi o metro 7 fino a Jackson Heights e bus Q70.",
+        "oraArrivo": "15:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/d/d2/LaGuardia_Airport_Terminal_B.jpg",
+        "maps": "https://maps.apple.com/?q=LaGuardia+Airport",
+        "latitudine": 40.7769,
+        "longitudine": -73.8740
+      }
+    ]
+  },
+  {
+    "citta": "New York",
+    "aeroporto": "Newark Liberty International Airport (EWR)",
+    "orarioArrivo": "14:00",
+    "ore": 9,
+    "minuti": 0,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Manhattan",
+        "descr": "NJ Transit treno diretto per Penn Station.",
+        "oraArrivo": "14:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5a/NJ_Transit_train.jpg",
+        "maps": "https://maps.apple.com/?q=Penn+Station+NYC",
+        "latitudine": 40.7506,
+        "longitudine": -73.9935
+      },
+      {
+        "nome": "Macy's Herald Square",
+        "descr": "Uno dei più grandi department store del mondo.",
+        "oraArrivo": "15:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/8/89/Macy%27s_Herald_Square_NYC.jpg",
+        "maps": "https://maps.apple.com/?q=Macy's+Herald+Square",
+        "latitudine": 40.7508,
+        "longitudine": -73.9896
+      },
+      {
+        "nome": "Fifth Avenue",
+        "descr": "La via dello shopping di lusso con i flagship store più famosi.",
+        "oraArrivo": "16:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/d/da/Fifth_Avenue_New_York_City.jpg",
+        "maps": "https://maps.apple.com/?q=Fifth+Avenue+NYC",
+        "latitudine": 40.7600,
+        "longitudine": -73.9750
+      },
+      {
+        "nome": "Ritorno a Newark",
+        "descr": "Treno NJ Transit da Penn Station per l’aeroporto.",
+        "oraArrivo": "21:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Newark_Airport_Terminal_C.jpg",
+        "maps": "https://maps.apple.com/?q=Newark+Airport",
+        "latitudine": 40.6895,
+        "longitudine": -74.1745
+      }
+    ]
+  },
+  {
+    "citta": "New York",
+    "aeroporto": "John F. Kennedy International Airport (JFK)",
+    "orarioArrivo": "07:30",
+    "ore": 10,
+    "minuti": 0,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Manhattan",
+        "descr": "AirTrain JFK fino a Jamaica Station e metro E.",
+        "oraArrivo": "08:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/ad/AirTrain_JFK.jpg",
+        "maps": "https://maps.apple.com/?q=Jamaica+Station",
+        "latitudine": 40.7003,
+        "longitudine": -73.8070
+      },
+      {
+        "nome": "Central Park",
+        "descr": "Il polmone verde di New York, ideale per una passeggiata.",
+        "oraArrivo": "09:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Central_Park_New_York_City_New_York_23_crop.jpg",
+        "maps": "https://maps.apple.com/?q=Central+Park",
+        "latitudine": 40.7851,
+        "longitudine": -73.9683
+      },
+      {
+        "nome": "The High Line",
+        "descr": "Parco sopraelevato costruito su una vecchia linea ferroviaria.",
+        "oraArrivo": "12:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5f/The_High_Line_20th_Street_looking_downtown.jpg",
+        "maps": "https://maps.apple.com/?q=High+Line+NYC",
+        "latitudine": 40.7479,
+        "longitudine": -74.0049
+      },
+      {
+        "nome": "Ritorno a JFK",
+        "descr": "Metro E e AirTrain fino al terminal.",
+        "oraArrivo": "16:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e4/JFK_Terminal_4.jpg",
+        "maps": "https://maps.apple.com/?q=JFK+Airport",
+        "latitudine": 40.6413,
+        "longitudine": -73.7781
+      }
+    ]
+  },
+  {
+    "citta": "New York",
+    "aeroporto": "LaGuardia Airport (LGA)",
+    "orarioArrivo": "11:00",
+    "ore": 6,
+    "minuti": 30,
+    "categoria": "monumenti",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Manhattan",
+        "descr": "Bus Q70 SBS fino a Jackson Heights, metro E verso Midtown.",
+        "oraArrivo": "11:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3c/MTA_Q70_SBS_Bus.jpg",
+        "maps": "https://maps.apple.com/?q=Jackson+Heights",
+        "latitudine": 40.7557,
+        "longitudine": -73.8831
+      },
+      {
+        "nome": "Times Square",
+        "descr": "Cuore pulsante di New York con le insegne luminose.",
+        "oraArrivo": "12:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Times_Square_%28HDR%29.jpg",
+        "maps": "https://maps.apple.com/?q=Times+Square",
+        "latitudine": 40.7580,
+        "longitudine": -73.9855
+      },
+      {
+        "nome": "Grand Central Terminal",
+        "descr": "Storica stazione ferroviaria e capolavoro architettonico.",
+        "oraArrivo": "14:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/0/09/Grand_Central_Station_Main_Concourse_Jan_2006.jpg",
+        "maps": "https://maps.apple.com/?q=Grand+Central+Terminal",
+        "latitudine": 40.7527,
+        "longitudine": -73.9772
+      },
+      {
+        "nome": "Ritorno a LGA",
+        "descr": "Metro e bus Q70 fino all’aeroporto.",
+        "oraArrivo": "16:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/d/d2/LaGuardia_Airport_Terminal_B.jpg",
+        "maps": "https://maps.apple.com/?q=LaGuardia+Airport",
+        "latitudine": 40.7769,
+        "longitudine": -73.8740
+      }
+    ]
+  },
+  {
+    "citta": "New York",
+    "aeroporto": "Newark Liberty International Airport (EWR)",
+    "orarioArrivo": "08:00",
+    "ore": 12,
+    "minuti": 0,
+    "categoria": "natura",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Manhattan",
+        "descr": "Treno NJ Transit per Penn Station.",
+        "oraArrivo": "08:45",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5a/NJ_Transit_train.jpg",
+        "maps": "https://maps.apple.com/?q=Penn+Station+NYC",
+        "latitudine": 40.7506,
+        "longitudine": -73.9935
+      },
+      {
+        "nome": "Bryant Park",
+        "descr": "Giardino urbano nel cuore di Midtown, perfetto per rilassarsi.",
+        "oraArrivo": "09:15",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Bryant_Park_2009.jpg",
+        "maps": "https://maps.apple.com/?q=Bryant+Park",
+        "latitudine": 40.7536,
+        "longitudine": -73.9832
+      },
+      {
+        "nome": "Brooklyn Botanic Garden",
+        "descr": "Uno dei giardini botanici più belli degli Stati Uniti.",
+        "oraArrivo": "11:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Brooklyn_Botanic_Garden_Japanese_Hill_and_Pond_Garden_1.jpg",
+        "maps": "https://maps.apple.com/?q=Brooklyn+Botanic+Garden",
+        "latitudine": 40.6694,
+        "longitudine": -73.9624
+      },
+      {
+        "nome": "Ritorno a EWR",
+        "descr": "Rientro con NJ Transit a Newark.",
+        "oraArrivo": "18:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Newark_Airport_Terminal_C.jpg",
+        "maps": "https://maps.apple.com/?q=Newark+Airport",
+        "latitudine": 40.6895,
+        "longitudine": -74.1745
+      }
+    ]
+  },
+  {
+    "citta": "New York",
+    "aeroporto": "John F. Kennedy International Airport (JFK)",
+    "orarioArrivo": "15:00",
+    "ore": 7,
+    "minuti": 30,
+    "categoria": "shopping",
+    "preferito": false,
+    "tappe": [
+      {
+        "nome": "Trasferimento a Manhattan",
+        "descr": "AirTrain fino a Jamaica Station e metro.",
+        "oraArrivo": "16:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/a/ad/AirTrain_JFK.jpg",
+        "maps": "https://maps.apple.com/?q=Jamaica+Station",
+        "latitudine": 40.7003,
+        "longitudine": -73.8070
+      },
+      {
+        "nome": "SoHo",
+        "descr": "Quartiere famoso per boutique e negozi di design.",
+        "oraArrivo": "17:00",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/4/40/SoHo_NYC_Buildings.jpg",
+        "maps": "https://maps.apple.com/?q=SoHo+NYC",
+        "latitudine": 40.7233,
+        "longitudine": -74.0020
+      },
+      {
+        "nome": "Westfield World Trade Center",
+        "descr": "Centro commerciale moderno vicino al One World Trade Center.",
+        "oraArrivo": "18:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/d/de/Westfield_World_Trade_Center_Interior.jpg",
+        "maps": "https://maps.apple.com/?q=Westfield+World+Trade+Center",
+        "latitudine": 40.7116,
+        "longitudine": -74.0117
+      },
+      {
+        "nome": "Ritorno a JFK",
+        "descr": "Rientro in metro e AirTrain.",
+        "oraArrivo": "21:30",
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e4/JFK_Terminal_4.jpg",
+        "maps": "https://maps.apple.com/?q=JFK+Airport",
+        "latitudine": 40.6413,
+        "longitudine": -73.7781
       }
     ]
   },

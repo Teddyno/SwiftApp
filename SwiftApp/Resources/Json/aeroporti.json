@@ -399,6 +399,20 @@
     "min": 5
   },
   {
+    "name": "LaGuardia Airport",
+    "city": "New York",
+    "iata": "LGA",
+    "country": "United States",
+    "min": 5
+  },
+  {
+    "name": "Newark Liberty International Airport",
+    "city": "Newark",
+    "iata": "EWR",
+    "country": "United States",
+    "min": 5
+  },
+  {
     "name": "Dallas/Fort Worth International Airport",
     "city": "Dallas",
     "iata": "DFW",
